@@ -621,65 +621,60 @@ body::after {
 /* intro is a giant roadside sign */
 
 .intro {
-
-    min-height: 500px;
-
+    position: relative;
+    min-height: 430px;
     display: grid;
-
-    grid-template-columns: 1.5fr .5fr;
-
+    grid-template-columns: minmax(0, 1.5fr) minmax(220px, .5fr);
     align-items: center;
-
+    gap: 50px;
+    padding: 70px 8vw;
     background: #f2b634;
-
     color: #170611;
-
     transform: skewY(-1deg);
-
     margin-top: -25px;
-
     margin-bottom: -25px;
-
-    padding-left: 8vw;
-
-    padding-right: 8vw;
-
 }
 
 .intro > * {
-
     transform: skewY(1deg);
-
 }
 
-.intro-big {
-
-    max-width: 900px;
-
-    font-size: clamp(55px, 10vw, 145px);
-
-    letter-spacing: -8px;
-
-    line-height: .73;
-
+.intro .music-player {
+    width: 100%;
+    max-width: 850px;
+    margin: 0;
+    padding: 20px;
+    background: #080308;
+    color: #f2b634;
+    box-shadow: 14px 14px 0 #b026ff;
+    transform: rotate(-1deg);
 }
 
-.intro-copy {
+.intro .music-player-label {
+    margin-bottom: 10px;
+    color: #f2b634;
+    font-size: 25px;
+    letter-spacing: -1px;
+}
 
-    padding: 25px;
-
-    background: #170611;
-
+.intro .music-player-status {
+    margin-bottom: 15px;
     color: #f4dfc1;
-
     font-family: "courier new", monospace;
+    font-size: 10px;
+    font-weight: 900;
+}
 
-    font-size: 13px;
-
-    line-height: 1.35;
-
-    transform: rotate(4deg);
-
+.intro .intro-copy {
+    padding: 22px;
+    background: #f80000;
+    color: #fff0d5;
+    font-family: "courier new", monospace;
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 1.45;
+    transform: rotate(3deg) skewY(1deg);
+    box-shadow: 9px 9px 0 #170611;
 }
 
 /* people becomes a photo pile */
@@ -1803,19 +1798,21 @@ body::after {
     bottom: 3%;
 }
 
-    .intro {
+.intro {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 45px;
+    padding: 60px 25px;
+}
 
-        grid-template-columns: 1fr;
+.intro .music-player {
+    width: 100%;
+}
 
-        min-height: 650px;
-
-    }
-
-    .intro-big {
-
-        font-size: clamp(55px, 17vw, 100px);
-
-    }
+.intro .intro-copy {
+    width: 85%;
+    justify-self: center;
+}
 
     .people-grid {
 
