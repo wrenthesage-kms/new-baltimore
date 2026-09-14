@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NEW BALTIMORE // 2015</title>
+    <!-- =========================================================
+         ANCHOR BAY / ABCC
+         A fictional 2015 Southeast Michigan universe archive
+         ========================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
-        content="New Baltimore, Michigan. Anchor Bay. 2015. People, places, nights, summer, school, and everything in between."
+        content="Anchor Bay Community College and the New Baltimore, Michigan universe surrounding it. A 2015 Southeast Michigan social sandbox."
     >
 
-    <link rel="stylesheet" href="style.css">
+    <meta
+        name="theme-color"
+        content="#dad0dc"
+    >
+
+    <title>ANCHOR BAY — ABCC / 2015</title>
+
+    <!--
+        BATCH 02 will add the stylesheet here:
+
+        <link rel="stylesheet" href="style.css">
+    -->
+
 </head>
 
 <body>
@@ -20,27 +40,45 @@
      SITE HEADER
      ========================================================= -->
 
-<header class="site-header">
+<header id="site-header">
 
-    <div class="header-top">
-        <a href="#home" class="site-mark">
-            <span class="mark-small">NEW BALTIMORE</span>
-            <span class="mark-large">2015</span>
-        </a>
+    <div class="site-mark">
 
-        <div class="header-location">
-            <span>ANCHOR BAY</span>
-            <span>MACOMB COUNTY, MI</span>
+        <div class="site-mark-small">
+            ANCHOR BAY
         </div>
+
+        <div class="site-mark-large">
+            ABCC
+        </div>
+
+        <div class="site-mark-subtitle">
+            COMMUNITY COLLEGE / NEW BALTIMORE, MICHIGAN
+        </div>
+
     </div>
 
-    <nav class="main-nav">
 
-        <a href="#people">PEOPLE</a>
+    <!--
+        This is intentionally a normal navigation system.
+        Later, JavaScript will make these switch between
+        sections / overlays without making the page reload.
+    -->
+
+    <nav id="main-navigation" aria-label="Main navigation">
+
+        <a href="#home">HOME</a>
+
+        <a href="#campus">CAMPUS</a>
+
+        <a href="#roster">ROSTER</a>
+
+        <a href="#relationships">RELATIONSHIPS</a>
+
         <a href="#places">PLACES</a>
-        <a href="#nights">NIGHTS</a>
-        <a href="#summer">SUMMER</a>
-        <a href="#school">SCHOOL</a>
+
+        <a href="#events">EVENTS</a>
+
         <a href="#2015">2015</a>
 
     </nav>
@@ -49,255 +87,1654 @@
 
 
 <!-- =========================================================
-     HOME / HERO
+     MAIN
      ========================================================= -->
 
-<main id="home">
+<main id="main-content">
 
-<section class="hero">
+
+<!-- =========================================================
+     HOME
+     ========================================================= -->
+
+<section id="home" class="page-section hero-section">
 
     <div class="hero-copy">
 
-        <p class="eyebrow">
-            NEW BALTIMORE, MICHIGAN
-        </p>
+        <div class="eyebrow">
+            SOUTHEAST MICHIGAN / 2015
+        </div>
 
         <h1>
-            <span>EVERYBODY</span>
-            <span>ENDS UP</span>
-            <span>HERE.</span>
+            ANCHOR<br>
+            BAY
         </h1>
 
-        <p class="hero-description">
-            Anchor Bay. Lake St. Clair. Washington Street.
-            M-29. Somebody's car. Somebody's house.
-            Somebody saying they're only staying for an hour.
+        <p class="hero-dek">
+            A community college. A lake. A small city where everybody
+            knows somebody. A parking lot full of cars that have no
+            reason to still be there.
         </p>
 
-        <div class="hero-meta">
-            <span>2015</span>
-            <span>18–19</span>
-            <span>SUMMER</span>
-            <span>NO DESTINATION</span>
-        </div>
+        <p>
+            This is New Baltimore, Michigan in 2015.
+        </p>
+
+        <p>
+            Not a fictionalized version of some vague Midwestern
+            "small town." Not a rural nowhere. Not a generic college
+            campus dropped into the woods.
+        </p>
+
+        <p>
+            New Baltimore sits on Anchor Bay at the northern end of
+            Lake St. Clair, inside the Metro Detroit orbit. The lake
+            is part of the town's daily geography. Downtown is compact.
+            Houses, storefronts, parks, roads and the waterfront all
+            overlap. People recognize each other. Students see their
+            classmates outside school. Parents know other parents.
+            Somebody's cousin works somewhere you just walked into.
+        </p>
+
+        <p>
+            ABCC sits inside that ecosystem.
+        </p>
+
+        <p class="hero-emphasis">
+            The college is only one place people go.
+        </p>
+
+        <p>
+            After class, people drive.
+        </p>
+
+        <p>
+            Sometimes they have somewhere to be.
+        </p>
+
+        <p>
+            Usually they don't.
+        </p>
 
     </div>
 
-    <div class="hero-side">
 
-        <div class="hero-note">
-            <span class="note-label">LOCAL TIME</span>
-            <strong>10:47 PM</strong>
-            <span>probably still out</span>
+    <!-- =====================================================
+         HERO SIDEBAR
+         ===================================================== -->
+
+    <aside class="hero-side">
+
+        <div class="archive-stamp">
+
+            <span>ARCHIVE</span>
+
+            <strong>
+                NB / 2015
+            </strong>
+
+            <small>
+                ANCHOR BAY<br>
+                COMMUNITY COLLEGE
+            </small>
+
         </div>
 
-        <div class="hero-note">
-            <span class="note-label">CURRENTLY</span>
-            <strong>M-29</strong>
-            <span>windows down</span>
+
+        <div class="hero-facts">
+
+            <div class="fact">
+
+                <span>REGION</span>
+
+                <strong>
+                    MACOMB COUNTY
+                </strong>
+
+            </div>
+
+            <div class="fact">
+
+                <span>WATER</span>
+
+                <strong>
+                    ANCHOR BAY / LAKE ST. CLAIR
+                </strong>
+
+            </div>
+
+            <div class="fact">
+
+                <span>NEAREST MAJOR CITY</span>
+
+                <strong>
+                    DETROIT
+                </strong>
+
+            </div>
+
+            <div class="fact">
+
+                <span>SCHOOL</span>
+
+                <strong>
+                    ABCC / TARS
+                </strong>
+
+            </div>
+
+            <div class="fact">
+
+                <span>YEAR</span>
+
+                <strong>
+                    2015
+                </strong>
+
+            </div>
+
         </div>
 
-    </div>
+    </aside>
 
 </section>
 
 
 <!-- =========================================================
-     INTRO
+     SOUNDTRACK
      ========================================================= -->
 
-<section class="intro section">
-
-    <div class="section-label">
-        <span>01</span>
-        <span>THE PLACE</span>
-    </div>
-
-    <div class="intro-grid">
-
-        <div class="intro-title">
-            <h2>
-                THIS IS<br>
-                NEW BALTIMORE.
-            </h2>
-        </div>
-
-        <div class="intro-copy">
-
-            <p class="large-copy">
-                It's small enough that everybody knows somebody.
-                Big enough that you can disappear for a few hours.
-            </p>
-
-            <p>
-                New Baltimore sits on Anchor Bay at the northern
-                edge of Lake St. Clair, caught somewhere between
-                old waterfront town and suburban Metro Detroit.
-            </p>
-
-            <p>
-                There are streets you know by name, places you
-                don't think twice about, people you keep running
-                into, and stretches of road where nobody asks
-                where you're going.
-            </p>
-
-            <p>
-                Most of the time, there isn't anywhere you need
-                to be.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     PEOPLE
-     ========================================================= -->
-
-<section id="people" class="people section">
-
-    <div class="section-label">
-        <span>02</span>
-        <span>PEOPLE</span>
-    </div>
+<section id="soundtrack" class="page-section soundtrack-section">
 
     <div class="section-heading">
 
-        <h2>
-            YOU KNOW<br>
-            THESE PEOPLE.
-        </h2>
+        <div>
+
+            <div class="eyebrow">
+                LISTEN WHILE YOU'RE HERE
+            </div>
+
+            <h2>
+                NEW BALTIMORE / 2015
+            </h2>
+
+        </div>
 
         <p>
-            Maybe from class. Maybe from the lake.
-            Maybe because they keep showing up wherever
-            everybody else is.
+            The soundtrack for driving around town with nowhere
+            specific to go.
         </p>
 
     </div>
 
 
-    <div class="people-grid">
+    <div class="soundcloud-player">
+
+        <iframe
+            width="100%"
+            height="300"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay; encrypted-media"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2298746358&color=%23dad0dc&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+        </iframe>
+
+        <div class="soundcloud-credit">
+
+            <a
+                href="https://soundcloud.com/user-3934588"
+                title="wren"
+                target="_blank"
+                rel="noopener"
+            >
+                wren
+            </a>
+
+            ·
+
+            <a
+                href="https://soundcloud.com/user-3934588/sets/new-baltimore-2015"
+                title="new baltimore 2015"
+                target="_blank"
+                rel="noopener"
+            >
+                new baltimore 2015
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-        <!-- ROMAN -->
+<!-- =========================================================
+     WHAT IS ANCHOR BAY?
+     ========================================================= -->
 
-        <article class="person-card person-roman">
+<section id="world" class="page-section">
 
-            <div class="person-number">
+    <div class="section-heading">
+
+        <div>
+
+            <div class="eyebrow">
+                THE WORLD
+            </div>
+
+            <h2>
+                SO, WHERE THE HELL ARE WE?
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="longform">
+
+        <p>
+            New Baltimore is a small city on Anchor Bay, part of
+            Lake St. Clair in Macomb County, Michigan. It sits
+            northeast of Detroit and within the larger suburban
+            network of Metro Detroit.
+        </p>
+
+        <p>
+            The city is old enough to have an actual downtown and
+            waterfront history, but suburban enough that the car is
+            still the basic unit of movement. The lake isn't some
+            exotic destination people make a special trip to see.
+            It's simply there.
+        </p>
+
+        <p>
+            You drive toward it.
+        </p>
+
+        <p>
+            You park near it.
+        </p>
+
+        <p>
+            You walk along it.
+        </p>
+
+        <p>
+            You sit on a dock because nobody has anything else to do.
+        </p>
+
+        <p>
+            You go to the festival because everyone else is going.
+        </p>
+
+        <p>
+            You end up in someone's car after class and eventually
+            somebody says they might as well head toward the water.
+        </p>
+
+        <p>
+            That's the social geography of the place.
+        </p>
+
+        <p>
+            Downtown isn't a polished tourist district. It's a
+            working, lived-in part of the city where businesses,
+            houses, streets, parks and the waterfront sit close
+            together. Washington Street forms the main spine of the
+            older downtown. Front Street runs toward the waterfront.
+        </p>
+
+        <p>
+            This physical closeness matters.
+        </p>
+
+        <p>
+            A student can leave ABCC, run into a classmate downtown,
+            grab something to eat, walk toward the water, see somebody
+            else's parents, and wind up sitting on the dock with three
+            people they didn't plan on seeing that day.
+        </p>
+
+        <p>
+            Nobody thinks this is remarkable.
+        </p>
+
+        <p>
+            That's the point.
+        </p>
+
+    </div>
+
+
+    <div class="world-principles">
+
+        <article>
+
+            <span class="number">
                 01
-            </div>
+            </span>
 
-            <div class="person-image placeholder">
-                <span>ROMAN</span>
-            </div>
+            <h3>
+                SMALL DOESN'T MEAN RURAL
+            </h3>
 
-            <div class="person-info">
-
-                <div class="person-name-row">
-                    <h3>ROMAN SCHOLL</h3>
-                    <span>19</span>
-                </div>
-
-                <p class="person-tag">
-                    THE SOCIAL NEXUS
-                </p>
-
-                <p>
-                    Knows everybody. Gets stopped everywhere.
-                    Popular athlete without acting like popularity
-                    is a job.
-                </p>
-
-                <div class="person-details">
-                    <span>ABCC</span>
-                    <span>ATHLETE</span>
-                    <span>SNAPCHAT</span>
-                    <span>CAR</span>
-                </div>
-
-            </div>
+            <p>
+                New Baltimore is a waterfront suburb inside the
+                Metro Detroit orbit. There are subdivisions, commercial
+                corridors, traffic, chain stores, older homes,
+                local businesses, marinas and major highways.
+            </p>
 
         </article>
 
 
-        <!-- TYLER -->
+        <article>
 
-        <article class="person-card person-tyler">
-
-            <div class="person-number">
+            <span class="number">
                 02
-            </div>
+            </span>
 
-            <div class="person-image placeholder">
-                <span>TYLER</span>
-            </div>
+            <h3>
+                EVERYBODY OVERLAPS
+            </h3>
 
-            <div class="person-info">
-
-                <div class="person-name-row">
-                    <h3>TYLER VANCE</h3>
-                    <span>19</span>
-                </div>
-
-                <p class="person-tag">
-                    SUBURBAN BASS TERRORIST
-                </p>
-
-                <p>
-                    Diamond snapback. Columbia half zip.
-                    Sound system loud enough to rattle
-                    the rearview mirror.
-                </p>
-
-                <div class="person-details">
-                    <span>ABCC</span>
-                    <span>TRACK</span>
-                    <span>AUX CORD</span>
-                    <span>MONSTER</span>
-                </div>
-
-            </div>
+            <p>
+                School life doesn't stay at school. Classmates exist
+                at the lake, downtown, at restaurants, at gas stations,
+                at parties, at friends' houses and in the same parking
+                lots.
+            </p>
 
         </article>
 
 
-        <!-- FUTURE -->
+        <article>
 
-        <article class="person-card person-future">
-
-            <div class="person-number">
+            <span class="number">
                 03
-            </div>
+            </span>
 
-            <div class="person-image placeholder">
-                <span>???</span>
-            </div>
+            <h3>
+                THE LAKE IS BACKGROUND
+            </h3>
 
-            <div class="person-info">
-
-                <div class="person-name-row">
-                    <h3>MORE PEOPLE</h3>
-                    <span>SOON</span>
-                </div>
-
-                <p class="person-tag">
-                    EVERYBODY HAS A STORY
-                </p>
-
-                <p>
-                    This isn't a fixed cast.
-                    People come and go. Friends overlap.
-                    Somebody always knows somebody else.
-                </p>
-
-            </div>
+            <p>
+                Anchor Bay should ground scenes without hijacking them.
+                You don't need a dramatic lake scene every time the
+                characters are nearby. Sometimes it's just wind,
+                boats, wet pavement or light on the water.
+            </p>
 
         </article>
+
+
+        <article>
+
+            <span class="number">
+                04
+            </span>
+
+            <h3>
+                THE CAR IS A ROOM
+            </h3>
+
+            <p>
+                Driving is social space. Conversations happen in
+                parked cars. People listen to music. Windows come down.
+                Someone gets distracted and takes the long way home.
+                A car can be private without being isolated.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CAMPUS
+     ========================================================= -->
+
+<section id="campus" class="page-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="eyebrow">
+                ABCC
+            </div>
+
+            <h2>
+                ANCHOR BAY COMMUNITY COLLEGE
+            </h2>
+
+        </div>
+
+        <p>
+            The school is important because people spend time there.
+            It isn't important because the universe revolves around it.
+        </p>
+
+    </div>
+
+
+    <div class="campus-intro">
+
+        <p>
+            ABCC is a small community college serving the surrounding
+            area. Its social scale is completely different from a
+            giant university.
+        </p>
+
+        <p>
+            Classes are small.
+        </p>
+
+        <p>
+            You see the same people.
+        </p>
+
+        <p>
+            You recognize professors.
+        </p>
+
+        <p>
+            Somebody knows somebody who knows you.
+        </p>
+
+        <p>
+            The result is less "college movie" and more
+            <strong>
+                everyone keeps accidentally becoming familiar.
+            </strong>
+        </p>
+
+    </div>
+
+
+    <div class="campus-details">
+
+
+        <article class="info-card">
+
+            <div class="card-label">
+                SCHOOL IDENTITY
+            </div>
+
+            <h3>
+                THE TARS
+            </h3>
+
+            <p>
+                ABCC's school identity is the Tars. School colors
+                are red and white.
+            </p>
+
+            <p>
+                School spirit exists, but this isn't a football
+                movie. It's the kind of school identity that shows
+                up on hoodies, gym clothes, flyers, athletic gear,
+                banners and whatever somebody happened to buy at
+                the bookstore.
+            </p>
+
+        </article>
+
+
+        <article class="info-card">
+
+            <div class="card-label">
+                CLASSROOMS
+            </div>
+
+            <h3>
+                SMALL ROOMS
+            </h3>
+
+            <p>
+                Think desks, not lecture-hall anonymity.
+            </p>
+
+            <p>
+                Students notice who sits where. Professors notice
+                who showed up. People develop little routines without
+                ever officially deciding that they're routines.
+            </p>
+
+        </article>
+
+
+        <article class="info-card">
+
+            <div class="card-label">
+                SOCIAL LIFE
+            </div>
+
+            <h3>
+                THE CAMPUS IS ONLY THE START
+            </h3>
+
+            <p>
+                People leave.
+            </p>
+
+            <p>
+                Someone says they're getting food. Somebody else
+                needs gas. Somebody wants to go downtown. Somebody
+                wants to go to the lake. Somebody says to just get
+                in the car.
+            </p>
+
+            <p>
+                Then the afternoon becomes something else.
+            </p>
+
+        </article>
+
+
+        <article class="info-card">
+
+            <div class="card-label">
+                ACADEMICS
+            </div>
+
+            <h3>
+                CAPABLE ≠ MOTIVATED
+            </h3>
+
+            <p>
+                Roman is perfectly capable of passing his classes.
+                His biggest academic problem is that there are
+                approximately twelve more interesting things happening
+                around him at any given moment.
+            </p>
+
+        </article>
+
+
+        <article class="info-card">
+
+            <div class="card-label">
+                PARKING LOT
+            </div>
+
+            <h3>
+                THE UNOFFICIAL COMMON ROOM
+            </h3>
+
+            <p>
+                The parking lot matters because cars matter.
+            </p>
+
+            <p>
+                People sit in them before class. After class.
+                During breaks. While waiting for someone. While
+                pretending they're about to leave.
+            </p>
+
+        </article>
+
+
+        <article class="info-card">
+
+            <div class="card-label">
+                SOCIAL RULE
+            </div>
+
+            <h3>
+                YOU WILL RUN INTO SOMEONE
+            </h3>
+
+            <p>
+                This is a small community. Not every encounter is
+                important. Most aren't.
+            </p>
+
+            <p>
+                That's what makes them useful.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ROSTER INTRO
+     ========================================================= -->
+
+<section id="roster" class="page-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="eyebrow">
+                STUDENT DIRECTORY
+            </div>
+
+            <h2>
+                ROSTER
+            </h2>
+
+        </div>
+
+        <p>
+            The people who turn a place into a social ecosystem.
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         ROMAN
+         ===================================================== -->
+
+    <article
+        id="roman"
+        class="character-profile character-roman"
+    >
+
+        <div class="character-image-column">
+
+            <figure class="character-main-image">
+
+                <img
+                    src="https://ella.janitorai.com/media-approved/khVzUELFAEzqKw36bc1mi.webp"
+                    alt="Roman Scholl"
+                >
+
+            </figure>
+
+
+            <div class="character-sticker-row">
+
+                <img
+                    src="https://ella.janitorai.com/media-approved/r2Rp8nYy1TOylkJdeUGLG.webp"
+                    alt="Roman Scholl smiling"
+                >
+
+                <img
+                    src="https://ella.janitorai.com/media-approved/LhjiRzmpmlikRHkVtY8fk.webp"
+                    alt="Roman Scholl transparent iPhone sticker"
+                >
+
+                <img
+                    src="https://ella.janitorai.com/media-approved/bGjzIscxbj0KPOuAFdB6o.webp"
+                    alt="Roman Scholl desk sticker"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="character-copy">
+
+            <div class="character-id">
+
+                <div class="eyebrow">
+                    STUDENT / ATHLETE
+                </div>
+
+                <h3>
+                    ROMAN SCHOLL
+                </h3>
+
+                <div class="character-subtitle">
+                    THE SOCIAL NEXUS
+                </div>
+
+            </div>
+
+
+            <div class="character-quickfacts">
+
+                <span>
+                    19
+                </span>
+
+                <span>
+                    FRESHMAN
+                </span>
+
+                <span>
+                    ATHLETE
+                </span>
+
+                <span>
+                    AUGUST 8
+                </span>
+
+                <span>
+                    LEO
+                </span>
+
+                <span>
+                    ESFP
+                </span>
+
+                <span>
+                    7w8
+                </span>
+
+            </div>
+
+
+            <p class="character-lead">
+                Roman is the guy who occupies every room he walks
+                into without trying to.
+            </p>
+
+            <p>
+                He isn't "popular" because he's constantly trying to
+                prove something. He doesn't need a crowd around him
+                to feel important.
+            </p>
+
+            <p>
+                He just knows people.
+            </p>
+
+            <p>
+                Professors.
+            </p>
+
+            <p>
+                Baristas.
+            </p>
+
+            <p>
+                Neighbors.
+            </p>
+
+            <p>
+                Classmates.
+            </p>
+
+            <p>
+                Somebody's cousin.
+            </p>
+
+            <p>
+                The person working somewhere he stopped once six
+                months ago.
+            </p>
+
+            <p>
+                He remembers names and bizarrely specific details
+                about people he's met once.
+            </p>
+
+            <p>
+                To everyone else, Roman looks socially connected.
+            </p>
+
+            <p>
+                To Roman, he's just existing.
+            </p>
+
+            <p class="character-punchline">
+                To him, this isn't fame.
+                <br>
+                It's Tuesday.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             ROMAN PERSONALITY
+             ================================================= -->
+
+        <div class="character-section">
+
+            <div class="eyebrow">
+                PERSONALITY
+            </div>
+
+            <h4>
+                CHAOTIC GOOD, ISH
+            </h4>
+
+            <p>
+                Roman has almost no respect for arbitrary rules.
+                He doesn't wake up planning to cause problems.
+                He simply doesn't understand why everyone else
+                is acting like every rule needs to be followed.
+            </p>
+
+            <p>
+                He is present-oriented, tactile, restless and
+                stimulation-seeking.
+            </p>
+
+            <p>
+                Boredom bothers him more than most actual problems.
+            </p>
+
+            <p>
+                Being ignored bothers him even more.
+            </p>
+
+            <p>
+                If Roman is in the room, he expects to be seen.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             ROMAN PHYSICALITY
+             ================================================= -->
+
+        <div class="character-section">
+
+            <div class="eyebrow">
+                PHYSICALITY
+            </div>
+
+            <h4>
+                HE DOES NOT UNDERSTAND PERSONAL SPACE
+            </h4>
+
+            <p>
+                Roman moves like someone who assumes the people
+                around him are already comfortable with him.
+            </p>
+
+            <p>
+                He is relaxed, confident and physically familiar.
+                If he likes somebody, he gets close.
+            </p>
+
+            <p>
+                Touch is casual for him.
+            </p>
+
+            <p>
+                Leaning against somebody.
+                Sitting too close.
+                Throwing an arm over a shoulder.
+                Stealing food.
+                Asking for a massage like this is a completely
+                reasonable request.
+            </p>
+
+            <p>
+                He will deny having a "love language" while
+                demonstrating physical touch approximately
+                every thirty seconds.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             ROMAN TASTE
+             ================================================= -->
+
+        <div class="character-section">
+
+            <div class="eyebrow">
+                LIFESTYLE
+            </div>
+
+            <h4>
+                THE IMPORTANT SHIT
+            </h4>
+
+            <div class="detail-list">
+
+                <div>
+                    <span>
+                        MUSIC
+                    </span>
+
+                    <strong>
+                        Rap first. Whatever's playing second.
+                    </strong>
+
+                </div>
+
+
+                <div>
+                    <span>
+                        FOOD
+                    </span>
+
+                    <strong>
+                        Chicken tenders + fries.
+                    </strong>
+
+                </div>
+
+
+                <div>
+                    <span>
+                        DRINK
+                    </span>
+
+                    <strong>
+                        Sprite / whatever gas-station concoction
+                        exists at the moment.
+                    </strong>
+
+                </div>
+
+
+                <div>
+                    <span>
+                        COLOR
+                    </span>
+
+                    <strong>
+                        Black.
+                    </strong>
+
+                </div>
+
+
+                <div>
+                    <span>
+                        PHONE
+                    </span>
+
+                    <strong>
+                        iPhone 6.
+                    </strong>
+
+                </div>
+
+
+                <div>
+                    <span>
+                        COMMUNICATION
+                    </span>
+
+                    <strong>
+                        Snapchat first. Texting when necessary.
+                    </strong>
+
+                </div>
+
+
+                <div>
+                    <span>
+                        VEHICLE
+                    </span>
+
+                    <strong>
+                        A nice sedan his parents bought.
+                    </strong>
+
+                </div>
+
+
+                <div>
+                    <span>
+                        HANDWRITING
+                    </span>
+
+                    <strong>
+                        Horrific.
+                    </strong>
+
+                </div>
+
+
+                <div>
+                    <span>
+                        WORST HABIT
+                    </span>
+
+                    <strong>
+                        Taking food off other people's plates.
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             ROMAN DIGITAL LIFE
+             ================================================= -->
+
+        <div class="character-section">
+
+            <div class="eyebrow">
+                2015 INTERNET
+            </div>
+
+            <h4>
+                ROMAN ONLINE
+            </h4>
+
+            <p>
+                Roman's phone is an iPhone 6.
+            </p>
+
+            <p>
+                Snapchat is his primary communication method.
+            </p>
+
+            <p>
+                He sends pictures instead of explanations.
+            </p>
+
+            <p>
+                His Instagram is active and full of group photos,
+                sports pictures, random selfies and evidence that
+                he was somewhere with somebody.
+            </p>
+
+            <p>
+                He doesn't need a carefully maintained online
+                identity because his actual social life already
+                exists around him.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             ROMAN / TYLER
+             ================================================= -->
+
+        <div class="character-section relationship-highlight">
+
+            <div class="eyebrow">
+                BEST FRIEND
+            </div>
+
+            <h4>
+                ROMAN + TYLER
+            </h4>
+
+            <p>
+                Roman is the spark.
+            </p>
+
+            <p>
+                Tyler is gasoline.
+            </p>
+
+            <p>
+                Roman says,
+                <strong>
+                    "Let's go."
+                </strong>
+            </p>
+
+            <p>
+                Tyler is already looking for the keys.
+            </p>
+
+            <p>
+                Neither of them has a particularly strong reason
+                for whatever they're about to do.
+            </p>
+
+            <p>
+                This is normal.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         TYLER
+         ===================================================== -->
+
+    <article
+        id="tyler"
+        class="character-profile character-tyler"
+    >
+
+        <div class="character-image-column">
+
+            <figure class="character-main-image">
+
+                <img
+                    src="https://ella.janitorai.com/media-approved/eg3AxdiHmo2J13eOnrcxK.webp"
+                    alt="Tyler Vance at a gas station"
+                >
+
+            </figure>
+
+        </div>
+
+
+        <div class="character-copy">
+
+            <div class="character-id">
+
+                <div class="eyebrow">
+                    STUDENT / ROMAN'S BEST FRIEND
+                </div>
+
+                <h3>
+                    TYLER VANCE
+                </h3>
+
+                <div class="character-subtitle">
+                    THE SUBURBAN BASS TERRORIST
+                </div>
+
+            </div>
+
+
+            <p class="character-lead">
+                Tyler is loud enough to arrive before his car does.
+            </p>
+
+            <p>
+                Lean, restless and permanently five seconds away
+                from doing something stupid, Tyler doesn't really
+                know how to sit still.
+            </p>
+
+            <p>
+                His knee bounces.
+            </p>
+
+            <p>
+                His fingers tap the steering wheel.
+            </p>
+
+            <p>
+                His music is too loud.
+            </p>
+
+            <p>
+                His phone is full of Vine clips.
+            </p>
+
+            <p>
+                His definition of a good idea becomes increasingly
+                questionable the longer Roman is around.
+            </p>
+
+        </div>
+
+
+        <div class="character-section">
+
+            <div class="eyebrow">
+                VISUAL
+            </div>
+
+            <h4>
+                THE 2015 SUBURBAN ATHLETE UNIFORM
+            </h4>
+
+            <p>
+                Diamond Supply Co. snapback.
+            </p>
+
+            <p>
+                Columbia half zip.
+            </p>
+
+            <p>
+                Graphic tees.
+            </p>
+
+            <p>
+                Track pants.
+            </p>
+
+            <p>
+                Nike or Jordan.
+            </p>
+
+            <p>
+                Absolutely no interest in looking "indie."
+            </p>
+
+        </div>
+
+
+        <div class="character-section">
+
+            <div class="eyebrow">
+                VEHICLE
+            </div>
+
+            <h4>
+                THE MOBILE DISTRACTION
+            </h4>
+
+            <p>
+                An ordinary sedan with a wildly disproportionate
+                sound system.
+            </p>
+
+            <p>
+                The trunk is basically subwoofers, gym shit,
+                chargers and empty Monster cans.
+            </p>
+
+            <p>
+                The rearview mirror never stops vibrating.
+            </p>
+
+            <p>
+                You hear Tyler before you see Tyler.
+            </p>
+
+        </div>
+
+
+        <div class="character-section">
+
+            <div class="eyebrow">
+                SOUND
+            </div>
+
+            <h4>
+                HE DOES NOT LISTEN TO MUSIC.
+            </h4>
+
+            <p>
+                He weaponizes it.
+            </p>
+
+            <p>
+                Chief Keef.
+                Q.
+                YG.
+                Shmurda.
+            </p>
+
+            <p>
+                2015 rap at a volume that makes normal conversation
+                physically unnecessary.
+            </p>
+
+        </div>
+
+
+        <div class="character-section">
+
+            <div class="eyebrow">
+                TYLER + ROMAN
+            </div>
+
+            <h4>
+                LOUDER THAN NECESSARY
+            </h4>
+
+            <p>
+                Roman gets bored.
+            </p>
+
+            <p>
+                Tyler hears about it.
+            </p>
+
+            <p>
+                Somebody gets in the car.
+            </p>
+
+            <p>
+                The music goes up.
+            </p>
+
+            <p>
+                They drive.
+            </p>
+
+            <p>
+                Eventually they figure out what they're doing.
+            </p>
+
+        </div>
+
+    </article>
+
+</section>
+
+
+<!-- =========================================================
+     VISUAL ASSET WALL
+     ========================================================= -->
+
+<section id="assets" class="page-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="eyebrow">
+                ARCHIVE / VISUAL MATERIAL
+            </div>
+
+            <h2>
+                LITTLE PIECES OF THE WORLD
+            </h2>
+
+        </div>
+
+        <p>
+            The stickers, objects and stupid little visual details
+            that make the universe feel lived in.
+        </p>
+
+    </div>
+
+
+    <div class="asset-wall">
+
+
+        <figure>
+
+            <img
+                src="https://ella.janitorai.com/media-approved/6fGtSGWHTyoupeqWmdXDC.webp"
+                alt="Car sticker facing right"
+            >
+
+            <figcaption>
+                CAR / RIGHT
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://ella.janitorai.com/media-approved/nQsB07aXC0KSF746TF2kP.webp"
+                alt="Car with windows down and music"
+            >
+
+            <figcaption>
+                WINDOWS DOWN / MUSIC
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://ella.janitorai.com/media-approved/mMDe9WehPIH565pktLHXO.webp"
+                alt="Vertical iPhone 6 sticker"
+            >
+
+            <figcaption>
+                IPHONE 6
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://ella.janitorai.com/media-approved/HU3fTC6xC-a1JWcPywgbb.webp"
+                alt="AUX cord"
+            >
+
+            <figcaption>
+                THE AUX CORD
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://ella.janitorai.com/media-approved/JbXc3DknGlgsxyh9kPwif.webp"
+                alt="I'm fine sticker"
+            >
+
+            <figcaption>
+                I'M FINE
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://ella.janitorai.com/media-approved/JfxOqc9sDsp4z-Y_PZ4XI.webp"
+                alt="Ugly red Tumblr heart"
+            >
+
+            <figcaption>
+                UGLY RED TUMBLR HEART
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://ella.janitorai.com/media-approved/c1kx3ieLDQRjlS3sLqwPM.webp"
+                alt="Car sticker facing left"
+            >
+
+            <figcaption>
+                CAR / LEFT
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://ella.janitorai.com/media-approved/4rDwl1QF8MFeNdzK9bVu6.webp"
+                alt="Fishfly facing left"
+            >
+
+            <figcaption>
+                FISHFLY / LEFT
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://ella.janitorai.com/media-approved/P6Wgzk4ismmItUkdKxazk.webp"
+                alt="Fishfly facing right"
+            >
+
+            <figcaption>
+                FISHFLY / RIGHT
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://ella.janitorai.com/media-approved/-hNPi7ajoZa159HTE5XyO.webp"
+                alt="Fishfly swarm"
+            >
+
+            <figcaption>
+                FISHFLY SWARM / 01
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://ella.janitorai.com/media-approved/BCd2_a38CgImnWXdUuzKi.webp"
+                alt="Fishfly swarm"
+            >
+
+            <figcaption>
+                FISHFLY SWARM / 02
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://ella.janitorai.com/media-approved/XaKLekBFYxKSOItdj-e7M.webp"
+                alt="Fishfly with party hat"
+            >
+
+            <figcaption>
+                FISHFLY / PARTY HAT
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://ella.janitorai.com/media-approved/o09O7wSpXSzPF4d1ZVzvt.webp"
+                alt="Fishfly with party hat facing left"
+            >
+
+            <figcaption>
+                FISHFLY / PARTY HAT LEFT
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     RELATIONSHIPS
+     ========================================================= -->
+
+<section id="relationships" class="page-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="eyebrow">
+                SOCIAL GRAPH
+            </div>
+
+            <h2>
+                RELATIONSHIPS
+            </h2>
+
+        </div>
+
+        <p>
+            The important thing isn't who is connected to whom.
+            It's how much everybody's lives overlap.
+        </p>
+
+    </div>
+
+
+    <div class="relationship-intro">
+
+        <p>
+            Roman sits close to the center of the social ecosystem
+            because he knows an unreasonable number of people.
+        </p>
+
+        <p>
+            Tyler is the obvious connection: best friend, accomplice,
+            volume control set permanently to "too much."
+        </p>
+
+        <p>
+            Other connections will be added as the roster expands.
+        </p>
+
+    </div>
+
+
+    <div id="relationship-web">
+
+        <div class="relationship-node roman-node">
+
+            <strong>
+                ROMAN
+            </strong>
+
+            <span>
+                SOCIAL NEXUS
+            </span>
+
+        </div>
+
+
+        <div class="relationship-node tyler-node">
+
+            <strong>
+                TYLER
+            </strong>
+
+            <span>
+                BEST FRIEND
+            </span>
+
+        </div>
+
+
+        <div class="relationship-node future-node-one">
+
+            <strong>
+                ?
+            </strong>
+
+            <span>
+                FRIEND
+            </span>
+
+        </div>
+
+
+        <div class="relationship-node future-node-two">
+
+            <strong>
+                ?
+            </strong>
+
+            <span>
+                CLASSMATE
+            </span>
+
+        </div>
+
+
+        <div class="relationship-node future-node-three">
+
+            <strong>
+                ?
+            </strong>
+
+            <span>
+                CAMPUS
+            </span>
+
+        </div>
 
     </div>
 
@@ -308,550 +1745,965 @@
      PLACES
      ========================================================= -->
 
-<section id="places" class="places section">
-
-    <div class="section-label">
-        <span>03</span>
-        <span>PLACES</span>
-    </div>
+<section id="places" class="page-section">
 
     <div class="section-heading">
 
-        <h2>
-            NOWHERE<br>
-            SPECIAL.
-        </h2>
+        <div>
 
-        <p>
-            Which is exactly why everybody goes there.
-        </p>
-
-    </div>
-
-
-    <div class="places-list">
-
-
-        <article class="place-row">
-
-            <div class="place-number">01</div>
-
-            <div class="place-main">
-
-                <h3>M-29</h3>
-
-                <p class="place-type">
-                    LAKESHORE ROUTE
-                </p>
-
-                <p>
-                    Two lanes. Trees. Driveways.
-                    Flickering roadside businesses.
-                    Lake St. Clair appearing between
-                    the gaps like you're being reminded
-                    where you are.
-                </p>
-
+            <div class="eyebrow">
+                NEW BALTIMORE
             </div>
-
-            <div class="place-side">
-                <span>NO DESTINATION</span>
-                <span>WINDOWS DOWN</span>
-            </div>
-
-        </article>
-
-
-        <article class="place-row">
-
-            <div class="place-number">02</div>
-
-            <div class="place-main">
-
-                <h3>FRONT STREET</h3>
-
-                <p class="place-type">
-                    WATERFRONT
-                </p>
-
-                <p>
-                    Boats. Wind. Parking. The bay.
-                    Somewhere to sit when nobody wants
-                    to go home yet.
-                </p>
-
-            </div>
-
-            <div class="place-side">
-                <span>LAKE ST. CLAIR</span>
-                <span>AFTER DARK</span>
-            </div>
-
-        </article>
-
-
-        <article class="place-row">
-
-            <div class="place-number">03</div>
-
-            <div class="place-main">
-
-                <h3>BURKE PARK</h3>
-
-                <p class="place-type">
-                    WATERFRONT / TOWN CENTER
-                </p>
-
-                <p>
-                    Families, teenagers, fishermen,
-                    couples, kids, fireworks, summer
-                    events, and somebody always walking
-                    down toward the dock.
-                </p>
-
-            </div>
-
-            <div class="place-side">
-                <span>THE BAY</span>
-                <span>THE DOCK</span>
-            </div>
-
-        </article>
-
-
-        <article class="place-row">
-
-            <div class="place-number">04</div>
-
-            <div class="place-main">
-
-                <h3>WASHINGTON STREET</h3>
-
-                <p class="place-type">
-                    DOWNTOWN
-                </p>
-
-                <p>
-                    Older buildings. Local businesses.
-                    People you know. People who know
-                    your parents. The place where
-                    running into somebody is inevitable.
-                </p>
-
-            </div>
-
-            <div class="place-side">
-                <span>DOWNTOWN</span>
-                <span>EVERYBODY KNOWS</span>
-            </div>
-
-        </article>
-
-
-        <article class="place-row">
-
-            <div class="place-number">05</div>
-
-            <div class="place-main">
-
-                <h3>ANCHOR BAY</h3>
-
-                <p class="place-type">
-                    LAKE ST. CLAIR
-                </p>
-
-                <p>
-                    The water is always there.
-                    Sometimes that's the whole point.
-                </p>
-
-            </div>
-
-            <div class="place-side">
-                <span>BOATS</span>
-                <span>WIND</span>
-            </div>
-
-        </article>
-
-
-        <article class="place-row">
-
-            <div class="place-number">06</div>
-
-            <div class="place-main">
-
-                <h3>FESTIVAL PARK</h3>
-
-                <p class="place-type">
-                    FIELDS / SPORTS / OPEN SPACE
-                </p>
-
-                <p>
-                    Grass, dirt, chain-link diamonds,
-                    portable bleachers, hot asphalt,
-                    whistles and bats.
-                </p>
-
-            </div>
-
-            <div class="place-side">
-                <span>DAYTIME</span>
-                <span>AFTER PRACTICE</span>
-            </div>
-
-        </article>
-
-
-        <article class="place-row">
-
-            <div class="place-number">07</div>
-
-            <div class="place-main">
-
-                <h3>THE ROADS HOME</h3>
-
-                <p class="place-type">
-                    RESIDENTIAL NEW BALTIMORE
-                </p>
-
-                <p>
-                    Cul-de-sacs. Driveways.
-                    Porch lights. Somebody's garage.
-                    The places where the night eventually
-                    ends.
-                </p>
-
-            </div>
-
-            <div class="place-side">
-                <span>LOCAL</span>
-                <span>FAMILIAR</span>
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     NIGHTS
-     ========================================================= -->
-
-<section id="nights" class="nights section">
-
-    <div class="section-label">
-        <span>04</span>
-        <span>NIGHTS</span>
-    </div>
-
-    <div class="night-feature">
-
-        <div class="night-feature-main">
-
-            <p class="eyebrow">
-                11:38 PM / SOMEWHERE OFF M-29
-            </p>
 
             <h2>
-                WHERE<br>
-                ARE WE<br>
-                GOING?
+                PLACES
             </h2>
 
-            <p>
-                Doesn't matter.
-            </p>
-
         </div>
-
-        <div class="night-feature-side">
-
-            <p>
-                The car smells like somebody's
-                deodorant, fast food, and whatever
-                air freshener has been hanging from
-                the mirror for six months.
-            </p>
-
-            <p>
-                The music is too loud.
-                Nobody can hear Tyler talking.
-                Roman is laughing anyway.
-            </p>
-
-            <p>
-                Lake St. Clair keeps appearing through
-                the trees.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="night-list">
-
-        <div>
-            <span>01</span>
-            <strong>DRIVE UNTIL SOMEONE SAYS STOP</strong>
-        </div>
-
-        <div>
-            <span>02</span>
-            <strong>PARK SOMEWHERE FOR NO REASON</strong>
-        </div>
-
-        <div>
-            <span>03</span>
-            <strong>END UP AT THE WATER</strong>
-        </div>
-
-        <div>
-            <span>04</span>
-            <strong>SOMEONE'S HOUSE AFTER MIDNIGHT</strong>
-        </div>
-
-        <div>
-            <span>05</span>
-            <strong>GET FOOD</strong>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     SUMMER
-     ========================================================= -->
-
-<section id="summer" class="summer section">
-
-    <div class="section-label">
-        <span>05</span>
-        <span>SUMMER</span>
-    </div>
-
-    <div class="summer-header">
-
-        <h2>
-            SUMMER<br>
-            IN ANCHOR BAY.
-        </h2>
 
         <p>
-            Hot pavement. Lake wind.
-            Fried food. Boats. Fireworks.
-            Everybody outside.
+            The world outside the classroom.
         </p>
 
     </div>
 
 
-    <div class="summer-grid">
+    <!-- =====================================================
+         DOWNTOWN
+         ===================================================== -->
 
+    <article class="location-profile">
 
-        <article class="summer-card">
+        <div class="location-number">
+            01
+        </div>
 
-            <span class="summer-number">01</span>
+        <div class="location-copy">
 
-            <h3>BAY-RAMA</h3>
+            <div class="eyebrow">
+                DOWNTOWN
+            </div>
+
+            <h3>
+                NEW BALTIMORE
+            </h3>
 
             <p>
-                Five days of carnival rides,
-                food stands, live music, fireworks,
-                families, teenagers, volunteers,
-                and everybody knowing everybody.
+                Downtown is the old core of the city.
             </p>
 
-        </article>
+            <p>
+                Older buildings sit close to the sidewalk. Businesses,
+                homes, streets and the waterfront occupy the same
+                compact space. It is walkable without pretending
+                to be some curated little tourist village.
+            </p>
+
+            <p>
+                It feels lived in.
+            </p>
+
+            <p>
+                There are errands.
+            </p>
+
+            <p>
+                Restaurants.
+            </p>
+
+            <p>
+                Local businesses.
+            </p>
+
+            <p>
+                People who recognize each other.
+            </p>
+
+            <p>
+                Students who came downtown for one thing and somehow
+                ended up doing something else.
+            </p>
+
+            <div class="location-rule">
+                DOWNTOWN IS THE COLLISION ZONE.
+            </div>
+
+            <p>
+                It is where school life and local life constantly
+                run into each other.
+            </p>
+
+        </div>
+
+    </article>
 
 
-        <article class="summer-card">
+    <!-- =====================================================
+         WASHINGTON
+         ===================================================== -->
 
-            <span class="summer-number">02</span>
+    <article class="location-profile">
 
-            <h3>FISHFLY SEASON</h3>
+        <div class="location-number">
+            02
+        </div>
+
+        <div class="location-copy">
+
+            <div class="eyebrow">
+                MAIN STREET / DOWNTOWN SPINE
+            </div>
+
+            <h3>
+                WASHINGTON STREET
+            </h3>
+
+            <p>
+                Washington Street is the everyday downtown artery.
+            </p>
+
+            <p>
+                Not glamorous.
+            </p>
+
+            <p>
+                Not a movie set.
+            </p>
+
+            <p>
+                Just town.
+            </p>
+
+            <p>
+                Older buildings and local businesses create a tighter,
+                more enclosed feeling than the open waterfront.
+            </p>
+
+            <p>
+                Students walk it.
+                Parents run errands.
+                Locals recognize people.
+                Somebody pulls over because they know somebody.
+            </p>
+
+            <p>
+                Roman is particularly bad at being anonymous here.
+            </p>
+
+            <p>
+                He knows someone.
+            </p>
+
+            <p>
+                Someone knows him.
+            </p>
+
+            <p>
+                Somebody says his name from across the street.
+            </p>
+
+            <div class="location-rule">
+                NOTHING HERE NEEDS TO BE A PLOT.
+            </div>
+
+            <p>
+                A random encounter is enough.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         FRONT
+         ===================================================== -->
+
+    <article class="location-profile">
+
+        <div class="location-number">
+            03
+        </div>
+
+        <div class="location-copy">
+
+            <div class="eyebrow">
+                WATERFRONT
+            </div>
+
+            <h3>
+                FRONT STREET
+            </h3>
+
+            <p>
+                Front Street is the transition between downtown and
+                the water.
+            </p>
+
+            <p>
+                Washington Street feels enclosed and urban.
+            </p>
+
+            <p>
+                Front Street opens up.
+            </p>
+
+            <p>
+                You get boats.
+            </p>
+
+            <p>
+                Water.
+            </p>
+
+            <p>
+                Wind.
+            </p>
+
+            <p>
+                More sky.
+            </p>
+
+            <p>
+                It is one of the natural places for a scene to
+                decompress without announcing that it is becoming
+                an Important Scene.
+            </p>
+
+            <p>
+                Somebody can park.
+            </p>
+
+            <p>
+                Somebody can walk.
+            </p>
+
+            <p>
+                Somebody can stare at the water while the conversation
+                keeps going.
+            </p>
+
+            <div class="location-rule">
+                END UP AT THE WATER.
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         BURKE PARK
+         ===================================================== -->
+
+    <article class="location-profile featured-location">
+
+        <div class="location-number">
+            04
+        </div>
+
+        <div class="location-copy">
+
+            <div class="eyebrow">
+                WATERFRONT / ANCHOR BAY
+            </div>
+
+            <h3>
+                WALTER &amp; MARY BURKE PARK
+            </h3>
+
+            <p>
+                Burke Park is the town's living room.
+            </p>
+
+            <p>
+                It is a public waterfront space where the city and
+                the bay meet.
+            </p>
+
+            <p>
+                Beach.
+                Boardwalk.
+                Picnic areas.
+                Fishing.
+                Swimming.
+                Playground.
+                Pavilion.
+                Volleyball.
+                Benches.
+                Dock.
+            </p>
+
+            <p>
+                The dock extends into the bay.
+            </p>
+
+            <p>
+                The park is not magically empty because two characters
+                need privacy. It is a real public place. Families are
+                around. Teenagers are around. Fishermen are around.
+                People are walking.
+            </p>
+
+            <p>
+                Sometimes there are simply people sitting there because
+                they don't have anything better to do.
+            </p>
+
+            <p>
+                During major events, it becomes even more crowded.
+            </p>
+
+            <div class="location-rule">
+                2015 VISUAL LANDMARK: THE OLD RED WATER TOWER.
+            </div>
+
+            <p>
+                The later giant flagpole does not belong in the 2015
+                version of this world. The historic water tower is
+                the landmark to use for the setting's 2015 visual
+                identity.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         ANCHOR BAY
+         ===================================================== -->
+
+    <article class="location-profile">
+
+        <div class="location-number">
+            05
+        </div>
+
+        <div class="location-copy">
+
+            <div class="eyebrow">
+                LAKE ST. CLAIR
+            </div>
+
+            <h3>
+                ANCHOR BAY
+            </h3>
+
+            <p>
+                The bay is not a magical destination.
+            </p>
+
+            <p>
+                It is the constant.
+            </p>
+
+            <p>
+                Boats.
+            </p>
+
+            <p>
+                Docks.
+            </p>
+
+            <p>
+                Swimmers.
+            </p>
+
+            <p>
+                Wind.
+            </p>
+
+            <p>
+                Lake smell.
+            </p>
+
+            <p>
+                Sunscreen.
+            </p>
+
+            <p>
+                Cut grass.
+            </p>
+
+            <p>
+                Food cooking somewhere nearby.
+            </p>
+
+            <p>
+                Wet pavement after a summer storm.
+            </p>
+
+            <p>
+                A distant boat engine.
+            </p>
+
+            <p>
+                Light reflecting off the water.
+            </p>
+
+            <div class="location-rule">
+                THE LAKE IS PART OF THE WEATHER.
+            </div>
+
+            <p>
+                It should ground the setting without taking over
+                every scene.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         M-29
+         ===================================================== -->
+
+    <article class="location-profile">
+
+        <div class="location-number">
+            06
+        </div>
+
+        <div class="location-copy">
+
+            <div class="eyebrow">
+                LAKESHORE ROAD
+            </div>
+
+            <h3>
+                M-29
+            </h3>
+
+            <p>
+                M-29 is the road you take when you want to keep moving
+                without necessarily wanting to go somewhere.
+            </p>
+
+            <p>
+                It follows the lakeshore through the broader area,
+                connecting stretches of residential streets,
+                businesses and glimpses of the water.
+            </p>
+
+            <p>
+                At night, streetlights pass across the windshield.
+            </p>
+
+            <p>
+                The road is familiar enough that somebody can drive
+                it without thinking.
+            </p>
+
+            <p>
+                That makes it useful.
+            </p>
+
+            <p>
+                A car can become its own little room while the world
+                moves past outside.
+            </p>
+
+            <div class="location-rule">
+                NO DESTINATION REQUIRED.
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         I-94
+         ===================================================== -->
+
+    <article class="location-profile">
+
+        <div class="location-number">
+            07
+        </div>
+
+        <div class="location-copy">
+
+            <div class="eyebrow">
+                INTERSTATE
+            </div>
+
+            <h3>
+                I-94
+            </h3>
+
+            <p>
+                I-94 is not scenic.
+            </p>
+
+            <p>
+                It is infrastructure.
+            </p>
+
+            <p>
+                Concrete.
+                Signs.
+                Traffic.
+                Billboards.
+                Headlights.
+                Tire noise.
+            </p>
+
+            <p>
+                It connects New Baltimore to the larger Metro Detroit
+                region and toward Port Huron.
+            </p>
+
+            <p>
+                It is what you use when you're actually going somewhere.
+            </p>
+
+            <p>
+                It is also what you use when you need to get the hell
+                out of town for a while.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         23 / 24 MILE
+         ===================================================== -->
+
+    <article class="location-profile">
+
+        <div class="location-number">
+            08
+        </div>
+
+        <div class="location-copy">
+
+            <div class="eyebrow">
+                SUBURBAN FRINGE
+            </div>
+
+            <h3>
+                23 / 24 MILE ROAD
+            </h3>
+
+            <p>
+                The farther you move toward the broader commercial
+                corridors, the less distinct the old waterfront town
+                feels.
+            </p>
+
+            <p>
+                Wide roads.
+            </p>
+
+            <p>
+                Big parking lots.
+            </p>
+
+            <p>
+                Chain stores.
+            </p>
+
+            <p>
+                Fast food.
+            </p>
+
+            <p>
+                Newer subdivisions.
+            </p>
+
+            <p>
+                Construction.
+            </p>
+
+            <p>
+                This is the suburban infrastructure surrounding
+                New Baltimore's older core.
+            </p>
+
+            <p>
+                It's where you go when you need something practical.
+            </p>
+
+            <p>
+                It isn't where the town feels most like itself.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         RESIDENTIAL
+         ===================================================== -->
+
+    <article class="location-profile">
+
+        <div class="location-number">
+            09
+        </div>
+
+        <div class="location-copy">
+
+            <div class="eyebrow">
+                NEIGHBORHOODS
+            </div>
+
+            <h3>
+                THE RESIDENTIAL STREETS
+            </h3>
+
+            <p>
+                New Baltimore's residential areas aren't one uniform
+                subdivision.
+            </p>
+
+            <p>
+                There are older houses closer to the established
+                downtown fabric and newer suburban developments
+                farther out.
+            </p>
+
+            <p>
+                Some streets are busy.
+            </p>
+
+            <p>
+                Some are quiet.
+            </p>
+
+            <p>
+                Some dead-end into little wooded pockets where
+                teenagers can park without feeling like the entire
+                town is watching.
+            </p>
+
+            <p>
+                These places matter because not every private moment
+                needs to happen somewhere dramatic.
+            </p>
+
+            <div class="location-rule">
+                SOMETIMES IT'S JUST A CAR AT THE END OF A ROAD.
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <!-- =====================================================
+         FESTIVAL PARK
+         ===================================================== -->
+
+    <article class="location-profile">
+
+        <div class="location-number">
+            10
+        </div>
+
+        <div class="location-copy">
+
+            <div class="eyebrow">
+                SPORTS / RESIDENTIAL EDGE
+            </div>
+
+            <h3>
+                FESTIVAL PARK
+            </h3>
+
+            <p>
+                Festival Park is different from the waterfront.
+            </p>
+
+            <p>
+                Less downtown.
+                Less spectacle.
+                More open suburban space.
+            </p>
+
+            <p>
+                In the 2015 setting, it has the feeling of a community
+                project still taking shape: grassy fields, baseball
+                diamonds, fencing, gravel and parking, youth sports,
+                families and the general sound of people doing normal
+                suburban things.
+            </p>
+
+            <p>
+                It is a good place for Roman and his friends because
+                nobody needs to explain why they are there.
+            </p>
+
+            <p>
+                They can just be there.
+            </p>
+
+        </div>
+
+    </article>
+
+</section>
+
+
+<!-- =========================================================
+     EVENTS
+     ========================================================= -->
+
+<section id="events" class="page-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="eyebrow">
+                SEASONAL
+            </div>
+
+            <h2>
+                BAY-RAMA / FISHFLY SEASON
+            </h2>
+
+        </div>
+
+        <p>
+            Late June turns the entire waterfront into a community
+            event whether you planned on participating or not.
+        </p>
+
+    </div>
+
+
+    <div class="event-profile">
+
+        <div class="event-title">
+
+            <span>
+                FIVE DAYS
+            </span>
+
+            <strong>
+                BAY-RAMA
+            </strong>
+
+            <small>
+                FISHFLY FESTIVAL
+            </small>
+
+        </div>
+
+
+        <div class="event-copy">
+
+            <p>
+                Bay-Rama takes over downtown and the waterfront.
+            </p>
+
+            <p>
+                The festival is loud, crowded, hot and intensely local.
+            </p>
+
+            <p>
+                Carnival rides.
+            </p>
+
+            <p>
+                Food.
+            </p>
+
+            <p>
+                Games.
+            </p>
+
+            <p>
+                Live music.
+            </p>
+
+            <p>
+                Community groups.
+            </p>
+
+            <p>
+                Families.
+            </p>
+
+            <p>
+                Teenagers who have absolutely no business being out
+                that late but are somehow still there.
+            </p>
+
+            <p>
+                It isn't treated like some exotic tourist attraction.
+                It is a community event that happens to consume the
+                town for several days.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FISHFLY DETAIL
+         ===================================================== -->
+
+    <div class="fishfly-feature">
+
+        <div class="fishfly-images">
+
+            <img
+                src="https://ella.janitorai.com/media-approved/-hNPi7ajoZa159HTE5XyO.webp"
+                alt="Fishfly swarm"
+            >
+
+            <img
+                src="https://ella.janitorai.com/media-approved/BCd2_a38CgImnWXdUuzKi.webp"
+                alt="Fishfly swarm"
+            >
+
+        </div>
+
+
+        <div class="fishfly-copy">
+
+            <div class="eyebrow">
+                THE ROADS
+            </div>
+
+            <h3>
+                FISHFLIES
+            </h3>
+
+            <p>
+                Fishfly season is part of the sensory identity of
+                summer around New Baltimore.
+            </p>
 
             <p>
                 They're everywhere.
-                They hit the windshield.
-                They cover the pavement.
-                Tires go pop pop pop pop.
             </p>
-
-        </article>
-
-
-        <article class="summer-card">
-
-            <span class="summer-number">03</span>
-
-            <h3>FIREWORKS</h3>
 
             <p>
-                People gather around the water.
-                Somebody brought chairs.
-                Somebody brought food.
-                Nobody wants to leave yet.
+                And when you're driving through them, the tires make
+                that ridiculous rapid-fire sound:
             </p>
 
-        </article>
-
-
-        <article class="summer-card">
-
-            <span class="summer-number">04</span>
-
-            <h3>THE LAKE</h3>
+            <div class="fishfly-sound">
+                POP POP POP POP POP
+            </div>
 
             <p>
-                Swimming. Fishing. Boats.
-                Sitting on the dock.
-                Watching the water because
-                there isn't anything else to do.
+                It becomes something people notice and joke about.
             </p>
 
-        </article>
+            <p>
+                Windows down.
+            </p>
 
-    </div>
+            <p>
+                Music playing.
+            </p>
 
-</section>
+            <p>
+                Somebody starts deliberately aiming the car toward
+                the densest patches because apparently this is
+                entertainment now.
+            </p>
 
+            <p>
+                It is stupid.
+            </p>
 
-<!-- =========================================================
-     SCHOOL
-     ========================================================= -->
+            <p>
+                It is specific.
+            </p>
 
-<section id="school" class="school section">
-
-    <div class="school-banner">
-
-        <div class="school-banner-left">
-
-            <span class="school-kicker">
-                ABCC / 2015
-            </span>
-
-            <h2>
-                ANCHOR BAY<br>
-                TARS
-            </h2>
+            <p>
+                It belongs here.
+            </p>
 
         </div>
 
-        <div class="school-banner-right">
+    </div>
 
-            <span class="school-colors">
-                RED / WHITE
-            </span>
+
+    <!-- =====================================================
+         FESTIVAL SOCIAL DYNAMICS
+         ===================================================== -->
+
+    <div class="event-grid">
+
+        <article>
 
             <span>
-                ANCHOR BAY COMMUNITY COLLEGE
+                01
             </span>
 
-        </div>
+            <h3>
+                RUN INTO EVERYBODY
+            </h3>
 
-    </div>
+            <p>
+                Classmates. Parents. Friends. People you haven't seen
+                since high school. Somebody always knows somebody.
+            </p>
+
+        </article>
 
 
-    <div class="school-intro">
+        <article>
 
-        <div>
-            <span class="section-label-small">
-                THE SCHOOL PAGE
+            <span>
+                02
             </span>
-        </div>
 
-        <div>
-
-            <p class="large-copy">
-                Yeah, there's a school.
-                Yeah, everybody is proud of the Tars.
-                No, school isn't the entire universe.
-            </p>
+            <h3>
+                LOSE THE GROUP
+            </h3>
 
             <p>
-                ABCC is one of the biggest social collision
-                points in the area. Classes are small.
-                People know each other. Somebody's always
-                walking somewhere with somebody else.
-            </p>
-
-            <p>
-                Then everybody leaves campus and the real
-                world starts again.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="school-grid">
-
-
-        <article class="school-card">
-
-            <span class="school-card-number">01</span>
-
-            <h3>THE TARS</h3>
-
-            <p>
-                Red and white. School pride.
-                Sports. Rivalries. Game nights.
-                The people who bleed school colors
-                and the people who just want to
-                get through class.
+                Crowds make it easy for people to separate without
+                turning it into a dramatic event.
             </p>
 
         </article>
 
 
-        <article class="school-card">
+        <article>
 
-            <span class="school-card-number">02</span>
+            <span>
+                03
+            </span>
 
-            <h3>THE HALLWAYS</h3>
+            <h3>
+                WANDER
+            </h3>
 
             <p>
-                Small classes. Familiar faces.
-                People stopping in the doorway.
-                Someone getting invited somewhere
-                before class is even over.
+                Food. Games. Music. Rides. Water. Back to the crowd.
+                Somewhere else. Back again.
             </p>
 
         </article>
 
 
-        <article class="school-card">
+        <article>
 
-            <span class="school-card-number">03</span>
+            <span>
+                04
+            </span>
 
-            <h3>AFTER CLASS</h3>
-
-            <p>
-                The important part is what happens
-                when nobody has to be there anymore.
-            </p>
-
-        </article>
-
-
-        <article class="school-card">
-
-            <span class="school-card-number">04</span>
-
-            <h3>SCHOOL PRIDE</h3>
+            <h3>
+                FIREWORKS
+            </h3>
 
             <p>
-                Pep rallies. Jerseys. Red and white.
-                Parents in the stands.
-                Everybody pretending they aren't
-                checking their phones.
+                The waterfront becomes crowded and bright over the bay.
             </p>
 
         </article>
@@ -865,27 +2717,67 @@
      2015
      ========================================================= -->
 
-<section id="2015" class="year section">
+<section id="2015" class="page-section">
 
-    <div class="section-label">
-        <span>06</span>
-        <span>2015</span>
-    </div>
+    <div class="section-heading">
 
-    <div class="year-header">
+        <div>
 
-        <h2>
-            BEFORE<br>
-            EVERYTHING<br>
-            CHANGED.
-        </h2>
+            <div class="eyebrow">
+                TEMPORAL LOCK
+            </div>
+
+            <h2>
+                2015
+            </h2>
+
+        </div>
 
         <p>
-            iPhone 6. Snapchat. Instagram.
-            Vine. Tumblr. Twitter.
-            Nobody had TikTok.
-            Nobody had heard of rizz.
-            Thank fucking god.
+            This universe does not know what happens after 2015.
+        </p>
+
+    </div>
+
+
+    <div class="year-intro">
+
+        <p>
+            The world is smartphone-centered, but it is not the
+            world of TikTok, Instagram Reels, modern Snapchat culture
+            or post-2015 internet slang.
+        </p>
+
+        <p>
+            People have phones.
+        </p>
+
+        <p>
+            They text.
+        </p>
+
+        <p>
+            They use Snapchat.
+        </p>
+
+        <p>
+            They post to Instagram.
+        </p>
+
+        <p>
+            They scroll Tumblr.
+        </p>
+
+        <p>
+            They watch Vine.
+        </p>
+
+        <p>
+            They use Facebook.
+        </p>
+
+        <p>
+            They send dumb shit in group chats.
         </p>
 
     </div>
@@ -893,49 +2785,308 @@
 
     <div class="year-grid">
 
-        <div class="year-item">
-            <span>PHONE</span>
-            <strong>iPHONE 6</strong>
-        </div>
 
-        <div class="year-item">
-            <span>MESSAGING</span>
-            <strong>SNAPCHAT</strong>
-        </div>
+        <article>
 
-        <div class="year-item">
-            <span>VIDEO</span>
-            <strong>VINE</strong>
-        </div>
+            <div class="year-label">
+                PHONE
+            </div>
 
-        <div class="year-item">
-            <span>SOCIAL</span>
-            <strong>INSTAGRAM</strong>
-        </div>
+            <h3>
+                IPHONE 6
+            </h3>
 
-        <div class="year-item">
-            <span>MUSIC</span>
-            <strong>RAP ON AUX</strong>
-        </div>
+            <p>
+                Thin enough to feel modern. Small enough to fit in a
+                pocket. The primary object people carry everywhere.
+            </p>
 
-        <div class="year-item">
-            <span>TRANSPORT</span>
-            <strong>SOMEBODY'S CAR</strong>
-        </div>
+        </article>
+
+
+        <article>
+
+            <div class="year-label">
+                SNAPCHAT
+            </div>
+
+            <h3>
+                STREAKS / FILTERS / UGLY SELFIES
+            </h3>
+
+            <p>
+                Snapchat is communication, documentation and
+                pointless social contact all at once.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <div class="year-label">
+                INSTAGRAM
+            </div>
+
+            <h3>
+                FILTERED PHOTOS
+            </h3>
+
+            <p>
+                Group pictures, sports shots, mirror selfies,
+                hashtags and whatever somebody thinks looks good
+                enough to post.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <div class="year-label">
+                VINE
+            </div>
+
+            <h3>
+                SIX SECONDS
+            </h3>
+
+            <p>
+                Tyler would absolutely send three Vine clips instead
+                of answering a question normally.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <div class="year-label">
+                TUMBLR
+            </div>
+
+            <h3>
+                AESTHETICS / SCENE / EMO
+            </h3>
+
+            <p>
+                Tumblr influences alternative and scene culture,
+                photography, music taste and the general visual
+                language of teenagers who spend too much time online.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <div class="year-label">
+                FACEBOOK
+            </div>
+
+            <h3>
+                FAMILY INTERNET
+            </h3>
+
+            <p>
+                Parents are there. School events are there.
+                Relatives are there. Teenagers are there while
+                pretending they aren't.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <div class="year-label">
+                TWITTER
+            </div>
+
+            <h3>
+                SUBTWEETS
+            </h3>
+
+            <p>
+                A place to say something without saying it directly.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <div class="year-label">
+                GROUP CHATS
+            </div>
+
+            <h3>
+                KIK / TEXTING / CHAOS
+            </h3>
+
+            <p>
+                Screenshots, inside jokes, plans, arguments, links,
+                photos and conversations that make absolutely no sense
+                if you weren't there when they started.
+            </p>
+
+        </article>
 
     </div>
 
 
-    <div class="year-language">
+    <!-- =====================================================
+         LANGUAGE
+         ===================================================== -->
 
-        <span>LOCAL LANGUAGE</span>
+    <div class="language-lock">
+
+        <div class="eyebrow">
+            LANGUAGE
+        </div>
+
+        <h3>
+            TALK LIKE 2015.
+        </h3>
 
         <p>
-            pop · party store · Up North · the D ·
-            the Mitten · Michigan Left · fam · bae ·
-            turnt · lit · lowkey · highkey · salty ·
-            no chill · savage · extra · legit ·
-            LMAO · WTF · IDK · YOLO
+            People mostly speak normally.
+        </p>
+
+        <p>
+            Slang exists, but nobody needs to perform it every
+            sentence.
+        </p>
+
+        <p>
+            "Pop," not "soda."
+        </p>
+
+        <p>
+            "Party store," not "convenience store" when people are
+            talking naturally.
+        </p>
+
+        <p>
+            The D.
+        </p>
+
+        <p>
+            Up North.
+        </p>
+
+        <p>
+            The Mitten.
+        </p>
+
+        <p>
+            Michigan Left.
+        </p>
+
+        <p>
+            Meijer.
+        </p>
+
+        <p>
+            Kroger.
+        </p>
+
+        <p>
+            Faygo.
+        </p>
+
+        <p>
+            Vernors.
+        </p>
+
+        <p>
+            Better Made.
+        </p>
+
+        <p>
+            Coney dogs.
+        </p>
+
+        <p>
+            The language should feel regional without turning into
+            somebody doing a bad Michigan impression.
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         FORBIDDEN MODERN LANGUAGE
+         ===================================================== -->
+
+    <div class="forbidden-language">
+
+        <div class="eyebrow">
+            DO NOT
+        </div>
+
+        <h3>
+            THIS WORLD IS STUCK IN 2015.
+        </h3>
+
+        <p>
+            No rizz.
+        </p>
+
+        <p>
+            No gyatt.
+        </p>
+
+        <p>
+            No sigma.
+        </p>
+
+        <p>
+            No skibidi.
+        </p>
+
+        <p>
+            No delulu.
+        </p>
+
+        <p>
+            No "it's giving."
+        </p>
+
+        <p>
+            No "ate."
+        </p>
+
+        <p>
+            No "periodt."
+        </p>
+
+        <p>
+            No "no cap."
+        </p>
+
+        <p>
+            No "sus."
+        </p>
+
+        <p>
+            No "touch grass."
+        </p>
+
+        <p>
+            No "main character energy."
+        </p>
+
+        <p>
+            No "aura."
+        </p>
+
+        <p>
+            No "cooked."
+        </p>
+
+        <p>
+            No "glazing."
         </p>
 
     </div>
@@ -944,74 +3095,276 @@
 
 
 <!-- =========================================================
-     RELATIONSHIPS
+     MICHIGAN / REGIONAL REALISM
      ========================================================= -->
 
-<section id="relationships" class="relationships section">
+<section id="regional" class="page-section">
 
-    <div class="section-label">
-        <span>07</span>
-        <span>THE WEB</span>
+    <div class="section-heading">
+
+        <div>
+
+            <div class="eyebrow">
+                REGIONAL REALISM
+            </div>
+
+            <h2>
+                THIS ISN'T GENERIC AMERICA.
+            </h2>
+
+        </div>
+
     </div>
 
-    <div class="relationships-header">
 
-        <h2>
-            EVERYBODY<br>
-            KNOWS SOMEBODY.
-        </h2>
+    <div class="regional-copy">
 
         <p>
-            That's how a town this size works.
-            One person invites two people.
-            Somebody brings three more.
-            Someone's ex is there.
-            Someone's cousin knows somebody.
+            The characters know where they are.
         </p>
+
+        <p>
+            They don't need to explain what 23 Mile is.
+        </p>
+
+        <p>
+            They don't need to explain M-29.
+        </p>
+
+        <p>
+            They don't need to explain I-94.
+        </p>
+
+        <p>
+            They don't need to explain Lake St. Clair.
+        </p>
+
+        <p>
+            They don't need to explain Burke Park.
+        </p>
+
+        <p>
+            They know which roads connect to which.
+        </p>
+
+        <p>
+            They know which direction they're going.
+        </p>
+
+        <p>
+            They know where they can get food.
+        </p>
+
+        <p>
+            They know which gas station is convenient.
+        </p>
+
+        <p>
+            They know where somebody lives.
+        </p>
+
+        <p>
+            They know what happens around Bay-Rama.
+        </p>
+
+        <p>
+            None of this requires exposition between locals.
+        </p>
+
+        <div class="regional-callout">
+
+            <strong>
+                A LOCAL DOESN'T EXPLAIN THEIR OWN TOWN.
+            </strong>
+
+            <span>
+                They just move through it.
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WORLD RULES
+     ========================================================= -->
+
+<section id="rules" class="page-section">
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="eyebrow">
+                UNIVERSE RULES
+            </div>
+
+            <h2>
+                THIS IS A SANDBOX.
+            </h2>
+
+        </div>
 
     </div>
 
 
-    <div class="relationship-board">
+    <div class="rules-list">
 
-        <div class="relationship-line line-one"></div>
-        <div class="relationship-line line-two"></div>
-        <div class="relationship-line line-three"></div>
-        <div class="relationship-line line-four"></div>
 
-        <div class="relationship-node node-roman">
-            ROMAN
-        </div>
-
-        <div class="relationship-node node-tyler">
-            TYLER
-        </div>
-
-        <div class="relationship-node node-abcc">
-            ABCC
-        </div>
-
-        <div class="relationship-node node-lake">
-            THE LAKE
-        </div>
-
-        <div class="relationship-node node-town">
-            NEW BALTIMORE
-        </div>
-
-        <div class="relationship-note">
+        <article>
 
             <span>
-                IMPORTANT
+                01
             </span>
 
+            <h3>
+                NO CHOSEN ONE.
+            </h3>
+
             <p>
-                This isn't a fixed storyline.
-                People move around the map.
-                That's the point.
+                Nobody is secretly destined to save the town.
+                There is no prophecy. There is no supernatural
+                conspiracy underneath ABCC.
             </p>
 
-        </div>
+        </article>
+
+
+        <article>
+
+            <span>
+                02
+            </span>
+
+            <h3>
+                NO FORCED PLOT.
+            </h3>
+
+            <p>
+                A scene can simply be a scene. Characters can hang
+                out, talk, argue, flirt, drive, eat, get bored,
+                leave and come back.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <span>
+                03
+            </span>
+
+            <h3>
+                PEOPLE HAVE THEIR OWN LIVES.
+            </h3>
+
+            <p>
+                Characters can text other people. Make plans.
+                Get distracted. Go somewhere else. Leave a room.
+                Notice something happening across campus.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <span>
+                04
+            </span>
+
+            <h3>
+                NOT EVERYTHING IS CINEMATIC.
+            </h3>
+
+            <p>
+                Most moments are mundane.
+            </p>
+
+            <p>
+                Mundane is good.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <span>
+                05
+            </span>
+
+            <h3>
+                THE WORLD CONTINUES WITHOUT YOU.
+            </h3>
+
+            <p>
+                People have conversations you aren't part of.
+                They know things you don't. They make plans that
+                don't involve you.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <span>
+                06
+            </span>
+
+            <h3>
+                SHORT INPUTS SHOULD STILL WORK.
+            </h3>
+
+            <p>
+                A character saying "let's go" can become a drive.
+                "Where?" can become a disagreement. "I'm hungry"
+                can become a trip somewhere.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <span>
+                07
+            </span>
+
+            <h3>
+                LOCAL DETAILS SHOULD BE CASUAL.
+            </h3>
+
+            <p>
+                Don't dump geography into dialogue. Let geography
+                exist underneath the scene.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <span>
+                08
+            </span>
+
+            <h3>
+                THE LAKE DOES NOT HAVE TO BE THE POINT.
+            </h3>
+
+            <p>
+                Sometimes the characters are by the lake.
+                Sometimes they aren't.
+                The world doesn't need to announce it.
+            </p>
+
+        </article>
 
     </div>
 
@@ -1022,57 +3375,37 @@
      FOOTER
      ========================================================= -->
 
-<footer class="site-footer">
+<footer id="site-footer">
 
-    <div class="footer-main">
-
-        <div>
-
-            <span class="footer-label">
-                NEW BALTIMORE
-            </span>
-
-            <h2>
-                2015
-            </h2>
-
-        </div>
-
-        <div class="footer-copy">
-
-            <p>
-                Anchor Bay. Lake St. Clair.
-                Macomb County, Michigan.
-            </p>
-
-            <p>
-                There is no main plot.
-                There is just somewhere to go.
-            </p>
-
-        </div>
-
+    <div class="footer-title">
+        ANCHOR BAY
     </div>
 
+    <div class="footer-copy">
+        ABCC / NEW BALTIMORE / SOUTHEAST MICHIGAN / 2015
+    </div>
 
-    <div class="footer-bottom">
-
-        <span>
-            MADE FOR THE PEOPLE WHO WERE THERE
-        </span>
-
-        <span>
-            © 2015 / NEW BALTIMORE
-        </span>
-
+    <div class="footer-note">
+        FICTIONAL UNIVERSE ARCHIVE
     </div>
 
 </footer>
 
+
 </main>
 
 
-<script src="script.js"></script>
+<!-- =========================================================
+     BATCH 02 WILL ADD:
+     
+     <link rel="stylesheet" href="style.css">
+
+     BATCH 03 WILL ADD:
+     
+     <script src="script.js"></script>
+
+     ========================================================= -->
+
 
 </body>
 </html>
