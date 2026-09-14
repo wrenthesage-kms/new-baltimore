@@ -1,1418 +1,648 @@
-/* =========================================================
-   NEW BALTIMORE / 2015
-   someone gave a teenager CSS and nobody stopped them
-   ========================================================= */
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  color: #e9e1d0;
-  background:
-    radial-gradient(
-      ellipse at 18% 8%,
-      rgba(137, 26, 255, .34) 0,
-      transparent 27%
-    ),
-    radial-gradient(
-      ellipse at 91% 22%,
-      rgba(0, 115, 255, .35) 0,
-      transparent 29%
-    ),
-    radial-gradient(
-      ellipse at 75% 78%,
-      rgba(240, 25, 42, .22) 0,
-      transparent 25%
-    ),
-    radial-gradient(
-      ellipse at 24% 91%,
-      rgba(188, 220, 0, .12) 0,
-      transparent 22%
-    ),
-    #08090d;
-
-  font-family:
-    "Lucida Console",
-    Monaco,
-    monospace;
-
-  position: relative;
-}
-
-
-/* =========================================================
-   THE PAGE IS NOT A WEBSITE.
-   IT IS A FUCKING OBJECT.
-   ========================================================= */
-
-.new-baltimore {
-  position: relative;
-
-  width: min(900px, 92vw);
-  min-height: 1700px;
-
-  margin: 0 auto;
-  padding: 55px 0 180px;
-
-  overflow: visible;
-}
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>new baltimore / 2015</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
 
-/* =========================================================
-   BACKGROUND LAKE
-   ========================================================= */
+  <!-- FISHFLY DISASTER -->
+  <div class="fishfly-field" aria-hidden="true">
+    <span class="fly fly-1">✦</span>
+    <span class="fly fly-2">·</span>
+    <span class="fly fly-3">✧</span>
+    <span class="fly fly-4">✦</span>
+    <span class="fly fly-5">·</span>
+    <span class="fly fly-6">✧</span>
+    <span class="fly fly-7">✦</span>
+    <span class="fly fly-8">·</span>
+    <span class="fly fly-9">✧</span>
+    <span class="fly fly-10">✦</span>
+    <span class="fly fly-11">·</span>
+    <span class="fly fly-12">✧</span>
+  </div>
+
+
+  <main class="new-baltimore">
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+
+      <div class="tiny-top">
+        // ANCHOR BAY / MACOMB COUNTY / MI //
+      </div>
+
+      <h1 class="crazy-title">
+        new<br>
+        baltimore
+      </h1>
+
+      <div class="title-doodle">
+        ☆ﾟ.*･｡ﾟ
+        <br>
+        everybody ends up somewhere
+      </div>
+
+      <div class="header-sticker">
+        ♡ 2015 ♡
+      </div>
 
-.new-baltimore::before {
-  content: "";
+    </header>
 
-  position: absolute;
-  z-index: -4;
 
-  top: 260px;
-  right: -15vw;
-
-  width: 720px;
-  height: 430px;
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
 
-  background:
-    linear-gradient(
-      118deg,
-      rgba(0, 173, 255, .9),
-      rgba(12, 94, 255, .62) 43%,
-      rgba(73, 19, 137, .35) 78%,
-      transparent
-    );
+    <section class="hero">
+
+      <div class="hero-picture">
+        <img
+          src="REPLACE-WITH-NEW-BALTIMORE-IMAGE.jpg"
+          alt="New Baltimore, Michigan"
+        >
 
-  border-radius:
-    62% 38% 48% 52%
-    / 44% 59% 41% 56%;
+        <span class="picture-tape tape-a"></span>
+        <span class="picture-tape tape-b"></span>
+      </div>
 
-  transform:
-    rotate(-8deg)
-    skewX(-10deg);
+      <div class="hero-note note-yellow">
+        <strong>NEW BALTIMORE</strong>
+        <br>
+        lake st. clair / downtown / cars
+        <br>
+        <span>♡ windows down ♡</span>
+      </div>
+
+      <div class="hero-note note-blue">
+        population: enough people
+        <br>
+        that somebody always knows somebody
+      </div>
 
-  filter: blur(.2px);
-}
+      <div class="hero-symbols">
+        ★ ★ ★
+        <br>
+        <span>╰(*´︶`*)╯♡</span>
+      </div>
 
+    </section>
 
-/* =========================================================
-   COLOR LEAKS
-   ========================================================= */
 
-.new-baltimore::after {
-  content: "";
+    <!-- =====================================================
+         INTRO
+         ===================================================== -->
 
-  position: absolute;
-  z-index: -5;
+    <section class="intro">
 
-  top: 680px;
-  left: -13vw;
+      <div class="section-kicker">
+        :: SO WHAT THE FUCK IS THIS PLACE? ::
+      </div>
 
-  width: 470px;
-  height: 250px;
+      <div class="intro-note">
 
-  background:
-    radial-gradient(
-      ellipse,
-      rgba(192, 0, 255, .48),
-      transparent 68%
-    );
+        <p>
+          New Baltimore is a waterfront city in Macomb County, sitting on
+          Anchor Bay / Lake St. Clair. It's suburban Detroit without feeling
+          like you're in the middle of Detroit — old downtown, lake water,
+          M-29, neighborhoods, parking lots, docks, and everybody somehow
+          ending up at the same places.
+        </p>
 
-  transform: rotate(18deg);
-}
+        <p>
+          In 2015, you could go downtown, hit the lake, get food, sit in
+          somebody's car, wander around Burke Park, or just drive until
+          somebody finally decided they were hungry.
+          <span class="pink">♡</span>
+          Nobody needed a plan.
+        </p>
 
+      </div>
 
-/* =========================================================
-   TITLE
-   ========================================================= */
+      <div class="tiny-note note-cream">
+        pop = pop
+        <br>
+        party store = party store
+        <br>
+        the D = Detroit
+        <br>
+        yes, this is Michigan
+      </div>
 
-.nb-title {
-  position: relative;
-  z-index: 20;
+    </section>
 
-  display: inline-block;
 
-  margin-left: 4vw;
+    <!-- =====================================================
+         MUSIC
+         ===================================================== -->
 
-  color: #eee5d1;
+    <section class="music">
 
-  font-family:
-    "Arial Black",
-    Impact,
-    sans-serif;
+      <div class="section-kicker">
+        ♫ NEW BALTIMORE // 2015 ♫
+      </div>
 
-  font-size: clamp(54px, 10vw, 108px);
-  font-weight: 900;
+      <div class="music-layout">
 
-  line-height: .75;
-  letter-spacing: -7px;
+        <div class="music-note">
 
-  transform: rotate(-2deg);
+          <strong>m-29 / windows down</strong>
 
-  text-shadow:
-    7px 6px 0 #7d18ff,
-    -4px -3px 0 #087cff;
-}
+          <br><br>
 
-.nb-title::after {
-  content: "anchor bay / macomb county / mi / 2015";
+          music stupidly loud.
+          <br>
+          somebody has the aux.
+          <br>
+          nobody is going home yet.
 
-  position: absolute;
+          <div class="ascii">
+            ╲(｡◕‿◕｡)╱
+          </div>
 
-  left: 11px;
-  bottom: -24px;
+        </div>
 
-  padding: 5px 9px;
+        <div class="soundcloud">
+          <iframe
+            width="100%"
+            height="166"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2298746358&color=%23ff1f8f&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false">
+          </iframe>
+        </div>
 
-  background:
-    linear-gradient(
-      90deg,
-      #ef192b,
-      #ef192b 70%,
-      #ffbd00
-    );
+      </div>
 
-  color: #08090d;
+    </section>
 
-  font-family: "Lucida Console", monospace;
-  font-size: 8px;
-  font-weight: 900;
 
-  letter-spacing: 1px;
+    <!-- =====================================================
+         CLOCK
+         ===================================================== -->
 
-  transform: rotate(3deg);
+    <section class="clock-section">
 
-  box-shadow:
-    5px 5px 0 #42105f;
-}
+      <div class="clock-note">
 
+        <span class="clock-label">
+          CURRENTLY SOMEWHERE IN
+        </span>
 
-/* =========================================================
-   TINY HEADER CRAP
-   ========================================================= */
+        <strong>NEW BALTIMORE, MI</strong>
 
-.nb-lake-note {
-  position: absolute;
-  z-index: 25;
+        <span id="local-time">
+          loading...
+        </span>
 
-  top: 72px;
-  right: 7%;
+        <small>
+          // lake time //
+        </small>
 
-  padding: 7px 11px;
+      </div>
 
-  background:
-    linear-gradient(
-      135deg,
-      #10151d,
-      #171d29
-    );
+    </section>
 
-  border:
-    1px solid rgba(0, 166, 255, .7);
 
-  color: #55c8ff;
+    <!-- =====================================================
+         PEOPLE
+         ===================================================== -->
 
-  font-size: 8px;
-  font-weight: bold;
+    <section class="people">
 
-  box-shadow:
-    4px 5px 0 #43106a;
+      <div class="section-kicker">
+        :: PEOPLE YOU'RE PROBABLY GONNA RUN INTO ::
+      </div>
 
-  transform: rotate(5deg);
-}
 
+      <!-- ROMAN -->
 
-/* =========================================================
-   LITTLE HEART / SYMBOL STUFF
-   ========================================================= */
+      <article class="character-card roman-card">
 
-.nb-symbol {
-  position: absolute;
+        <div class="card-photo">
+          <img
+            src="https://ella.janitorai.com/media-approved/r2Rp8nYy1TOylkJdeUGLG.webp"
+            alt="Roman"
+          >
+        </div>
 
-  color: #ffb900;
+        <div class="card-copy">
 
-  font-size: 16px;
-  font-weight: bold;
+          <div class="card-mini">
+            19 / ABCC / athlete / social menace
+          </div>
 
-  text-shadow:
-    2px 2px 0 #6e159d;
-}
+          <h2>ROMAN</h2>
 
-.nb-symbol.one {
-  top: 145px;
-  left: 4%;
-  transform: rotate(-15deg);
-}
+          <div class="card-question">
+            who the fuck is roman
+          </div>
 
-.nb-symbol.two {
-  top: 390px;
-  right: 3%;
-  color: #ff2639;
-  transform: rotate(9deg);
-}
+          <p>
+            Shortest guy in the group. Knows everybody.
+            Somehow knows the barista, the professor, the neighbor,
+            your cousin, and the guy who owns the place you're standing in.
+          </p>
 
-.nb-symbol.three {
-  top: 880px;
-  left: 43%;
-  color: #08aaff;
-  transform: rotate(-8deg);
-}
+          <div class="card-fact">
+            ♡ probably already knows where you're going
+          </div>
 
-.nb-symbol.four {
-  top: 1210px;
-  right: 15%;
-  color: #b8df00;
-  transform: rotate(13deg);
-}
+        </div>
 
+      </article>
 
-/* =========================================================
-   MAP
-   SMALL. SHITTY. ACTUALLY USEFUL.
-   ========================================================= */
 
-.nb-map {
-  position: absolute;
-  z-index: 12;
+      <!-- TYLER -->
 
-  top: 230px;
-  left: 1%;
+      <article class="character-card tyler-card">
 
-  width: 175px;
-  min-height: 125px;
+        <div class="card-photo">
+          <img
+            src="https://ella.janitorai.com/media-approved/eg3AxdiHmo2J13eOnrcxK.webp"
+            alt="Tyler"
+          >
+        </div>
 
-  padding: 11px;
+        <div class="card-copy">
 
-  color: #16151a;
+          <div class="card-mini">
+            19 / track / aux cord / chief keef
+          </div>
 
-  background:
-    linear-gradient(
-      155deg,
-      #f1e4c4 0,
-      #e7d8b4 72%,
-      #d4c399 100%
-    );
+          <h2>TYLER</h2>
 
-  border:
-    1px solid #201d1c;
+          <div class="card-question">
+            the walls are literally fucking shaking
+          </div>
 
-  box-shadow:
-    7px 8px 0 #087cff,
-    11px 12px 0 rgba(126, 18, 191, .65);
+          <p>
+            Diamond snapback. Track pants. Expensive speakers in a
+            completely normal sedan. Chief Keef is playing loud enough
+            that somebody three cars away knows every word.
+          </p>
 
-  transform:
-    rotate(-6deg)
-    skewX(-2deg);
-}
+          <div class="card-fact">
+            :: he is NOT changing the song ::
+          </div>
 
-.nb-map::before {
-  content: "NEW BALTIMORE, MICHIGAN ♡";
+        </div>
 
-  display: block;
+      </article>
 
-  margin-bottom: 7px;
 
-  color: #e91c2d;
+      <!-- BAY RAMA -->
 
-  font-size: 8px;
-  font-weight: 900;
+      <article class="character-card bayrama-card">
 
-  letter-spacing: -.3px;
-}
+        <div class="card-copy">
 
-.nb-map::after {
-  content: "M-29 →     ← I-94";
+          <div class="card-mini">
+            late june / five days / everybody outside
+          </div>
 
-  position: absolute;
+          <h2>BAY-RAMA</h2>
 
-  right: 7px;
-  bottom: 6px;
+          <div class="card-question">
+            what the fuck is bay-rama
+          </div>
 
-  color: #155cff;
+          <p>
+            Five days of carnival rides, food, music, fireworks,
+            community groups, and basically the entire town deciding
+            it has somewhere to be.
+          </p>
 
-  font-size: 7px;
-  font-weight: bold;
-}
+          <div class="bayrama-facts">
+            <span>✦ PARADE</span>
+            <span>✦ RIDES</span>
+            <span>✦ FOOD</span>
+            <span>✦ FIREWORKS</span>
+          </div>
 
-.nb-map-roads {
-  position: relative;
+        </div>
 
-  height: 82px;
+      </article>
 
-  background:
-    linear-gradient(
-      31deg,
-      transparent 45%,
-      #e91c2d 46% 49%,
-      transparent 50%
-    ),
-    linear-gradient(
-      88deg,
-      transparent 45%,
-      #155cff 46% 49%,
-      transparent 50%
-    ),
-    linear-gradient(
-      145deg,
-      transparent 48%,
-      #83a900 49% 51%,
-      transparent 52%
-    );
-}
+    </section>
 
-.nb-map-roads::before {
-  content: "WASHINGTON ST.";
 
-  position: absolute;
+    <!-- =====================================================
+         PLACES
+         ===================================================== -->
 
-  top: 17px;
-  left: 22px;
+    <section class="places">
 
-  color: #15151a;
+      <div class="section-kicker">
+        :: PLACES PEOPLE ACTUALLY GO ::
+      </div>
 
-  font-size: 6px;
 
-  transform: rotate(-7deg);
-}
+      <div class="place-grid">
 
-.nb-map-roads::after {
-  content: "BURKE PARK";
+        <article class="place-note washington">
+          <span class="place-symbol">★</span>
+          <h3>WASHINGTON ST.</h3>
+          <p>
+            downtown. old buildings. storefronts.
+            somebody you know is probably walking past.
+          </p>
+          <small>// main street energy //</small>
+        </article>
 
-  position: absolute;
 
-  right: 8px;
-  top: 48px;
+        <article class="place-note front">
+          <span class="place-symbol">♡</span>
+          <h3>FRONT STREET</h3>
+          <p>
+            waterfront edge of downtown.
+            boats, sidewalks, lake air.
+          </p>
+          <small>// keep walking toward the water //</small>
+        </article>
 
-  color: #155cff;
 
-  font-size: 6px;
+        <article class="place-note burke">
+          <span class="place-symbol">✦</span>
+          <h3>BURKE PARK</h3>
+          <p>
+            beach. dock. benches. pavilion.
+            playground. water tower.
+          </p>
+          <small>// disappear for a while //</small>
+        </article>
 
-  transform: rotate(4deg);
-}
 
+        <article class="place-note anchor">
+          <span class="place-symbol">→</span>
+          <h3>ANCHOR BAY</h3>
+          <p>
+            Lake St. Clair.
+            boats. swimming. fishing. wind.
+          </p>
+          <small>// the lake is literally right there //</small>
+        </article>
 
-/* =========================================================
-   ROMAN PHOTO
-   ========================================================= */
 
-.nb-roman {
-  position: absolute;
-  z-index: 22;
+        <article class="place-note m29">
+          <span class="place-symbol">★</span>
+          <h3>M-29</h3>
+          <p>
+            the road you take when nobody wants to go home yet.
+          </p>
+          <small>// no destination required //</small>
+        </article>
 
-  top: 195px;
-  left: 18%;
 
-  width: 132px;
+        <article class="place-note festival">
+          <span class="place-symbol">::</span>
+          <h3>FESTIVAL PARK</h3>
+          <p>
+            fields. baseball diamonds. dirt.
+            chain-link fences. sports.
+          </p>
+          <small>// still becoming something //</small>
+        </article>
 
-  transform: rotate(4deg);
-}
 
-.nb-roman::before {
-  content: "";
+        <article class="place-note interstate">
+          <span class="place-symbol">//</span>
+          <h3>I-94</h3>
+          <p>
+            Detroit one way.
+            Port Huron the other.
+            everybody eventually gets back on it.
+          </p>
+          <small>// headlights + highway noise //</small>
+        </article>
 
-  position: absolute;
 
-  top: -6px;
-  left: 32px;
+        <article class="place-note miles">
+          <span class="place-symbol">✧</span>
+          <h3>23 / 24 MILE</h3>
+          <p>
+            bigger roads. parking lots.
+            stores. chain restaurants.
+            suburban sprawl.
+          </p>
+          <small>// civilization, apparently //</small>
+        </article>
 
-  width: 52px;
-  height: 13px;
+      </div>
 
-  background: rgba(255, 191, 0, .76);
+    </section>
 
-  transform: rotate(-7deg);
 
-  z-index: 2;
-}
+    <!-- =====================================================
+         FISHFLY NOTE
+         ===================================================== -->
 
-.nb-roman img {
-  display: block;
+    <section class="fishfly-note-section">
 
-  width: 100%;
+      <div class="fishfly-note">
 
-  padding: 5px;
+        <div class="fishfly-header">
+          FISHFLIES
+          <span>✦ ✦ ✦</span>
+        </div>
 
-  background: #ede0c0;
+        <div class="fishfly-big">
+          POP POP POP POP
+        </div>
 
-  border: 1px solid #19181a;
+        <p>
+          They show up around Bay-Rama season.
+          Then they're suddenly under everybody's tires.
+        </p>
 
-  box-sizing: border-box;
+        <div class="fishfly-score">
+          FISHFLIES: 0
+          <br>
+          YOUR TIRES: 1
+        </div>
 
-  box-shadow:
-    5px 6px 0 #ffb900,
-    8px 9px 0 rgba(66, 16, 95, .7);
-}
+      </div>
 
-.nb-roman::after {
-  content: "WHO THE FUCK IS ROMAN";
+    </section>
 
-  position: absolute;
 
-  right: -83px;
-  bottom: -18px;
+    <!-- =====================================================
+         SUMMER
+         ===================================================== -->
 
-  padding: 5px 6px;
+    <section class="summer">
 
-  background: #ffb900;
-  color: #0a0a0d;
+      <div class="section-kicker">
+        ♡ SUMMER / LAKE WEATHER / BAD IDEAS ♡
+      </div>
 
-  font-size: 7px;
-  font-weight: 900;
+      <div class="summer-note">
 
-  transform: rotate(-7deg);
+        <div class="summer-header">
+          <span class="pink">♡</span> i'm out past curfew
+          <span class="cream-heart">♡</span>
+        </div>
 
-  box-shadow: 3px 3px 0 #8b18cf;
-}
+        <p>
+          Swimming. Fishing. Sitting on the dock.
+          Walking downtown for no reason.
+          Somebody's mom eventually calls.
+        </p>
 
+        <div class="summer-list">
+          :: lake<br>
+          :: food<br>
+          :: somebody's car<br>
+          :: fireworks<br>
+          :: drive again
+        </div>
 
-/* =========================================================
-   BAY-RAMA OBJECT
-   ========================================================= */
+        <div class="ascii">
+          ヽ(°◇° )ノ
+        </div>
 
-.nb-bayrama {
-  position: absolute;
-  z-index: 16;
+      </div>
 
-  top: 395px;
-  right: 7%;
+    </section>
 
-  width: 150px;
 
-  padding: 13px 12px 15px;
+    <!-- =====================================================
+         2015
+         ===================================================== -->
 
-  background:
-    radial-gradient(
-      circle at 18% 25%,
-      rgba(255,255,255,.14) 0 2px,
-      transparent 3px
-    ),
-    linear-gradient(
-      135deg,
-      #1a1015,
-      #24131a
-    );
+    <section class="year-2015">
 
-  border:
-    1px solid rgba(255,255,255,.28);
+      <div class="section-kicker">
+        :: THIS IS 2015, BY THE WAY ::
+      </div>
 
-  color: #ffd000;
+      <div class="internet-notes">
 
-  box-shadow:
-    6px 7px 0 #ed1c2d,
-    10px 11px 0 rgba(126, 18, 191, .55);
+        <div class="sticky internet-yellow">
+          <strong>SNAPCHAT</strong>
+          <br>
+          screenshots
+          <br>
+          stupid selfies
+          <br>
+          "why did you save that"
+          <br><br>
+          ☆
+        </div>
 
-  transform:
-    rotate(-7deg)
-    skewX(-3deg);
-}
+        <div class="sticky internet-pink">
+          <strong>VINE</strong>
+          <br>
+          six seconds
+          <br>
+          everybody knows the joke
+          <br><br>
+          ¯\_(ツ)_/¯
+        </div>
 
-.nb-bayrama::before {
-  content: "♡ LOCAL EVENT ♡";
+        <div class="sticky internet-blue">
+          <strong>INSTAGRAM</strong>
+          <br>
+          filters
+          <br>
+          comments
+          <br>
+          over-edited sunsets
+          <br><br>
+          // omg //
+        </div>
 
-  display: block;
+        <div class="sticky internet-purple">
+          <strong>iPHONE 6</strong>
+          <br>
+          cracked screen
+          <br>
+          ugly case
+          <br>
+          somehow everybody wants one
+          <br><br>
+          ♡
+        </div>
 
-  margin-bottom: 5px;
+      </div>
 
-  color: #ff2b3c;
+    </section>
 
-  font-size: 6px;
-  font-weight: bold;
-}
 
-.nb-bayrama strong {
-  display: block;
+    <!-- =====================================================
+         SCHOOL
+         ===================================================== -->
 
-  font-family: Impact, "Arial Black", sans-serif;
+    <section class="school">
 
-  font-size: 25px;
-  line-height: .85;
+      <div class="section-kicker">
+        :: ABCC ::
+      </div>
 
-  color: #ffd000;
+      <div class="school-note">
 
-  text-shadow:
-    2px 2px 0 #72145e;
-}
+        <div class="school-id">
+          ABCC
+          <span>2015</span>
+        </div>
 
-.nb-bayrama small {
-  display: block;
+        <p>
+          classes / parking lots / lunch /
+          somebody leaving early /
+          somebody asking what everyone is doing tonight
+        </p>
 
-  margin-top: 9px;
+        <div class="school-bottom">
+          STUDENT STATUS: ¯\_(ツ)_/¯
+        </div>
 
-  color: #c5e800;
+      </div>
 
-  font-size: 6px;
-  line-height: 1.5;
-}
+    </section>
 
 
-/* =========================================================
-   FISHFLY OBJECTS
-   ========================================================= */
+    <!-- =====================================================
+         END
+         ===================================================== -->
 
-.nb-fishflies {
-  position: absolute;
-  z-index: 18;
+    <section class="ending">
 
-  top: 490px;
-  left: 8%;
+      <div class="ending-note">
 
-  width: 125px;
+        <span class="ending-big">
+          no destination.
+        </span>
 
-  padding: 8px 9px;
+        <br>
 
-  background:
-    linear-gradient(
-      165deg,
-      #141713,
-      #0d110e
-    );
+        just keep driving.
 
-  border:
-    1px dashed #b8df00;
+        <div class="ending-symbols">
+          ★ ☆ ✦ ♡ // :: → ★
+        </div>
 
-  color: #b8df00;
+        <small>
+          new baltimore / michigan / 2015
+        </small>
 
-  font-size: 7px;
-  font-weight: bold;
+      </div>
 
-  box-shadow:
-    4px 5px 0 #42105f;
+    </section>
 
-  transform: rotate(3deg);
-}
 
-.nb-fishflies::after {
-  content: "✦  ✦  ✦";
+  </main>
 
-  position: absolute;
 
-  right: -31px;
-  bottom: -11px;
+  <script src="script.js"></script>
 
-  color: #e7ff35;
-
-  font-size: 15px;
-
-  transform: rotate(-13deg);
-}
-
-
-/* =========================================================
-   TYLER CARD
-   DARK CARD. COLORFUL DEBRIS.
-   ========================================================= */
-
-.nb-tyler {
-  position: absolute;
-  z-index: 17;
-
-  top: 570px;
-  right: 3%;
-
-  width: 190px;
-  min-height: 95px;
-
-  padding: 12px 13px;
-
-  box-sizing: border-box;
-
-  background:
-    linear-gradient(
-      115deg,
-      rgba(255,255,255,.08),
-      transparent 40%
-    ),
-    linear-gradient(
-      160deg,
-      #17171e,
-      #0c0d12
-    );
-
-  border:
-    1px solid rgba(255,255,255,.22);
-
-  box-shadow:
-    6px 7px 0 #154dff,
-    10px 11px 0 rgba(184, 223, 0, .5);
-
-  transform: rotate(3deg);
-}
-
-.nb-tyler::before {
-  content: "";
-
-  position: absolute;
-
-  top: -7px;
-  left: 28px;
-
-  width: 55px;
-  height: 14px;
-
-  background: rgba(255, 204, 0, .75);
-
-  transform: rotate(-4deg);
-}
-
-.nb-tyler::after {
-  content: "AUX CORD";
-
-  position: absolute;
-
-  right: -29px;
-  top: 22px;
-
-  padding: 4px 5px;
-
-  background: #ed1c2d;
-  color: white;
-
-  font-size: 6px;
-  font-weight: bold;
-
-  transform: rotate(8deg);
-
-  box-shadow: 2px 3px 0 #42105f;
-}
-
-.nb-tyler strong {
-  display: block;
-
-  color: #2770ff;
-
-  font-family:
-    "Arial Black",
-    Impact,
-    sans-serif;
-
-  font-size: 25px;
-  line-height: .9;
-
-  text-shadow:
-    2px 2px 0 #b8df00;
-}
-
-.nb-tyler span {
-  display: block;
-
-  margin-top: 9px;
-
-  color: #d5d0c5;
-
-  font-size: 6px;
-  line-height: 1.7;
-}
-
-
-/* =========================================================
-   LITTLE 2015 PHONE
-   ========================================================= */
-
-.nb-phone {
-  position: absolute;
-  z-index: 19;
-
-  top: 675px;
-  left: 5%;
-
-  width: 115px;
-  min-height: 190px;
-
-  padding: 9px;
-
-  background:
-    linear-gradient(
-      150deg,
-      #252631,
-      #101117 65%,
-      #171020
-    );
-
-  border:
-    2px solid #24242b;
-
-  border-radius: 12px;
-
-  box-shadow:
-    5px 7px 0 #e81b35,
-    -3px -3px 0 #007dff;
-
-  transform: rotate(-5deg);
-}
-
-.nb-phone::before {
-  content: "";
-
-  position: absolute;
-
-  top: 5px;
-  left: 50%;
-
-  width: 28px;
-  height: 3px;
-
-  margin-left: -14px;
-
-  background: #050509;
-
-  border-radius: 5px;
-}
-
-.nb-phone::after {
-  content: "2015";
-
-  position: absolute;
-
-  right: -19px;
-  bottom: 21px;
-
-  color: #ffbe00;
-
-  font-size: 8px;
-  font-weight: bold;
-
-  transform: rotate(9deg);
-}
-
-.nb-phone .snap,
-.nb-phone .tweet {
-  padding: 7px;
-
-  font-size: 6px;
-  line-height: 1.5;
-}
-
-.nb-phone .snap {
-  margin-top: 13px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #ffbe00,
-      #efb500
-    );
-
-  color: #101014;
-
-  transform: rotate(2deg);
-
-  box-shadow:
-    3px 3px 0 #7015a0;
-}
-
-.nb-phone .tweet {
-  margin-top: 11px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #087cff,
-      #1645d5
-    );
-
-  color: white;
-
-  transform: rotate(-3deg);
-
-  box-shadow:
-    3px 3px 0 #ed1c2d;
-}
-
-
-/* =========================================================
-   ONE REAL PARAGRAPH
-   ========================================================= */
-
-.nb-intro {
-  position: absolute;
-  z-index: 10;
-
-  top: 835px;
-  left: 23%;
-
-  width: 330px;
-
-  color: #d7d0c2;
-
-  font-size: 9px;
-  line-height: 1.8;
-
-  transform: rotate(-1deg);
-}
-
-.nb-intro strong {
-  color: #ffbd00;
-}
-
-.nb-intro .blue {
-  color: #18aaff;
-}
-
-.nb-intro .red {
-  color: #ff2639;
-}
-
-.nb-intro .purple {
-  color: #bd3cff;
-}
-
-
-/* =========================================================
-   RANDOM INFORMATION OBJECT
-   ========================================================= */
-
-.nb-fact {
-  position: absolute;
-  z-index: 15;
-
-  top: 930px;
-  right: 13%;
-
-  width: 145px;
-
-  padding: 10px 12px;
-
-  background:
-    repeating-linear-gradient(
-      0deg,
-      #15161a 0,
-      #15161a 3px,
-      #191a20 3px,
-      #191a20 6px
-    );
-
-  border-left: 4px solid #b8df00;
-
-  color: #ded7ca;
-
-  font-size: 7px;
-  line-height: 1.7;
-
-  box-shadow:
-    5px 5px 0 #087cff;
-
-  transform: rotate(2deg);
-}
-
-.nb-fact strong {
-  color: #b8df00;
-}
-
-
-/* =========================================================
-   CAR PHOTO
-   SMALLER.
-   ACTUALLY HANGING OFF THE PAGE.
-   ========================================================= */
-
-.nb-car {
-  position: absolute;
-  z-index: 25;
-
-  top: 1040px;
-  left: -2vw;
-
-  width: 245px;
-
-  transform: rotate(-7deg);
-}
-
-.nb-car::before {
-  content: "SOMEONE'S CAR ♡";
-
-  position: absolute;
-  z-index: 2;
-
-  top: -13px;
-  right: -20px;
-
-  padding: 5px 7px;
-
-  background: #ed1c2d;
-  color: #fff;
-
-  font-size: 7px;
-  font-weight: bold;
-
-  transform: rotate(8deg);
-
-  box-shadow: 3px 3px 0 #42105f;
-}
-
-.nb-car img {
-  display: block;
-
-  width: 100%;
-
-  border:
-    4px solid #111217;
-
-  box-shadow:
-    8px 9px 0 #087cff,
-    12px 13px 0 rgba(184, 223, 0, .5);
-}
-
-
-/* =========================================================
-   ROADS / DRIVING OBJECT
-   ========================================================= */
-
-.nb-road-note {
-  position: absolute;
-  z-index: 20;
-
-  top: 1160px;
-  left: 28%;
-
-  padding: 8px 12px;
-
-  background:
-    linear-gradient(
-      160deg,
-      #111218,
-      #191923
-    );
-
-  border:
-    1px solid #343442;
-
-  color: #f1e7d2;
-
-  font-size: 7px;
-
-  box-shadow:
-    4px 5px 0 #bd18ff;
-
-  transform: rotate(5deg);
-}
-
-.nb-road-note strong {
-  color: #008cff;
-}
-
-.nb-road-note::after {
-  content: "→ M-29";
-
-  margin-left: 10px;
-
-  color: #ffbd00;
-}
-
-
-/* =========================================================
-   LAKE / WATER OBJECT
-   ========================================================= */
-
-.nb-water {
-  position: absolute;
-  z-index: 7;
-
-  top: 1200px;
-  right: 7%;
-
-  width: 250px;
-  height: 95px;
-
-  padding: 11px;
-
-  box-sizing: border-box;
-
-  background:
-    repeating-linear-gradient(
-      -8deg,
-      rgba(0,0,0,.12) 0 3px,
-      transparent 3px 10px
-    ),
-    linear-gradient(
-      135deg,
-      #007fff,
-      #0750d8
-    );
-
-  border:
-    1px solid rgba(255,255,255,.22);
-
-  color: white;
-
-  box-shadow:
-    8px 8px 0 #42105f;
-
-  transform:
-    rotate(-3deg)
-    skewX(-5deg);
-}
-
-.nb-water::before {
-  content: "ANCHOR BAY";
-
-  display: block;
-
-  color: #ffe000;
-
-  font-family:
-    "Arial Black",
-    Impact,
-    sans-serif;
-
-  font-size: 22px;
-
-  transform: rotate(2deg);
-}
-
-.nb-water::after {
-  content: "lake st. clair / boats / wind / swimming / fishing";
-
-  display: block;
-
-  margin-top: 5px;
-
-  color: #d9f5ff;
-
-  font-size: 6px;
-}
-
-
-/* =========================================================
-   BURKE PARK OBJECT
-   ========================================================= */
-
-.nb-burke {
-  position: absolute;
-  z-index: 23;
-
-  top: 1330px;
-  left: 11%;
-
-  width: 145px;
-
-  padding: 10px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #16171d,
-      #101116
-    );
-
-  border:
-    1px solid rgba(255,255,255,.2);
-
-  box-shadow:
-    5px 6px 0 #f21b2f;
-
-  transform: rotate(-4deg);
-}
-
-.nb-burke strong {
-  display: block;
-
-  color: #ff2c3e;
-
-  font-size: 12px;
-}
-
-.nb-burke span {
-  display: block;
-
-  margin-top: 7px;
-
-  color: #d7d1c6;
-
-  font-size: 6px;
-  line-height: 1.6;
-}
-
-
-/* =========================================================
-   ONE LAST STUPID LITTLE OBJECT
-   ========================================================= */
-
-.nb-sticker {
-  position: absolute;
-  z-index: 40;
-
-  top: 1460px;
-  right: 14%;
-
-  padding: 9px 12px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #ffbf00,
-      #ffdb31
-    );
-
-  color: #15151a;
-
-  border:
-    2px solid #15151a;
-
-  font-size: 8px;
-  font-weight: 900;
-
-  box-shadow:
-    4px 5px 0 #8d1dcc;
-
-  transform:
-    rotate(8deg)
-    skewX(-5deg);
-}
-
-
-/* =========================================================
-   LITTLE DECORATIVE IMAGE OBJECTS
-   ========================================================= */
-
-.nb-mini-image {
-  position: absolute;
-  z-index: 30;
-
-  width: 70px;
-
-  padding: 4px;
-
-  background: #eee2c5;
-
-  border: 1px solid #141419;
-
-  box-shadow:
-    4px 4px 0 #087cff;
-}
-
-.nb-mini-image.one {
-  top: 440px;
-  left: 40%;
-
-  transform: rotate(11deg);
-}
-
-.nb-mini-image.two {
-  top: 1010px;
-  right: 4%;
-
-  width: 82px;
-
-  box-shadow:
-    4px 4px 0 #ed1c2d;
-
-  transform: rotate(-9deg);
-}
-
-.nb-mini-image.three {
-  top: 1270px;
-  left: 44%;
-
-  width: 62px;
-
-  box-shadow:
-    4px 4px 0 #b8df00;
-
-  transform: rotate(5deg);
-}
-
-.nb-mini-image img {
-  display: block;
-  width: 100%;
-}
-
-
-/* =========================================================
-   TINY FLOATING FACTS
-   THESE AREN'T "TEXT BLOCKS."
-   THEY'RE LABELS.
-   ========================================================= */
-
-.nb-tag {
-  position: absolute;
-  z-index: 35;
-
-  padding: 4px 6px;
-
-  background: #111218;
-
-  border:
-    1px solid rgba(255,255,255,.2);
-
-  font-size: 6px;
-  font-weight: bold;
-
-  box-shadow: 3px 3px 0 #42105f;
-}
-
-.nb-tag.one {
-  top: 520px;
-  right: 24%;
-
-  color: #ffbd00;
-
-  transform: rotate(-4deg);
-}
-
-.nb-tag.two {
-  top: 760px;
-  right: 8%;
-
-  color: #19aaff;
-
-  transform: rotate(6deg);
-}
-
-.nb-tag.three {
-  top: 1100px;
-  right: 37%;
-
-  color: #b8df00;
-
-  transform: rotate(-5deg);
-}
-
-.nb-tag.four {
-  top: 1400px;
-  right: 30%;
-
-  color: #ff293e;
-
-  transform: rotate(4deg);
-}
-
-
-/* =========================================================
-   LITTLE HEARTS
-   ========================================================= */
-
-.nb-heart {
-  position: absolute;
-
-  color: #ff2d43;
-
-  font-size: 13px;
-
-  text-shadow:
-    2px 2px 0 #7d18ff;
-}
-
-.nb-heart.a {
-  top: 280px;
-  right: 27%;
-  transform: rotate(12deg);
-}
-
-.nb-heart.b {
-  top: 610px;
-  left: 34%;
-  color: #00aaff;
-  transform: rotate(-8deg);
-}
-
-.nb-heart.c {
-  top: 1000px;
-  left: 47%;
-  color: #ffbd00;
-  transform: rotate(7deg);
-}
-
-.nb-heart.d {
-  top: 1370px;
-  right: 8%;
-  color: #b8df00;
-  transform: rotate(-12deg);
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 650px) {
-
-  .new-baltimore {
-    width: 94vw;
-    min-height: 1650px;
-  }
-
-  .nb-title {
-    margin-left: 2vw;
-    font-size: 16vw;
-    letter-spacing: -4px;
-  }
-
-  .nb-lake-note {
-    top: 145px;
-    right: 2%;
-  }
-
-  .nb-map {
-    left: -4%;
-    transform: rotate(-6deg) scale(.82);
-    transform-origin: top left;
-  }
-
-  .nb-roman {
-    left: 20%;
-    width: 112px;
-  }
-
-  .nb-roman::after {
-    right: -70px;
-  }
-
-  .nb-bayrama {
-    top: 390px;
-    right: -3%;
-    transform: rotate(-7deg) scale(.86);
-    transform-origin: top right;
-  }
-
-  .nb-tyler {
-    right: -2%;
-    width: 165px;
-  }
-
-  .nb-phone {
-    left: 1%;
-    transform: rotate(-5deg) scale(.9);
-    transform-origin: top left;
-  }
-
-  .nb-intro {
-    left: 25%;
-    width: 245px;
-    font-size: 8px;
-  }
-
-  .nb-car {
-    left: -8vw;
-    width: 205px;
-  }
-
-  .nb-water {
-    right: -4%;
-    width: 210px;
-  }
-
-  .nb-burke {
-    left: 5%;
-  }
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    animation: none !important;
-    transition: none !important;
-  }
-}
+</body>
+</html>
