@@ -474,7 +474,7 @@ body::after {
 
     z-index: 2;
 
-    width: min(760px, 75vw);
+    width: max(48px, 75vw);
 
     filter: drop-shadow(15px 18px 0 #080308);
 
@@ -486,7 +486,7 @@ body::after {
 
 .car-right {
 
-    max-width: none;
+    max-width: 40px;
 
 }
 
