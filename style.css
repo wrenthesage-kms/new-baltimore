@@ -1,3259 +1,1960 @@
-/* =========================================================
-   WREN'S NEW BALTIMORE PROBLEM
-   =========================================================
+/* ============================================================
+   ANCHOR BAY // 2015
+   batch 1 — foundation
+   ============================================================ */
 
-   NEW BALTIMORE / ANCHOR BAY / 2015
-
-   this was supposed to be a normal little archive.
-
-   lol.
-
-   CURRENTLY:
-   - retired emo
-   - shitposter
-   - tumblr disease
-   - probably listening to rap too loud
-   - somebody's car is somewhere it shouldn't be
-   - fishflies everywhere
-   - Roman knows somebody
-   - Tyler is probably yelling
-   - nobody knows why this website has a music player
-
-   IMPORTANT:
-   THIS IS NOT A TOURISM WEBSITE.
-
-   DO NOT MAKE THIS LOOK PROFESSIONAL.
-
-   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Permanent+Marker&display=swap');
 
 
-/* =========================================================
-   00 // COLORS / VIBES / BAD DECISIONS
-   ========================================================= */
-
-:root {
-
-    --black: #0b0a0e;
-    --ink: #17151b;
-    --ink-soft: #242027;
-
-    --white: #f1eee8;
-    --paper: #d9d0c2;
-    --gray: #8e8790;
-    --light-gray: #b9b1b7;
-
-    --red: #e51d32;
-    --dark-red: #9f1527;
-
-    --violet: #a52ee8;
-    --hot-violet: #c54cff;
-
-    --blue: #2858d9;
-    --bright-blue: #4677ff;
-
-    --lake: #4f8195;
-
-    --yellow: #e4bd38;
-    --acid: #d4e34e;
-
-    --fishfly: #a9a052;
-
-    --pink: #d958a0;
-
-    --green: #5e8b68;
-
-    --shadow: rgba(0,0,0,.65);
-
-    --body-font:
-        Verdana,
-        Geneva,
-        Arial,
-        sans-serif;
-
-    --display-font:
-        "Arial Black",
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    --tiny-font:
-        "Courier New",
-        Courier,
-        monospace;
-
-    --emo-font:
-        Georgia,
-        "Times New Roman",
-        serif;
-}
-
-
-/* =========================================================
-   01 // RESET
-   ========================================================= */
+/* ============================================================
+   RESET
+   ============================================================ */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
-
-    background: var(--black);
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  min-height: 100vh;
 
-    color: var(--paper);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(176, 38, 255, .10), transparent 22%),
+    radial-gradient(circle at 88% 22%, rgba(10, 45, 240, .08), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(242, 182, 52, .05), transparent 30%),
+    #08090d;
 
-    font-family: var(--body-font);
+  color: #e8e6eb;
 
-    font-size: 13px;
-    line-height: 1.65;
+  font-family: "Inter", Arial, sans-serif;
 
-    background:
-        radial-gradient(
-            circle at 14% 8%,
-            rgba(165,46,232,.16),
-            transparent 25%
-        ),
-        radial-gradient(
-            circle at 88% 25%,
-            rgba(40,88,217,.12),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 52% 78%,
-            rgba(229,29,50,.09),
-            transparent 25%
-        ),
-        var(--black);
-
-    background-attachment: fixed;
-
-    overflow-x: hidden;
-}
-
-
-/* =========================================================
-   02 // SCREEN GARBAGE
-   =========================================================
-
-   because apparently we need to simulate a monitor
-   from 2007 even though this is supposed to be 2015.
-
-   ========================================================= */
-
-body::before {
-    content: "";
-
-    position: fixed;
-    inset: 0;
-
-    z-index: 9999;
-
-    pointer-events: none;
-
-    opacity: .13;
-
-    background:
-        repeating-linear-gradient(
-            to bottom,
-            transparent 0,
-            transparent 3px,
-            rgba(255,255,255,.045) 4px
-        );
-
-    mix-blend-mode: screen;
-}
-
-body::after {
-    content: "";
-
-    position: fixed;
-    inset: 0;
-
-    z-index: 9998;
-
-    pointer-events: none;
-
-    opacity: .25;
-
-    background:
-        radial-gradient(
-            ellipse at center,
-            transparent 55%,
-            rgba(0,0,0,.45) 100%
-        );
-}
-
-
-/* =========================================================
-   03 // LINKS
-   ========================================================= */
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-a:hover {
-    cursor: crosshair;
-}
-
-p {
-    margin: 0 0 1.3rem;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-
-/* =========================================================
-   04 // CUSTOM CURSOR
-   =========================================================
-
-   desktop gets the stupid little cursor.
-
-   phones ignore this because phones have decided
-   they're better than us.
-
-   ========================================================= */
-
-@media (pointer: fine) {
-
-    body {
-        cursor:
-            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M3 2l5 17 4-6 6 4 2-3-7-3 5-5z' fill='%23f1eee8' stroke='%230b0a0e' stroke-width='2'/%3E%3C/svg%3E")
-            3 2,
-            auto;
-    }
-
-    a,
-    button,
-    .main-nav a {
-        cursor:
-            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M3 2l5 17 4-6 6 4 2-3-7-3 5-5z' fill='%23e51d32' stroke='%230b0a0e' stroke-width='2'/%3E%3C/svg%3E")
-            3 2,
-            pointer;
-    }
-}
-
-
-/* =========================================================
-   05 // HEADER
-   ========================================================= */
-
-.site-header {
-    position: relative;
-
-    z-index: 100;
-
-    padding: 24px 4vw 0;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(12,10,15,.97),
-            rgba(12,10,15,.88)
-        );
-
-    border-bottom:
-        1px dashed rgba(217,208,194,.25);
-}
-
-.header-top {
-    display: flex;
-
-    align-items: flex-end;
-    justify-content: space-between;
-
-    max-width: 1400px;
-
-    margin: 0 auto;
-
-    position: relative;
-}
-
-
-/* =========================================================
-   06 // SITE TITLE
-   ========================================================= */
-
-.site-mark {
-    position: relative;
-
-    display: inline-flex;
-    flex-direction: column;
-
-    transform: rotate(-1deg);
-}
-
-.site-mark::before {
-    content: "♡ LOCAL INTERNET ♡";
-
-    position: absolute;
-
-    top: -18px;
-    left: 3px;
-
-    color: var(--hot-violet);
-
-    font-family: var(--tiny-font);
-
-    font-size: 8px;
-
-    letter-spacing: .12em;
-
-    transform: rotate(1deg);
-}
-
-.site-mark::after {
-    content: "don't steal my shit";
-
-    position: absolute;
-
-    right: -75px;
-    bottom: 4px;
-
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    transform: rotate(-4deg);
-}
-
-.mark-small {
-    color: var(--light-gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 9px;
-
-    letter-spacing: .18em;
-}
-
-.mark-large {
-    margin-top: -6px;
-
-    color: var(--white);
-
-    font-family: var(--display-font);
-
-    font-size: clamp(42px, 7vw, 90px);
-
-    line-height: .78;
-
-    letter-spacing: -.09em;
-
-    text-shadow:
-        3px 2px 0 var(--red),
-        -2px 0 0 var(--blue);
-}
-
-
-/* =========================================================
-   07 // LOCATION
-   ========================================================= */
-
-.header-location {
-    display: flex;
-
-    flex-direction: column;
-
-    text-align: right;
-
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 7px;
-
-    line-height: 1.4;
-
-    letter-spacing: .1em;
-
-    transform: rotate(1deg);
-}
-
-.header-location span:first-child {
-    color: var(--yellow);
-}
-
-
-/* =========================================================
-   08 // NAV
-   ========================================================= */
-
-.main-nav {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    max-width: 1400px;
-
-    margin: 23px auto 0;
-
-    border-top:
-        1px solid rgba(217,208,194,.14);
-}
-
-.main-nav a {
-    position: relative;
-
-    padding: 8px 14px 10px;
-
-    color: #9e979f;
-
-    font-family: var(--tiny-font);
-
-    font-size: 8px;
-
-    letter-spacing: .08em;
-
-    border-right:
-        1px solid rgba(217,208,194,.12);
-
-    transition:
-        .12s ease;
-}
-
-.main-nav a:first-child {
-    border-left:
-        1px solid rgba(217,208,194,.12);
-}
-
-.main-nav a:hover {
-    color: white;
-
-    background: var(--red);
-
-    transform:
-        translateY(-2px)
-        rotate(-1deg);
-
-    text-shadow:
-        1px 1px 0 var(--dark-red);
-}
-
-.main-nav a:nth-child(2):hover {
-    background: var(--violet);
-}
-
-.main-nav a:nth-child(3):hover {
-    background: var(--blue);
-}
-
-.main-nav a:nth-child(4):hover {
-    background: var(--yellow);
-
-    color: var(--black);
-}
-
-.main-nav a:nth-child(5):hover {
-    background: var(--red);
-}
-
-.main-nav a:nth-child(6):hover {
-    background: var(--green);
-}
-
-
-/* =========================================================
-   09 // GLOBAL SECTION
-   ========================================================= */
-
-.section {
-    position: relative;
-
-    max-width: 1400px;
-
-    margin: 0 auto;
-
-    padding:
-        90px
-        5vw
-        105px;
-
-    border-bottom:
-        1px dashed rgba(217,208,194,.16);
-}
-
-.section::before {
-    content: "//";
-
-    position: absolute;
-
-    top: 27px;
-    left: 4vw;
-
-    color: var(--hot-violet);
-
-    font-family: var(--tiny-font);
-
-    font-size: 10px;
-}
-
-.section-label {
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    margin-bottom: 38px;
-
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 8px;
-
-    letter-spacing: .13em;
-}
-
-.section-label span:first-child {
-    color: var(--red);
-}
-
-
-/* =========================================================
-   10 // HERO
-   ========================================================= */
-
-.hero {
-    position: relative;
-
-    min-height: 84vh;
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1fr)
-        260px;
-
-    gap: 50px;
-
-    align-items: end;
-
-    padding:
-        100px
-        7vw
-        75px;
-
-    overflow: hidden;
-
-    border-bottom:
-        1px dashed rgba(217,208,194,.17);
-}
-
-
-/* little tumblr bullshit */
-
-.hero::before {
-    content:
-        "posted from somewhere in new baltimore";
-
-    position: absolute;
-
-    top: 30px;
-    left: 7vw;
-
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 7px;
-
-    letter-spacing: .08em;
-
-    transform: rotate(-1deg);
-}
-
-.hero::after {
-    content:
-        "★ 11:47 PM ★ probably still out ★";
-
-    position: absolute;
-
-    top: 32px;
-    right: 6vw;
-
-    color: var(--yellow);
-
-    font-family: var(--tiny-font);
-
-    font-size: 7px;
-
-    transform: rotate(2deg);
-}
-
-.hero-copy {
-    position: relative;
-
-    z-index: 2;
-}
-
-.eyebrow {
-    margin-bottom: 22px;
-
-    color: var(--hot-violet);
-
-    font-family: var(--tiny-font);
-
-    font-size: 8px;
-
-    letter-spacing: .12em;
-}
-
-.hero h1 {
-    display: flex;
-
-    flex-direction: column;
-
-    margin: 0;
-
-    font-family: var(--display-font);
-
-    font-size:
-        clamp(65px, 12vw, 165px);
-
-    line-height: .76;
-
-    letter-spacing: -.1em;
-
-    text-transform: uppercase;
-}
-
-.hero h1 span:nth-child(1) {
-    color: var(--white);
-}
-
-.hero h1 span:nth-child(2) {
-    color: var(--paper);
-
-    margin-left: 4vw;
-
-    transform: rotate(-1deg);
-}
-
-.hero h1 span:nth-child(3) {
-    color: var(--red);
-
-    margin-left: 1vw;
-
-    transform: rotate(.8deg);
-
-    text-shadow:
-        4px 2px 0 var(--blue),
-        -2px 0 0 var(--hot-violet);
-}
-
-.hero-description {
-    max-width: 550px;
-
-    margin:
-        38px
-        0
-        0
-        7px;
-
-    color: #aaa2aa;
-
-    font-size: 11px;
-
-    line-height: 1.8;
-}
-
-.hero-description::before {
-    content: "♡ ";
-
-    color: var(--pink);
-}
-
-.hero-meta {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 5px;
-
-    margin-top: 20px;
-}
-
-.hero-meta span {
-    padding:
-        2px
-        6px;
-
-    color: var(--black);
-
-    background: var(--paper);
-
-    font-family: var(--tiny-font);
-
-    font-size: 7px;
-
-    letter-spacing: .05em;
-}
-
-.hero-meta span:nth-child(2) {
-    background: var(--violet);
-
-    color: white;
-}
-
-.hero-meta span:nth-child(3) {
-    background: var(--red);
-
-    color: white;
-}
-
-.hero-meta span:nth-child(4) {
-    background: var(--yellow);
-}
-
-
-/* =========================================================
-   11 // HERO SIDE NOTES
-   ========================================================= */
-
-.hero-side {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 27px;
-
-    padding-bottom: 15px;
-}
-
-.hero-note {
-    position: relative;
-
-    padding: 13px;
-
-    border:
-        1px solid rgba(217,208,194,.28);
-
-    background:
-        rgba(255,255,255,.025);
-
-    transform: rotate(2deg);
-}
-
-.hero-note:nth-child(2) {
-    transform:
-        rotate(-2deg)
-        translateX(20px);
-}
-
-.hero-note::before {
-    content: "LOCAL POST";
-
-    position: absolute;
-
-    top: -8px;
-    left: 9px;
-
-    padding: 0 4px;
-
-    background: var(--black);
-
-    color: var(--hot-violet);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    letter-spacing: .1em;
-}
-
-.note-label {
-    display: block;
-
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    letter-spacing: .1em;
-}
-
-.hero-note strong {
-    display: block;
-
-    margin: 2px 0;
-
-    color: var(--white);
-
-    font-family: var(--display-font);
-
-    font-size: 21px;
-}
-
-.hero-note span:last-child {
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 7px;
-}
-
-
-/* =========================================================
-   12 // INTRO
-   ========================================================= */
-
-.intro-grid {
-    display: grid;
-
-    grid-template-columns:
-        42%
-        minmax(0, 1fr);
-
-    gap: 8vw;
-}
-
-.intro-title {
-    position: sticky;
-
-    top: 80px;
-}
-
-.intro-title h2,
-.section-heading h2,
-.summer-header h2,
-.year-header h2 {
-    margin: 0;
-
-    color: var(--white);
-
-    font-family: var(--display-font);
-
-    font-size:
-        clamp(42px, 6vw, 80px);
-
-    line-height: .82;
-
-    letter-spacing: -.08em;
-
-    text-transform: uppercase;
-
-    text-shadow:
-        2px 2px 0 rgba(229,29,50,.4);
-}
-
-.intro-copy {
-    max-width: 600px;
-}
-
-.large-copy {
-    color: var(--white);
-
-    font-family: var(--emo-font);
-
-    font-size:
-        clamp(21px, 2.3vw, 31px);
-
-    line-height: 1.28;
-
-    transform: rotate(-.4deg);
-}
-
-.intro-copy p:not(.large-copy) {
-    color: #aaa4aa;
-
-    font-size: 11px;
-
-    line-height: 1.9;
-}
-
-.intro-copy p:nth-child(3) {
-    margin-left: 7%;
-}
-
-.intro-copy p:last-child {
-    margin-left: 15%;
-
-    color: var(--yellow);
-
-    font-family: var(--tiny-font);
-
-    font-size: 9px;
-}
-
-
-/* =========================================================
-   13 // PEOPLE
-   ========================================================= */
-
-.people {
-    background:
-        radial-gradient(
-            circle at 80% 18%,
-            rgba(165,46,232,.11),
-            transparent 25%
-        );
-}
-
-.section-heading {
-    max-width: 900px;
-
-    margin-bottom: 65px;
-}
-
-.section-heading p {
-    max-width: 420px;
-
-    margin:
-        22px
-        0
-        0
-        5px;
-
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 9px;
-
-    transform: rotate(-.5deg);
-}
-
-.people-grid {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 65px;
-}
-
-.person-card {
-    position: relative;
-
-    display: grid;
-
-    grid-template-columns:
-        45px
-        270px
-        minmax(0, 1fr);
-
-    gap: 25px;
-
-    min-height: 230px;
-
-    padding-top: 18px;
-
-    border-top:
-        1px dashed rgba(217,208,194,.23);
-}
-
-.person-card:nth-child(1) {
-    transform: rotate(-.35deg);
-}
-
-.person-card:nth-child(2) {
-    margin-left: 5%;
-
-    transform: rotate(.45deg);
-}
-
-.person-card:nth-child(3) {
-    margin-left: 10%;
-
-    transform: rotate(-.7deg);
-}
-
-.person-number {
-    color: var(--red);
-
-    font-family: var(--tiny-font);
-
-    font-size: 8px;
-}
-
-.person-image {
-    position: relative;
-
-    min-height: 210px;
-
-    border:
-        1px solid rgba(217,208,194,.32);
-
-    background:
-        #17151b;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    transform: rotate(-2deg);
-
-    box-shadow:
-        5px 6px 0 rgba(0,0,0,.4);
-}
-
-.person-image::before {
-    content: "IMAGE HERE";
-
-    position: absolute;
-
-    top: -17px;
-    left: 7px;
-
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    transform: rotate(2deg);
-}
-
-.person-image::after {
-    content: "♡";
-
-    position: absolute;
-
-    right: -14px;
-    bottom: -13px;
-
-    color: var(--pink);
-
-    font-size: 20px;
-
-    transform: rotate(13deg);
-}
-
-.person-image span {
-    color: #403b43;
-
-    font-family: var(--display-font);
-
-    font-size: 25px;
-
-    letter-spacing: -.08em;
-}
-
-.person-info {
-    max-width: 570px;
-}
-
-.person-name-row {
-    display: flex;
-
-    align-items: baseline;
-
-    gap: 12px;
-
-    border-bottom:
-        1px dashed rgba(217,208,194,.15);
-
-    padding-bottom: 8px;
-}
-
-.person-name-row h3 {
-    margin: 0;
-
-    color: var(--white);
-
-    font-family: var(--display-font);
-
-    font-size:
-        clamp(24px, 3.5vw, 45px);
-
-    line-height: .9;
-
-    letter-spacing: -.07em;
-}
-
-.person-name-row span {
-    color: var(--hot-violet);
-
-    font-family: var(--tiny-font);
-
-    font-size: 7px;
-}
-
-.person-tag {
-    margin:
-        13px
-        0
-        17px;
-
-    color: var(--red);
-
-    font-family: var(--tiny-font);
-
-    font-size: 7px;
-
-    letter-spacing: .11em;
-}
-
-.person-info > p:not(.person-tag) {
-    color: #aaa4aa;
-
-    font-size: 10px;
-
-    line-height: 1.85;
-}
-
-.person-details {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 4px;
-
-    margin-top: 18px;
-}
-
-.person-details span {
-    padding:
-        2px
-        5px;
-
-    border:
-        1px solid rgba(217,208,194,.2);
-
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-}
-
-.person-roman .person-name-row h3 {
-    text-shadow:
-        2px 1px 0 var(--red),
-        -1px 0 0 var(--blue);
-}
-
-.person-roman .person-tag {
-    color: var(--hot-violet);
-}
-
-.person-roman::after {
-    content:
-        "ROMAN KNOWS THIS PERSON";
-
-    position: absolute;
-
-    top: 27px;
-    right: 0;
-
-    color: var(--hot-violet);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    transform: rotate(2deg);
-}
-
-.person-tyler::after {
-    content:
-        "AUX CORD WAR CRIMINAL";
-
-    position: absolute;
-
-    right: 5px;
-    bottom: 4px;
-
-    color: var(--red);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    transform: rotate(-2deg);
-}
-
-
-/* =========================================================
-   14 // PLACES
-   ========================================================= */
-
-.places {
-    background:
-        radial-gradient(
-            circle at 20% 70%,
-            rgba(79,129,149,.13),
-            transparent 28%
-        );
-}
-
-.places-list {
-    border-top:
-        1px dashed rgba(217,208,194,.22);
-}
-
-.place-row {
-    position: relative;
-
-    display: grid;
-
-    grid-template-columns:
-        45px
-        minmax(0,1fr)
-        170px;
-
-    gap: 25px;
-
-    padding:
-        30px
-        0
-        34px;
-
-    border-bottom:
-        1px dashed rgba(217,208,194,.14);
-}
-
-.place-row:nth-child(2) {
-    margin-left: 6%;
-}
-
-.place-row:nth-child(3) {
-    margin-left: 2%;
-}
-
-.place-row:nth-child(4) {
-    margin-left: 10%;
-}
-
-.place-row:nth-child(5) {
-    margin-left: 4%;
-}
-
-.place-row:nth-child(6) {
-    margin-left: 13%;
-}
-
-.place-row:nth-child(7) {
-    margin-left: 2%;
-}
-
-.place-number {
-    color: var(--lake);
-
-    font-family: var(--tiny-font);
-
-    font-size: 8px;
-}
-
-.place-main h3 {
-    margin: 0 0 5px;
-
-    color: var(--white);
-
-    font-family: var(--display-font);
-
-    font-size:
-        clamp(27px, 4vw, 52px);
-
-    line-height: .88;
-
-    letter-spacing: -.07em;
-}
-
-.place-type {
-    margin-bottom: 15px;
-
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    letter-spacing: .13em;
-}
-
-.place-main > p:last-child {
-    max-width: 610px;
-
-    color: #9d979e;
-
-    font-size: 10px;
-
-    line-height: 1.85;
-}
-
-.place-side {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-end;
-
-    gap: 4px;
-
-    padding-top: 5px;
-
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    text-align: right;
-}
-
-.place-row:nth-child(2) .place-main h3,
-.place-row:nth-child(5) .place-main h3 {
-    color: #7398a7;
-}
-
-.place-row:nth-child(2)::after {
-    content:
-        "♡ lake st. clair ♡";
-
-    position: absolute;
-
-    top: 8px;
-    left: 47%;
-
-    color: var(--lake);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    transform: rotate(-4deg);
-}
-
-
-/* =========================================================
-   15 // NIGHTS
-   ========================================================= */
-
-.nights {
-    max-width: none;
-
-    padding-left: 9vw;
-    padding-right: 9vw;
-
-    background:
-        radial-gradient(
-            circle at 74% 30%,
-            rgba(40,88,217,.16),
-            transparent 32%
-        ),
-        #090a11;
-}
-
-.night-feature {
-    position: relative;
-
-    display: grid;
-
-    grid-template-columns:
-        58%
-        minmax(0,1fr);
-
-    gap: 8vw;
-
-    align-items: end;
-
-    min-height: 560px;
-}
-
-.night-feature::before {
-    content:
-        "11:38 PM // M-29 // WINDOWS DOWN";
-
-    position: absolute;
-
-    top: 0;
-    right: 3%;
-
-    color: var(--bright-blue);
-
-    font-family: var(--tiny-font);
-
-    font-size: 7px;
-
-    transform: rotate(2deg);
-}
-
-.night-feature-main h2 {
-    margin: 0;
-
-    color: var(--white);
-
-    font-family: var(--display-font);
-
-    font-size:
-        clamp(62px, 11vw, 150px);
-
-    line-height: .73;
-
-    letter-spacing: -.1em;
-}
-
-.night-feature-main h2::after {
-    content: "?";
-
-    color: var(--red);
-
-    text-shadow:
-        3px 2px 0 var(--hot-violet);
-}
-
-.night-feature-main > p:last-child {
-    margin:
-        38px
-        0
-        0
-        10px;
-
-    color: var(--hot-violet);
-
-    font-family: var(--emo-font);
-
-    font-size: 26px;
-
-    transform: rotate(-2deg);
-}
-
-.night-feature-side {
-    max-width: 390px;
-
-    padding-bottom: 25px;
-}
-
-.night-feature-side p {
-    color: #8f919d;
-
-    font-size: 10px;
-
-    line-height: 1.9;
-}
-
-.night-feature-side p:nth-child(2) {
-    color: var(--paper);
-
-    transform: translateX(-25px);
-}
-
-.night-feature-side p:last-child {
-    color: #6f99aa;
-
-    transform: rotate(1deg);
-}
-
-.night-list {
-    margin-top: 80px;
-
-    border-top:
-        1px dashed rgba(217,208,194,.17);
-}
-
-.night-list div {
-    display: flex;
-
-    align-items: baseline;
-
-    gap: 20px;
-
-    padding: 12px 0;
-
-    border-bottom:
-        1px dashed rgba(217,208,194,.1);
-}
-
-.night-list span {
-    color: var(--blue);
-
-    font-family: var(--tiny-font);
-
-    font-size: 7px;
-}
-
-.night-list strong {
-    color: #aaa5ac;
-
-    font-family: var(--body-font);
-
-    font-size: 9px;
-
-    letter-spacing: .05em;
-}
-
-
-/* =========================================================
-   16 // SUMMER
-   ========================================================= */
-
-.summer {
-    background:
-        radial-gradient(
-            circle at 82% 22%,
-            rgba(228,189,56,.08),
-            transparent 24%
-        ),
-        radial-gradient(
-            circle at 18% 88%,
-            rgba(79,129,149,.11),
-            transparent 28%
-        );
-}
-
-.summer-header {
-    display: grid;
-
-    grid-template-columns:
-        60%
-        minmax(0,1fr);
-
-    gap: 60px;
-
-    align-items: end;
-
-    margin-bottom: 80px;
-}
-
-.summer-header p {
-    max-width: 350px;
-
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 8px;
-
-    transform: rotate(1deg);
-}
-
-.summer-grid {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-}
-
-.summer-card {
-    position: relative;
-
-    min-height: 240px;
-
-    padding:
-        25px
-        30px;
-
-    border-top:
-        1px dashed rgba(217,208,194,.2);
-
-    border-right:
-        1px dashed rgba(217,208,194,.12);
-
-    transform: rotate(-.25deg);
-}
-
-.summer-card:nth-child(2) {
-    transform:
-        rotate(.7deg)
-        translateY(20px);
-}
-
-.summer-card:nth-child(3) {
-    transform:
-        rotate(.3deg)
-        translateY(-8px);
-}
-
-.summer-card:nth-child(4) {
-    transform:
-        rotate(-.7deg)
-        translateY(18px);
-}
-
-.summer-number {
-    color: var(--yellow);
-
-    font-family: var(--tiny-font);
-
-    font-size: 7px;
-}
-
-.summer-card h3 {
-    margin:
-        17px
-        0
-        14px;
-
-    color: var(--white);
-
-    font-family: var(--display-font);
-
-    font-size: 29px;
-
-    line-height: .9;
-
-    letter-spacing: -.06em;
-}
-
-.summer-card p {
-    max-width: 390px;
-
-    color: #99939a;
-
-    font-size: 10px;
-
-    line-height: 1.8;
-}
-
-.summer-card:nth-child(2) h3 {
-    color: var(--fishfly);
-}
-
-.summer-card:nth-child(2)::after {
-    content:
-        "POP POP POP POP POP";
-
-    position: absolute;
-
-    right: 12px;
-    bottom: 12px;
-
-    color: var(--fishfly);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    transform: rotate(-7deg);
-}
-
-
-/* =========================================================
-   17 // SCHOOL
-   17 // FINE. THE TARS CAN HAVE THEIR MOMENT.
-   ========================================================= */
-
-.school {
-    max-width: none;
-
-    padding:
-        0
-        0
-        100px;
-
-    background:
-        #e8e2d8;
-
-    color: #17141a;
-}
-
-.school::before {
-    left: 5vw;
-
-    color: var(--red);
-}
-
-.school-banner {
-    display: flex;
-
-    align-items: flex-end;
-
-    justify-content: space-between;
-
-    padding:
-        60px
-        7vw
-        48px;
-
-    background:
-        repeating-linear-gradient(
-            0deg,
-            transparent 0,
-            transparent 4px,
-            rgba(0,0,0,.035) 5px
-        ),
-        var(--red);
-
-    color: white;
-
-    border-top:
-        7px solid #17141a;
-
-    border-bottom:
-        7px solid #17141a;
-
-    transform: rotate(-.15deg);
-}
-
-.school-kicker,
-.school-colors,
-.school-banner-right span:last-child {
-    font-family: var(--tiny-font);
-
-    font-size: 7px;
-
-    letter-spacing: .12em;
-}
-
-.school-banner h2 {
-    margin: 9px 0 0;
-
-    font-family: var(--display-font);
-
-    font-size:
-        clamp(53px, 10vw, 140px);
-
-    line-height: .7;
-
-    letter-spacing: -.11em;
-
-    text-shadow:
-        4px 4px 0 #17141a;
-}
-
-.school-banner-right {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 7px;
-
-    text-align: right;
-}
-
-.school-colors {
-    color: #17141a;
-}
-
-.school-intro {
-    display: grid;
-
-    grid-template-columns:
-        25%
-        minmax(0,1fr);
-
-    gap: 7vw;
-
-    max-width: 1250px;
-
-    margin: 0 auto;
-
-    padding:
-        85px
-        5vw;
-}
-
-.section-label-small {
-    color: var(--red);
-
-    font-family: var(--tiny-font);
-
-    font-size: 7px;
-
-    letter-spacing: .12em;
-}
-
-.school-intro .large-copy {
-    color: #17141a;
-}
-
-.school-intro p:not(.large-copy) {
-    max-width: 590px;
-
-    color: #504a51;
-
-    font-size: 10px;
-}
-
-.school-grid {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    max-width: 1250px;
-
-    margin: 0 auto;
-
-    padding:
-        0
-        5vw;
-}
-
-.school-card {
-    min-height: 225px;
-
-    padding:
-        27px
-        30px;
-
-    border-top:
-        1px dashed rgba(23,20,26,.4);
-
-    border-right:
-        1px dashed rgba(23,20,26,.2);
-}
-
-.school-card:nth-child(odd) {
-    transform: rotate(-.25deg);
-}
-
-.school-card:nth-child(even) {
-    transform: rotate(.4deg);
-}
-
-.school-card-number {
-    color: var(--red);
-
-    font-family: var(--tiny-font);
-
-    font-size: 7px;
-}
-
-.school-card h3 {
-    margin:
-        18px
-        0
-        14px;
-
-    color: #17141a;
-
-    font-family: var(--display-font);
-
-    font-size: 30px;
-
-    line-height: .9;
-
-    letter-spacing: -.06em;
-}
-
-.school-card p {
-    max-width: 430px;
-
-    color: #514c52;
-
-    font-size: 10px;
-}
-
-
-/* =========================================================
-   18 // 2015
-   ========================================================= */
-
-.year {
-    background:
-        radial-gradient(
-            circle at 20% 30%,
-            rgba(165,46,232,.12),
-            transparent 25%
-        );
-}
-
-.year-header {
-    display: grid;
-
-    grid-template-columns:
-        60%
-        minmax(0,1fr);
-
-    gap: 7vw;
-
-    align-items: end;
-
-    margin-bottom: 70px;
-}
-
-.year-header p {
-    color: #a29ca4;
-
-    font-family: var(--tiny-font);
-
-    font-size: 8px;
-
-    line-height: 1.9;
-
-    transform: rotate(1deg);
-}
-
-.year-header p::before {
-    content:
-        "// IMPORTANT";
-
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: var(--red);
-
-    font-size: 6px;
-
-    letter-spacing: .13em;
-}
-
-.year-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    border-top:
-        1px dashed rgba(217,208,194,.2);
-}
-
-.year-item {
-    position: relative;
-
-    min-height: 135px;
-
-    padding:
-        22px
-        18px;
-
-    border-right:
-        1px dashed rgba(217,208,194,.12);
-
-    border-bottom:
-        1px dashed rgba(217,208,194,.12);
-}
-
-.year-item:nth-child(2n) {
-    transform: rotate(.4deg);
-}
-
-.year-item:nth-child(3n) {
-    transform: rotate(-.4deg);
-}
-
-.year-item span {
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    letter-spacing: .12em;
-}
-
-.year-item strong {
-    display: block;
-
-    margin-top: 13px;
-
-    color: var(--white);
-
-    font-family: var(--display-font);
-
-    font-size:
-        clamp(19px, 2.8vw, 33px);
-
-    line-height: .9;
-
-    letter-spacing: -.06em;
-}
-
-.year-item:nth-child(1) strong {
-    color: var(--blue);
-}
-
-.year-item:nth-child(2) strong {
-    color: var(--violet);
-}
-
-.year-item:nth-child(3) strong {
-    color: var(--yellow);
-}
-
-.year-item:nth-child(4) strong {
-    color: var(--pink);
-}
-
-.year-item:nth-child(5) strong {
-    color: var(--red);
-}
-
-.year-item:nth-child(6) strong {
-    color: var(--lake);
-}
-
-.year-language {
-    margin-top: 65px;
-
-    padding:
-        18px;
-
-    border-top:
-        1px dashed rgba(217,208,194,.16);
-
-    transform: rotate(-.25deg);
-}
-
-.year-language > span {
-    color: var(--hot-violet);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    letter-spacing: .14em;
-}
-
-.year-language p {
-    margin-top: 10px;
-
-    color: #77717a;
-
-    font-family: var(--tiny-font);
-
-    font-size: 8px;
-
-    line-height: 2;
-}
-
-
-/* =========================================================
-   19 // RELATIONSHIP BOARD
-   19 // LOCAL CONSPIRACY BOARD BUT MAKE IT TUMBLR
-   ========================================================= */
-
-.relationships {
-    min-height: 800px;
-
-    background:
-        radial-gradient(
-            circle at 50% 45%,
-            rgba(165,46,232,.13),
-            transparent 35%
-        );
-}
-
-.relationships-header {
-    max-width: 650px;
-
-    margin-bottom: 75px;
-}
-
-.relationships-header h2 {
-    margin: 0;
-
-    color: var(--white);
-
-    font-family: var(--display-font);
-
-    font-size:
-        clamp(43px, 7vw, 88px);
-
-    line-height: .8;
-
-    letter-spacing: -.08em;
-}
-
-.relationships-header p {
-    max-width: 430px;
-
-    margin-top: 25px;
-
-    color: var(--gray);
-
-    font-size: 9px;
-}
-
-.relationship-board {
-    position: relative;
-
-    height: 480px;
-
-    border-top:
-        1px dashed rgba(217,208,194,.14);
-
-    border-bottom:
-        1px dashed rgba(217,208,194,.14);
-}
-
-.relationship-node {
-    position: absolute;
-
-    padding:
-        11px
-        15px;
-
-    border:
-        1px solid rgba(217,208,194,.3);
-
-    background:
-        rgba(11,10,14,.88);
-
-    color: var(--white);
-
-    font-family: var(--tiny-font);
-
-    font-size: 7px;
-
-    letter-spacing: .07em;
-
-    z-index: 3;
-}
-
-.node-roman {
-    left: 22%;
-    top: 22%;
-
-    border-color: var(--hot-violet);
-
-    transform: rotate(-3deg);
-
-    box-shadow:
-        4px 4px 0 rgba(165,46,232,.2);
-}
-
-.node-tyler {
-    left: 60%;
-    top: 18%;
-
-    border-color: var(--red);
-
-    transform: rotate(2deg);
-}
-
-.node-abcc {
-    left: 43%;
-    top: 53%;
-
-    border-color: var(--red);
-
-    transform: rotate(-1deg);
-}
-
-.node-lake {
-    left: 12%;
-    top: 68%;
-
-    border-color: var(--lake);
-
-    transform: rotate(2deg);
-}
-
-.node-town {
-    right: 10%;
-    top: 69%;
-
-    border-color: var(--yellow);
-
-    transform: rotate(-2deg);
-}
-
-.relationship-line {
-    position: absolute;
-
-    height: 1px;
-
-    transform-origin: left center;
-
-    opacity: .5;
-
-    z-index: 1;
-}
-
-.line-one {
-    left: 27%;
-    top: 31%;
-    width: 34%;
-
-    background: var(--hot-violet);
-
-    transform: rotate(-5deg);
-}
-
-.line-two {
-    left: 49%;
-    top: 59%;
-    width: 27%;
-
-    background: var(--red);
-
-    transform: rotate(-8deg);
-}
-
-.line-three {
-    left: 17%;
-    top: 71%;
-    width: 29%;
-
-    background: var(--lake);
-
-    transform: rotate(-21deg);
-}
-
-.line-four {
-    left: 50%;
-    top: 61%;
-    width: 31%;
-
-    background: var(--yellow);
-
-    transform: rotate(16deg);
-}
-
-.relationship-note {
-    position: absolute;
-
-    right: 5%;
-    top: 37%;
-
-    width: 190px;
-
-    padding: 17px;
-
-    background: #d7cdb9;
-
-    color: #18151a;
-
-    transform: rotate(4deg);
-
-    box-shadow:
-        6px 7px 0 rgba(0,0,0,.4);
-
-    z-index: 4;
-}
-
-.relationship-note span {
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    letter-spacing: .12em;
-}
-
-.relationship-note p {
-    margin-top: 8px;
-
-    font-family: var(--emo-font);
-
-    font-size: 12px;
-
-    line-height: 1.4;
-}
-
-
-/* =========================================================
-   20 // TUMBLR GARBAGE
-   =========================================================
-
-   These classes are intentionally NOT represented by
-   the current HTML yet.
-
-   When we add the markup:
-   - .tumblr-post
-   - .tumblr-tags
-   - .tumblr-notes
-   - .archive-stamp
-   - .local-post
-   - .sticker
-   - .fishfly
-   - .music-player
-
-   they already have a home here.
-
-   ========================================================= */
-
-
-/* fake tumblr post */
-
-.tumblr-post {
-    position: relative;
-
-    max-width: 510px;
-
-    margin:
-        60px
-        auto;
-
-    padding:
-        20px
-        22px;
-
-    background: #ded6c8;
-
-    color: #1b181d;
-
-    box-shadow:
-        7px 8px 0 rgba(0,0,0,.5);
-
-    transform: rotate(-1deg);
-}
-
-.tumblr-post:nth-of-type(even) {
-    transform: rotate(1.2deg);
-}
-
-.tumblr-post::before {
-    content:
-        "posted from new baltimore";
-
-    position: absolute;
-
-    top: -13px;
-    left: 10px;
-
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    transform: rotate(-2deg);
-}
-
-.tumblr-post::after {
-    content:
-        "reblog this";
-
-    position: absolute;
-
-    right: 8px;
-    bottom: -14px;
-
-    color: var(--hot-violet);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    transform: rotate(2deg);
+  overflow-x: hidden;
 }
-
-.tumblr-post p {
-    font-family: var(--body-font);
 
-    font-size: 11px;
-
-    line-height: 1.7;
-}
 
-.tumblr-post strong {
-    font-family: var(--display-font);
+/* ============================================================
+   SELECTION
+   ============================================================ */
 
-    font-size: 15px;
+::selection {
+  background: #b026ff;
+  color: #fff;
 }
 
-.tumblr-tags {
-    color: #777078;
 
-    font-family: var(--tiny-font);
+/* ============================================================
+   PAGE SHELL
+   ============================================================ */
 
-    font-size: 6px;
+.site-shell {
+  position: relative;
 
-    line-height: 1.8;
-}
-
-.tumblr-notes {
-    margin-top: 13px;
+  width: min(1380px, calc(100% - 32px));
+  margin: 0 auto;
 
-    color: var(--red);
+  padding: 20px 0 100px;
 
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
+  isolation: isolate;
 }
-
 
-/* =========================================================
-   21 // STICKERS
-   ========================================================= */
 
-.sticker {
-    position: absolute;
+/* ============================================================
+   BACKGROUND GRID
+   ============================================================ */
 
-    z-index: 20;
+.site-shell::before {
+  content: "";
 
-    pointer-events: none;
+  position: fixed;
+  inset: 0;
 
-    user-select: none;
+  z-index: -3;
 
-    font-family: var(--tiny-font);
+  pointer-events: none;
 
-    font-size: 7px;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
 
-    letter-spacing: .05em;
-}
-
-.sticker-lake {
-    color: var(--lake);
+  background-size: 42px 42px;
 
-    transform: rotate(-7deg);
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 85%
+  );
 }
 
-.sticker-emo {
-    color: var(--hot-violet);
 
-    transform: rotate(5deg);
-}
+/* ============================================================
+   FLOATING FISHFLY LAYER
+   ============================================================ */
 
-.sticker-red {
-    color: var(--red);
+.fishfly-layer {
+  position: fixed;
+  inset: 0;
 
-    transform: rotate(-4deg);
-}
+  z-index: 50;
 
-.sticker-yellow {
-    color: var(--yellow);
+  pointer-events: none;
 
-    transform: rotate(3deg);
+  overflow: hidden;
 }
-
-
-/* =========================================================
-   22 // FISHFLIES
-   =========================================================
-
-   yes.
-
-   they are now part of the website.
-
-   ========================================================= */
 
 .fishfly {
-    position: fixed;
+  position: absolute;
 
-    z-index: 9990;
+  display: block;
 
-    pointer-events: none;
+  width: 18px;
+  height: 10px;
 
-    color: var(--fishfly);
+  color: rgba(222, 218, 193, .30);
 
-    font-size: 12px;
+  font-family: Georgia, serif;
+  font-size: 18px;
 
-    opacity: .65;
+  opacity: .45;
 
-    user-select: none;
+  filter:
+    blur(.15px)
+    drop-shadow(0 0 5px rgba(255,255,220,.12));
 
-    animation:
-        fishflyDrift 13s linear infinite;
-}
+  transform-origin: center;
 
-.fishfly::before {
-    content: "✦";
-}
-
-.fishfly:nth-child(2) {
-    animation-delay: -3s;
-    animation-duration: 17s;
-}
-
-.fishfly:nth-child(3) {
-    animation-delay: -7s;
-    animation-duration: 11s;
-}
-
-.fishfly:nth-child(4) {
-    animation-delay: -10s;
-    animation-duration: 19s;
-}
-
-@keyframes fishflyDrift {
-
-    0% {
-        transform:
-            translate(-10vw, 105vh)
-            rotate(0deg);
-    }
-
-    25% {
-        transform:
-            translate(25vw, 72vh)
-            rotate(40deg);
-    }
-
-    50% {
-        transform:
-            translate(62vw, 44vh)
-            rotate(-25deg);
-    }
-
-    75% {
-        transform:
-            translate(82vw, 17vh)
-            rotate(70deg);
-    }
-
-    100% {
-        transform:
-            translate(110vw, -10vh)
-            rotate(120deg);
-    }
+  animation:
+    fishfly-drift 13s ease-in-out infinite;
 }
 
 
-/* =========================================================
-   23 // FLOATING LOCAL INTERNET BULLSHIT
-   ========================================================= */
+/*
+   every fishfly gets its own dumb little trajectory.
+   they're supposed to look like movement you don't notice
+   until you've already been on the page for twenty seconds.
+*/
 
-.floating-local {
-    position: fixed;
-
-    z-index: 9000;
-
-    pointer-events: none;
-
-    user-select: none;
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    opacity: .65;
+.ff-01 {
+  left: 4%;
+  top: 18%;
+  animation-duration: 17s;
+  animation-delay: -4s;
 }
 
-.local-arrow {
-    color: var(--red);
-
-    transform: rotate(-7deg);
+.ff-02 {
+  left: 13%;
+  top: 72%;
+  animation-duration: 11s;
+  animation-delay: -8s;
+  opacity: .28;
 }
 
-.local-lake {
-    color: var(--lake);
-
-    transform: rotate(4deg);
+.ff-03 {
+  left: 23%;
+  top: 35%;
+  animation-duration: 19s;
+  animation-delay: -13s;
+  opacity: .20;
 }
 
-.local-roman {
-    color: var(--hot-violet);
-
-    transform: rotate(-3deg);
+.ff-04 {
+  left: 31%;
+  top: 82%;
+  animation-duration: 14s;
+  animation-delay: -2s;
+  opacity: .32;
 }
 
-.local-2015 {
-    color: var(--yellow);
-
-    transform: rotate(5deg);
+.ff-05 {
+  left: 42%;
+  top: 12%;
+  animation-duration: 21s;
+  animation-delay: -10s;
+  opacity: .20;
 }
 
-
-/* =========================================================
-   24 // MUSIC PLAYER
-   =========================================================
-
-   THIS IS THE IMPORTANT ONE.
-
-   The actual audio needs HTML/JS.
-
-   This CSS makes it look like some idiot embedded
-   SoundCloud into their Tumblr and then refused
-   to leave it alone.
-
-   ========================================================= */
-
-.music-player {
-    position: fixed;
-
-    right: 18px;
-    bottom: 18px;
-
-    z-index: 10000;
-
-    width: 235px;
-
-    padding: 10px 11px;
-
-    background:
-        rgba(11,10,14,.95);
-
-    border:
-        1px solid rgba(217,208,194,.28);
-
-    box-shadow:
-        5px 5px 0 rgba(0,0,0,.5);
-
-    transform: rotate(-1deg);
+.ff-06 {
+  left: 49%;
+  top: 57%;
+  animation-duration: 12s;
+  animation-delay: -7s;
+  opacity: .34;
 }
 
-.music-player::before {
-    content:
-        "♪ NOW PLAYING";
-
-    display: block;
-
-    margin-bottom: 5px;
-
-    color: var(--hot-violet);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    letter-spacing: .12em;
+.ff-07 {
+  left: 57%;
+  top: 28%;
+  animation-duration: 18s;
+  animation-delay: -15s;
+  opacity: .23;
 }
 
-.music-player::after {
-    content:
-        "probably too loud";
-
-    position: absolute;
-
-    right: 5px;
-    bottom: -12px;
-
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 5px;
-
-    transform: rotate(2deg);
+.ff-08 {
+  left: 63%;
+  top: 88%;
+  animation-duration: 15s;
+  animation-delay: -5s;
+  opacity: .27;
 }
 
-.music-player .track-title {
-    color: var(--white);
-
-    font-family: var(--body-font);
-
-    font-size: 8px;
-
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
+.ff-09 {
+  left: 71%;
+  top: 44%;
+  animation-duration: 20s;
+  animation-delay: -11s;
+  opacity: .21;
 }
 
-.music-player .track-meta {
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 5px;
+.ff-10 {
+  left: 79%;
+  top: 17%;
+  animation-duration: 13s;
+  animation-delay: -6s;
+  opacity: .30;
 }
 
-.music-player .progress {
-    height: 3px;
-
-    margin:
-        7px
-        0;
-
-    background:
-        rgba(217,208,194,.15);
-
-    overflow: hidden;
+.ff-11 {
+  left: 87%;
+  top: 68%;
+  animation-duration: 16s;
+  animation-delay: -12s;
+  opacity: .24;
 }
 
-.music-player .progress-bar {
-    width: 32%;
-
-    height: 100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            var(--red),
-            var(--hot-violet),
-            var(--blue)
-        );
+.ff-12 {
+  left: 94%;
+  top: 31%;
+  animation-duration: 22s;
+  animation-delay: -9s;
+  opacity: .18;
 }
 
-.music-player button {
-    border: 0;
-
-    padding: 3px 7px;
-
-    background: var(--red);
-
-    color: white;
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    cursor: pointer;
+.ff-13 {
+  left: 17%;
+  top: 91%;
+  animation-duration: 14s;
+  animation-delay: -3s;
+  opacity: .22;
 }
 
-.music-player button:hover {
-    background: var(--hot-violet);
+.ff-14 {
+  left: 37%;
+  top: 48%;
+  animation-duration: 18s;
+  animation-delay: -14s;
+  opacity: .19;
+}
+
+.ff-15 {
+  left: 68%;
+  top: 76%;
+  animation-duration: 12s;
+  animation-delay: -1s;
+  opacity: .31;
+}
+
+.ff-16 {
+  left: 84%;
+  top: 53%;
+  animation-duration: 19s;
+  animation-delay: -17s;
+  opacity: .20;
+}
+
+.ff-17 {
+  left: 55%;
+  top: 93%;
+  animation-duration: 15s;
+  animation-delay: -9s;
+  opacity: .25;
 }
 
 
-/* =========================================================
-   25 // LOCAL TIME WIDGET
-   ========================================================= */
+@keyframes fishfly-drift {
 
-.local-time {
-    position: fixed;
-
-    left: 16px;
-    bottom: 17px;
-
-    z-index: 10000;
-
-    padding: 7px 9px;
-
-    background:
-        rgba(11,10,14,.92);
-
-    border:
-        1px dashed rgba(217,208,194,.25);
-
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    transform: rotate(1deg);
-}
-
-.local-time strong {
-    display: block;
-
-    color: var(--yellow);
-
-    font-size: 10px;
-}
-
-.local-time::after {
-    content:
-        "probably still out";
-
-    display: block;
-
-    margin-top: 2px;
-
-    color: var(--hot-violet);
-
-    font-size: 5px;
-}
-
-
-/* =========================================================
-   26 // FAKE ARCHIVE STAMP
-   ========================================================= */
-
-.archive-stamp {
-    position: absolute;
-
-    padding:
-        4px
-        7px;
-
-    border:
-        1px solid var(--red);
-
-    color: var(--red);
-
-    font-family: var(--tiny-font);
-
-    font-size: 6px;
-
-    letter-spacing: .08em;
-
+  0% {
     transform:
-        rotate(-7deg);
+      translate3d(0, 0, 0)
+      rotate(-12deg);
+  }
 
-    opacity: .8;
+  25% {
+    transform:
+      translate3d(42px, -28px, 0)
+      rotate(19deg);
+  }
+
+  50% {
+    transform:
+      translate3d(-24px, -62px, 0)
+      rotate(-25deg);
+  }
+
+  75% {
+    transform:
+      translate3d(58px, -20px, 0)
+      rotate(31deg);
+  }
+
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      rotate(-12deg);
+  }
+
 }
 
 
-/* =========================================================
-   27 // FOOTER
-   ========================================================= */
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+  position: relative;
+
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 80px clamp(25px, 6vw, 100px);
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,.12);
+
+  background:
+    linear-gradient(
+      118deg,
+      rgba(176,38,255,.14),
+      transparent 34%
+    ),
+    linear-gradient(
+      290deg,
+      rgba(10,45,240,.12),
+      transparent 38%
+    ),
+    #0b0c12;
+
+  box-shadow:
+    0 30px 100px rgba(0,0,0,.55),
+    inset 0 0 80px rgba(176,38,255,.04);
+}
+
+
+/* ugly color smear */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 620px;
+  height: 620px;
+
+  right: -190px;
+  top: -220px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(176,38,255,.22),
+      rgba(10,45,240,.06) 45%,
+      transparent 70%
+    );
+
+  filter: blur(5px);
+
+  transform: rotate(17deg);
+
+  pointer-events: none;
+}
+
+
+/* diagonal damage */
+
+.hero::after {
+  content: "/// /// ///";
+
+  position: absolute;
+
+  right: 35px;
+  bottom: 25px;
+
+  color: rgba(242,182,52,.35);
+
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 8px;
+
+  transform: rotate(-7deg);
+}
+
+
+/* ============================================================
+   HERO COPY
+   ============================================================ */
+
+.hero-copy {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 900px;
+}
+
+
+.hero-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 24px;
+
+  color: #a9a6b0;
+
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.hero-kicker span {
+  color: #b026ff;
+}
+
+
+.hero h1 {
+  margin: 0;
+
+  font-family: "Archivo Black", Impact, sans-serif;
+
+  font-size: clamp(72px, 12vw, 175px);
+
+  line-height: .78;
+
+  letter-spacing: -.08em;
+
+  text-transform: uppercase;
+
+  transform: rotate(-2deg);
+}
+
+
+.hero h1 span {
+  display: block;
+
+  color: #f1eff4;
+
+  text-shadow:
+    8px 8px 0 rgba(176,38,255,.30);
+}
+
+
+.hero h1 strong {
+  display: block;
+
+  margin-left: .38em;
+
+  color: #b026ff;
+
+  font-size: .63em;
+
+  letter-spacing: -.06em;
+
+  text-shadow:
+    5px 5px 0 #0a2df0;
+}
+
+
+.hero-subtitle {
+  margin: 40px 0 0;
+
+  max-width: 530px;
+
+  color: #c7c4cb;
+
+  font-family: "DM Mono", monospace;
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* ============================================================
+   HERO STICKERS
+   ============================================================ */
+
+.hero-sticker {
+  position: absolute;
+
+  z-index: 5;
+
+  user-select: none;
+}
+
+
+.sticker-star {
+  top: 70px;
+  right: 15%;
+
+  color: #f2b634;
+
+  font-size: 90px;
+
+  transform: rotate(13deg);
+
+  text-shadow:
+    0 0 25px rgba(242,182,52,.22);
+}
+
+
+.sticker-slashes {
+  right: 7%;
+  bottom: 28%;
+
+  color: #f80000;
+
+  font-family: "DM Mono", monospace;
+  font-size: 38px;
+  font-weight: 700;
+
+  letter-spacing: -8px;
+
+  transform: rotate(-12deg);
+}
+
+
+/* ============================================================
+   HERO HANDWRITTEN NOTE
+   ============================================================ */
+
+.hero-note {
+  position: absolute;
+
+  right: 8%;
+  top: 48%;
+
+  width: 175px;
+
+  padding: 14px;
+
+  color: #111;
+
+  background: #f2b634;
+
+  font-family: "Permanent Marker", cursive;
+  font-size: 13px;
+
+  line-height: 1.25;
+
+  transform:
+    rotate(5deg)
+    translateY(-50%);
+
+  box-shadow:
+    5px 7px 0 rgba(0,0,0,.25);
+
+  z-index: 6;
+}
+
+
+.hero-note span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: .15em;
+}
+
+
+/* ============================================================
+   QUICK FACTS
+   ============================================================ */
+
+.quickfacts {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  margin-top: 10px;
+
+  border-left: 1px solid rgba(255,255,255,.1);
+}
+
+
+.quickfact {
+  min-height: 100px;
+
+  padding: 18px 20px;
+
+  border-right: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+
+  background: rgba(255,255,255,.025);
+}
+
+
+.quickfact .label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #77737d;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+
+.quickfact strong {
+  color: #e6e3e8;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-transform: lowercase;
+}
+
+
+/* ============================================================
+   NAV
+   ============================================================ */
+
+.main-nav {
+  position: sticky;
+  top: 12px;
+
+  z-index: 40;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 5px;
+
+  margin: 35px 0 70px;
+
+  padding: 6px;
+
+  border: 1px solid rgba(255,255,255,.10);
+
+  background:
+    rgba(8,9,13,.88);
+
+  backdrop-filter: blur(16px);
+}
+
+
+.main-nav a {
+  flex: 1 1 auto;
+
+  padding: 12px 15px;
+
+  color: #aaa7af;
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: lowercase;
+
+  border: 1px solid transparent;
+
+  transition:
+    color .2s ease,
+    background .2s ease,
+    border-color .2s ease,
+    transform .2s ease;
+}
+
+
+.main-nav a:hover {
+  color: #fff;
+
+  background: rgba(176,38,255,.12);
+
+  border-color: rgba(176,38,255,.45);
+
+  transform: translateY(-2px);
+}
+
+
+/* ============================================================
+   SECTION STRUCTURE
+   ============================================================ */
+
+.section {
+  position: relative;
+
+  margin-bottom: 150px;
+}
+
+
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+
+  margin-bottom: 55px;
+}
+
+
+.section-index {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  flex: 0 0 38px;
+
+  border: 1px solid rgba(176,38,255,.5);
+
+  color: #b026ff;
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+
+  transform: rotate(-4deg);
+}
+
+
+.eyebrow {
+  margin: 0 0 10px;
+
+  color: #74717a;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  font-weight: 500;
+
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+
+.section h2 {
+  margin: 0;
+
+  color: #f0edf2;
+
+  font-family: "Archivo Black", Impact, sans-serif;
+  font-size: clamp(38px, 5vw, 68px);
+
+  line-height: .9;
+
+  letter-spacing: -.055em;
+  text-transform: lowercase;
+}
+
+
+/* ============================================================
+   INTRO
+   ============================================================ */
+
+.intro-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    270px;
+
+  gap: 40px;
+
+  align-items: start;
+}
+
+
+.main-card {
+  position: relative;
+
+  padding: clamp(30px, 5vw, 60px);
+
+  border: 1px solid rgba(255,255,255,.09);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.035),
+      rgba(255,255,255,.012)
+    );
+
+  box-shadow:
+    18px 18px 0 rgba(176,38,255,.05);
+}
+
+
+.main-card::before {
+  content: "::";
+
+  position: absolute;
+
+  top: 20px;
+  right: 25px;
+
+  color: #b026ff;
+
+  font-family: "DM Mono", monospace;
+  font-size: 20px;
+}
+
+
+.main-card p {
+  max-width: 760px;
+
+  margin: 0 0 24px;
+
+  color: #c3c0c7;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+
+.main-card p:last-child {
+  margin-bottom: 0;
+
+  color: #f2b634;
+
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   CROOKED NOTE
+   ============================================================ */
+
+.side-note {
+  position: relative;
+
+  padding: 28px 24px;
+
+  color: #17151a;
+
+  background: #e7e2e9;
+
+  box-shadow:
+    9px 11px 0 rgba(0,0,0,.28);
+
+  transform: rotate(3deg);
+}
+
+
+.side-note::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: -9px;
+
+  width: 65px;
+  height: 17px;
+
+  background: rgba(176,38,255,.45);
+
+  transform: translateX(-50%) rotate(-2deg);
+}
+
+
+.side-note .note-mark {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #b026ff;
+
+  font-size: 28px;
+}
+
+
+.side-note strong {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-family: "Permanent Marker", cursive;
+  font-size: 20px;
+}
+
+
+.side-note p {
+  margin: 9px 0;
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+
+  line-height: 1.65;
+}
+
+
+/* ============================================================
+   MUSIC
+   ============================================================ */
+
+.music-block {
+  position: relative;
+
+  margin:
+    0
+    0
+    150px;
+
+  padding: 25px;
+
+  border:
+    1px solid rgba(176,38,255,.25);
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(176,38,255,.07),
+      rgba(10,45,240,.04)
+    );
+}
+
+
+.music-block::after {
+  content: "♫";
+
+  position: absolute;
+
+  right: 20px;
+  top: -24px;
+
+  color: #b026ff;
+
+  font-size: 50px;
+
+  transform: rotate(13deg);
+}
+
+
+.music-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 15px;
+
+  color: #b026ff;
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+
+  letter-spacing: .12em;
+}
+
+
+.music-tiny {
+  color: #6f6b74;
+
+  font-size: 8px;
+
+  letter-spacing: .08em;
+}
+
+
+.soundcloud-wrap {
+  overflow: hidden;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  background: #111;
+}
+
+
+.soundcloud-wrap iframe {
+  display: block;
+
+  width: 100%;
+
+  border: 0;
+}
+
+
+.music-caption {
+  padding-top: 12px;
+
+  color: #6f6b74;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+
+  text-transform: lowercase;
+}
+
+
+/* ============================================================
+   PEOPLE
+   ============================================================ */
+
+.people-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+
+.person-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,.11);
+
+  background: #0d0e14;
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease;
+}
+
+
+.person-card:hover {
+  transform: translateY(-7px) rotate(-.4deg);
+
+  border-color: rgba(176,38,255,.4);
+
+  box-shadow:
+    12px 14px 0 rgba(176,38,255,.06);
+}
+
+
+/* ============================================================
+   PERSON IMAGE
+   ============================================================ */
+
+.person-image {
+  position: relative;
+
+  height: 500px;
+
+  overflow: hidden;
+
+  background: #15161d;
+}
+
+
+.person-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(8,9,13,.9),
+      transparent 45%
+    );
+
+  pointer-events: none;
+}
+
+
+.person-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform .5s ease;
+}
+
+
+.person-card:hover .person-image img {
+  transform: scale(1.035);
+}
+
+
+.image-stamp {
+  position: absolute;
+
+  left: 18px;
+  bottom: 18px;
+
+  z-index: 3;
+
+  padding: 7px 10px;
+
+  color: #0b0b0d;
+
+  background: #f2b634;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+  transform: rotate(-3deg);
+}
+
+
+/* ============================================================
+   PERSON INFORMATION
+   ============================================================ */
+
+.person-info {
+  padding: 30px;
+}
+
+
+.person-number {
+  margin-bottom: 8px;
+
+  color: #77727d;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .12em;
+}
+
+
+.person-info h3 {
+  margin: 0;
+
+  color: #f0edf2;
+
+  font-family: "Archivo Black", Impact, sans-serif;
+  font-size: 38px;
+
+  line-height: .9;
+
+  letter-spacing: -.05em;
+  text-transform: lowercase;
+}
+
+
+.person-tagline {
+  margin: 12px 0 25px;
+
+  color: #b026ff;
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+.person-info > p:not(.person-tagline) {
+  color: #a9a5ad;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* ============================================================
+   PERSON FACTS
+   ============================================================ */
+
+.person-facts {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  margin: 25px 0;
+
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-left: 1px solid rgba(255,255,255,.08);
+}
+
+
+.person-facts div {
+  padding: 11px 9px;
+
+  border-right: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+
+.person-facts span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #65616a;
+
+  font-family: "DM Mono", monospace;
+  font-size: 7px;
+
+  text-transform: uppercase;
+}
+
+
+.person-facts strong {
+  color: #ddd9df;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   CARD LINK
+   ============================================================ */
+
+.card-link {
+  display: inline-block;
+
+  margin-top: 12px;
+
+  color: #f2b634;
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
+}
+
+
+.card-link:hover {
+  color: #fff;
+
+  transform: translateX(5px);
+}
+
+
+/* ============================================================
+   CHARACTER SECTIONS
+   ============================================================ */
+
+.character-section {
+  position: relative;
+
+  margin-bottom: 160px;
+
+  padding: clamp(25px, 5vw, 70px);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  background:
+    linear-gradient(
+      140deg,
+      rgba(255,255,255,.025),
+      transparent 55%
+    );
+}
+
+
+.character-header {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 55px;
+}
+
+
+.character-symbol {
+  color: rgba(176,38,255,.4);
+
+  font-family: "Archivo Black", Impact, sans-serif;
+  font-size: 80px;
+
+  line-height: .7;
+
+  letter-spacing: -.1em;
+}
+
+
+.character-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(260px, .8fr)
+    minmax(0, 1.2fr);
+
+  gap: clamp(30px, 6vw, 90px);
+
+  align-items: center;
+}
+
+
+.character-grid.reverse {
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(260px, .8fr);
+}
+
+
+.character-image-large {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 500px;
+
+  background: #111218;
+}
+
+
+.character-image-large img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 500px;
+
+  object-fit: cover;
+}
+
+
+.character-copy {
+  max-width: 680px;
+}
+
+
+.big-line {
+  margin:
+    0 0
+    30px;
+
+  color: #f0edf2;
+
+  font-family: "Archivo Black", Impact, sans-serif;
+  font-size: clamp(28px, 4vw, 48px);
+
+  line-height: .98;
+
+  letter-spacing: -.05em;
+}
+
+
+.character-copy p:not(.big-line) {
+  color: #aaa6ae;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+
+/* ============================================================
+   QUOTE BOX
+   ============================================================ */
+
+.quote-box {
+  margin-top: 35px;
+
+  padding: 20px 24px;
+
+  border-left: 4px solid #b026ff;
+
+  background: rgba(176,38,255,.055);
+
+  transform: rotate(-.6deg);
+}
+
+
+.quote-box span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #716d76;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .12em;
+}
+
+
+.quote-box strong {
+  color: #f2b634;
+
+  font-family: "Permanent Marker", cursive;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+
+/* ============================================================
+   ROMAN TRAITS
+   ============================================================ */
+
+.roman-traits {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 45px;
+}
+
+
+.roman-traits span {
+  padding: 8px 11px;
+
+  color: #aaa6ae;
+
+  border: 1px solid rgba(255,255,255,.09);
+
+  background: rgba(255,255,255,.02);
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  text-transform: lowercase;
+
+  transform: rotate(
+    calc(var(--random-rotation, 0) * 1deg)
+  );
+}
+
+
+.roman-traits span:nth-child(2n) {
+  transform: rotate(-1deg);
+}
+
+
+.roman-traits span:nth-child(3n) {
+  transform: rotate(1.5deg);
+
+  border-color: rgba(176,38,255,.22);
+}
+
+
+/* ============================================================
+   SERIOUS / INFORMATIONAL SECTIONS
+   ============================================================ */
+
+.serious-section {
+  padding:
+    clamp(30px, 6vw, 80px);
+
+  border-top: 2px solid rgba(255,255,255,.14);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.025),
+      transparent
+    );
+}
+
+
+.serious-intro {
+  max-width: 900px;
+}
+
+
+.serious-intro p {
+  color: #aaa6ae;
+
+  font-size: 16px;
+
+  line-height: 1.9;
+}
+
+
+.serious-intro p:first-child {
+  color: #eeeaf0;
+
+  font-size: 22px;
+  font-weight: 600;
+}
+
+
+.abcc-facts {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  margin-top: 55px;
+
+  border-top: 1px solid rgba(255,255,255,.12);
+  border-left: 1px solid rgba(255,255,255,.12);
+}
+
+
+.abcc-facts div {
+  min-height: 125px;
+
+  padding: 20px;
+
+  border-right: 1px solid rgba(255,255,255,.12);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+
+.abcc-facts span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #6f6b74;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+
+.abcc-facts strong {
+  color: #e3e0e5;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+.margin-note {
+  max-width: 350px;
+
+  margin:
+    45px 0 0
+    auto;
+
+  padding: 20px;
+
+  border-left: 3px solid #f80000;
+
+  color: #aaa6ae;
+
+  background: rgba(248,0,0,.035);
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+
+.margin-note span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #f80000;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: .12em;
+}
+
+
+/* ============================================================
+   TOWN SECTION
+   ============================================================ */
+
+.town-section {
+  padding-bottom: 80px;
+}
+
+
+.town-intro {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.3fr)
+    minmax(250px, .7fr);
+
+  gap: 80px;
+
+  align-items: start;
+}
+
+
+.town-copy {
+  max-width: 800px;
+}
+
+
+.town-copy p:not(.big-line) {
+  color: #aaa6ae;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+
+.town-directions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  padding-top: 10px;
+}
+
+
+.town-directions span {
+  padding: 10px 12px;
+
+  color: #b9b5bd;
+
+  border:
+    1px solid
+    rgba(255,255,255,.1);
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+
+  background: rgba(255,255,255,.018);
+}
+
+
+.town-directions span:nth-child(1),
+.town-directions span:nth-child(4) {
+  color: #f2b634;
+
+  border-color: rgba(242,182,52,.28);
+}
+
+
+.town-directions span:nth-child(2),
+.town-directions span:nth-child(7) {
+  color: #72a9ff;
+
+  border-color: rgba(114,169,255,.24);
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
 
 .site-footer {
-    position: relative;
+  position: relative;
 
-    padding:
-        80px
-        7vw
-        30px;
+  padding:
+    45px 25px;
 
-    background:
-        #07060a;
+  border-top:
+    1px solid
+    rgba(255,255,255,.1);
 
-    border-top:
-        1px dashed rgba(217,208,194,.2);
+  color: #66626b;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+
+  text-align: center;
+
+  letter-spacing: .08em;
 }
 
-.footer-main {
-    display: grid;
 
+.site-footer div:nth-child(2) {
+  margin: 18px 0;
+
+  color: #b026ff;
+
+  font-size: 17px;
+
+  letter-spacing: 9px;
+}
+
+
+.site-footer p {
+  margin: 0;
+
+  color: #f2b634;
+
+  font-family: "Permanent Marker", cursive;
+  font-size: 13px;
+
+  letter-spacing: 0;
+
+  transform: rotate(-2deg);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+  .quickfacts {
     grid-template-columns:
-        minmax(0,1fr)
-        350px;
+      repeat(3, 1fr);
+  }
 
-    gap: 60px;
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
 
-    align-items: end;
+  .abcc-facts {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+  .town-intro {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
 }
 
-.footer-label {
-    color: var(--gray);
 
-    font-family: var(--tiny-font);
+@media (max-width: 700px) {
 
-    font-size: 7px;
+  .site-shell {
+    width: min(100% - 16px, 1380px);
 
-    letter-spacing: .15em;
+    padding-top: 8px;
+  }
+
+
+  .hero {
+    min-height: 570px;
+
+    padding: 55px 25px;
+  }
+
+
+  .hero h1 {
+    font-size: clamp(64px, 20vw, 110px);
+  }
+
+
+  .hero-note {
+    right: 20px;
+    top: auto;
+    bottom: 35px;
+
+    transform: rotate(4deg);
+  }
+
+
+  .sticker-star {
+    top: 40px;
+    right: 8%;
+
+    font-size: 55px;
+  }
+
+
+  .sticker-slashes {
+    right: 8%;
+    bottom: 13%;
+
+    font-size: 25px;
+  }
+
+
+  .quickfacts {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .quickfact:last-child {
+    grid-column: span 2;
+  }
+
+
+  .main-nav {
+    position: relative;
+    top: auto;
+
+    margin-top: 25px;
+  }
+
+
+  .main-nav a {
+    flex: 1 1 calc(33.333% - 5px);
+  }
+
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .side-note {
+    width: min(270px, 85%);
+
+    margin:
+      10px
+      auto
+      0
+      8%;
+  }
+
+
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .person-image {
+    height: 430px;
+  }
+
+
+  .character-grid,
+  .character-grid.reverse {
+    grid-template-columns: 1fr;
+  }
+
+
+  .character-image-large {
+    min-height: 400px;
+  }
+
+
+  .character-image-large img {
+    min-height: 400px;
+  }
+
+
+  .character-grid.reverse .character-copy {
+    order: 1;
+  }
+
+
+  .character-grid.reverse .character-image-large {
+    order: 2;
+  }
+
+
+  .abcc-facts {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .town-directions {
+    padding-bottom: 30px;
+  }
+
 }
 
-.footer-main h2 {
-    margin: 0;
 
-    color: var(--white);
+@media (max-width: 450px) {
 
-    font-family: var(--display-font);
+  .hero {
+    min-height: 600px;
+  }
 
-    font-size:
-        clamp(75px, 14vw, 180px);
 
-    line-height: .68;
-
-    letter-spacing: -.12em;
-
-    text-shadow:
-        4px 3px 0 var(--red),
-        -2px 0 0 var(--blue);
-}
-
-.footer-copy {
-    color: var(--gray);
-
-    font-family: var(--tiny-font);
-
-    font-size: 7px;
+  .hero-kicker {
+    display: block;
 
     line-height: 1.8;
-}
-
-.footer-copy p:last-child {
-    color: var(--hot-violet);
-
-    transform: rotate(-1deg);
-}
-
-.footer-bottom {
-    display: flex;
-
-    justify-content: space-between;
-
-    margin-top: 90px;
-
-    padding-top: 10px;
-
-    border-top:
-        1px dashed rgba(217,208,194,.13);
-
-    color: #55505a;
-
-    font-family: var(--tiny-font);
-
-    font-size: 5px;
-
-    letter-spacing: .08em;
-}
+  }
 
 
-/* =========================================================
-   28 // LITTLE HOVER GARBAGE
-   ========================================================= */
+  .hero-kicker span {
+    display: none;
+  }
 
-.person-card:hover .person-name-row h3 {
-    color: var(--hot-violet);
 
-    transition: .12s ease;
-}
+  .hero-subtitle {
+    font-size: 11px;
+  }
 
-.place-row:hover .place-main h3 {
-    color: var(--yellow);
 
-    transition: .12s ease;
-}
+  .quickfacts {
+    grid-template-columns: 1fr;
+  }
 
-.summer-card:hover h3 {
-    color: var(--red);
 
-    transition: .12s ease;
-}
+  .quickfact:last-child {
+    grid-column: auto;
+  }
 
-.year-item:hover strong {
-    color: var(--white);
 
-    text-shadow:
-        2px 0 var(--red),
-        -1px 0 var(--blue);
+  .main-nav a {
+    flex: 1 1 calc(50% - 5px);
+  }
 
-    transition: .12s ease;
+
+  .section-heading {
+    gap: 13px;
+  }
+
+
+  .section h2 {
+    font-size: 39px;
+  }
+
+
+  .person-facts {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .abcc-facts {
+    grid-template-columns: 1fr;
+  }
+
+
+  .character-section,
+  .serious-section {
+    padding:
+      25px 20px;
+  }
+
 }
 
 
-/* =========================================================
-   29 // MOBILE
-   ========================================================= */
-
-@media (max-width: 850px) {
-
-    .site-header {
-        padding:
-            22px
-            20px
-            0;
-    }
-
-    .header-top {
-        align-items: flex-start;
-    }
-
-    .site-mark::after {
-        display: none;
-    }
-
-    .header-location {
-        margin-top: 5px;
-    }
-
-    .main-nav {
-        flex-wrap: nowrap;
-
-        overflow-x: auto;
-
-        scrollbar-width: none;
-    }
-
-    .main-nav::-webkit-scrollbar {
-        display: none;
-    }
-
-    .main-nav a {
-        flex: 0 0 auto;
-
-        padding:
-            8px
-            11px;
-    }
-
-
-    /* HERO */
-
-    .hero {
-        min-height: auto;
-
-        grid-template-columns: 1fr;
-
-        padding:
-            85px
-            24px
-            65px;
-    }
-
-    .hero h1 {
-        font-size:
-            clamp(63px, 19vw, 110px);
-    }
-
-    .hero-description {
-        font-size: 10px;
-    }
-
-    .hero-side {
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 12px;
-    }
-
-    .hero-note:nth-child(2) {
-        transform: rotate(-2deg);
-    }
-
-
-    /* SECTIONS */
-
-    .section {
-        padding:
-            70px
-            24px
-            80px;
-    }
-
-    .section-heading h2,
-    .intro-title h2,
-    .summer-header h2,
-    .year-header h2 {
-        font-size:
-            clamp(43px, 15vw, 75px);
-    }
-
-
-    /* INTRO */
-
-    .intro-grid,
-    .summer-header,
-    .year-header,
-    .school-intro {
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-    }
-
-    .intro-title {
-        position: static;
-    }
-
-    .intro-copy p:nth-child(3),
-    .intro-copy p:last-child {
-        margin-left: 0;
-    }
-
-
-    /* PEOPLE */
-
-    .person-card {
-        grid-template-columns:
-            30px
-            minmax(0,1fr);
-
-        gap: 14px;
-    }
-
-    .person-card:nth-child(2),
-    .person-card:nth-child(3) {
-        margin-left: 0;
-    }
-
-    .person-number {
-        grid-column: 1;
-        grid-row: 1 / span 2;
-    }
-
-    .person-image {
-        grid-column: 2;
-        grid-row: 1;
-
-        min-height: 175px;
-    }
-
-    .person-info {
-        grid-column: 2;
-        grid-row: 2;
-    }
-
-    .person-roman::after,
-    .person-tyler::after {
-        display: none;
-    }
-
-
-    /* PLACES */
-
-    .place-row {
-        grid-template-columns:
-            28px
-            minmax(0,1fr);
-
-        gap: 12px;
-
-        margin-left: 0 !important;
-    }
-
-    .place-side {
-        grid-column: 2;
-
-        align-items: flex-start;
-
-        text-align: left;
-    }
-
-
-    /* NIGHTS */
-
-    .night-feature {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-
-        min-height: auto;
-    }
-
-    .night-feature-main h2 {
-        font-size:
-            clamp(65px, 20vw, 110px);
-    }
-
-    .night-feature-side p:nth-child(2) {
-        transform: none;
-    }
-
-
-    /* SUMMER */
-
-    .summer-grid,
-    .school-grid,
-    .year-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .summer-card {
-        border-right: 0;
-    }
-
-
-    /* SCHOOL */
-
-    .school-banner {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 25px;
-
-        padding:
-            55px
-            24px
-            45px;
-    }
-
-    .school-banner h2 {
-        font-size:
-            clamp(55px, 19vw, 105px);
-    }
-
-    .school-banner-right {
-        text-align: left;
-    }
-
-
-    /* RELATIONSHIP MAP */
-
-    .relationship-board {
-        height: 570px;
-    }
-
-    .node-roman {
-        left: 5%;
-    }
-
-    .node-tyler {
-        right: 5%;
-        left: auto;
-    }
-
-    .node-abcc {
-        left: 32%;
-    }
-
-    .node-lake {
-        left: 5%;
-    }
-
-    .node-town {
-        right: 5%;
-    }
-
-    .relationship-note {
-        right: 4%;
-        top: 43%;
-    }
-
-
-    /* FLOATING STUFF */
-
-    .music-player {
-        right: 8px;
-        bottom: 8px;
-
-        width: 190px;
-    }
-
-    .local-time {
-        left: 8px;
-        bottom: 8px;
-
-        opacity: .7;
-    }
-
-
-    /* FOOTER */
-
-    .footer-main {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-
-        gap: 7px;
-    }
-}
-
-
-/* =========================================================
-   30 // MOBILE = NO CRT OVERKILL
-   ========================================================= */
-
-@media (max-width: 500px) {
-
-    body::before {
-        opacity: .07;
-    }
-
-    .hero::after {
-        display: none;
-    }
-
-    .hero-side {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-note:nth-child(2) {
-        transform: rotate(-2deg);
-    }
-
-    .relationship-note {
-        width: 165px;
-    }
-}
-
-
-/* =========================================================
-   31 // ACCESSIBILITY
-   ========================================================= */
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
 
 @media (prefers-reduced-motion: reduce) {
 
-    html {
-        scroll-behavior: auto;
-    }
+  html {
+    scroll-behavior: auto;
+  }
 
-    *,
-    *::before,
-    *::after {
-        animation: none !important;
-        transition: none !important;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+
 }
-
-
-/* =========================================================
-   32 // END OF FILE
-   =========================================================
-
-   if you're reading this:
-
-   go outside.
-
-   seriously.
-
-   it's probably 11:47 PM.
-
-   Roman is somewhere.
-
-   Tyler has the aux.
-
-   fishflies are hitting the windshield.
-
-   somebody said "we're only gonna stay for an hour."
-
-   they are lying.
-
-   ========================================================= */
