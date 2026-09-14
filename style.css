@@ -936,3 +936,240 @@ img[aria-hidden="true"] {
 .swarm-footer {
   display: none !important;
 }
+/* =========================================================
+   OKAY NOW MAKE THE FUCKING PICTURES MOVE
+   ========================================================= */
+
+/* Roman — obviously he cannot simply sit there */
+.roman-phone {
+  animation: phoneIdiot 5.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes phoneIdiot {
+  0%, 100% {
+    transform: translate(0, 0) rotate(9deg);
+  }
+  35% {
+    transform: translate(7px, -11px) rotate(14deg);
+  }
+  70% {
+    transform: translate(-5px, 4px) rotate(4deg);
+  }
+}
+
+/* Roman's stupid desk sticker */
+.roman-desk {
+  animation: deskWobble 7s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes deskWobble {
+  0%, 100% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
+  25% {
+    transform: translate(-8px, -5px) rotate(-10deg);
+  }
+  60% {
+    transform: translate(5px, 7px) rotate(-3deg);
+  }
+}
+
+/* Car in the night section */
+.car-music {
+  animation: carFloat 6s ease-in-out infinite;
+}
+
+@keyframes carFloat {
+  0%, 100% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
+  30% {
+    transform: translate(-13px, 8px) rotate(-3deg);
+  }
+  65% {
+    transform: translate(8px, -7px) rotate(-10deg);
+  }
+}
+
+/* AUX cord has absolutely no business behaving normally */
+.aux-cord {
+  animation: auxDrift 8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes auxDrift {
+  0%, 100% {
+    transform: translate(0, 0) rotate(13deg);
+  }
+  25% {
+    transform: translate(-12px, -8px) rotate(20deg);
+  }
+  55% {
+    transform: translate(9px, 5px) rotate(5deg);
+  }
+  80% {
+    transform: translate(-4px, 10px) rotate(16deg);
+  }
+}
+
+/* Party fish. They are fish. They should wander. */
+.party-fish.one {
+  animation: partyFishOne 6s ease-in-out infinite;
+}
+
+.party-fish.two {
+  animation: partyFishTwo 7.5s ease-in-out infinite;
+  animation-delay: -2.5s;
+}
+
+@keyframes partyFishOne {
+  0%, 100% {
+    transform: translate(0, 0) rotate(-15deg);
+  }
+  40% {
+    transform: translate(-15px, 12px) rotate(-5deg);
+  }
+  75% {
+    transform: translate(8px, -8px) rotate(-22deg);
+  }
+}
+
+@keyframes partyFishTwo {
+  0%, 100% {
+    transform: translate(0, 0) rotate(12deg);
+  }
+  35% {
+    transform: translate(12px, -14px) rotate(20deg);
+  }
+  70% {
+    transform: translate(-10px, 7px) rotate(4deg);
+  }
+}
+
+/* The iPhone has been dropped into the website and is now drifting */
+.iphone-sticker {
+  animation: iphoneDrift 6.5s ease-in-out infinite;
+}
+
+@keyframes iphoneDrift {
+  0%, 100% {
+    transform: translate(0, 0) rotate(8deg);
+  }
+  40% {
+    transform: translate(-9px, 12px) rotate(14deg);
+  }
+  75% {
+    transform: translate(7px, -6px) rotate(3deg);
+  }
+}
+
+/* ugly Tumblr heart. obviously */
+.relationship-heart {
+  animation: heartIdiot 5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes heartIdiot {
+  0%, 100% {
+    transform: translate(0, 0) rotate(-11deg) scale(1);
+  }
+  30% {
+    transform: translate(8px, -7px) rotate(-5deg) scale(1.04);
+  }
+  65% {
+    transform: translate(-6px, 6px) rotate(-15deg) scale(.96);
+  }
+}
+
+/* I AM FINE. SHE IS NOT FINE. */
+.im-fine {
+  animation: imFine 5.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes imFine {
+  0%, 100% {
+    transform: translate(0, 0) rotate(8deg);
+  }
+  45% {
+    transform: translate(-11px, -9px) rotate(2deg);
+  }
+  75% {
+    transform: translate(6px, 5px) rotate(13deg);
+  }
+}
+
+/* footer fish */
+.footer-fish {
+  animation: footerFish 8s ease-in-out infinite;
+}
+
+@keyframes footerFish {
+  0%, 100% {
+    transform: translate(0, 0) rotate(-18deg);
+  }
+  30% {
+    transform: translate(-18px, 10px) rotate(-8deg);
+  }
+  65% {
+    transform: translate(12px, -12px) rotate(-24deg);
+  }
+}
+
+/* make the hero shit feel less dead */
+.hero-kicker {
+  animation: kickerNudge 4.5s ease-in-out infinite;
+}
+
+@keyframes kickerNudge {
+  0%, 100% {
+    transform: rotate(-2deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(-1deg) translate(4px, -3px);
+  }
+}
+
+/* tags aren't supposed to be perfectly fucking aligned either */
+.person-tag {
+  animation: tagWiggle 6s ease-in-out infinite;
+}
+
+@keyframes tagWiggle {
+  0%, 100% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -4px;
+  }
+}
+
+/* little labels drift independently */
+.hero-meta span:nth-child(1) {
+  animation: label1 5s ease-in-out infinite;
+}
+
+.hero-meta span:nth-child(2) {
+  animation: label2 6s ease-in-out infinite;
+}
+
+.hero-meta span:nth-child(3) {
+  animation: label3 7s ease-in-out infinite;
+}
+
+@keyframes label1 {
+  0%, 100% { transform: rotate(-1deg) translate(0, 0); }
+  50% { transform: rotate(1deg) translate(3px, -3px); }
+}
+
+@keyframes label2 {
+  0%, 100% { transform: rotate(2deg) translate(0, 0); }
+  50% { transform: rotate(4deg) translate(-4px, 3px); }
+}
+
+@keyframes label3 {
+  0%, 100% { transform: rotate(-1deg) translate(0, 0); }
+  50% { transform: rotate(-3deg) translate(5px, -2px); }
+}
