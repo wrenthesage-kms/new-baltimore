@@ -885,10 +885,12 @@ main {
 }
 
 
-.roman-main img {
-
-  aspect-ratio: 4 / 5;
-
+.roman-main img,
+.roman-secondary img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
 }
 
 
@@ -904,13 +906,6 @@ main {
 
   transform:
     rotate(5deg);
-
-}
-
-
-.roman-secondary img {
-
-  aspect-ratio: 4 / 5;
 
 }
 
