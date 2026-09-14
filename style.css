@@ -1,456 +1,188 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;700&family=Permanent+Marker&display=swap');
-
-
 /* =========================================================
    NEW BALTIMORE / 2015
-   somebody gave a teenager css and nobody stopped them
+   someone got bored and started fucking with CSS
    ========================================================= */
 
-:root {
-    --black: #090909;
-    --paper: #e8e0ca;
-    --paper-dark: #c8bea5;
-    --ink: #171717;
-
-    --red: #e32929;
-    --blue: #1746b8;
-    --yellow: #e7bd32;
-    --purple: #7137a8;
-    --green: #718c58;
-
-    --gray: #77736b;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    background: #090909;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
-    margin: 0;
-    min-height: 100vh;
-    background:
-        radial-gradient(circle at 14% 12%, rgba(113,55,168,.18), transparent 20%),
-        radial-gradient(circle at 82% 37%, rgba(23,70,184,.14), transparent 22%),
-        radial-gradient(circle at 44% 90%, rgba(227,41,41,.10), transparent 24%),
-        #090909;
+  background:
+    radial-gradient(
+      ellipse at 12% 18%,
+      rgba(139, 32, 255, .42) 0%,
+      transparent 27%
+    ),
+    radial-gradient(
+      ellipse at 88% 12%,
+      rgba(8, 120, 255, .48) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      ellipse at 72% 82%,
+      rgba(242, 27, 36, .28) 0%,
+      transparent 25%
+    ),
+    radial-gradient(
+      ellipse at 20% 88%,
+      rgba(182, 230, 0, .18) 0%,
+      transparent 22%
+    ),
+    #09090d;
 
-    color: #dedbd1;
-
-    font-family:
-        "Archivo Narrow",
-        Arial Narrow,
-        Arial,
-        sans-serif;
-
-    overflow-x: hidden;
+  color: #f2e7c9;
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
 
-/* =========================================================
-   GENERAL INTERNET GARBAGE
-   ========================================================= */
-
-.internet-trash {
-    width: min(1500px, 100%);
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-}
+/* GIANT LAKE COLOR JUST FUCKING SITTING THERE */
 
 body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1000;
+  content: "";
+  position: fixed;
+  z-index: -4;
 
-    opacity: .07;
+  width: 72vw;
+  height: 42vh;
 
-    background:
-        repeating-linear-gradient(
-            0deg,
-            transparent 0px,
-            transparent 3px,
-            #fff 4px
-        );
+  left: 35vw;
+  top: 24vh;
 
-    mix-blend-mode: screen;
-}
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 166, 255, .72),
+      rgba(8, 120, 255, .32) 45%,
+      rgba(65, 16, 95, .1)
+    );
 
-img {
-    display: block;
-    max-width: 100%;
-}
+  border-radius: 48% 52% 61% 39%;
 
-a {
-    color: inherit;
-}
+  transform:
+    rotate(-8deg)
+    skewX(-12deg);
 
-
-/* =========================================================
-   TINY TOP
-   ========================================================= */
-
-.tiny-top {
-    width: 92%;
-    margin: 13px auto 0;
-
-    display: flex;
-    justify-content: space-between;
-
-    font-family: monospace;
-    font-size: 9px;
-    letter-spacing: .14em;
-    color: #77746c;
-
-    border-bottom: 1px solid #2b2b2b;
-    padding-bottom: 7px;
+  filter: blur(1px);
 }
 
 
-/* =========================================================
-   HEADER
-   ========================================================= */
+/* PURPLE / BLUE / RED STATIC COLOR GARBAGE */
 
-.town-header {
-    min-height: 570px;
-    position: relative;
+body::after {
+  content: "";
 
-    padding: 80px 8% 80px;
+  position: fixed;
+  inset: 0;
+  z-index: -3;
 
-    display: flex;
-    align-items: center;
-}
+  pointer-events: none;
 
-.header-noise {
-    position: absolute;
-    top: 43px;
-    left: 12%;
+  background:
+    linear-gradient(
+      91deg,
+      transparent 0 17%,
+      rgba(139, 32, 255, .09) 17% 18%,
+      transparent 18% 43%,
+      rgba(242, 27, 36, .08) 43% 44%,
+      transparent 44% 71%,
+      rgba(255, 210, 31, .06) 71% 72%,
+      transparent 72%
+    );
 
-    font-family: monospace;
-    font-size: 8px;
-    letter-spacing: .28em;
-
-    color: var(--yellow);
-
-    transform: rotate(-3deg);
-}
-
-.title-stack {
-    position: relative;
-    z-index: 3;
-}
-
-.title-small {
-    margin-left: 7px;
-
-    font-family: monospace;
-    font-size: 11px;
-    letter-spacing: .35em;
-
-    color: var(--red);
-}
-
-.title-stack h1 {
-    margin: 4px 0 4px;
-
-    font-family: "Permanent Marker", cursive;
-    font-size: clamp(80px, 13vw, 190px);
-    line-height: .73;
-
-    letter-spacing: -.08em;
-
-    color: #e7e1d3;
-
-    text-shadow:
-        9px 8px 0 var(--blue),
-        -4px -2px 0 var(--red);
-
-    transform: rotate(-3deg);
-}
-
-.title-tail {
-    display: inline-block;
-
-    margin-left: 17px;
-    margin-top: 17px;
-
-    padding: 5px 11px;
-
-    background: var(--yellow);
-    color: #111;
-
-    font-family: monospace;
-    font-size: 11px;
-    font-weight: bold;
-
-    transform: rotate(2deg);
-}
-
-.header-side {
-    position: absolute;
-
-    right: 8%;
-    top: 160px;
-
-    width: 245px;
-
-    transform: rotate(4deg);
-}
-
-.fake-profile {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-
-    padding: 13px;
-
-    background: #121212;
-    border: 1px solid #4c4c4c;
-
-    box-shadow: 8px 8px 0 #171717;
-}
-
-.fake-avatar {
-    width: 45px;
-    height: 45px;
-
-    display: grid;
-    place-items: center;
-
-    background: var(--red);
-    color: white;
-
-    font-family: monospace;
-    font-weight: bold;
-
-    transform: rotate(-9deg);
-}
-
-.fake-profile b {
-    display: block;
-    font-size: 15px;
-}
-
-.fake-profile small {
-    display: block;
-    margin-top: 3px;
-
-    color: #777;
-    font-family: monospace;
-    font-size: 8px;
-}
-
-.status-box {
-    margin-top: 14px;
-
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-
-    padding: 6px 9px;
-
-    background: #111;
-    border: 1px solid #333;
-
-    font-family: monospace;
-    font-size: 9px;
-}
-
-.status-box.crooked {
-    margin-left: 34px;
-    transform: rotate(-5deg);
-
-    color: var(--yellow);
-}
-
-.status-dot {
-    width: 6px;
-    height: 6px;
-
-    border-radius: 50%;
-
-    background: #75a34f;
-
-    box-shadow: 0 0 7px #75a34f;
-}
-
-.header-sticker {
-    position: absolute;
-
-    padding: 7px 12px;
-
-    color: #111;
-    font-family: monospace;
-    font-size: 9px;
-    font-weight: bold;
-}
-
-.sticker-one {
-    right: 29%;
-    bottom: 82px;
-
-    background: var(--yellow);
-    transform: rotate(-8deg);
-}
-
-.sticker-two {
-    left: 6%;
-    bottom: 35px;
-
-    background: var(--blue);
-    color: white;
-
-    transform: rotate(5deg);
+  mix-blend-mode: screen;
 }
 
 
 /* =========================================================
-   INTRO
+   THE WHOLE PROFILE
    ========================================================= */
 
-.intro-zone {
-    position: relative;
-
-    min-height: 700px;
-
-    padding: 100px 8%;
-
-    display: grid;
-    grid-template-columns: 1fr 360px;
-    gap: 100px;
-    align-items: center;
+.new-baltimore {
+  position: relative;
+  width: min(940px, 94vw);
+  min-height: 1500px;
+  margin: 0 auto;
+  padding: 60px 0 160px;
 }
 
-.intro-note {
-    position: relative;
 
-    max-width: 610px;
+/* =========================================================
+   TITLE — NOT A HERO SECTION
+   IT'S JUST A THING FLOATING THERE
+   ========================================================= */
 
-    padding: 42px 48px 50px;
+.nb-title {
+  position: relative;
+  z-index: 8;
 
-    background: var(--paper);
-    color: var(--ink);
+  display: inline-block;
 
-    transform: rotate(-1.5deg);
+  margin-left: 4vw;
 
-    box-shadow:
-        17px 20px 0 rgba(0,0,0,.5),
-        -4px 7px 0 var(--red);
+  color: #f2e7c9;
+
+  font-size: clamp(52px, 10vw, 110px);
+  line-height: .76;
+  letter-spacing: -7px;
+
+  text-shadow:
+    7px 6px 0 #8b20ff,
+    -4px -3px 0 #0878ff;
+
+  transform: rotate(-2deg);
 }
 
-.intro-note::after {
-    content: "";
+.nb-title::after {
+  content: "2015 / ANCHOR BAY / MI";
 
-    position: absolute;
-    top: -12px;
-    left: 34%;
+  position: absolute;
 
-    width: 120px;
-    height: 26px;
+  left: 9px;
+  bottom: -22px;
 
-    background: rgba(255, 230, 140, .6);
+  padding: 4px 8px;
 
-    transform: rotate(2deg);
+  background: #f21b24;
+  color: #09090d;
+
+  font-size: 10px;
+  letter-spacing: 1px;
+
+  transform: rotate(3deg);
 }
 
-.scribble {
-    font-family: "Permanent Marker", cursive;
-    font-size: 24px;
 
-    color: var(--purple);
-}
+/* =========================================================
+   RANDOM LAKE LABEL
+   ========================================================= */
 
-.intro-note h2 {
-    margin: 7px 0 24px;
+.nb-lake-note {
+  position: absolute;
 
-    font-size: 44px;
-    line-height: .88;
-    text-transform: uppercase;
-}
+  top: 180px;
+  right: 5%;
 
-.intro-note p {
-    max-width: 500px;
+  padding: 8px 13px;
 
-    font-size: 17px;
-    line-height: 1.25;
-}
+  background: #0878ff;
+  color: white;
 
-.intro-note .louder {
-    margin-top: 30px;
+  font-size: 11px;
+  font-weight: bold;
 
-    font-family: "Permanent Marker", cursive;
-    font-size: 25px;
+  transform:
+    rotate(7deg)
+    skewX(-4deg);
 
-    color: var(--red);
+  box-shadow:
+    8px 8px 0 #42105f;
 
-    transform: rotate(-2deg);
-}
-
-.margin-text {
-    position: absolute;
-
-    right: -125px;
-    bottom: 32px;
-
-    width: 145px;
-
-    font-family: monospace;
-    font-size: 8px;
-    line-height: 1.5;
-
-    color: #555;
-
-    transform: rotate(4deg);
-}
-
-.intro-photo {
-    position: relative;
-
-    width: 330px;
-
-    transform: rotate(7deg);
-}
-
-.intro-photo img {
-    width: 100%;
-
-    border: 8px solid #ddd6c5;
-
-    box-shadow: 11px 14px 0 #151515;
-}
-
-.photo-caption {
-    position: absolute;
-
-    bottom: -28px;
-    left: 12px;
-
-    font-family: "Permanent Marker", cursive;
-    font-size: 17px;
-
-    color: var(--yellow);
-
-    transform: rotate(-4deg);
-}
-
-.intro-arrow {
-    position: absolute;
-
-    right: 5%;
-    bottom: 130px;
-
-    font-family: monospace;
-    font-size: 10px;
-    line-height: 1.6;
-
-    color: var(--blue);
-
-    transform: rotate(9deg);
+  z-index: 12;
 }
 
 
@@ -458,1889 +190,436 @@ a {
    MAP
    ========================================================= */
 
-.map-zone {
-    position: relative;
+.nb-map {
+  position: absolute;
 
-    padding: 110px 7% 130px;
+  top: 250px;
+  left: 2%;
+
+  width: 190px;
+  height: 135px;
+
+  padding: 12px;
+
+  background: #f2e7c9;
+
+  color: #09090d;
+
+  border: 4px solid #164cff;
+
+  box-shadow:
+    9px 9px 0 #f21b24;
+
+  transform: rotate(-6deg);
+
+  z-index: 10;
 }
 
-.map-heading {
-    margin-left: 5%;
+.nb-map::before {
+  content: "NEW BALTIMORE. YES, IT'S A REAL PLACE.";
 
-    display: flex;
-    align-items: baseline;
-    gap: 18px;
+  display: block;
 
-    transform: rotate(-1deg);
+  margin-bottom: 8px;
+
+  color: #f21b24;
+
+  font-size: 8px;
+  font-weight: bold;
 }
 
-.map-heading span {
-    font-family: "Permanent Marker", cursive;
-    font-size: 31px;
-    color: var(--yellow);
-}
-
-.map-heading strong {
-    font-family: monospace;
-    font-size: 8px;
-    color: #666;
-}
-
-.map-paper {
-    position: relative;
-
-    width: min(1050px, 94%);
-    height: 630px;
-
-    margin: 30px auto 0;
-
-    overflow: hidden;
-
-    background:
-        linear-gradient(rgba(0,0,0,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,0,0,.025) 1px, transparent 1px),
-        #d7d0bd;
-
-    background-size: 22px 22px;
-
-    border: 1px solid #99917e;
-
-    box-shadow:
-        15px 17px 0 #121212,
-        -8px 5px 0 var(--purple);
-
-    transform: rotate(1.3deg);
-}
-
-.water-label {
-    position: absolute;
-
-    right: 50px;
-    top: 110px;
-
-    color: #56708c;
-
-    font-family: monospace;
-    font-size: 22px;
-    line-height: .9;
-    text-align: right;
-
-    transform: rotate(8deg);
-}
-
-.water-label small {
-    font-size: 9px;
-    letter-spacing: .2em;
-}
-
-.shoreline {
-    position: absolute;
-
-    width: 650px;
-    height: 520px;
-
-    right: -250px;
-    top: -60px;
-
-    border-left: 18px solid rgba(88,117,146,.25);
-    border-radius: 50%;
-
-    transform: rotate(-16deg);
-}
-
-.road {
-    position: absolute;
-
-    height: 13px;
-
-    background: #262626;
-
-    border-top: 2px solid #d4cdbd;
-    border-bottom: 2px solid #d4cdbd;
-
-    color: #111;
-
-    font-family: monospace;
-    font-size: 9px;
-    font-weight: bold;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.road span {
-    position: absolute;
-
-    background: #d7d0bd;
-
-    padding: 2px 5px;
-
-    white-space: nowrap;
-}
-
-.road-m29 {
-    width: 770px;
-    left: 60px;
-    top: 170px;
-
-    transform: rotate(-8deg);
-}
-
-.road-m29 span {
-    left: 130px;
-}
-
-.road-washington {
-    width: 420px;
-    left: 130px;
-    top: 310px;
-
-    transform: rotate(88deg);
-}
-
-.road-washington span {
-    top: -20px;
-}
-
-.road-front {
-    width: 500px;
-    left: 180px;
-    top: 260px;
-
-    transform: rotate(86deg);
-}
-
-.road-front span {
-    bottom: -20px;
-}
-
-.road-23 {
-    width: 420px;
-    left: -30px;
-    top: 510px;
-
-    transform: rotate(-4deg);
-}
-
-.road-24 {
-    width: 510px;
-    left: 500px;
-    top: 550px;
-
-    transform: rotate(5deg);
-}
-
-.road-i94 {
-    width: 850px;
-    left: 80px;
-    bottom: 40px;
-
-    height: 20px;
-
-    transform: rotate(-1deg);
-
-    background:
-        repeating-linear-gradient(
-            90deg,
-            #242424 0,
-            #242424 28px,
-            #555 29px,
-            #242424 30px
-        );
-}
-
-.place-pin {
-    position: absolute;
-
-    z-index: 5;
-
-    display: flex;
-    align-items: center;
-    gap: 5px;
-
-    color: #151515;
-
-    font-family: monospace;
-    font-size: 9px;
-    font-weight: bold;
-}
-
-.place-pin b {
-    color: var(--red);
-    font-size: 17px;
-}
-
-.pin-downtown {
-    left: 350px;
-    top: 225px;
-
-    transform: rotate(-5deg);
-}
-
-.pin-burke {
-    right: 130px;
-    top: 245px;
-
-    transform: rotate(4deg);
-}
-
-.pin-abcc {
-    left: 260px;
-    bottom: 180px;
-
-    transform: rotate(7deg);
-}
-
-.pin-festival {
-    left: 690px;
-    top: 425px;
-
-    transform: rotate(-8deg);
-}
-
-.map-note {
-    position: absolute;
-
-    z-index: 7;
-
-    width: 150px;
-
-    padding: 12px;
-
-    background: rgba(246,238,211,.9);
-
-    border: 1px solid #aaa;
-
-    color: #303030;
-
-    font-family: monospace;
-    font-size: 8px;
-    line-height: 1.5;
-
-    box-shadow: 5px 6px 0 rgba(0,0,0,.18);
-}
-
-.note-one {
-    left: 55px;
-    top: 70px;
-
-    transform: rotate(-7deg);
-}
-
-.note-two {
-    right: 50px;
-    bottom: 100px;
-
-    transform: rotate(6deg);
-}
-
-.note-three {
-    left: 480px;
-    bottom: 65px;
-
-    transform: rotate(-3deg);
-}
-
-.fishfly-map {
-    position: absolute;
-
-    left: 650px;
-    top: 100px;
-
-    color: #111;
-
-    font-size: 26px;
-
-    transform: rotate(24deg);
-}
-
-.fishfly-map span {
-    display: block;
-
-    margin-left: 8px;
-
-    font-family: monospace;
-    font-size: 7px;
-}
-
-.map-bottom {
-    width: 90%;
-
-    margin: 17px auto 0;
-
-    display: flex;
-    justify-content: space-between;
-
-    font-family: monospace;
-    font-size: 8px;
-
-    color: #5c5a54;
+.nb-map-roads {
+  position: relative;
+  height: 90px;
+
+  background:
+    linear-gradient(
+      28deg,
+      transparent 46%,
+      #0878ff 47% 50%,
+      transparent 51%
+    ),
+    linear-gradient(
+      88deg,
+      transparent 47%,
+      #f21b24 48% 51%,
+      transparent 52%
+    ),
+    linear-gradient(
+      154deg,
+      transparent 48%,
+      #b6e600 49% 51%,
+      transparent 52%
+    );
 }
 
 
 /* =========================================================
-   ROADS
+   ROMAN — HALF COVERING THE MAP
    ========================================================= */
 
-.road-wall {
-    position: relative;
+.nb-roman {
+  position: absolute;
 
-    padding: 130px 12%;
+  top: 205px;
+  left: 17%;
 
-    border-top: 1px solid #292929;
+  width: 210px;
+
+  z-index: 20;
+
+  transform: rotate(4deg);
 }
 
-.road-wall-title {
-    margin-bottom: 75px;
+.nb-roman img {
+  display: block;
+  width: 100%;
 
-    transform: rotate(-2deg);
+  filter:
+    drop-shadow(10px 10px 0 #ffb800)
+    drop-shadow(-5px -3px 0 #42105f);
 }
 
-.road-wall-title small {
-    color: var(--red);
-    font-family: monospace;
-    font-size: 9px;
-}
+.nb-roman::after {
+  content: "WHO THE FUCK IS ROMAN";
 
-.road-wall-title h2 {
-    margin: 0;
+  position: absolute;
 
-    font-family: "Permanent Marker", cursive;
-    font-size: clamp(55px, 8vw, 105px);
-    line-height: .8;
+  right: -80px;
+  bottom: -18px;
 
-    color: #ddd7ca;
-}
+  padding: 5px 7px;
 
-.road-entry {
-    position: relative;
+  background: #ffb800;
+  color: #09090d;
 
-    width: min(780px, 92%);
+  font-size: 9px;
+  font-weight: bold;
 
-    margin: 0 0 52px 7%;
-
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 25px;
-
-    padding: 23px 25px;
-
-    border-left: 7px solid var(--blue);
-
-    background: #111;
-
-    transform: rotate(.8deg);
-}
-
-.road-entry:nth-of-type(3) {
-    margin-left: 16%;
-    border-color: var(--yellow);
-}
-
-.road-entry:nth-of-type(4) {
-    margin-left: 3%;
-    border-color: var(--red);
-}
-
-.road-entry:nth-of-type(5) {
-    margin-left: 21%;
-    border-color: var(--purple);
-}
-
-.road-entry:nth-of-type(6) {
-    margin-left: 9%;
-    border-color: var(--green);
-}
-
-.road-entry.sideways {
-    transform: rotate(-1.7deg);
-}
-
-.road-entry.upside {
-    transform: rotate(1.5deg);
-}
-
-.road-entry.highway {
-    transform: rotate(-.7deg);
-}
-
-.road-number {
-    font-family: "Permanent Marker", cursive;
-    font-size: 30px;
-    color: #555;
-}
-
-.road-entry h3 {
-    margin: 0 0 7px;
-
-    font-size: 25px;
-    letter-spacing: .04em;
-}
-
-.road-entry p {
-    margin: 0 0 10px;
-
-    max-width: 620px;
-
-    color: #aaa69b;
-
-    font-size: 15px;
-    line-height: 1.25;
-}
-
-.road-entry b {
-    font-family: monospace;
-    font-size: 9px;
-
-    color: var(--yellow);
+  transform: rotate(-8deg);
 }
 
 
 /* =========================================================
-   LAKE
+   BAY-RAMA — RANDOM OBJECT
    ========================================================= */
 
-.lake-zone {
-    position: relative;
+.nb-bayrama {
+  position: absolute;
 
-    min-height: 850px;
+  top: 430px;
+  right: 8%;
 
-    padding: 130px 7%;
+  padding: 13px 17px;
 
-    background:
-        linear-gradient(
-            115deg,
-            #0a1018 0%,
-            #101e2c 48%,
-            #090909 48.5%
-        );
+  background: #f21b24;
+  color: #ffd21f;
 
-    overflow: hidden;
+  font-size: 19px;
+  font-weight: 900;
+
+  border: 3px solid #ffd21f;
+
+  transform:
+    rotate(-9deg)
+    skewX(-8deg);
+
+  box-shadow:
+    7px 7px 0 #8b20ff;
+
+  z-index: 15;
 }
 
-.lake-zone::before {
-    content: "";
+.nb-bayrama small {
+  display: block;
 
-    position: absolute;
+  margin-top: 4px;
 
-    width: 800px;
-    height: 800px;
+  color: #fff;
 
-    right: -350px;
-    top: 20px;
-
-    border-radius: 50%;
-
-    background:
-        repeating-radial-gradient(
-            ellipse,
-            transparent 0 16px,
-            rgba(104,140,173,.09) 17px 19px
-        );
-
-    transform: rotate(-20deg);
-}
-
-.lake-copy {
-    position: relative;
-    z-index: 3;
-
-    width: 430px;
-}
-
-.lake-warning {
-    display: inline-block;
-
-    padding: 5px 8px;
-
-    background: var(--red);
-    color: white;
-
-    font-family: monospace;
-    font-size: 8px;
-    font-weight: bold;
-
-    transform: rotate(-4deg);
-}
-
-.lake-copy h2 {
-    margin: 15px 0 20px;
-
-    font-family: "Permanent Marker", cursive;
-    font-size: 95px;
-    line-height: .75;
-
-    color: #dbe4e9;
-}
-
-.lake-copy p {
-    font-size: 17px;
-    line-height: 1.25;
-
-    color: #aeb9c0;
-}
-
-.lake-photo {
-    position: absolute;
-
-    right: 9%;
-    top: 100px;
-
-    width: 430px;
-
-    transform: rotate(5deg);
-}
-
-.lake-photo img {
-    border: 12px solid #ded7c8;
-
-    box-shadow: 18px 19px 0 #050505;
-}
-
-.lake-photo span {
-    position: absolute;
-
-    left: -35px;
-    bottom: -35px;
-
-    color: var(--yellow);
-
-    font-family: "Permanent Marker", cursive;
-    font-size: 19px;
-
-    transform: rotate(-8deg);
-}
-
-.dock-strip {
-    position: absolute;
-
-    bottom: 85px;
-    left: 8%;
-
-    display: flex;
-    gap: 9px;
-    flex-wrap: wrap;
-
-    max-width: 600px;
-}
-
-.dock-strip span {
-    padding: 6px 9px;
-
-    border: 1px solid #506679;
-
-    color: #8ba2b4;
-
-    font-family: monospace;
-    font-size: 8px;
-
-    transform: rotate(calc(var(--rotation, 0deg)));
-}
-
-.dock-strip span:nth-child(2) { --rotation: 3deg; }
-.dock-strip span:nth-child(3) { --rotation: -4deg; }
-.dock-strip span:nth-child(4) { --rotation: 2deg; }
-.dock-strip span:nth-child(5) { --rotation: -2deg; }
-.dock-strip span:nth-child(6) { --rotation: 5deg; }
-
-
-/* =========================================================
-   BURKE
-   ========================================================= */
-
-.burke-zone {
-    position: relative;
-
-    padding: 150px 9% 180px;
-
-    background: #ddd6c5;
-    color: #171717;
-}
-
-.burke-sign {
-    position: absolute;
-
-    top: 70px;
-    left: 10%;
-
-    display: flex;
-    align-items: center;
-    gap: 14px;
-
-    transform: rotate(-2deg);
-}
-
-.burke-sign span {
-    font-family: "Permanent Marker", cursive;
-    font-size: 38px;
-}
-
-.burke-sign small {
-    font-family: monospace;
-    font-size: 8px;
-}
-
-.burke-body {
-    max-width: 1100px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: 1.1fr .8fr .4fr;
-    gap: 50px;
-
-    align-items: center;
-}
-
-.burke-photo {
-    width: 100%;
-
-    transform: rotate(2deg);
-
-    border: 8px solid #f2ead7;
-
-    box-shadow: 12px 14px 0 #a69f90;
-}
-
-.burke-copy h2 {
-    font-family: "Permanent Marker", cursive;
-    font-size: 50px;
-    line-height: .82;
-
-    margin: 0 0 25px;
-}
-
-.burke-copy p {
-    font-size: 16px;
-    line-height: 1.25;
-}
-
-.burke-copy .summer-note {
-    color: var(--red);
-
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 11px;
-}
-
-.burke-side-note {
-    padding: 15px;
-
-    border: 2px dashed #777;
-
-    font-family: monospace;
-    font-size: 9px;
-    line-height: 2;
-
-    transform: rotate(7deg);
+  font-size: 7px;
+  letter-spacing: 1px;
 }
 
 
 /* =========================================================
-   SUMMER
+   FISHFLIES
    ========================================================= */
 
-.summer-zone {
-    position: relative;
+.nb-fishflies {
+  position: absolute;
 
-    padding: 150px 7%;
+  top: 520px;
+  left: 8%;
 
-    background: #15100d;
+  color: #b6e600;
+
+  font-size: 10px;
+  font-weight: bold;
+
+  transform: rotate(3deg);
+
+  text-shadow:
+    2px 2px 0 #42105f;
 }
 
-.summer-header {
-    margin-left: 5%;
+.nb-fishflies::after {
+  content: "✦  ✦  ✦  ✦  ✦";
 
-    transform: rotate(-2deg);
-}
+  display: block;
 
-.summer-header span {
-    color: var(--red);
+  margin-top: 8px;
 
-    font-family: monospace;
-    font-size: 9px;
-    letter-spacing: .3em;
-}
+  color: #ffd21f;
 
-.summer-header h2 {
-    margin: 6px 0 90px;
+  font-size: 18px;
 
-    font-family: "Permanent Marker", cursive;
-    font-size: clamp(70px, 10vw, 135px);
-    line-height: .72;
-
-    color: #eee5d2;
-
-    text-shadow: 8px 8px 0 #522c70;
-}
-
-.summer-chaos {
-    min-height: 600px;
-
-    position: relative;
-}
-
-.bayrama,
-.fishflies,
-.fireworks {
-    position: absolute;
-
-    padding: 30px;
-
-    background: #e2d9c5;
-    color: #171717;
-
-    box-shadow: 11px 12px 0 #080808;
-}
-
-.bayrama {
-    width: 330px;
-    left: 7%;
-    top: 20px;
-
-    transform: rotate(-4deg);
-}
-
-.fishflies {
-    width: 310px;
-    right: 24%;
-    top: 170px;
-
-    background: #aeb7a0;
-
-    transform: rotate(5deg);
-}
-
-.fireworks {
-    width: 300px;
-    right: 3%;
-    bottom: 40px;
-
-    background: #314b70;
-    color: #eee;
-
-    transform: rotate(-6deg);
-}
-
-.stamp {
-    display: inline-block;
-
-    padding: 5px;
-
-    border: 2px solid var(--red);
-
-    color: var(--red);
-
-    font-family: monospace;
-    font-size: 8px;
-
-    transform: rotate(-7deg);
-}
-
-.bayrama h3,
-.fishflies h3,
-.fireworks h3 {
-    margin: 16px 0 10px;
-
-    font-family: "Permanent Marker", cursive;
-    font-size: 32px;
-}
-
-.bayrama p,
-.fishflies p,
-.fireworks p {
-    font-size: 15px;
-    line-height: 1.25;
-}
-
-.big-noise {
-    margin-bottom: 0;
-}
-
-.fishflies strong {
-    display: block;
-
-    margin: 10px 0;
-
-    font-family: monospace;
-    font-size: 31px;
-    line-height: .8;
-
-    color: #202020;
-}
-
-.fly {
-    position: absolute;
-
-    font-size: 24px;
-    color: #333;
-
-    animation: stupid-fly 4s ease-in-out infinite;
-}
-
-.fly-a { top: 15px; right: 30px; }
-.fly-b { top: 80px; left: 15px; animation-delay: -1s; }
-.fly-c { bottom: 30px; right: 15px; animation-delay: -2s; }
-.fly-d { bottom: 70px; left: 35px; animation-delay: -3s; }
-
-@keyframes stupid-fly {
-    0%,100% { transform: translate(0,0) rotate(0); }
-    50% { transform: translate(15px,-8px) rotate(40deg); }
+  transform: rotate(-4deg);
 }
 
 
 /* =========================================================
-   FESTIVAL PARK
+   TYLER / LOUD ASS BLUE
    ========================================================= */
 
-.festival-zone {
-    position: relative;
+.nb-tyler {
+  position: absolute;
 
-    min-height: 700px;
+  top: 620px;
+  right: 4%;
 
-    padding: 130px 9%;
+  width: 270px;
 
-    background:
-        linear-gradient(
-            90deg,
-            #191d13 0%,
-            #252b1c 55%,
-            #171717 55%
-        );
+  background: #164cff;
+  color: #fff;
+
+  padding: 18px;
+
+  box-shadow:
+    12px 12px 0 #b6e600;
+
+  transform: rotate(3deg);
+
+  z-index: 14;
 }
 
-.festival-label {
-    position: absolute;
+.nb-tyler strong {
+  display: block;
 
-    left: 8%;
-    top: 120px;
+  color: #ffd21f;
 
-    z-index: 4;
+  font-size: 22px;
+
+  text-shadow:
+    3px 3px 0 #09090d;
 }
 
-.festival-label span {
-    font-family: monospace;
-    font-size: 8px;
+.nb-tyler span {
+  display: block;
 
-    color: var(--yellow);
-}
+  margin-top: 7px;
 
-.festival-label h2 {
-    margin: 7px 0;
-
-    font-family: "Permanent Marker", cursive;
-    font-size: 85px;
-    line-height: .72;
-
-    color: #e4ddce;
-}
-
-.festival-image {
-    position: absolute;
-
-    width: 410px;
-
-    right: 14%;
-    top: 95px;
-
-    transform: rotate(4deg);
-}
-
-.festival-image::before {
-    content: "";
-
-    position: absolute;
-    inset: -17px;
-
-    border: 2px dashed #798264;
-
-    transform: rotate(-6deg);
-}
-
-.festival-image img {
-    border: 7px solid #ddd6c3;
-
-    box-shadow: 14px 16px 0 #0b0b0b;
-}
-
-.festival-copy {
-    position: absolute;
-
-    left: 9%;
-    bottom: 90px;
-
-    width: 400px;
-
-    color: #b8bea8;
-
-    font-size: 16px;
-    line-height: 1.25;
-}
-
-.festival-tag {
-    display: inline-block;
-
-    margin-top: 15px;
-    padding: 5px 8px;
-
-    background: var(--yellow);
-    color: #111;
-
-    font-family: monospace;
-    font-size: 8px;
-
-    transform: rotate(-2deg);
+  font-size: 9px;
 }
 
 
 /* =========================================================
-   SCHOOL
+   2015 PHONE
    ========================================================= */
 
-.school-zone {
-    padding: 150px 8%;
+.nb-phone {
+  position: absolute;
 
-    background: #0d0d0d;
+  top: 710px;
+  left: 5%;
+
+  width: 155px;
+  min-height: 250px;
+
+  padding: 15px;
+
+  background: #42105f;
+
+  border: 5px solid #f21b24;
+
+  box-shadow:
+    8px 8px 0 #0878ff;
+
+  transform: rotate(-5deg);
+
+  z-index: 18;
 }
 
-.school-paper {
-    position: relative;
+.nb-phone::before {
+  content: "iPhone 6";
 
-    width: min(900px, 94%);
-    min-height: 480px;
+  display: block;
 
-    margin: auto;
+  padding-bottom: 10px;
 
-    padding: 50px;
+  color: #b6e600;
 
-    background: #d8d0bd;
-    color: #161616;
-
-    box-shadow:
-        15px 15px 0 #050505,
-        -7px 6px 0 var(--red);
-
-    transform: rotate(-1deg);
+  font-size: 12px;
+  font-weight: bold;
 }
 
-.school-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
+.nb-phone .snap {
+  padding: 9px;
 
-    border-bottom: 3px solid #171717;
+  background: #ffd21f;
+  color: #09090d;
 
-    padding-bottom: 8px;
+  font-size: 8px;
 
-    font-family: monospace;
-    font-size: 9px;
+  transform: rotate(2deg);
 }
 
-.school-top b {
-    font-size: 25px;
-}
+.nb-phone .tweet {
+  margin-top: 13px;
 
-.school-paper h2 {
-    font-family: "Permanent Marker", cursive;
-    font-size: 65px;
-    line-height: .8;
+  padding: 9px;
 
-    max-width: 450px;
-}
+  background: #0878ff;
+  color: white;
 
-.school-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+  font-size: 8px;
 
-    max-width: 500px;
-}
-
-.school-list span {
-    padding: 6px 8px;
-
-    border: 1px solid #666;
-
-    font-family: monospace;
-    font-size: 8px;
-}
-
-.school-note {
-    position: absolute;
-
-    right: 55px;
-    bottom: 70px;
-
-    padding: 12px;
-
-    background: var(--red);
-    color: white;
-
-    font-family: monospace;
-    font-size: 9px;
-
-    transform: rotate(6deg);
-}
-
-.school-paper img {
-    position: absolute;
-
-    width: 210px;
-
-    right: -65px;
-    top: 90px;
-
-    border: 7px solid #ddd5c2;
-
-    box-shadow: 8px 9px 0 #111;
-
-    transform: rotate(8deg);
+  transform: rotate(-3deg);
 }
 
 
 /* =========================================================
-   INTERNET
+   RANDOM FACT STRIP
    ========================================================= */
 
-.internet-zone {
-    padding: 150px 7%;
+.nb-fact {
+  position: absolute;
 
-    position: relative;
+  top: 950px;
+  right: 12%;
 
-    background:
-        radial-gradient(circle at 80% 30%, rgba(113,55,168,.18), transparent 20%),
-        #111;
-}
+  padding: 10px 15px;
 
-.internet-title {
-    margin-left: 8%;
-}
+  background: #b6e600;
+  color: #09090d;
 
-.internet-title small {
-    font-family: monospace;
-    font-size: 8px;
+  font-size: 12px;
+  font-weight: 900;
 
-    color: var(--blue);
-}
+  transform:
+    rotate(2deg)
+    skewX(-7deg);
 
-.internet-title h2 {
-    margin: 4px 0 80px;
-
-    font-family: "Permanent Marker", cursive;
-    font-size: 75px;
-    line-height: .72;
-}
-
-.internet-wall {
-    position: relative;
-
-    min-height: 600px;
-}
-
-.site-note {
-    position: absolute;
-
-    width: 220px;
-
-    padding: 20px;
-
-    background: #dcd3bd;
-    color: #161616;
-
-    box-shadow: 8px 9px 0 #050505;
-}
-
-.site-note b {
-    font-family: monospace;
-    font-size: 11px;
-}
-
-.site-note p {
-    margin-bottom: 0;
-
-    font-size: 14px;
-    line-height: 1.2;
-}
-
-.snapchat {
-    left: 5%;
-    top: 20px;
-
-    transform: rotate(-5deg);
-}
-
-.vine {
-    left: 30%;
-    top: 130px;
-
-    transform: rotate(4deg);
-
-    background: var(--yellow);
-}
-
-.tumblr {
-    right: 22%;
-    top: 20px;
-
-    transform: rotate(-3deg);
-
-    background: #2d3e50;
-    color: white;
-}
-
-.instagram {
-    right: 4%;
-    top: 250px;
-
-    transform: rotate(7deg);
-}
-
-.twitter {
-    left: 18%;
-    bottom: 20px;
-
-    transform: rotate(-4deg);
-
-    background: var(--red);
-    color: white;
-}
-
-.phone-image {
-    position: absolute;
-
-    left: 47%;
-    bottom: 30px;
-
-    width: 230px;
-
-    transform: rotate(-7deg);
-}
-
-.phone-image img {
-    border: 7px solid #e0d8c6;
-
-    box-shadow: 12px 13px 0 #050505;
+  box-shadow:
+    6px 6px 0 #f21b24;
 }
 
 
 /* =========================================================
-   MICHIGAN TRANSLATOR
+   CAR — HANGING OFF THE FUCKING PAGE
    ========================================================= */
 
-.michigan-zone {
-    padding: 140px 8%;
+.nb-car {
+  position: absolute;
 
-    background: #202b20;
+  top: 1030px;
+  left: -8vw;
+
+  width: min(460px, 55vw);
+
+  z-index: 30;
+
+  transform: rotate(-7deg);
 }
 
-.mitten {
-    width: min(800px, 95%);
+.nb-car img {
+  width: 100%;
 
-    margin: auto;
-
-    padding: 45px;
-
-    border: 2px solid #66745d;
-
-    transform: rotate(1deg);
-}
-
-.mitten-title {
-    margin-bottom: 30px;
-
-    font-family: "Permanent Marker", cursive;
-    font-size: 45px;
-
-    color: var(--yellow);
-}
-
-.translation {
-    display: grid;
-    grid-template-columns: 180px 30px 1fr;
-
-    align-items: center;
-
-    padding: 13px 0;
-
-    border-bottom: 1px dotted #596352;
-
-    font-family: monospace;
-    font-size: 10px;
-}
-
-.translation span:first-child {
-    color: #eee;
-    font-weight: bold;
-}
-
-.translation b {
-    color: var(--red);
-}
-
-.translation span:last-child {
-    color: #aeb7a5;
+  filter:
+    drop-shadow(12px 12px 0 #0878ff)
+    drop-shadow(-5px -4px 0 #f21b24);
 }
 
 
 /* =========================================================
-   PEOPLE
+   RANDOM TEXT THAT ISN'T IN A CARD
    ========================================================= */
 
-.people-zone {
-    position: relative;
+.nb-floating-text {
+  position: absolute;
 
-    padding: 160px 7% 220px;
+  top: 1130px;
+  right: 2%;
 
-    background: #ded6c2;
-    color: #171717;
+  max-width: 280px;
+
+  color: #f2e7c9;
+
+  font-size: 11px;
+  line-height: 1.6;
+
+  transform: rotate(-3deg);
 }
 
-.people-title {
-    margin-left: 8%;
-
-    transform: rotate(-2deg);
+.nb-floating-text b {
+  color: #ffb800;
 }
 
-.people-title span {
-    font-family: monospace;
-    font-size: 8px;
-
-    color: var(--purple);
+.nb-floating-text .blue {
+  color: #00a6ff;
 }
 
-.people-title h2 {
-    margin: 4px 0 110px;
-
-    font-family: "Permanent Marker", cursive;
-    font-size: 85px;
-    line-height: .7;
+.nb-floating-text .red {
+  color: #f21b24;
 }
 
-.roman-paper,
-.tyler-paper {
-    position: relative;
-
-    min-height: 350px;
-
-    width: min(950px, 90%);
-
-    margin: 0 auto 130px;
-
-    padding: 35px;
-
-    background: #f0e9d8;
-
-    box-shadow: 12px 13px 0 #a49d8e;
-}
-
-.roman-paper {
-    transform: rotate(1.8deg);
-}
-
-.tyler-paper {
-    transform: rotate(-2.4deg);
-
-    background: #202020;
-    color: #eee;
-
-    box-shadow: -10px 14px 0 #151515;
-}
-
-.person-tag {
-    position: absolute;
-
-    top: -17px;
-    left: 35px;
-
-    padding: 6px 9px;
-
-    background: var(--red);
-    color: white;
-
-    font-family: monospace;
-    font-size: 8px;
-
-    transform: rotate(-3deg);
-}
-
-.roman-paper img {
-    position: absolute;
-
-    left: 40px;
-    top: 45px;
-
-    width: 330px;
-
-    border: 8px solid white;
-
-    transform: rotate(-4deg);
-
-    box-shadow: 9px 10px 0 #999;
-}
-
-.person-writing {
-    width: 400px;
-
-    margin-left: 430px;
-    padding-top: 25px;
-}
-
-.person-writing h3,
-.tyler-writing h3 {
-    margin: 0;
-
-    font-family: "Permanent Marker", cursive;
-    font-size: 62px;
-    line-height: .7;
-}
-
-.person-writing > span,
-.tyler-writing > span {
-    display: block;
-
-    margin-top: 15px;
-
-    font-family: monospace;
-    font-size: 8px;
-}
-
-.person-writing p,
-.tyler-writing p {
-    font-size: 16px;
-    line-height: 1.2;
-}
-
-.person-writing b,
-.tyler-writing b {
-    font-family: monospace;
-    font-size: 9px;
-
-    color: var(--red);
-}
-
-.tyler-writing {
-    width: 390px;
-
-    margin-left: 30px;
-    padding-top: 30px;
-}
-
-.tyler-writing b {
-    color: var(--yellow);
-}
-
-.tyler-paper img {
-    position: absolute;
-
-    right: 30px;
-    top: 40px;
-
-    width: 350px;
-
-    border: 7px solid #d6cfbe;
-
-    transform: rotate(5deg);
-
-    box-shadow: 11px 12px 0 #080808;
-}
-
-.people-margin {
-    position: absolute;
-
-    right: 4%;
-    bottom: 80px;
-
-    font-family: monospace;
-    font-size: 8px;
-    line-height: 1.5;
-
-    color: #777;
-
-    transform: rotate(5deg);
+.nb-floating-text .purple {
+  color: #c000ff;
 }
 
 
 /* =========================================================
-   NIGHT
+   MORE COLOR LEAKING OUT FROM BEHIND THINGS
    ========================================================= */
 
-.night-zone {
-    position: relative;
+.nb-color-blob {
+  position: absolute;
 
-    min-height: 850px;
+  width: 230px;
+  height: 90px;
 
-    padding: 130px 8%;
+  background: #c000ff;
 
-    background:
-        radial-gradient(circle at 72% 40%, #24213d 0, #0c0c11 30%, #050505 70%);
+  z-index: -1;
 
-    overflow: hidden;
+  transform:
+    rotate(17deg)
+    skewX(-20deg);
+
+  opacity: .8;
 }
 
-.night-photo {
-    position: absolute;
-
-    left: 7%;
-    top: 150px;
-
-    width: 440px;
-
-    transform: rotate(-4deg);
+.nb-color-blob.one {
+  top: 580px;
+  left: 32%;
 }
 
-.night-photo img {
-    border: 8px solid #d9d1bd;
+.nb-color-blob.two {
+  top: 900px;
+  right: 35%;
 
-    box-shadow: 17px 18px 0 #000;
+  background: #f21b24;
+
+  transform: rotate(-13deg);
 }
 
-.night-copy {
-    position: absolute;
+.nb-color-blob.three {
+  top: 1200px;
+  left: 35%;
 
-    right: 9%;
-    top: 190px;
+  background: #0878ff;
 
-    width: 430px;
-}
-
-.night-kicker {
-    color: var(--yellow);
-
-    font-family: monospace;
-    font-size: 9px;
-}
-
-.night-copy h2 {
-    margin: 10px 0 25px;
-
-    font-family: "Permanent Marker", cursive;
-    font-size: 72px;
-    line-height: .72;
-
-    color: #eee5d3;
-}
-
-.night-copy p {
-    color: #aaa8a0;
-
-    font-size: 17px;
-}
-
-.night-list {
-    margin-top: 30px;
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-}
-
-.night-list span {
-    padding: 6px 8px;
-
-    border: 1px solid #46436c;
-
-    color: #9d9ab9;
-
-    font-family: monospace;
-    font-size: 8px;
-}
-
-.night-arrow {
-    position: absolute;
-
-    bottom: 70px;
-    right: 20%;
-
-    color: var(--red);
-
-    font-family: monospace;
-    font-size: 10px;
-    line-height: 1.4;
-
-    transform: rotate(-6deg);
-}
-
-
-/* =========================================================
-   OVERLAP
-   ========================================================= */
-
-.overlap-zone {
-    padding: 170px 7%;
-
-    background: #111;
-}
-
-.overlap-head {
-    margin-left: 10%;
-
-    transform: rotate(2deg);
-}
-
-.overlap-head small {
-    color: var(--green);
-
-    font-family: monospace;
-    font-size: 8px;
-}
-
-.overlap-head h2 {
-    margin: 5px 0 80px;
-
-    font-family: "Permanent Marker", cursive;
-    font-size: 90px;
-    line-height: .7;
-
-    color: #ddd6c5;
-}
-
-.overlap-map {
-    position: relative;
-
-    width: min(900px, 95%);
-    height: 600px;
-
-    margin: auto;
-
-    border: 1px dashed #444;
-}
-
-.circle {
-    position: absolute;
-
-    width: 210px;
-    height: 210px;
-
-    display: grid;
-    place-items: center;
-
-    border-radius: 50%;
-
-    font-family: "Permanent Marker", cursive;
-    font-size: 25px;
-
-    mix-blend-mode: screen;
-}
-
-.circle-school {
-    left: 17%;
-    top: 8%;
-
-    background: rgba(113,55,168,.35);
-}
-
-.circle-town {
-    left: 35%;
-    top: 7%;
-
-    background: rgba(227,41,41,.28);
-}
-
-.circle-lake {
-    left: 47%;
-    top: 27%;
-
-    background: rgba(23,70,184,.32);
-}
-
-.circle-cars {
-    left: 25%;
-    top: 43%;
-
-    background: rgba(231,189,50,.25);
-}
-
-.circle-houses {
-    left: 8%;
-    top: 33%;
-
-    background: rgba(113,140,88,.28);
-}
-
-.circle-parks {
-    right: 5%;
-    top: 52%;
-
-    background: rgba(120,90,150,.25);
-}
-
-.overlap-line {
-    position: absolute;
-
-    width: 180px;
-    height: 1px;
-
-    background: #777;
-
-    transform-origin: left;
-}
-
-.line-a {
-    left: 32%;
-    top: 35%;
-
-    transform: rotate(24deg);
-}
-
-.line-b {
-    left: 45%;
-    top: 47%;
-
-    transform: rotate(-17deg);
-}
-
-.line-c {
-    left: 30%;
-    top: 55%;
-
-    transform: rotate(-36deg);
-}
-
-.line-d {
-    left: 55%;
-    top: 42%;
-
-    transform: rotate(43deg);
-}
-
-.overlap-note {
-    position: absolute;
-
-    right: 8%;
-    top: 12%;
-
-    padding: 13px;
-
-    background: var(--yellow);
-    color: #111;
-
-    font-family: monospace;
-    font-size: 8px;
-    line-height: 1.5;
-
-    transform: rotate(-4deg);
-}
-
-
-/* =========================================================
-   CHEAT SHEET
-   ========================================================= */
-
-.cheat-zone {
-    padding: 150px 7% 180px;
-
-    background: #0b0b0b;
-}
-
-.cheat-paper {
-    width: min(1000px, 94%);
-
-    margin: auto;
-
-    padding: 60px;
-
-    background: #ded5c0;
-    color: #171717;
-
-    box-shadow:
-        17px 17px 0 #030303,
-        -6px 7px 0 var(--blue);
-
-    transform: rotate(-1deg);
-}
-
-.cheat-paper h2 {
-    margin: 0 0 45px;
-
-    font-family: "Permanent Marker", cursive;
-    font-size: 67px;
-    line-height: .72;
-}
-
-.cheat-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0 35px;
-}
-
-.cheat-grid > div {
-    min-height: 75px;
-
-    padding: 12px 0;
-
-    border-top: 1px solid #8e887a;
-}
-
-.cheat-grid b {
-    display: block;
-
-    font-family: monospace;
-    font-size: 8px;
-
-    color: var(--red);
-}
-
-.cheat-grid span {
-    display: block;
-
-    margin-top: 4px;
-
-    font-size: 15px;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-footer {
-    position: relative;
-
-    min-height: 300px;
-
-    padding: 80px 7%;
-
-    border-top: 1px solid #252525;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-}
-
-.footer-left,
-.footer-middle,
-.footer-right,
-.footer-last {
-    font-family: monospace;
-    font-size: 8px;
-    color: #666;
-}
-
-.footer-middle {
-    text-align: center;
-
-    color: var(--yellow);
-
-    line-height: 1.7;
-}
-
-.footer-right {
-    display: flex;
-    justify-content: flex-end;
-    gap: 13px;
-
-    color: var(--red);
-
-    font-size: 20px;
-}
-
-.footer-last {
-    position: absolute;
-
-    left: 50%;
-    bottom: 30px;
-
-    transform: translateX(-50%);
-
-    text-align: center;
-
-    color: #777;
-}
-
-
-/* =========================================================
-   RANDOM FLOATING BULLSHIT
-   ========================================================= */
-
-.floating-fish {
-    position: fixed;
-
-    z-index: 20;
-
-    color: #9c8b43;
-
-    font-size: 18px;
-
-    pointer-events: none;
-
-    animation: fish-drift 9s linear infinite;
-}
-
-.fly-one {
-    left: 7%;
-    top: 35%;
-}
-
-.fly-two {
-    right: 11%;
-    top: 63%;
-
-    animation-delay: -3s;
-}
-
-.fly-three {
-    left: 72%;
-    top: 15%;
-
-    animation-delay: -6s;
-}
-
-@keyframes fish-drift {
-    0% {
-        transform: translate(0,0) rotate(0deg);
-    }
-
-    25% {
-        transform: translate(22px,-13px) rotate(35deg);
-    }
-
-    50% {
-        transform: translate(-10px,24px) rotate(80deg);
-    }
-
-    75% {
-        transform: translate(17px,9px) rotate(140deg);
-    }
-
-    100% {
-        transform: translate(0,0) rotate(180deg);
-    }
-}
-
-.floating-note {
-    position: fixed;
-
-    z-index: 25;
-
-    padding: 8px 10px;
-
-    font-family: monospace;
-    font-size: 8px;
-    line-height: 1.4;
-
-    pointer-events: none;
-
-    box-shadow: 5px 6px 0 #000;
-}
-
-.note-drive {
-    left: 15px;
-    bottom: 24%;
-
-    background: var(--red);
-    color: white;
-
-    transform: rotate(-7deg);
-}
-
-.note-music {
-    right: 16px;
-    top: 24%;
-
-    background: var(--yellow);
-    color: #111;
-
-    transform: rotate(8deg);
+  transform: rotate(8deg);
 }
 
 
@@ -2348,362 +627,40 @@ footer {
    MOBILE
    ========================================================= */
 
-@media (max-width: 850px) {
-
-    .tiny-top {
-        font-size: 7px;
-    }
-
-    .town-header {
-        min-height: 520px;
-        padding: 80px 7%;
-    }
-
-    .title-stack h1 {
-        font-size: 82px;
-    }
-
-    .header-side {
-        right: 5%;
-        top: auto;
-        bottom: 50px;
-
-        width: 190px;
-    }
-
-    .intro-zone {
-        display: block;
-        min-height: 850px;
-        padding: 90px 7%;
-    }
-
-    .intro-note {
-        width: 92%;
-        padding: 30px;
-    }
-
-    .margin-text {
-        display: none;
-    }
-
-    .intro-photo {
-        width: 70%;
-        margin: 75px auto 0;
-    }
-
-    .map-paper {
-        width: 100%;
-        height: 550px;
-    }
-
-    .map-heading {
-        margin-left: 0;
-    }
-
-    .map-heading span {
-        font-size: 22px;
-    }
-
-    .road-wall {
-        padding: 100px 7%;
-    }
-
-    .road-entry,
-    .road-entry:nth-of-type(3),
-    .road-entry:nth-of-type(4),
-    .road-entry:nth-of-type(5),
-    .road-entry:nth-of-type(6) {
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .lake-zone {
-        min-height: 1100px;
-        padding: 100px 7%;
-    }
-
-    .lake-copy {
-        width: 100%;
-    }
-
-    .lake-photo {
-        position: relative;
-
-        right: auto;
-        top: auto;
-
-        width: 85%;
-
-        margin: 80px auto 0;
-    }
-
-    .burke-body {
-        display: block;
-    }
-
-    .burke-photo {
-        width: 90%;
-        margin: auto;
-    }
-
-    .burke-copy {
-        margin-top: 50px;
-    }
-
-    .burke-side-note {
-        margin-top: 30px;
-        width: 70%;
-    }
-
-    .summer-zone {
-        padding: 110px 7%;
-    }
-
-    .summer-chaos {
-        min-height: 1050px;
-    }
-
-    .bayrama,
-    .fishflies,
-    .fireworks {
-        position: absolute;
-    }
-
-    .bayrama {
-        left: 0;
-        top: 0;
-    }
-
-    .fishflies {
-        right: 0;
-        top: 350px;
-    }
-
-    .fireworks {
-        right: 10%;
-        bottom: 0;
-    }
-
-    .festival-zone {
-        min-height: 1050px;
-        padding: 100px 7%;
-    }
-
-    .festival-label {
-        position: relative;
-        left: auto;
-        top: auto;
-    }
-
-    .festival-image {
-        position: relative;
-
-        right: auto;
-        top: auto;
-
-        width: 80%;
-
-        margin: 70px auto 0;
-    }
-
-    .festival-copy {
-        position: relative;
-
-        left: auto;
-        bottom: auto;
-
-        width: 90%;
-
-        margin-top: 70px;
-    }
-
-    .school-paper {
-        padding: 35px 25px;
-    }
-
-    .school-paper img {
-        position: relative;
-
-        right: auto;
-        top: auto;
-
-        width: 55%;
-
-        margin: 40px auto 0;
-    }
-
-    .school-note {
-        position: relative;
-
-        right: auto;
-        bottom: auto;
-
-        width: fit-content;
-
-        margin-top: 30px;
-    }
-
-    .internet-wall {
-        min-height: 1100px;
-    }
-
-    .site-note {
-        width: 190px;
-    }
-
-    .snapchat {
-        left: 0;
-    }
-
-    .vine {
-        left: auto;
-        right: 0;
-        top: 180px;
-    }
-
-    .tumblr {
-        left: 5%;
-        right: auto;
-        top: 400px;
-    }
-
-    .instagram {
-        right: 0;
-        top: 600px;
-    }
-
-    .twitter {
-        left: 8%;
-        bottom: 60px;
-    }
-
-    .phone-image {
-        left: 35%;
-        bottom: 230px;
-    }
-
-    .translation {
-        grid-template-columns: 110px 25px 1fr;
-        font-size: 8px;
-    }
-
-    .people-zone {
-        padding: 110px 5% 160px;
-    }
-
-    .roman-paper,
-    .tyler-paper {
-        width: 95%;
-        min-height: 700px;
-    }
-
-    .roman-paper img {
-        position: relative;
-
-        left: auto;
-        top: auto;
-
-        width: 70%;
-
-        margin: auto;
-    }
-
-    .person-writing {
-        width: 100%;
-        margin: 60px 0 0;
-    }
-
-    .tyler-writing {
-        width: 100%;
-        margin: 0 0 60px;
-    }
-
-    .tyler-paper img {
-        position: relative;
-
-        right: auto;
-        top: auto;
-
-        width: 75%;
-
-        margin: auto;
-    }
-
-    .night-zone {
-        min-height: 1100px;
-    }
-
-    .night-photo {
-        position: relative;
-
-        left: auto;
-        top: auto;
-
-        width: 90%;
-
-        margin: auto;
-    }
-
-    .night-copy {
-        position: relative;
-
-        right: auto;
-        top: auto;
-
-        width: 90%;
-
-        margin: 90px auto 0;
-    }
-
-    .overlap-map {
-        height: 650px;
-        transform: scale(.85);
-        transform-origin: top center;
-    }
-
-    .circle {
-        width: 160px;
-        height: 160px;
-
-        font-size: 18px;
-    }
-
-    .cheat-paper {
-        padding: 35px 25px;
-    }
-
-    .cheat-paper h2 {
-        font-size: 48px;
-    }
-
-    .cheat-grid {
-        grid-template-columns: 1fr;
-    }
-
-    footer {
-        grid-template-columns: 1fr;
-        gap: 30px;
-
-        text-align: center;
-    }
-
-    .footer-right {
-        justify-content: center;
-    }
-
-    .floating-note {
-        display: none;
-    }
-}
-
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-    }
+@media (max-width: 650px) {
+
+  .new-baltimore {
+    width: 94vw;
+    min-height: 1450px;
+  }
+
+  .nb-title {
+    margin-left: 2vw;
+    font-size: 18vw;
+  }
+
+  .nb-map {
+    left: -2%;
+    transform: rotate(-6deg) scale(.82);
+    transform-origin: top left;
+  }
+
+  .nb-roman {
+    left: 18%;
+    width: 175px;
+  }
+
+  .nb-bayrama {
+    right: -3%;
+  }
+
+  .nb-tyler {
+    width: 210px;
+    right: -2%;
+  }
+
+  .nb-car {
+    left: -12vw;
+    width: 70vw;
+  }
 }
