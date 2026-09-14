@@ -1,37 +1,28 @@
 /* =========================================================
-   NEW BALTIMORE / 2015
-   LIVE LOCAL CLOCK
+   NEW BALTIMORE // LIVE CLOCK
    ========================================================= */
 
-(function () {
+function updateLiveClock() {
 
-  const clock = document.getElementById("local-time");
+  const clock = document.getElementById("live-clock");
 
   if (!clock) return;
 
-  function updateNewBaltimoreTime() {
+  const now = new Date();
 
-    const now = new Date();
+  let hours = now.getHours();
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  const seconds = String(now.getSeconds()).padStart(2, "0");
 
-    const time = new Intl.DateTimeFormat(
-      "en-US",
-      {
-        timeZone: "America/Detroit",
-        hour: "numeric",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: true
-      }
-    ).format(now);
+  const ampm = hours >= 12 ? "PM" : "AM";
 
-    clock.textContent = time;
-  }
+  hours = hours % 12 || 12;
 
-  updateNewBaltimoreTime();
+  clock.textContent =
+    `${String(hours).padStart(2, "0")}:${minutes}:${seconds} ${ampm}`;
+}
 
-  setInterval(
-    updateNewBaltimoreTime,
-    1000
-  );
 
-})();
+updateLiveClock();
+
+setInterval(updateLiveClock, 1000);
