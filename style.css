@@ -1958,3 +1958,1488 @@ body {
   }
 
 }
+ /* ============================================================
+    BATCH 2 — NEW BALTIMORE / LOCATION LAYER
+    ============================================================ */
+
+
+/* ============================================================
+   LOCATION GUIDE
+   ============================================================ */
+
+.location-guide {
+  position: relative;
+}
+
+
+.location-guide::before {
+  content: "NORTH // MACOMB COUNTY // LAKE ST. CLAIR";
+
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  color: rgba(255,255,255,.16);
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .18em;
+}
+
+
+/* ============================================================
+   FAKE LOCAL MAP
+   ============================================================ */
+
+.local-map {
+  position: relative;
+
+  height: 470px;
+
+  margin:
+    80px 0
+    110px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255,255,255,.14);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      rgba(255,255,255,.025) 1px,
+      transparent 1px
+    ),
+    #0b0e12;
+
+  background-size: 40px 40px;
+
+  box-shadow:
+    inset 0 0 100px rgba(10,45,240,.05);
+}
+
+
+.map-water {
+  position: absolute;
+
+  right: -5%;
+  top: -10%;
+
+  width: 43%;
+  height: 120%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    repeating-linear-gradient(
+      -25deg,
+      transparent 0,
+      transparent 15px,
+      rgba(114,169,255,.045) 16px,
+      transparent 17px
+    );
+
+  border-left:
+    1px solid
+    rgba(114,169,255,.25);
+
+  color: rgba(114,169,255,.6);
+
+  transform: rotate(2deg);
+}
+
+
+.map-water span {
+  font-family: "Archivo Black", Impact, sans-serif;
+  font-size: 30px;
+
+  letter-spacing: -.04em;
+
+  transform: rotate(-7deg);
+}
+
+
+.map-water small {
+  margin-top: 8px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .2em;
+}
+
+
+.map-road {
+  position: absolute;
+
+  z-index: 3;
+
+  background:
+    rgba(235,235,235,.08);
+
+  border:
+    1px solid
+    rgba(255,255,255,.12);
+}
+
+
+.map-road span {
+  position: absolute;
+
+  padding: 5px 8px;
+
+  background: #0b0e12;
+
+  color: #aaa6ae;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .08em;
+
+  white-space: nowrap;
+}
+
+
+.road-front {
+  width: 64%;
+  height: 9px;
+
+  left: 0;
+  top: 35%;
+
+  transform:
+    rotate(-5deg);
+}
+
+
+.road-front span {
+  left: 25%;
+  top: -22px;
+
+  color: #72a9ff;
+}
+
+
+.road-washington {
+  width: 70%;
+  height: 11px;
+
+  left: -5%;
+  top: 52%;
+
+  transform:
+    rotate(-7deg);
+}
+
+
+.road-washington span {
+  left: 38%;
+  top: -25px;
+
+  color: #f2b634;
+}
+
+
+.road-green {
+  width: 42%;
+  height: 8px;
+
+  left: 19%;
+  top: 67%;
+
+  transform:
+    rotate(87deg);
+}
+
+
+.road-green span {
+  left: 0;
+  top: -23px;
+
+  transform: rotate(-87deg);
+}
+
+
+.map-place {
+  position: absolute;
+
+  z-index: 5;
+
+  padding: 9px 12px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.16);
+
+  background:
+    rgba(8,9,13,.85);
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .1em;
+}
+
+
+.map-burke {
+  right: 29%;
+  top: 25%;
+
+  color: #72a9ff;
+
+  transform: rotate(-4deg);
+}
+
+
+.map-downtown {
+  left: 27%;
+  top: 43%;
+
+  color: #f2b634;
+
+  transform: rotate(3deg);
+}
+
+
+.map-abcc {
+  left: 29%;
+  bottom: 19%;
+
+  color: #f80000;
+
+  transform: rotate(-2deg);
+}
+
+
+.map-label {
+  position: absolute;
+
+  z-index: 10;
+
+  color: #59555e;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+
+.map-label-top {
+  top: 15px;
+  left: 18px;
+}
+
+
+.map-label-bottom {
+  bottom: 15px;
+  left: 18px;
+}
+
+
+/* ============================================================
+   LOCATION BLOCKS
+   ============================================================ */
+
+.location-block {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    65px
+    minmax(0, 1fr);
+
+  column-gap: 30px;
+
+  margin-bottom: 90px;
+
+  padding:
+    35px 0
+    45px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.10);
+}
+
+
+.location-number {
+  color: #57535c;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+
+  padding-top: 7px;
+}
+
+
+.location-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(230px, .7fr)
+    minmax(0, 1.3fr);
+
+  gap: 60px;
+}
+
+
+.location-type {
+  color: #6b6770;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .15em;
+}
+
+
+.location-title h3 {
+  margin:
+    13px 0 8px;
+
+  color: #eae7ec;
+
+  font-family: "Archivo Black", Impact, sans-serif;
+  font-size: clamp(30px, 4vw, 52px);
+
+  line-height: .9;
+
+  letter-spacing: -.055em;
+
+  text-transform: lowercase;
+}
+
+
+.location-route {
+  margin: 0;
+
+  color: #716d76;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  line-height: 1.7;
+}
+
+
+.location-description p {
+  margin:
+    0 0
+    20px;
+
+  color: #aaa6ae;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+.location-description p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   LOCATION NOTES
+   ============================================================ */
+
+.location-notes {
+  grid-column: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+
+.field-note {
+  padding: 22px;
+
+  border:
+    1px solid
+    rgba(242,182,52,.20);
+
+  background:
+    rgba(242,182,52,.035);
+
+  transform: rotate(-.6deg);
+}
+
+
+.field-note:nth-child(2) {
+  transform: rotate(.8deg);
+}
+
+
+.field-note span,
+.red-note span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #f2b634;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: .12em;
+}
+
+
+.field-note strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #ddd9df;
+
+  font-size: 12px;
+}
+
+
+.field-note p {
+  margin: 0;
+
+  color: #85818a;
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+
+.red-note {
+  border-color:
+    rgba(248,0,0,.22);
+
+  background:
+    rgba(248,0,0,.025);
+}
+
+
+.red-note span {
+  color: #f80000;
+}
+
+
+/* ============================================================
+   LOCATION SCRIBBLE
+   ============================================================ */
+
+.location-scribble {
+  position: absolute;
+
+  right: 2%;
+  bottom: 20px;
+
+  color: #f2b634;
+
+  font-family: "Permanent Marker", cursive;
+  font-size: 15px;
+
+  line-height: 1.05;
+
+  transform: rotate(-6deg);
+}
+
+
+.location-scribble span {
+  color: #f80000;
+
+  font-size: 25px;
+}
+
+
+/* ============================================================
+   BLUE NOTE
+   ============================================================ */
+
+.blue-note {
+  border-color:
+    rgba(114,169,255,.22);
+
+  background:
+    rgba(114,169,255,.03);
+}
+
+
+.blue-note span {
+  color: #72a9ff;
+}
+
+
+/* ============================================================
+   BURKE PARK
+   ============================================================ */
+
+.featured-location {
+  padding:
+    45px 0
+    60px;
+
+  border:
+    1px solid
+    rgba(114,169,255,.15);
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(114,169,255,.035),
+      transparent 60%
+    );
+}
+
+
+.featured-location .location-number {
+  padding-left: 25px;
+}
+
+
+.featured-location .location-content {
+  padding-right: 35px;
+}
+
+
+.location-image {
+  grid-column: 2;
+
+  margin:
+    0 35px
+    30px 0;
+
+  height: 280px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255,255,255,.1);
+
+  background:
+    linear-gradient(
+      135deg,
+      #11151d,
+      #0c1118
+    );
+}
+
+
+.location-image-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(114,169,255,.45);
+
+  font-family: "Archivo Black", Impact, sans-serif;
+
+  transform: rotate(-2deg);
+}
+
+
+.location-image-placeholder span {
+  font-size: 48px;
+
+  letter-spacing: -.06em;
+}
+
+
+.location-image-placeholder small {
+  margin-top: 12px;
+
+  color: #5f6976;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .12em;
+}
+
+
+.burke-specs {
+  grid-column: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  margin:
+    30px 35px
+    0 0;
+
+  border:
+    1px solid
+    rgba(255,255,255,.1);
+}
+
+
+.burke-specs div {
+  padding: 18px;
+
+  border-right:
+    1px solid
+    rgba(255,255,255,.1);
+}
+
+
+.burke-specs div:last-child {
+  border-right: 0;
+}
+
+
+.burke-specs span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #66626b;
+
+  font-family: "DM Mono", monospace;
+  font-size: 7px;
+}
+
+
+.burke-specs strong {
+  color: #d6d2d9;
+
+  font-size: 10px;
+}
+
+
+.historical-lock {
+  grid-column: 2;
+
+  max-width: 500px;
+
+  margin:
+    30px 35px
+    0 0;
+
+  padding: 18px 22px;
+
+  border-left:
+    4px solid
+    #f80000;
+
+  background:
+    rgba(248,0,0,.025);
+}
+
+
+.historical-lock span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #f80000;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: .13em;
+}
+
+
+.historical-lock strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #ddd9df;
+
+  font-size: 12px;
+}
+
+
+.historical-lock p {
+  margin: 0;
+
+  color: #77737c;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+
+  line-height: 1.7;
+}
+
+
+/* ============================================================
+   ANCHOR BAY
+   ============================================================ */
+
+.anchor-atmosphere {
+  grid-column: 2;
+
+  margin-top: 35px;
+
+  padding:
+    22px;
+
+  border:
+    1px solid
+    rgba(114,169,255,.15);
+
+  background:
+    rgba(114,169,255,.025);
+}
+
+
+.anchor-atmosphere > span {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: #72a9ff;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .13em;
+}
+
+
+.atmosphere-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+
+.atmosphere-row span {
+  padding:
+    7px 9px;
+
+  color: #89858e;
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+}
+
+
+/* ============================================================
+   RESIDENTIAL
+   ============================================================ */
+
+.residential-block {
+  background:
+    linear-gradient(
+      100deg,
+      rgba(255,255,255,.012),
+      transparent 55%
+    );
+}
+
+
+.residential-note {
+  grid-column: 2;
+
+  width: min(430px, 100%);
+
+  margin:
+    40px 0 0
+    auto;
+
+  padding:
+    25px;
+
+  border:
+    1px solid
+    rgba(176,38,255,.22);
+
+  background:
+    rgba(176,38,255,.035);
+
+  transform: rotate(1.2deg);
+}
+
+
+.residential-note span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #b026ff;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .12em;
+}
+
+
+.residential-note strong {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #ddd9df;
+
+  font-family: "Permanent Marker", cursive;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+.residential-note p {
+  margin: 0;
+
+  color: #77737d;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+
+  line-height: 1.7;
+}
+
+
+/* ============================================================
+   FESTIVAL PARK
+   ============================================================ */
+
+.festival-park-block {
+  border-top-color:
+    rgba(242,182,52,.18);
+}
+
+
+.park-note {
+  grid-column: 2;
+
+  margin-top: 35px;
+
+  padding:
+    22px;
+
+  border:
+    1px dashed
+    rgba(242,182,52,.25);
+
+  background:
+    rgba(242,182,52,.025);
+}
+
+
+.park-note span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #f2b634;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .12em;
+}
+
+
+.park-note strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #ddd9df;
+
+  font-size: 12px;
+}
+
+
+.park-note p {
+  margin: 0;
+
+  color: #77737d;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+
+  line-height: 1.7;
+}
+
+
+/* ============================================================
+   23 / 24 MILE
+   ============================================================ */
+
+.contrast-box {
+  grid-column: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    70px
+    1fr;
+
+  align-items: center;
+
+  margin-top: 40px;
+
+  padding:
+    25px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.1);
+
+  background:
+    rgba(255,255,255,.018);
+}
+
+
+.contrast-box div:not(.contrast-arrow) span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #66626b;
+
+  font-family: "DM Mono", monospace;
+  font-size: 7px;
+
+  letter-spacing: .12em;
+}
+
+
+.contrast-box div:not(.contrast-arrow) strong {
+  color: #aaa6ae;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+.contrast-arrow {
+  color: #f2b634;
+
+  font-family: "Archivo Black", Impact, sans-serif;
+  font-size: 30px;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   M-29
+   ============================================================ */
+
+.m29-block {
+  border-top-color:
+    rgba(114,169,255,.20);
+}
+
+
+.drive-mode {
+  grid-column: 2;
+
+  margin-top: 40px;
+
+  padding:
+    30px;
+
+  border:
+    1px solid
+    rgba(176,38,255,.22);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(176,38,255,.06),
+      transparent
+    );
+}
+
+
+.drive-mode-label {
+  color: #b026ff;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .15em;
+}
+
+
+.drive-mode-text {
+  margin:
+    14px 0
+    22px;
+
+  color: #eeeaf0;
+
+  font-family: "Archivo Black", Impact, sans-serif;
+  font-size: clamp(26px, 4vw, 43px);
+
+  line-height: .95;
+
+  letter-spacing: -.05em;
+}
+
+
+.drive-mode-text span {
+  color: #77737d;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: .45em;
+  font-weight: 500;
+
+  letter-spacing: 0;
+}
+
+
+.drive-route {
+  color: #77737d;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+}
+
+
+.drive-route b {
+  margin:
+    0 8px;
+
+  color: #f2b634;
+}
+
+
+/* ============================================================
+   I-94
+   ============================================================ */
+
+.highway-strip {
+  grid-column: 2;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 40px;
+
+  padding:
+    22px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.09);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.09);
+
+  color: #6f6b74;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .08em;
+}
+
+
+.highway-strip i {
+  color: #3d3942;
+
+  font-style: normal;
+}
+
+
+.highway-strip strong {
+  color: #f2b634;
+}
+
+
+/* ============================================================
+   CHEAT SHEET
+   ============================================================ */
+
+.location-cheatsheet {
+  position: relative;
+
+  margin:
+    120px 0
+    80px;
+
+  padding:
+    35px;
+
+  border:
+    1px solid
+    rgba(176,38,255,.25);
+
+  background:
+    rgba(176,38,255,.035);
+}
+
+
+.cheatsheet-header {
+  display: flex;
+
+  align-items: baseline;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+
+.cheatsheet-header span {
+  color: #b026ff;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .13em;
+}
+
+
+.cheatsheet-header strong {
+  color: #e2dee4;
+
+  font-family: "Archivo Black", Impact, sans-serif;
+  font-size: 24px;
+
+  letter-spacing: -.04em;
+}
+
+
+.cheatsheet-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.08);
+
+  border-left:
+    1px solid
+    rgba(255,255,255,.08);
+}
+
+
+.cheatsheet-grid div {
+  min-height: 105px;
+
+  padding: 18px;
+
+  border-right:
+    1px solid
+    rgba(255,255,255,.08);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.08);
+}
+
+
+.cheatsheet-grid span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #67636c;
+
+  font-family: "DM Mono", monospace;
+  font-size: 7px;
+
+  letter-spacing: .12em;
+}
+
+
+.cheatsheet-grid strong {
+  color: #aaa6ae;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+/* ============================================================
+   RANDOM TOWN GARBAGE
+   ============================================================ */
+
+.town-chaos-note {
+  position: absolute;
+
+  z-index: 10;
+
+  color: #f2b634;
+
+  font-family: "Permanent Marker", cursive;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+
+.note-one {
+  top: 12%;
+
+  right: -15px;
+
+  font-size: 14px;
+
+  transform: rotate(8deg);
+}
+
+
+.note-one span {
+  color: #f80000;
+
+  font-family: "DM Mono", monospace;
+}
+
+
+.note-two {
+  top: 38%;
+
+  left: -22px;
+
+  color: #72a9ff;
+
+  font-size: 13px;
+
+  transform: rotate(-9deg);
+}
+
+
+.note-three {
+  top: 57%;
+
+  right: -12px;
+
+  color: #b026ff;
+
+  font-size: 13px;
+
+  text-align: center;
+
+  transform: rotate(7deg);
+}
+
+
+.note-four {
+  bottom: 9%;
+
+  left: -8px;
+
+  color: #f80000;
+
+  font-size: 12px;
+
+  transform: rotate(-4deg);
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 800px) {
+
+  .local-map {
+    height: 390px;
+  }
+
+
+  .map-water {
+    width: 48%;
+  }
+
+
+  .map-water span {
+    font-size: 20px;
+  }
+
+
+  .location-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+
+  .location-notes,
+  .anchor-atmosphere,
+  .residential-note,
+  .park-note,
+  .contrast-box,
+  .drive-mode,
+  .highway-strip {
+    grid-column: 2;
+  }
+
+
+  .location-scribble {
+    position: relative;
+
+    right: auto;
+    bottom: auto;
+
+    grid-column: 2;
+
+    margin:
+      25px 0
+      0 auto;
+  }
+
+
+  .burke-specs {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .burke-specs div:nth-child(2) {
+    border-right: 0;
+  }
+
+
+  .burke-specs div:nth-child(-n+2) {
+    border-bottom:
+      1px solid
+      rgba(255,255,255,.1);
+  }
+
+
+  .cheatsheet-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .town-chaos-note {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 560px) {
+
+  .local-map {
+    height: 330px;
+  }
+
+
+  .location-block {
+    grid-template-columns:
+      38px
+      minmax(0, 1fr);
+
+    column-gap: 15px;
+  }
+
+
+  .location-number {
+    font-size: 8px;
+  }
+
+
+  .location-notes,
+  .anchor-atmosphere,
+  .residential-note,
+  .park-note,
+  .contrast-box,
+  .drive-mode,
+  .highway-strip,
+  .location-scribble {
+    grid-column: 2;
+  }
+
+
+  .location-image {
+    margin-right: 0;
+  }
+
+
+  .featured-location .location-content {
+    padding-right: 20px;
+  }
+
+
+  .burke-specs {
+    margin-right: 20px;
+  }
+
+
+  .historical-lock {
+    margin-right: 20px;
+  }
+
+
+  .cheatsheet-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .cheatsheet-header {
+    display: block;
+  }
+
+
+  .cheatsheet-header strong {
+    display: block;
+
+    margin-top: 10px;
+  }
+
+
+  .contrast-box {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+
+  .contrast-arrow {
+    transform: rotate(90deg);
+  }
+
+
+  .highway-strip {
+    flex-wrap: wrap;
+
+    gap: 9px;
+  }
+
+}
