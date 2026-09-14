@@ -1,1080 +1,1271 @@
-/* =========================================================
+/* ============================================================
    NEW BALTIMORE / 2015
-   Anchor Bay / Macomb County, Michigan
-   ========================================================= */
-
-:root {
-    --cream: #f3ead8;
-    --paper: #e8ddc8;
-    --paper-dark: #d6c7ad;
-    --ink: #272522;
-    --muted: #6f685d;
-
-    --red: #a63c32;
-    --red-dark: #762d29;
-    --yellow: #e0b84e;
-    --blue: #3d6570;
-    --lake: #6f9290;
-    --green: #68705a;
-
-    --line: rgba(39, 37, 34, 0.2);
-
-    --shadow: 5px 6px 0 rgba(39, 37, 34, 0.12);
-    --shadow-small: 3px 4px 0 rgba(39, 37, 34, 0.12);
-
-    --max: 1180px;
-}
-
-
-/* =========================================================
-   RESET
-   ========================================================= */
+   deliberately ugly 2015 personal-web reference page
+   ============================================================ */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    background:
-        linear-gradient(rgba(255,255,255,.12), rgba(255,255,255,.12)),
-        var(--cream);
-    color: var(--ink);
-    font-family:
-        "Trebuchet MS",
-        Arial,
-        Helvetica,
-        sans-serif;
-    line-height: 1.45;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-::selection {
-    background: var(--yellow);
-    color: var(--ink);
+  margin: 0;
+  background:
+    linear-gradient(
+      90deg,
+      #d9d4c9 0,
+      #d9d4c9 49.5%,
+      #cbc6bb 49.5%,
+      #cbc6bb 50.5%,
+      #d9d4c9 50.5%
+    );
+  color: #171717;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 
-/* =========================================================
-   HEADER
-   ========================================================= */
+/* ============================================================
+   PAGE
+   ============================================================ */
 
-.site-header {
-    width: min(calc(100% - 40px), var(--max));
-    margin: 0 auto;
-    padding: 24px 0 18px;
+.site {
+  width: min(1180px, calc(100% - 28px));
+  margin: 18px auto;
+  background: #efede7;
+  border: 1px solid #222;
+  box-shadow: 8px 8px 0 #777;
+}
 
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 30px;
 
-    border-bottom: 2px solid var(--ink);
+/* ============================================================
+   TOP BAR
+   ============================================================ */
+
+.topbar {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: #111;
+  color: #f4f1e8;
+  border-bottom: 5px solid #d92323;
 }
 
 .site-mark {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(2rem, 5vw, 4rem);
-    line-height: .8;
-    font-weight: 900;
-    letter-spacing: -0.08em;
-    text-transform: lowercase;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  letter-spacing: .08em;
 }
 
-.site-location {
-    margin-top: 10px;
-    color: var(--muted);
-    font-size: .72rem;
-    font-weight: 700;
-    letter-spacing: .13em;
-    text-transform: uppercase;
+.site-mark span {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 28px;
+  letter-spacing: .02em;
 }
 
-.site-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 7px;
+.site-mark small {
+  font-size: 10px;
+  letter-spacing: .18em;
+  color: #bbb;
 }
 
-.site-nav a {
-    padding: 6px 9px;
-    background: var(--paper-dark);
-    border: 1px solid var(--ink);
-    font-size: .68rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    transition: .15s ease;
-}
-
-.site-nav a:hover {
-    background: var(--red);
-    color: var(--cream);
-    transform: translateY(-2px) rotate(-1deg);
+.date-stamp {
+  border: 2px solid #f4f1e8;
+  padding: 5px 10px;
+  font-family: monospace;
+  font-size: 18px;
 }
 
 
-/* =========================================================
-   MAIN
-   ========================================================= */
+/* ============================================================
+   GENERAL
+   ============================================================ */
 
 main {
-    overflow: hidden;
+  overflow: hidden;
 }
 
-.hero,
-.intro,
-.section {
-    width: min(calc(100% - 40px), var(--max));
-    margin-left: auto;
-    margin-right: auto;
+p {
+  margin: 0 0 15px;
 }
 
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero {
-    padding: 65px 0 55px;
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: .95;
 }
 
-.hero-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(260px, .7fr);
-    gap: 55px;
-    align-items: center;
+h2 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(40px, 6vw, 74px);
+  letter-spacing: -.025em;
 }
 
-.hero-main {
-    position: relative;
+.label {
+  display: inline-block;
+  margin-bottom: 13px;
+  padding: 3px 7px;
+  background: #d92323;
+  color: #fff;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
 }
 
-.kicker {
-    display: inline-block;
-    padding: 6px 10px;
-    background: var(--red);
-    color: var(--cream);
-
-    font-size: .72rem;
-    font-weight: 900;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-
-    transform: rotate(-1deg);
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  border-bottom: 3px solid #111;
+  margin-bottom: 25px;
 }
 
-h1 {
-    margin: 17px 0 15px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(5rem, 14vw, 11rem);
-    line-height: .72;
-    letter-spacing: -.09em;
-    font-weight: 900;
+.section-heading > span {
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 12px;
+  color: #d92323;
 }
 
-.hero-copy {
-    max-width: 550px;
-    font-size: clamp(1.1rem, 2.5vw, 1.7rem);
-    font-weight: 900;
-    text-transform: lowercase;
-}
-
-.hero-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-    margin-top: 25px;
-}
-
-.hero-meta span {
-    padding: 7px 10px;
-    border: 1px solid var(--ink);
-    background: var(--paper);
-
-    font-size: .68rem;
-    font-weight: 900;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-}
-
-.hero-meta span:nth-child(1) {
-    background: var(--yellow);
-}
-
-.hero-meta span:nth-child(2) {
-    background: var(--blue);
-    color: var(--cream);
-}
-
-.hero-meta span:nth-child(3) {
-    background: var(--green);
-    color: var(--cream);
-}
-
-.hero-notes {
-    position: relative;
-    min-height: 440px;
-}
-
-.hero-clock {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    padding: 7px 10px;
-
-    background: var(--ink);
-    color: var(--cream);
-
-    font-size: .65rem;
-    font-weight: 900;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-}
-
-.hero-clock span {
-    color: var(--yellow);
-}
-
-.car-sticker {
-    position: absolute;
-    width: 215px;
-    right: 10px;
-    top: 60px;
-
-    border: 5px solid var(--cream);
-    box-shadow: var(--shadow);
-
-    transform: rotate(4deg);
-}
-
-.roman-phone {
-    position: absolute;
-    width: 180px;
-    left: 15px;
-    top: 190px;
-
-    border: 5px solid var(--cream);
-    box-shadow: var(--shadow);
-
-    transform: rotate(-6deg);
-}
-
-.roman-desk {
-    position: absolute;
-    width: 190px;
-    right: 40px;
-    bottom: 0;
-
-    border: 5px solid var(--cream);
-    box-shadow: var(--shadow);
-
-    transform: rotate(3deg);
+.section-heading h2 {
+  font-size: clamp(30px, 5vw, 56px);
 }
 
 
-/* =========================================================
-   INTRO / MUSIC
-   ========================================================= */
+/* ============================================================
+   ORIENTATION
+   ============================================================ */
 
-.intro {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 35px;
-    padding: 35px 0 80px;
-    align-items: center;
+.orientation {
+  display: grid;
+  grid-template-columns: 43% 57%;
+  min-height: 570px;
+  border-bottom: 1px solid #111;
 }
 
-.music-player {
-    background: var(--paper);
-    border: 2px solid var(--ink);
-    box-shadow: var(--shadow);
-    padding: 14px;
-    transform: rotate(-1deg);
+.orientation-copy {
+  padding: 55px 35px 45px;
+  border-right: 1px solid #111;
 }
 
-.music-player-label {
-    font-weight: 900;
-    text-transform: lowercase;
+.orientation-copy h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(75px, 11vw, 145px);
+  letter-spacing: -.045em;
+  margin-bottom: 30px;
 }
 
-.music-player-status {
-    margin: 3px 0 12px;
-    color: var(--muted);
-    font-size: .7rem;
-    font-weight: 700;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-}
-
-.music-player iframe {
-    display: block;
-}
-
-.intro-copy {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.3rem, 3vw, 2rem);
-    line-height: 1.15;
-    font-weight: 900;
+.big-copy {
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
 }
 
 
-/* =========================================================
-   GENERAL SECTIONS
-   ========================================================= */
+/* ============================================================
+   MAP
+   ============================================================ */
 
-.section {
-    position: relative;
-    padding: 85px 0;
-    border-top: 2px solid var(--ink);
+.map-wrap {
+  padding: 25px;
+  background:
+    radial-gradient(#c4c0b5 1px, transparent 1px);
+  background-size: 7px 7px;
 }
 
-.section-number {
-    position: absolute;
-    top: 20px;
-    left: 0;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1rem;
-    font-weight: 900;
-    color: var(--red);
+.map-label {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 4px 8px;
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: bold;
+  transform: rotate(-1deg);
 }
 
-.section-header {
-    margin-bottom: 40px;
-    padding-left: 55px;
-}
-
-.section-header h2 {
-    margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(3rem, 7vw, 6rem);
-    line-height: .8;
-    letter-spacing: -.07em;
-    text-transform: lowercase;
-}
-
-.section-sub {
-    margin: 13px 0 0;
-    color: var(--muted);
-    font-size: .75rem;
-    font-weight: 900;
-    letter-spacing: .12em;
-    text-transform: uppercase;
+.map {
+  position: relative;
+  height: 430px;
+  margin-top: 13px;
+  overflow: hidden;
+  background: #e7e4db;
+  border: 3px solid #111;
 }
 
 
-/* =========================================================
-   PEOPLE
-   ========================================================= */
+/* water */
 
-.people-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px;
+.map-water {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 39%;
+  height: 100%;
+  background:
+    repeating-linear-gradient(
+      -12deg,
+      #a7c2c5 0,
+      #a7c2c5 7px,
+      #91afb4 8px,
+      #91afb4 10px
+    );
+  border-left: 4px solid #111;
+  color: #23474d;
+  padding: 35px 15px;
+  font-family: Georgia, serif;
+  font-style: italic;
 }
 
-.person {
-    position: relative;
-    background: var(--paper);
-    border: 2px solid var(--ink);
-    padding: 15px;
-    box-shadow: var(--shadow);
+.map-water span {
+  display: block;
+  font-size: 22px;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  position: absolute;
+  left: 55%;
+  top: 72%;
+  white-space: nowrap;
 }
 
-.person:nth-child(1) {
-    transform: rotate(-1deg);
-}
-
-.person:nth-child(2) {
-    transform: rotate(1deg);
-}
-
-.person-image-wrap {
-    position: relative;
-    margin-bottom: 18px;
-}
-
-.person-image {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    border: 2px solid var(--ink);
-}
-
-.person-tag {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-
-    padding: 7px 9px;
-    background: var(--yellow);
-    border: 1px solid var(--ink);
-
-    font-size: .65rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-
-    transform: rotate(-2deg);
-}
-
-.person:nth-child(2) .person-tag {
-    background: var(--red);
-    color: var(--cream);
-}
-
-.person-name {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 2rem;
-    font-weight: 900;
-    text-transform: lowercase;
-}
-
-.person-info {
-    margin-top: 3px;
-    color: var(--blue);
-    font-size: .7rem;
-    font-weight: 900;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-}
-
-.person-copy {
-    margin-top: 17px;
-    font-size: .92rem;
-}
-
-.more-people {
-    margin-top: 35px;
-    padding: 18px;
-
-    border-top: 1px dashed var(--ink);
-    border-bottom: 1px dashed var(--ink);
-
-    color: var(--muted);
-    font-size: .75rem;
-    font-weight: 900;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: .1em;
+.map-water small {
+  position: absolute;
+  bottom: 15px;
+  right: 12px;
+  font-family: monospace;
+  font-style: normal;
+  font-size: 9px;
 }
 
 
-/* =========================================================
-   PLACES
-   ========================================================= */
+/* roads */
 
-.places-list {
-    border-top: 2px solid var(--ink);
+.road {
+  position: absolute;
+  background: #fff;
+  border: 2px solid #222;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 9px;
+  z-index: 4;
 }
+
+.road span {
+  display: block;
+  padding: 3px 5px;
+}
+
+.road-i94 {
+  left: -30px;
+  top: 355px;
+  width: 75%;
+  transform: rotate(-5deg);
+  border-left: 8px solid #d92323;
+}
+
+.road-m29 {
+  left: 5%;
+  top: 175px;
+  width: 58%;
+  transform: rotate(-3deg);
+  border-left: 8px solid #e39d24;
+}
+
+.road-washington {
+  left: 13%;
+  top: 72px;
+  width: 35%;
+  transform: rotate(90deg);
+  transform-origin: center;
+  border-left: 5px solid #111;
+}
+
+.road-front {
+  left: 43%;
+  top: 85px;
+  width: 25%;
+  transform: rotate(90deg);
+  transform-origin: center;
+  border-left: 5px solid #111;
+}
+
+.road-23 {
+  left: 4%;
+  top: 290px;
+  width: 34%;
+  transform: rotate(7deg);
+  border-top: 5px solid #555;
+}
+
+.road-24 {
+  left: 1%;
+  top: 318px;
+  width: 36%;
+  transform: rotate(7deg);
+  border-top: 5px solid #555;
+}
+
+
+/* map places */
 
 .place {
-    display: grid;
-    grid-template-columns: 70px 1fr;
-    gap: 20px;
-
-    padding: 22px 0;
-
-    border-bottom: 1px solid var(--line);
+  position: absolute;
+  z-index: 8;
+  padding: 7px 8px;
+  background: #fff5a8;
+  border: 2px solid #111;
+  box-shadow: 3px 3px 0 #111;
+  font-family: monospace;
 }
 
-.place-number {
-    color: var(--red);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.5rem;
-    font-weight: 900;
+.place b,
+.place small {
+  display: block;
 }
 
-.place-name {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.7rem;
-    font-weight: 900;
-    text-transform: lowercase;
+.place b {
+  font-size: 11px;
 }
 
-.place-note {
-    max-width: 700px;
-    margin-top: 3px;
-    color: var(--muted);
-    font-size: .9rem;
+.place small {
+  font-size: 8px;
+  margin-top: 2px;
+}
+
+.downtown {
+  left: 25%;
+  top: 120px;
+  transform: rotate(-2deg);
+}
+
+.burke {
+  left: 48%;
+  top: 145px;
+  transform: rotate(3deg);
+}
+
+.abcc {
+  left: 13%;
+  top: 230px;
+  transform: rotate(2deg);
+}
+
+.festival {
+  left: 29%;
+  top: 260px;
+  transform: rotate(-3deg);
+}
+
+.map-note {
+  position: absolute;
+  z-index: 10;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 12px;
+  color: #d92323;
+  font-weight: bold;
+}
+
+.note-one {
+  right: 9%;
+  top: 38%;
+  transform: rotate(-10deg);
+}
+
+.note-two {
+  left: 18%;
+  top: 12%;
+  transform: rotate(-8deg);
+}
+
+.note-three {
+  left: 7%;
+  bottom: 12%;
+  transform: rotate(4deg);
+}
+
+.map-footnote {
+  margin: 13px 3px 0;
+  font-family: monospace;
+  font-size: 10px;
+  color: #555;
 }
 
 
-/* =========================================================
-   NIGHTS
-   ========================================================= */
+/* ============================================================
+   FACT STRIP
+   ============================================================ */
 
-.night-intro {
-    display: inline-block;
-    padding: 9px 12px;
+.fact-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-bottom: 3px solid #111;
+  background: #fff;
+}
 
-    background: var(--yellow);
-    border: 1px solid var(--ink);
+.fact-strip > div {
+  padding: 13px;
+  min-height: 76px;
+  border-right: 1px solid #111;
+}
 
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.4rem;
-    font-weight: 900;
+.fact-strip > div:last-child {
+  border-right: 0;
+}
 
-    transform: rotate(-1deg);
+.fact-strip strong,
+.fact-strip span {
+  display: block;
+}
+
+.fact-strip strong {
+  font-family: monospace;
+  font-size: 9px;
+  color: #d92323;
+}
+
+.fact-strip span {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   ROADS
+   ============================================================ */
+
+.roads {
+  padding: 55px 35px;
+  background: #f4f1e8;
+}
+
+.road-list {
+  border-top: 1px solid #111;
+}
+
+.road-entry {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 30px;
+  padding: 24px 0;
+  border-bottom: 1px solid #aaa;
+}
+
+.road-number {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 35px;
+  line-height: .9;
+  color: #d92323;
+}
+
+.road-entry h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.road-entry p {
+  max-width: 720px;
+}
+
+
+/* ============================================================
+   LAKE
+   ============================================================ */
+
+.lake-section {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  background: #89aeb3;
+  border-top: 4px solid #111;
+  border-bottom: 4px solid #111;
+}
+
+.lake-photo {
+  min-height: 530px;
+  padding: 25px;
+}
+
+.lake-photo img {
+  display: block;
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border: 4px solid #111;
+  filter: saturate(.75) contrast(1.05);
+}
+
+.lake-copy {
+  padding: 60px 38px;
+  background: #d6e2df;
+  border-left: 4px solid #111;
+}
+
+.lake-copy h2 {
+  margin-bottom: 30px;
+}
+
+.lake-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 25px;
+}
+
+.lake-facts span {
+  padding: 5px 8px;
+  background: #111;
+  color: #fff;
+  font-family: monospace;
+  font-size: 9px;
+}
+
+
+/* ============================================================
+   BURKE
+   ============================================================ */
+
+.burke-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 3px solid #111;
+}
+
+.burke-copy {
+  padding: 55px 40px;
+}
+
+.burke-copy ul {
+  columns: 2;
+  padding: 0;
+  margin: 25px 0;
+  list-style: none;
+  font-family: monospace;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.burke-copy li {
+  padding: 5px 0;
+  border-bottom: 1px dotted #777;
+}
+
+.burke-copy li::before {
+  content: "→ ";
+  color: #d92323;
+}
+
+.burke-photo {
+  position: relative;
+  min-height: 480px;
+  background: #222;
+  padding: 22px;
+  transform: rotate(.4deg);
+}
+
+.burke-photo img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+.photo-caption {
+  position: absolute;
+  bottom: 12px;
+  left: 28px;
+  padding: 5px 8px;
+  background: #fff;
+  color: #111;
+  font-family: monospace;
+  font-size: 9px;
+  transform: rotate(-2deg);
+}
+
+
+/* ============================================================
+   SCHOOL
+   ============================================================ */
+
+.school {
+  display: grid;
+  grid-template-columns: 31% 39% 30%;
+  min-height: 390px;
+  border-bottom: 3px solid #111;
+}
+
+.school-title {
+  padding: 50px 30px;
+  background: #b72222;
+  color: #fff;
+}
+
+.school-title .label {
+  background: #111;
+}
+
+.school-title h2 {
+  font-size: 100px;
+}
+
+.school-title strong {
+  display: block;
+  margin-top: 12px;
+  font-family: monospace;
+  font-size: 11px;
+}
+
+.school-title .year {
+  display: block;
+  margin-top: 45px;
+  font-size: 45px;
+  font-family: Impact, sans-serif;
+}
+
+.school-copy {
+  padding: 55px 35px;
+  border-right: 1px solid #111;
+}
+
+.school > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(.15);
+}
+
+
+/* ============================================================
+   TRANSLATOR
+   ============================================================ */
+
+.translation {
+  padding: 55px 35px;
+  background: #fff;
+  border-bottom: 3px solid #111;
+}
+
+.translator-intro {
+  max-width: 650px;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.dictionary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 2px solid #111;
+  border-left: 2px solid #111;
+}
+
+.word {
+  min-height: 145px;
+  padding: 18px;
+  border-right: 2px solid #111;
+  border-bottom: 2px solid #111;
+}
+
+.word:nth-child(1),
+.word:nth-child(4) {
+  background: #fff29a;
+}
+
+.word:nth-child(2),
+.word:nth-child(5) {
+  background: #d5e2e2;
+}
+
+.word:nth-child(3),
+.word:nth-child(6) {
+  background: #ead5d5;
+}
+
+.word b {
+  display: block;
+  margin-bottom: 12px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 25px;
+}
+
+.word span {
+  display: block;
+  max-width: 270px;
+}
+
+
+/* ============================================================
+   BAY-RAMA
+   ============================================================ */
+
+.bayrama {
+  display: grid;
+  grid-template-columns: 48% 52%;
+  background: #222;
+  color: #fff;
+  border-bottom: 3px solid #111;
+}
+
+.bayrama-image {
+  padding: 30px;
+}
+
+.bayrama-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+.bayrama-copy {
+  padding: 65px 45px;
+}
+
+.bayrama-copy h2 {
+  color: #ffdc3d;
+  margin-bottom: 30px;
+}
+
+.bayrama-copy .label {
+  background: #ffdc3d;
+  color: #111;
+}
+
+
+/* ============================================================
+   FISHFLIES
+   ============================================================ */
+
+.fishflies {
+  display: grid;
+  grid-template-columns: 58% 42%;
+  min-height: 400px;
+  background: #d7d1c4;
+  border-bottom: 3px solid #111;
+}
+
+.fishflies > div:first-child {
+  padding: 60px 40px;
+}
+
+.fishflies h2 {
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+.fly-stack {
+  position: relative;
+  min-height: 400px;
+}
+
+.fly-stack img {
+  position: absolute;
+  width: 60%;
+  height: 250px;
+  object-fit: cover;
+  border: 4px solid #111;
+}
+
+.fly-stack img:first-child {
+  top: 45px;
+  left: 10%;
+  transform: rotate(-5deg);
+}
+
+.fly-stack img:last-child {
+  right: 6%;
+  bottom: 25px;
+  transform: rotate(6deg);
+}
+
+
+/* ============================================================
+   2015
+   ============================================================ */
+
+.twenty-fifteen {
+  display: grid;
+  grid-template-columns: 27% 33% 40%;
+  min-height: 440px;
+  border-bottom: 3px solid #111;
+  background: #e7e2d7;
+}
+
+.year-big {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  color: #fff;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(75px, 10vw, 130px);
+  transform: rotate(-2deg);
+}
+
+.2015-copy {
+  padding: 60px 30px;
+}
+
+.2015-copy h2 {
+  font-size: 48px;
+  margin-bottom: 25px;
+}
+
+.tech-list {
+  border-left: 3px solid #111;
+}
+
+.tech-list > div {
+  padding: 20px;
+  min-height: 70px;
+  border-bottom: 1px solid #111;
+}
+
+.tech-list b,
+.tech-list span {
+  display: block;
+}
+
+.tech-list b {
+  font-family: monospace;
+  font-size: 11px;
+  color: #d92323;
+}
+
+.tech-list span {
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   NIGHT
+   ============================================================ */
+
+.night {
+  display: grid;
+  grid-template-columns: 52% 48%;
+  background: #16191c;
+  color: #fff;
+  border-bottom: 4px solid #111;
+}
+
+.night-photo {
+  padding: 25px;
+}
+
+.night-photo img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border: 3px solid #777;
 }
 
 .night-copy {
-    max-width: 650px;
-    margin: 30px 0;
-    font-size: 1.05rem;
+  padding: 60px 40px;
 }
 
-.night-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    max-width: 650px;
+.night-copy h2 {
+  color: #fff;
+  margin-bottom: 30px;
 }
 
-.night-list span {
-    padding: 7px 11px;
-
-    background: var(--blue);
-    color: var(--cream);
-
-    font-size: .7rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: .08em;
+.night-loop {
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+  font-family: monospace;
+  font-size: 10px;
 }
 
-.night-list span:nth-child(2n) {
-    background: var(--red);
-}
-
-.car-music {
-    position: absolute;
-    width: 290px;
-    right: 30px;
-    top: 170px;
-
-    border: 5px solid var(--cream);
-    box-shadow: var(--shadow);
-
-    transform: rotate(4deg);
-}
-
-.aux-cord {
-    position: absolute;
-    width: 190px;
-    right: 220px;
-    bottom: 100px;
-
-    border: 5px solid var(--cream);
-    box-shadow: var(--shadow-small);
-
-    transform: rotate(-7deg);
+.night-loop span {
+  padding: 5px 7px;
+  background: #d92323;
+  color: #fff;
 }
 
 
-/* =========================================================
-   SUMMER
-   ========================================================= */
+/* ============================================================
+   SOCIAL
+   ============================================================ */
 
-.summer {
-    min-height: 700px;
+.social {
+  padding: 55px 35px;
+  background: #f4f1e8;
+  border-bottom: 3px solid #111;
 }
 
-.summer-list {
-    max-width: 720px;
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 2px solid #111;
+  border-left: 2px solid #111;
 }
 
-.summer-item {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 20px;
-
-    padding: 20px 0;
-    border-bottom: 1px solid var(--line);
+.social-grid > div {
+  min-height: 160px;
+  padding: 22px;
+  border-right: 2px solid #111;
+  border-bottom: 2px solid #111;
 }
 
-.summer-item strong {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.35rem;
-    text-transform: lowercase;
+.social-grid > div:nth-child(odd) {
+  background: #fff;
 }
 
-.summer-item span {
-    color: var(--muted);
-}
-
-.party-fish-right {
-    position: absolute;
-    width: 220px;
-    right: 0;
-    top: 160px;
-
-    transform: rotate(8deg);
-}
-
-.party-fish-left {
-    position: absolute;
-    width: 180px;
-    right: 190px;
-    bottom: 100px;
-
-    transform: rotate(-9deg);
+.social-grid strong {
+  display: block;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 27px;
+  margin-bottom: 12px;
 }
 
 
-/* =========================================================
-   SCHOOL
-   ========================================================= */
+/* ============================================================
+   PEOPLE
+   ============================================================ */
 
-.school {
-    min-height: 520px;
+.people {
+  padding: 55px 35px;
+  background: #d8d3c8;
+  border-bottom: 3px solid #111;
 }
 
-.school > .intro-copy {
-    max-width: 600px;
+.people-header {
+  max-width: 650px;
+  margin-bottom: 35px;
 }
 
-.im-fine {
-    position: absolute;
-    width: 280px;
-    right: 50px;
-    top: 170px;
-
-    border: 5px solid var(--cream);
-    box-shadow: var(--shadow);
-
-    transform: rotate(5deg);
+.people-header h2 {
+  margin-bottom: 18px;
 }
 
-
-/* =========================================================
-   2015
-   ========================================================= */
-
-.year-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 15px;
+.person {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 30px;
+  padding: 22px;
+  margin-bottom: 22px;
+  border: 3px solid #111;
+  background: #fff;
 }
 
-.year-item {
-    min-height: 150px;
-    padding: 20px;
-
-    background: var(--paper);
-    border: 1px solid var(--ink);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.person img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
 }
 
-.year-item:nth-child(1) {
-    background: #d8d4c6;
+.person-tag {
+  display: inline-block;
+  margin-bottom: 13px;
+  padding: 4px 7px;
+  background: #111;
+  color: #fff;
+  font-family: monospace;
+  font-size: 9px;
 }
 
-.year-item:nth-child(2) {
-    background: #d5ddd2;
+.person h3 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 45px;
+  margin-bottom: 7px;
 }
 
-.year-item:nth-child(3) {
-    background: #ddd3c6;
+.person strong {
+  font-family: monospace;
+  font-size: 10px;
 }
 
-.year-item:nth-child(4) {
-    background: #d2dadd;
+.person p {
+  max-width: 580px;
+  margin-top: 25px;
 }
 
-.year-item:nth-child(5) {
-    background: #ddd7b9;
-}
-
-.year-item:nth-child(6) {
-    background: #d9cbc7;
-}
-
-.year-item strong {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.35rem;
-    text-transform: lowercase;
-}
-
-.year-item span {
-    color: var(--muted);
-    font-size: .85rem;
-}
-
-.phone-2015 {
-    width: 210px;
-    margin: 45px auto 0;
-
-    border: 5px solid var(--cream);
-    box-shadow: var(--shadow);
-
-    transform: rotate(-5deg);
+.tyler {
+  background: #ded9cd;
 }
 
 
-/* =========================================================
-   WHO'S AROUND
-   ========================================================= */
+/* ============================================================
+   FINAL REFERENCE
+   ============================================================ */
 
-.relationship-map {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-
-    max-width: 800px;
-    margin: 0 auto;
+.reference {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  padding: 55px 35px;
+  background: #fff;
+  border-bottom: 4px solid #111;
 }
 
-.node {
-    padding: 12px 17px;
-
-    background: var(--paper);
-    border: 2px solid var(--ink);
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.15rem;
-    font-weight: 900;
-
-    box-shadow: var(--shadow-small);
+.reference-title h2 {
+  font-size: 65px;
 }
 
-.node:nth-child(1) {
-    background: var(--yellow);
+.reference ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: reference;
 }
 
-.node:nth-child(2) {
-    background: var(--red);
-    color: var(--cream);
+.reference li {
+  counter-increment: reference;
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px dotted #777;
 }
 
-.node:nth-child(3) {
-    background: var(--blue);
-    color: var(--cream);
-}
-
-.node:nth-child(4) {
-    background: var(--lake);
-    color: var(--cream);
-}
-
-.relationship-copy {
-    margin-top: 40px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.5rem;
-    font-weight: 900;
-    text-align: center;
-}
-
-.red-heart {
-    width: 95px;
-    margin: 30px auto 0;
-    transform: rotate(-8deg);
+.reference li::before {
+  content: counter(reference, decimal-leading-zero);
+  font-family: monospace;
+  font-weight: bold;
+  color: #d92323;
 }
 
 
-/* =========================================================
-   FLOATING FISHFLIES
-   ========================================================= */
-
-.fishfly {
-    position: fixed;
-    z-index: 10;
-    pointer-events: none;
-}
-
-.fishfly-1 {
-    width: 55px;
-    right: 4%;
-    top: 35%;
-    transform: rotate(17deg);
-}
-
-.fishfly-2 {
-    width: 42px;
-    left: 3%;
-    top: 65%;
-    transform: rotate(-20deg);
-}
-
-.fishfly-3 {
-    width: 32px;
-    right: 13%;
-    bottom: 8%;
-    transform: rotate(45deg);
-}
-
-
-/* =========================================================
+/* ============================================================
    FOOTER
-   ========================================================= */
+   ============================================================ */
 
-.site-footer {
-    width: min(calc(100% - 40px), var(--max));
-    margin: 0 auto;
-    padding: 90px 0 45px;
-
-    border-top: 2px solid var(--ink);
-}
-
-.footer-big {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(3rem, 8vw, 7rem);
-    line-height: .8;
-    letter-spacing: -.08em;
-    font-weight: 900;
-}
-
-.footer-small {
-    margin-top: 30px;
-    color: var(--red);
-    font-size: .75rem;
-    font-weight: 900;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-}
-
-.footer-note {
-    margin-top: 10px;
-    color: var(--muted);
-    font-size: .7rem;
-    text-transform: uppercase;
-    letter-spacing: .08em;
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 18px;
+  background: #111;
+  color: #fff;
+  font-family: monospace;
+  font-size: 9px;
+  letter-spacing: .08em;
 }
 
 
-/* =========================================================
+/* ============================================================
    RESPONSIVE
-   ========================================================= */
+   ============================================================ */
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
 
-    .site-header {
-        align-items: flex-start;
-        flex-direction: column;
-    }
+  .orientation,
+  .lake-section,
+  .burke-section,
+  .school,
+  .bayrama,
+  .fishflies,
+  .twenty-fifteen,
+  .night,
+  .reference {
+    grid-template-columns: 1fr;
+  }
 
-    .site-nav {
-        justify-content: flex-start;
-    }
+  .orientation-copy {
+    border-right: 0;
+    border-bottom: 1px solid #111;
+  }
 
-    .hero-inner {
-        grid-template-columns: 1fr;
-    }
+  .fact-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .hero-notes {
-        min-height: 330px;
-        max-width: 600px;
-        width: 100%;
-        margin: 0 auto;
-    }
+  .fact-strip > div:nth-child(2n) {
+    border-right: 0;
+  }
 
-    .car-sticker {
-        width: 190px;
-        left: 10%;
-        right: auto;
-    }
+  .road-entry {
+    grid-template-columns: 125px 1fr;
+  }
 
-    .roman-phone {
-        width: 165px;
-        left: auto;
-        right: 12%;
-        top: 125px;
-    }
+  .lake-copy {
+    border-left: 0;
+    border-top: 4px solid #111;
+  }
 
-    .roman-desk {
-        width: 160px;
-        right: 30%;
-        bottom: 0;
-    }
+  .school-title {
+    min-height: 300px;
+  }
 
-    .intro {
-        grid-template-columns: 1fr;
-    }
+  .school-copy {
+    border-right: 0;
+    border-bottom: 1px solid #111;
+  }
 
-    .car-music {
-        position: relative;
-        width: 260px;
-        right: auto;
-        top: auto;
-        margin: 45px auto 0;
-    }
+  .dictionary {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .aux-cord {
-        position: relative;
-        width: 160px;
-        right: auto;
-        bottom: auto;
-        margin: -25px 0 0 auto;
-    }
+  .year-big {
+    min-height: 260px;
+  }
 
-    .summer {
-        min-height: auto;
-    }
+  .tech-list {
+    border-left: 0;
+  }
 
-    .party-fish-right,
-    .party-fish-left {
-        position: relative;
-        right: auto;
-        bottom: auto;
-        top: auto;
-        margin: 30px auto;
-    }
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .school {
-        min-height: auto;
-    }
+  .person {
+    grid-template-columns: 160px 1fr;
+  }
 
-    .im-fine {
-        position: relative;
-        width: 250px;
-        right: auto;
-        top: auto;
-        margin: 40px auto 0;
-    }
-
-    .year-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .person img {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 
-@media (max-width: 650px) {
+@media (max-width: 560px) {
 
-    .site-header,
-    .hero,
-    .intro,
-    .section,
-    .site-footer {
-        width: min(calc(100% - 26px), var(--max));
-    }
+  body {
+    font-size: 13px;
+  }
 
-    .site-header {
-        padding-top: 18px;
-    }
+  .site {
+    width: calc(100% - 12px);
+    margin: 6px auto;
+    box-shadow: 4px 4px 0 #777;
+  }
 
-    .site-mark {
-        font-size: 2.7rem;
-    }
+  .topbar {
+    align-items: flex-start;
+  }
 
-    .site-nav {
-        gap: 5px;
-    }
+  .site-mark {
+    display: block;
+  }
 
-    .site-nav a {
-        font-size: .58rem;
-        padding: 5px 7px;
-    }
+  .site-mark small {
+    display: block;
+    margin-top: 4px;
+  }
 
-    .hero {
-        padding-top: 45px;
-    }
+  .orientation-copy {
+    padding: 35px 22px;
+  }
 
-    h1 {
-        font-size: clamp(4.5rem, 23vw, 8rem);
-    }
+  .orientation-copy h1 {
+    font-size: 85px;
+  }
 
-    .hero-notes {
-        min-height: 300px;
-    }
+  .map-wrap {
+    padding: 12px;
+  }
 
-    .car-sticker {
-        width: 165px;
-        left: 3%;
-    }
+  .map {
+    height: 370px;
+  }
 
-    .roman-phone {
-        width: 145px;
-        right: 4%;
-        top: 120px;
-    }
+  .fact-strip {
+    grid-template-columns: 1fr;
+  }
 
-    .roman-desk {
-        width: 140px;
-        right: 28%;
-    }
+  .fact-strip > div {
+    border-right: 0;
+    border-bottom: 1px solid #111;
+  }
 
-    .section {
-        padding: 65px 0;
-    }
+  .roads,
+  .translation,
+  .social,
+  .people {
+    padding: 40px 20px;
+  }
 
-    .section-header {
-        padding-left: 35px;
-        margin-bottom: 28px;
-    }
+  .road-entry {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 
-    .section-header h2 {
-        font-size: 3.7rem;
-    }
+  .road-number {
+    font-size: 30px;
+  }
 
-    .people-grid {
-        grid-template-columns: 1fr;
-    }
+  .lake-photo {
+    padding: 15px;
+    min-height: auto;
+  }
 
-    .place {
-        grid-template-columns: 45px 1fr;
-        gap: 12px;
-    }
+  .lake-photo img {
+    height: 280px;
+  }
 
-    .place-name {
-        font-size: 1.4rem;
-    }
+  .lake-copy,
+  .burke-copy,
+  .bayrama-copy,
+  .night-copy,
+  .school-copy,
+  .2015-copy {
+    padding: 40px 22px;
+  }
 
-    .summer-item {
-        grid-template-columns: 1fr;
-        gap: 5px;
-    }
+  .burke-copy ul {
+    columns: 1;
+  }
 
-    .year-grid {
-        grid-template-columns: 1fr;
-    }
+  .burke-photo {
+    min-height: 340px;
+  }
 
-    .fishfly {
-        display: none;
-    }
+  .burke-photo img {
+    height: 300px;
+  }
 
-    .footer-big {
-        font-size: 3.8rem;
-    }
-}
+  .dictionary {
+    grid-template-columns: 1fr;
+  }
 
+  .fishflies {
+    display: block;
+  }
 
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
+  .fly-stack {
+    min-height: 320px;
+  }
 
-@media (prefers-reduced-motion: reduce) {
+  .twenty-fifteen {
+    display: block;
+  }
 
-    html {
-        scroll-behavior: auto;
-    }
+  .year-big {
+    min-height: 220px;
+  }
 
-    *,
-    *::before,
-    *::after {
-        transition: none !important;
-        animation: none !important;
-    }
+  .person {
+    grid-template-columns: 1fr;
+  }
+
+  .person img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .reference {
+    display: block;
+    padding: 40px 20px;
+  }
+
+  .reference-title {
+    margin-bottom: 30px;
+  }
+
+  footer {
+    display: block;
+    line-height: 1.8;
+  }
 }
