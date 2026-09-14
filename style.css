@@ -1,1175 +1,1604 @@
 /* =========================================================
-   NEW BALTIMORE / 2015
-   made by somebody who should've gone to bed
+   NEW BALTIMORE // 2015
+   it is 3:41 AM.
+   i have not slept.
+   i have changed the padding 47 times.
+   this is probably fine.
    ========================================================= */
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;700;900&display=swap');
 :root {
-  --black: #11100f;
-  --paper: #f4e8c9;
-  --paper2: #e9d7ad;
-  --yellow: #e8b83d;
-  --yellow2: #ffd866;
-  --blue: #315f86;
-  --blue2: #7ba4bd;
-  --violet: #702cff;
-  --red: #d72d25;
-  --white: #fff8e7;
-  --dirty: #75664d;
+    --sun: #e3b75f;
+    --gold: #c99435;
+    --cream: #ead9b4;
+    --paper: #d7c4a0;
+    --dirty: #bcae91;
+    --ink: #171419;
+    --black: #0c0b0e;
+    --brown: #684b35;
+    --lake: #6d9297;
+    --lake-dark: #365f68;
+    --blue: #294e96;
+    --violet: #7144a8;
+    --electric: #5131b8;
+    --red: #b63132;
+    --red-dark: #762128;
+    --yellow: #e0ad35;
+    --white: #f4e9d1;
+    --sans: Arial, Helvetica, sans-serif;
+    --heavy: "Arial Black", Impact, Arial, Helvetica, sans-serif;
 }
 /* =========================================================
-   BASICALLY THE ENTIRE PAGE
+   EVERYTHING
    ========================================================= */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth;
-  background: var(--black);
+    scroll-behavior: smooth;
 }
 body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background:
-    radial-gradient(circle at 78% 7%, rgba(255,214,100,.45), transparent 28%),
-    radial-gradient(circle at 15% 36%, rgba(74,117,148,.20), transparent 30%),
-    linear-gradient(
-      180deg,
-      #f6e9c9 0%,
-      #efdcb1 24%,
-      #e6d1a5 53%,
-      #c5c1a5 78%,
-      #7992a0 100%
-    );
-  color: var(--black);
-  font-family: "DM Sans", Arial, sans-serif;
-  line-height: 1.45;
+    margin: 0;
+    min-height: 100vh;
+    color: var(--ink);
+    background:
+        radial-gradient(
+            circle at 14% 4%,
+            rgba(255, 218, 135, .82),
+            transparent 27rem
+        ),
+        radial-gradient(
+            circle at 91% 41%,
+            rgba(74, 105, 130, .20),
+            transparent 32rem
+        ),
+        linear-gradient(
+            180deg,
+            #d8bd88 0%,
+            #ead9b5 27%,
+            #d2c7ad 58%,
+            #a9b0ab 100%
+        );
+    font-family: var(--sans);
+    overflow-x: hidden;
+    cursor: crosshair;
 }
-/* old internet dirt. NOT horror. just... there. */
+/* cheap screen texture */
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 999;
-  pointer-events: none;
-  background:
-    repeating-linear-gradient(
-      0deg,
-      rgba(0,0,0,.025) 0px,
-      rgba(0,0,0,.025) 1px,
-      transparent 1px,
-      transparent 5px
-    );
-  mix-blend-mode: multiply;
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    pointer-events: none;
+    opacity: .10;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(0,0,0,.09) 0,
+            rgba(0,0,0,.09) 1px,
+            transparent 1px,
+            transparent 5px
+        );
+    mix-blend-mode: multiply;
+}
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 9997;
+    pointer-events: none;
+    box-shadow:
+        inset 0 0 100px rgba(50, 33, 25, .16),
+        inset 0 -80px 130px rgba(42, 69, 74, .10);
 }
 /* =========================================================
    LINKS
    ========================================================= */
-a {
-  color: var(--violet);
-  font-weight: 900;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
-  transition: .15s ease;
+::selection {
+    background: var(--violet);
+    color: white;
 }
-a:hover {
-  color: var(--red);
-  text-shadow: 2px 2px 0 rgba(232,184,61,.8);
+a {
+    color: inherit;
 }
 /* =========================================================
    HEADER
+   this is not a navigation bar.
+   it is six links somebody slapped at the top.
    ========================================================= */
 .site-header {
-  position: relative;
-  z-index: 50;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 30px;
-  padding: 18px 4vw 14px;
-  background: var(--black);
-  color: var(--white);
-  border-bottom: 7px solid var(--yellow);
-  transform: rotate(-.25deg);
-  width: 101%;
-  margin-left: -.5%;
+    position: relative;
+    z-index: 100;
+    min-height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 14px 4vw;
+    background: rgba(231, 211, 170, .91);
+    border-bottom: 3px solid var(--ink);
 }
 .site-mark {
-  font-family: "Archivo Black", Impact, sans-serif;
-  font-size: clamp(20px, 3vw, 40px);
-  line-height: .9;
-  letter-spacing: -2px;
+    font-family: var(--heavy);
+    font-size: clamp(18px, 3vw, 29px);
+    line-height: .8;
+    letter-spacing: -1.8px;
 }
 .site-location {
-  margin-top: 7px;
-  color: var(--yellow2);
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 2px;
+    margin-top: 7px;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    opacity: .58;
 }
 .site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 4px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    transform: rotate(-1deg);
 }
 .site-nav a {
-  color: var(--white);
-  font-size: 11px;
-  font-weight: 900;
-  text-decoration: none;
-  letter-spacing: 1px;
+    display: block;
+    padding: 6px 8px;
+    background: var(--white);
+    border: 2px solid var(--ink);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .7px;
+    text-decoration: none;
+    box-shadow: 2px 2px 0 var(--ink);
+    transform: rotate(1deg);
+}
+.site-nav a:nth-child(2) {
+    transform: rotate(-2deg);
+}
+.site-nav a:nth-child(3) {
+    transform: rotate(1deg);
+}
+.site-nav a:nth-child(4) {
+    transform: rotate(-1deg);
+}
+.site-nav a:nth-child(5) {
+    transform: rotate(2deg);
+}
+.site-nav a:nth-child(6) {
+    transform: rotate(-2deg);
 }
 .site-nav a:hover {
-  color: var(--yellow2);
+    background: var(--yellow);
+    color: var(--ink);
+    transform:
+        translateY(-2px)
+        rotate(-3deg);
 }
 /* =========================================================
    HERO
+   big.
+   warm.
+   slightly stupid.
    ========================================================= */
 .hero {
-  position: relative;
-  min-height: 82vh;
-  display: flex;
-  align-items: center;
-  padding: 8vw 6vw 12vw;
-  overflow: hidden;
+    position: relative;
+    min-height: 680px;
+    padding:
+        110px
+        6vw
+        135px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 77% 36%,
+            rgba(255, 225, 153, .94),
+            transparent 19rem
+        ),
+        linear-gradient(
+            160deg,
+            #d9b66d 0%,
+            #e6ce96 45%,
+            #94a9ab 100%
+        );
+    border-bottom: 3px solid var(--ink);
+}
+.hero::before {
+    content:
+        "LAKE ST. CLAIR // M-29 // WINDOWS DOWN";
+    position: absolute;
+    top: 43px;
+    right: 4vw;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    transform: rotate(3deg);
+    opacity: .55;
 }
 .hero::after {
-  content: "";
-  position: absolute;
-  left: -5%;
-  right: -5%;
-  bottom: 0;
-  height: 22%;
-  background:
-    repeating-linear-gradient(
-      175deg,
-      transparent 0 15px,
-      rgba(255,255,255,.12) 16px 18px
-    );
-  opacity: .5;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    left: -8%;
+    bottom: -125px;
+    width: 116%;
+    height: 260px;
+    background: rgba(54, 91, 100, .19);
+    border-top: 3px solid rgba(23, 20, 25, .30);
+    transform: rotate(-2deg);
 }
 .hero-inner {
-  position: relative;
-  z-index: 5;
-  max-width: 980px;
+    position: relative;
+    z-index: 5;
+    max-width: 920px;
 }
-.hero-kicker {
-  display: inline-block;
-  background: var(--red);
-  color: white;
-  padding: 7px 12px;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  transform: rotate(-2deg);
-  box-shadow: 6px 6px 0 var(--black);
+.kicker {
+    display: inline-block;
+    margin-bottom: 25px;
+    padding: 6px 9px;
+    background: var(--red);
+    color: white;
+    border: 2px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    transform: rotate(-2deg);
 }
 .hero h1 {
-  margin: 22px 0 15px;
-  max-width: 900px;
-  font-family: "Archivo Black", Impact, sans-serif;
-  font-size: clamp(64px, 11vw, 155px);
-  line-height: .79;
-  letter-spacing: -7px;
-  text-transform: uppercase;
-  color: var(--black);
-  transform: rotate(-1.5deg);
+    margin: 0;
+    max-width: 1000px;
+    font-family: var(--heavy);
+    font-size: clamp(58px, 11vw, 155px);
+    line-height: .73;
+    letter-spacing: -8px;
+    text-transform: uppercase;
+    transform: rotate(-.5deg);
 }
 .hero h1 span {
-  display: inline-block;
-  color: var(--violet);
-  transform: rotate(1.5deg);
+    display: block;
+}
+.hero h1 span:nth-child(1) {
+    color: var(--ink);
+}
+.hero h1 span:nth-child(2) {
+    margin-left: 4vw;
+    color: var(--red);
+    transform: rotate(-1deg);
+}
+.hero h1 span:nth-child(3) {
+    margin-left: 1vw;
+    color: var(--lake-dark);
 }
 .hero-copy {
-  max-width: 580px;
-  font-size: clamp(16px, 2vw, 22px);
-  font-weight: 700;
-  transform: rotate(.7deg);
+    max-width: 625px;
+    margin:
+        42px
+        0
+        22px
+        2px;
+    padding-left: 14px;
+    border-left: 6px solid var(--violet);
+    font-size: clamp(15px, 2vw, 19px);
+    font-weight: 700;
+    line-height: 1.42;
 }
 .hero-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    transform: rotate(-.5deg);
 }
 .hero-meta span {
-  padding: 5px 9px;
-  border: 2px solid var(--black);
-  background: var(--white);
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  box-shadow: 3px 3px 0 var(--black);
+    padding: 5px 7px;
+    background: rgba(248, 238, 215, .84);
+    border: 2px solid var(--ink);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .7px;
+    box-shadow: 2px 2px 0 var(--ink);
 }
-.hero-meta span:nth-child(2) {
-  background: var(--yellow2);
-  transform: rotate(2deg);
+.hero-notes {
+    position: absolute;
+    left: 6vw;
+    bottom: 28px;
+    z-index: 8;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .5px;
+    line-height: 1.8;
+    transform: rotate(-1deg);
 }
-.hero-meta span:nth-child(3) {
-  background: #a9c6d4;
-  transform: rotate(-1deg);
-}
-.hero-meta span:nth-child(4) {
-  background: #d6b8d8;
-  transform: rotate(2deg);
-}
-.hero-clock {
-  margin-top: 25px;
-  font-family: monospace;
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--dirty);
-}
-/* =========================================================
-   HERO GARBAGE
-   ========================================================= */
-.hero-fish {
-  position: absolute;
-  width: 34px;
-  right: 13%;
-  top: 19%;
-  transform: rotate(18deg);
-  opacity: .82;
-  animation: stupidFish 7s ease-in-out infinite;
-}
-.hero-car {
-  position: absolute;
-  width: 145px;
-  right: 4%;
-  bottom: 13%;
-  transform: rotate(4deg);
-  filter: drop-shadow(7px 8px 0 rgba(0,0,0,.18));
-  animation: carNudge 5s ease-in-out infinite;
-}
-@keyframes stupidFish {
-  0%,100% { transform: translate(0,0) rotate(18deg); }
-  50% { transform: translate(20px,-14px) rotate(28deg); }
-}
-@keyframes carNudge {
-  0%,100% { transform: rotate(4deg); }
-  50% { transform: translate(-8px,3px) rotate(2deg); }
+.hero-notes strong {
+    color: var(--red-dark);
 }
 /* =========================================================
    GENERAL SECTIONS
+   notice:
+   there are no goddamn cards here.
    ========================================================= */
-section {
-  position: relative;
-  padding: 105px 6vw;
-  border-top: 9px solid var(--black);
+.section {
+    position: relative;
+    padding:
+        105px
+        6vw;
+    overflow: hidden;
 }
-.section-inner {
-  position: relative;
-  max-width: 1180px;
-  margin: 0 auto;
+.section:nth-of-type(odd) {
+    background:
+        rgba(239, 225, 193, .56);
 }
-.section-label {
-  display: inline-block;
-  margin-bottom: 13px;
-  color: var(--red);
-  font-family: monospace;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 2px;
+.section:nth-of-type(even) {
+    background:
+        rgba(104, 137, 143, .13);
 }
-.section-title {
-  margin: 0 0 35px;
-  font-family: "Archivo Black", Impact, sans-serif;
-  font-size: clamp(48px, 8vw, 100px);
-  line-height: .82;
-  letter-spacing: -4px;
-  text-transform: uppercase;
+.section-header {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 60px;
 }
-.section-title .violet {
-  color: var(--violet);
+.section-number {
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.7px;
+    opacity: .47;
 }
-.section-title .blue {
-  color: var(--blue);
+.section h2 {
+    margin: 5px 0 0;
+    font-family: var(--heavy);
+    font-size: clamp(43px, 7vw, 92px);
+    line-height: .76;
+    letter-spacing: -5px;
+    text-transform: uppercase;
 }
-.section-title .red {
-  color: var(--red);
+.section-sub {
+    max-width: 300px;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.45;
 }
 /* =========================================================
    INTRO
    ========================================================= */
 .intro {
-  background: var(--yellow2);
-  transform: rotate(.25deg);
-  width: 101%;
-  margin-left: -.5%;
+    min-height: 460px;
+    display: block;
+    padding-top: 130px;
+}
+.intro-big {
+    position: relative;
+    max-width: 850px;
+    font-family: var(--heavy);
+    font-size: clamp(52px, 9vw, 112px);
+    line-height: .73;
+    letter-spacing: -6px;
+    text-transform: uppercase;
+    transform: rotate(-1deg);
+}
+.intro-big span {
+    display: block;
+    margin-left: 8vw;
+    color: var(--electric);
+    transform: rotate(.8deg);
 }
 .intro-copy {
-  max-width: 750px;
-  font-size: clamp(20px, 3vw, 32px);
-  font-weight: 900;
-  line-height: 1.15;
+    max-width: 540px;
+    margin:
+        65px
+        0
+        0
+        38vw;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.55;
 }
-.intro-copy em {
-  color: var(--violet);
-  font-style: normal;
-}
-.intro-note {
-  position: absolute;
-  right: 3%;
-  bottom: 4%;
-  max-width: 190px;
-  padding: 12px;
-  background: var(--white);
-  border: 3px solid var(--black);
-  box-shadow: 5px 5px 0 var(--black);
-  font-family: monospace;
-  font-size: 10px;
-  font-weight: 900;
-  transform: rotate(4deg);
+.intro-copy strong {
+    display: inline-block;
+    margin-top: 14px;
+    color: var(--red-dark);
+    transform: rotate(-2deg);
 }
 /* =========================================================
    PEOPLE
+   THIS IS NOT A PROFILE DIRECTORY.
    ========================================================= */
 .people {
-  background: #d8c49e;
+    padding-bottom: 145px;
 }
 .people-grid {
-  display: grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap: 75px;
-  align-items: start;
+    position: relative;
+    z-index: 4;
+    display: grid;
+    grid-template-columns: 1.08fr .92fr;
+    gap: 90px;
+    align-items: start;
 }
 .person {
-  position: relative;
+    position: relative;
+    min-width: 0;
 }
 .person:nth-child(1) {
-  transform: rotate(-1deg);
+    transform: rotate(-1deg);
 }
 .person:nth-child(2) {
-  margin-top: 100px;
-  transform: rotate(1.5deg);
+    margin-top: 75px;
+    transform: rotate(1.3deg);
 }
-/* NO CARD. THE IMAGE IS THE THING. */
 .person-image-wrap {
-  position: relative;
-  overflow: visible;
-  border: 6px solid var(--black);
-  background: var(--black);
-  box-shadow: 13px 13px 0 var(--violet);
+    position: relative;
+    height: 430px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: visible;
+    border: 3px solid var(--ink);
+    box-shadow:
+        8px 8px 0 var(--ink);
+    background: #b7a476;
 }
 .person:nth-child(2) .person-image-wrap {
-  box-shadow: -12px 12px 0 var(--red);
+    background: #708b90;
+    box-shadow:
+        -7px 9px 0 var(--ink);
 }
 .person-image {
-  display: block;
-  width: 100%;
-  height: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
 }
+/* THE TAG IS NO LONGER ON TYLER'S FACE.
+   WE HAVE LEARNED FROM OUR MISTAKES. */
 .person-tag {
-  position: absolute;
-  left: 15px;
-  bottom: 15px;
-  z-index: 20;
-  max-width: calc(100% - 30px);
-  padding: 6px 9px;
-  background: var(--black);
-  color: var(--yellow2);
-  font-family: monospace;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  transform: rotate(-2deg);
+    position: absolute;
+    top: auto;
+    left: auto;
+    right: 14px;
+    bottom: -17px;
+    z-index: 20;
+    padding: 6px 9px;
+    background: var(--yellow);
+    border: 2px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .8px;
+    transform: rotate(2deg);
+}
+.person:nth-child(1) .person-tag {
+    left: 14px;
+    right: auto;
+    bottom: -16px;
+    transform: rotate(-2deg);
 }
 .person:nth-child(2) .person-tag {
-  left: auto;
-  right: 15px;
-  bottom: 15px;
-  background: var(--red);
-  color: white;
-  transform: rotate(2deg);
+    background: var(--red);
+    color: white;
+    transform: rotate(2deg);
 }
 .person-name {
-  margin: 22px 0 3px;
-  font-family: "Archivo Black", Impact, sans-serif;
-  font-size: clamp(38px, 6vw, 70px);
-  line-height: .8;
-  text-transform: uppercase;
+    margin:
+        30px
+        0
+        4px;
+    font-family: var(--heavy);
+    font-size: clamp(37px, 5vw, 63px);
+    line-height: .77;
+    letter-spacing: -4px;
+    text-transform: uppercase;
 }
-.person-meta {
-  font-family: monospace;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 1px;
+.person-info {
+    margin: 0;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    opacity: .75;
 }
 .person-copy {
-  max-width: 500px;
-  margin-top: 17px;
-  font-size: 17px;
-  font-weight: 700;
+    max-width: 440px;
+    margin-top: 18px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
 }
-.person-note {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 8px 11px;
-  background: var(--white);
-  border: 2px solid var(--black);
-  font-size: 11px;
-  font-weight: 900;
-  transform: rotate(-2deg);
+.more-people {
+    position: relative;
+    z-index: 5;
+    width: fit-content;
+    max-width: 520px;
+    margin:
+        110px
+        0
+        0
+        17vw;
+    padding: 17px 21px;
+    border:
+        3px
+        dashed
+        var(--ink);
+    background: rgba(244, 232, 205, .72);
+    font-family: var(--heavy);
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+    transform: rotate(-1.5deg);
 }
-.person-note::before {
-  content: "// ";
-  color: var(--red);
-}
-.roman-phone {
-  position: absolute;
-  width: 72px;
-  right: -40px;
-  top: 37%;
-  transform: rotate(9deg);
-  filter: drop-shadow(4px 5px 0 rgba(0,0,0,.2));
-}
+/* Roman's stupid little desk image */
 .roman-desk {
-  position: absolute;
-  width: 105px;
-  left: -58px;
-  bottom: -50px;
-  transform: rotate(-7deg);
-  filter: drop-shadow(5px 6px 0 rgba(0,0,0,.25));
+    position: absolute;
+    width: 105px;
+    right: -32px;
+    bottom: -35px;
+    z-index: 30;
+    transform: rotate(8deg);
+    filter:
+        drop-shadow(4px 5px 0 rgba(0,0,0,.28));
+}
+/* Roman phone */
+.roman-phone {
+    position: absolute;
+    width: 72px;
+    right: 5%;
+    top: 5%;
+    z-index: 25;
+    transform: rotate(12deg);
+    filter:
+        drop-shadow(3px 4px 0 rgba(0,0,0,.25));
+    animation:
+        tinyFloat
+        8s
+        ease-in-out
+        infinite;
 }
 /* =========================================================
    PLACES
+   we're going to pretend these are notes somebody kept.
    ========================================================= */
 .places {
-  background: #b5c5c2;
+    padding-bottom: 135px;
 }
-.place-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-  border-top: 4px solid var(--black);
+.places-list {
+    position: relative;
+    z-index: 4;
+    max-width: 1050px;
+    margin-left: 5vw;
 }
 .place {
-  position: relative;
-  min-height: 120px;
-  padding: 23px 25px;
-  border-bottom: 4px solid var(--black);
+    position: relative;
+    display: grid;
+    grid-template-columns:
+        60px
+        minmax(0, 1fr)
+        220px;
+    align-items: center;
+    gap: 25px;
+    min-height: 105px;
+    padding:
+        17px
+        0;
+    border-top:
+        2px
+        solid
+        rgba(23,20,25,.62);
 }
-.place:nth-child(odd) {
-  border-right: 4px solid var(--black);
+.place:last-child {
+    border-bottom:
+        2px
+        solid
+        rgba(23,20,25,.62);
 }
-.place:nth-child(1) { background: #c8d4d1; }
-.place:nth-child(2) { background: #e6d7ae; }
-.place:nth-child(3) { background: #9fb9c7; }
-.place:nth-child(4) { background: #d8b7a9; }
-.place:nth-child(5) { background: #e5cb72; }
-.place:nth-child(6) { background: #b8a8c5; }
+.place:nth-child(2) {
+    margin-left: 6vw;
+}
+.place:nth-child(3) {
+    margin-left: 1vw;
+}
+.place:nth-child(4) {
+    margin-left: 9vw;
+}
+.place:nth-child(5) {
+    margin-left: 3vw;
+}
+.place:nth-child(6) {
+    margin-left: 12vw;
+}
 .place:nth-child(7) {
-  background: var(--black);
-  color: white;
+    margin-left: 5vw;
+}
+.place-number {
+    font-size: 9px;
+    font-weight: 900;
+    opacity: .42;
 }
 .place-name {
-  font-family: "Archivo Black", Impact, sans-serif;
-  font-size: 28px;
-  text-transform: uppercase;
-  line-height: .9;
+    font-family: var(--heavy);
+    font-size: clamp(28px, 4.8vw, 64px);
+    line-height: .78;
+    letter-spacing: -3px;
+    text-transform: uppercase;
 }
-.place-desc {
-  margin-top: 9px;
-  font-size: 12px;
-  font-weight: 700;
+.place:nth-child(2) .place-name {
+    color: var(--red);
 }
 .place:nth-child(3) .place-name {
-  color: var(--blue);
+    color: var(--lake-dark);
 }
 .place:nth-child(4) .place-name {
-  color: var(--red);
+    color: var(--violet);
+}
+.place:nth-child(5) .place-name {
+    color: var(--blue);
 }
 .place:nth-child(6) .place-name {
-  color: var(--violet);
+    color: var(--red-dark);
+}
+.place-note {
+    max-width: 220px;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.35;
 }
 /* =========================================================
    NIGHTS
+   dark lake.
+   not horror.
    ========================================================= */
 .nights {
-  background: #151617;
-  color: var(--white);
-  overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 18% 14%,
+            rgba(105, 77, 140, .35),
+            transparent 25rem
+        ),
+        linear-gradient(
+            180deg,
+            #747d81,
+            #525a5e
+        );
+    color: var(--white);
 }
-.nights .section-label {
-  color: var(--yellow2);
+.nights h2 {
+    color: #f0d18a;
 }
-.nights .section-title {
-  color: var(--white);
+.nights .section-number,
+.nights .section-sub {
+    color: var(--white);
 }
-.nights-copy {
-  max-width: 700px;
-  font-size: clamp(22px, 3vw, 35px);
-  font-weight: 900;
-  line-height: 1.05;
+.night-intro {
+    position: relative;
+    z-index: 4;
+    max-width: 1000px;
+    font-family: var(--heavy);
+    font-size: clamp(38px, 7vw, 86px);
+    line-height: .75;
+    letter-spacing: -5px;
+    text-transform: uppercase;
+    transform: rotate(-1deg);
 }
-.nights-copy span {
-  color: var(--yellow2);
+.night-intro span {
+    display: block;
+    margin-left: 13vw;
+    color: #e0a742;
+    transform: rotate(1deg);
+}
+.night-copy {
+    position: relative;
+    z-index: 4;
+    max-width: 620px;
+    margin:
+        50px
+        0
+        42px
+        8vw;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.55;
 }
 .night-list {
-  margin-top: 45px;
-  max-width: 720px;
+    position: relative;
+    z-index: 4;
+    display: block;
+    max-width: 720px;
+    padding: 0;
+    margin:
+        0
+        0
+        0
+        16vw;
+    list-style: none;
 }
-.night-list div {
-  padding: 13px 0;
-  border-bottom: 2px solid rgba(255,255,255,.25);
-  font-size: 14px;
-  font-weight: 700;
+.night-list li {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 7px 0;
+    padding: 8px 11px;
+    border:
+        2px
+        solid
+        rgba(244,234,211,.63);
+    background:
+        rgba(255,255,255,.055);
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
 }
-.night-list div::before {
-  content: "→ ";
-  color: var(--red);
+.night-list li:nth-child(2) {
+    margin-left: 35px;
 }
-.car-music {
-  position: absolute;
-  width: 125px;
-  right: 2%;
-  top: 30%;
-  transform: rotate(-7deg);
-  opacity: .95;
+.night-list li:nth-child(3) {
+    margin-left: 12px;
 }
-.aux-cord {
-  position: absolute;
-  width: 125px;
-  right: 7%;
-  bottom: 5%;
-  transform: rotate(13deg);
-  opacity: .8;
+.night-list li:nth-child(4) {
+    margin-left: 70px;
+}
+.night-list li:nth-child(5) {
+    margin-left: 25px;
+}
+.night-list li:nth-child(6) {
+    margin-left: 100px;
 }
 /* =========================================================
-   MUSIC
+   SOUNDCloud
+   it is an embed.
+   it stays an embed.
    ========================================================= */
 .music-player {
-  position: relative;
-  max-width: 780px;
-  margin: 70px auto 0;
-  padding: 18px;
-  background: var(--yellow2);
-  color: var(--black);
-  border: 5px solid var(--black);
-  box-shadow: 10px 10px 0 var(--violet);
-  transform: rotate(-.7deg);
+    position: relative;
+    z-index: 8;
+    width: min(720px, 92%);
+    margin:
+        80px
+        auto
+        0;
+    padding: 11px;
+    background: #171419;
+    border:
+        3px
+        solid
+        #d9c59b;
+    box-shadow:
+        7px
+        7px
+        0
+        rgba(0,0,0,.42);
+    transform: rotate(.7deg);
 }
 .music-player-label {
-  font-family: "Archivo Black", Impact, sans-serif;
-  font-size: 22px;
+    color: #e5c26b;
+    font-family: var(--heavy);
+    font-size: 16px;
+    letter-spacing: -.3px;
 }
 .music-player-status {
-  margin: 4px 0 15px;
-  font-family: monospace;
-  font-size: 10px;
-  font-weight: 900;
+    margin:
+        4px
+        0
+        9px;
+    color: #b9c9c6;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.music-player iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+}
+/* small car interrupting Nights */
+.car-music {
+    position: absolute;
+    width: 125px;
+    right: 2%;
+    top: 36%;
+    z-index: 12;
+    transform: rotate(-7deg);
+    filter:
+        drop-shadow(4px 5px 0 rgba(0,0,0,.30));
+    animation:
+        tinyCarFloat
+        9s
+        ease-in-out
+        infinite;
+}
+/* small aux */
+.aux-cord {
+    position: absolute;
+    width: 145px;
+    left: -28px;
+    top: 8%;
+    z-index: 12;
+    opacity: .85;
+    transform: rotate(-10deg);
+    animation:
+        cordWiggle
+        11s
+        ease-in-out
+        infinite;
 }
 /* =========================================================
    SUMMER
+   fishflies, but not FISHFLY FUCKING CENTRAL.
    ========================================================= */
 .summer {
-  background:
-    linear-gradient(
-      180deg,
-      #f4d875 0%,
-      #e7b75d 48%,
-      #82a8bb 100%
-    );
-}
-.summer-intro {
-  max-width: 680px;
-  font-size: 24px;
-  font-weight: 900;
+    background:
+        radial-gradient(
+            circle at 78% 17%,
+            rgba(239, 196, 93, .63),
+            transparent 25rem
+        ),
+        linear-gradient(
+            180deg,
+            #d7c08e,
+            #a9b5ad
+        );
 }
 .summer-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 35px;
+    position: relative;
+    z-index: 4;
+    display: block;
+    max-width: 850px;
+    margin-left: 6vw;
 }
-.summer-list div {
-  position: relative;
-  padding: 15px 20px;
-  background: var(--white);
-  border: 4px solid var(--black);
-  font-family: "Archivo Black", Impact, sans-serif;
-  font-size: 21px;
-  box-shadow: 5px 5px 0 var(--black);
+.summer-item {
+    position: relative;
+    display: block;
+    width: fit-content;
+    min-width: 300px;
+    min-height: auto;
+    margin: 20px 0;
+    padding: 17px 22px;
+    background:
+        rgba(245,235,210,.60);
+    border:
+        3px
+        solid
+        var(--ink);
+    box-shadow:
+        6px
+        6px
+        0
+        var(--ink);
+    transform: rotate(-1.2deg);
 }
-.summer-list div:nth-child(1) {
-  transform: rotate(-2deg);
+.summer-item:nth-child(2) {
+    margin-left: 17vw;
+    transform: rotate(1.5deg);
+    background:
+        rgba(103, 139, 148, .34);
 }
-.summer-list div:nth-child(2) {
-  transform: rotate(2deg);
-  background: var(--violet);
-  color: white;
+.summer-item:nth-child(3) {
+    margin-left: 5vw;
+    transform: rotate(-2deg);
 }
-.summer-list div:nth-child(3) {
-  transform: rotate(-1deg);
-  background: var(--red);
-  color: white;
+.summer-item:nth-child(4) {
+    margin-left: 24vw;
+    transform: rotate(1deg);
+    background:
+        rgba(103, 139, 148, .34);
 }
-.summer-list div:nth-child(4) {
-  transform: rotate(3deg);
-  background: var(--blue);
-  color: white;
+.summer-item h3 {
+    margin: 0;
+    font-family: var(--heavy);
+    font-size: clamp(30px, 5vw, 60px);
+    line-height: .78;
+    letter-spacing: -3px;
+    text-transform: uppercase;
 }
-.party-fish {
-  position: absolute;
-  width: 42px;
+.summer-item:nth-child(2) h3 {
+    color: var(--red);
 }
-.party-fish.one {
-  right: 14%;
-  top: 20%;
-  transform: rotate(-15deg);
+.summer-item:nth-child(3) h3 {
+    color: var(--violet);
 }
-.party-fish.two {
-  right: 5%;
-  top: 42%;
-  transform: rotate(12deg);
+.summer-item:nth-child(4) h3 {
+    color: var(--lake-dark);
+}
+/* tiny party fishflies */
+.party-fish-right {
+    position: absolute;
+    width: 48px;
+    right: 9%;
+    top: 19%;
+    z-index: 15;
+    transform: rotate(13deg);
+    animation:
+        tinyFloat
+        8s
+        ease-in-out
+        infinite;
+}
+.party-fish-left {
+    position: absolute;
+    width: 42px;
+    left: 4%;
+    bottom: 15%;
+    z-index: 15;
+    transform: rotate(-13deg);
+    animation:
+        tinyFloat
+        10s
+        ease-in-out
+        infinite reverse;
 }
 /* =========================================================
    SCHOOL
+   yes, the Tars section gets to be obnoxious.
    ========================================================= */
 .school {
-  background: #f0eee4;
+    background:
+        linear-gradient(
+            135deg,
+            #eee0bf,
+            #d6c09a 62%,
+            #b2aaa0
+        );
 }
-.school-stamp {
-  display: inline-block;
-  padding: 12px 18px;
-  background: var(--red);
-  color: white;
-  border: 4px solid var(--black);
-  font-family: "Archivo Black", Impact, sans-serif;
-  font-size: 24px;
-  transform: rotate(-3deg);
-  box-shadow: 7px 7px 0 var(--black);
+.school-banner {
+    position: relative;
+    z-index: 5;
+    max-width: 1050px;
+    margin-left: 3vw;
+    padding: 34px 38px;
+    background: var(--red);
+    color: white;
+    border:
+        4px
+        solid
+        var(--ink);
+    box-shadow:
+        10px
+        10px
+        0
+        var(--ink);
+    transform: rotate(-1.2deg);
 }
-.school-copy {
-  max-width: 680px;
-  margin-top: 35px;
-  font-size: 19px;
-  font-weight: 700;
+.school-banner h3 {
+    margin: 0;
+    font-family: var(--heavy);
+    font-size: clamp(43px, 8vw, 105px);
+    line-height: .72;
+    letter-spacing: -6px;
+    text-transform: uppercase;
 }
-.school-copy strong {
-  color: var(--red);
+.school-banner p {
+    max-width: 610px;
+    margin-top: 28px;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+.school-banner::after {
+    content: "TARS";
+    position: absolute;
+    right: 16px;
+    bottom: -23px;
+    font-family: var(--heavy);
+    font-size: 80px;
+    line-height: 1;
+    color: rgba(255,255,255,.11);
+    transform: rotate(-6deg);
+    pointer-events: none;
+}
+/* I'M FINE stays fucking perfect */
+.im-fine {
+    position: absolute;
+    width: 88px;
+    left: 2%;
+    top: 38%;
+    z-index: 25;
+    transform: rotate(-11deg);
+    filter:
+        drop-shadow(4px 4px 0 rgba(0,0,0,.22));
 }
 /* =========================================================
    2015
    ========================================================= */
 .year {
-  background: var(--black);
-  color: var(--white);
-  min-height: 700px;
+    background:
+        radial-gradient(
+            circle at 8% 76%,
+            rgba(81, 49, 184, .17),
+            transparent 23rem
+        ),
+        #d6c5a4;
 }
-.year .section-title {
-  color: var(--yellow2);
+.year-grid {
+    position: relative;
+    z-index: 4;
+    display: grid;
+    grid-template-columns:
+        1.2fr
+        .8fr
+        1fr;
+    gap: 0;
+    max-width: 1050px;
+    margin-left: 4vw;
 }
-.year-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  max-width: 850px;
+.year-item {
+    min-height: 135px;
+    padding: 17px;
+    background: rgba(244,234,211,.65);
+    border:
+        2px
+        solid
+        var(--ink);
+    transform: rotate(-1deg);
 }
-.year-list span {
-  display: inline-block;
-  padding: 8px 11px;
-  border: 2px solid var(--white);
-  font-family: monospace;
-  font-size: 12px;
-  font-weight: 900;
-  transform: rotate(var(--r));
+.year-item:nth-child(2) {
+    background: #c6d0cc;
+    transform: rotate(2deg);
 }
-.year-list span:nth-child(1) { --r: -2deg; color: #a9c6d4; }
-.year-list span:nth-child(2) { --r: 1deg; color: var(--yellow2); }
-.year-list span:nth-child(3) { --r: 3deg; color: #d98bce; }
-.year-list span:nth-child(4) { --r: -1deg; color: #e65b54; }
-.year-list span:nth-child(5) { --r: 2deg; color: #8fb6d0; }
-.year-list span:nth-child(6) { --r: -3deg; color: white; }
-.iphone-sticker {
-  position: absolute;
-  width: 92px;
-  right: 8%;
-  top: 20%;
-  transform: rotate(8deg);
-  filter: drop-shadow(5px 6px 0 rgba(0,0,0,.5));
+.year-item:nth-child(3) {
+    background: #ded0a9;
+    transform: rotate(-2deg);
+}
+.year-item:nth-child(4) {
+    background: #d5c0a8;
+    transform: rotate(1deg);
+}
+.year-item:nth-child(5) {
+    background: #b7c3bd;
+    transform: rotate(-1deg);
+}
+.year-item:nth-child(6) {
+    background: #d7bd77;
+    transform: rotate(2deg);
+}
+.year-item strong {
+    display: block;
+    margin-bottom: 9px;
+    font-family: var(--heavy);
+    font-size: 22px;
+    line-height: .82;
+    text-transform: uppercase;
+}
+.year-item span {
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+/* little phone, not giant fucking iPhone */
+.phone-2015 {
+    position: absolute;
+    width: 62px;
+    right: 7%;
+    bottom: 13%;
+    z-index: 20;
+    transform: rotate(8deg);
+    filter:
+        drop-shadow(3px 5px 0 rgba(0,0,0,.27));
+    animation:
+        tinyFloat
+        7s
+        ease-in-out
+        infinite;
 }
 /* =========================================================
    RELATIONSHIPS
    ========================================================= */
 .relationships {
-  background: #d8c2bb;
+    background: #c9bbb0;
 }
 .relationship-map {
-  position: relative;
-  min-height: 350px;
-  margin-top: 30px;
+    position: relative;
+    z-index: 4;
+    max-width: 850px;
+    margin-left: 8vw;
 }
-.relationship {
-  position: absolute;
-  padding: 11px 15px;
-  background: var(--white);
-  border: 3px solid var(--black);
-  font-family: monospace;
-  font-size: 11px;
-  font-weight: 900;
-  box-shadow: 5px 5px 0 var(--black);
+.node {
+    display: inline-block;
+    margin: 5px 4px;
+    padding: 8px 11px;
+    background: var(--white);
+    border:
+        2px
+        solid
+        var(--ink);
+    font-family: var(--heavy);
+    font-size: 13px;
+    text-transform: uppercase;
+    box-shadow:
+        3px
+        3px
+        0
+        var(--ink);
+    transform: rotate(-2deg);
 }
-.relationship.r1 {
-  left: 5%;
-  top: 10%;
-  transform: rotate(-4deg);
+.node:nth-child(2n) {
+    background: #d8b867;
+    transform: rotate(2deg);
 }
-.relationship.r2 {
-  right: 8%;
-  top: 25%;
-  transform: rotate(3deg);
+.node:nth-child(3n) {
+    background: #a8c0c2;
+    transform: rotate(-1deg);
 }
-.relationship.r3 {
-  left: 31%;
-  top: 55%;
-  background: var(--yellow2);
-  transform: rotate(-2deg);
+.node:nth-child(5n) {
+    background: #b97971;
+    color: white;
 }
-.relationship.r4 {
-  right: 26%;
-  bottom: 7%;
-  background: var(--violet);
-  color: white;
-  transform: rotate(4deg);
+.relationship-copy {
+    position: relative;
+    z-index: 4;
+    max-width: 680px;
+    margin:
+        65px
+        0
+        0
+        17vw;
+    padding: 22px;
+    background: rgba(244,234,211,.70);
+    border:
+        3px
+        solid
+        var(--ink);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.55;
+    transform: rotate(.8deg);
 }
-.relationship-heart {
-  position: absolute;
-  width: 90px;
-  left: 48%;
-  top: 25%;
-  transform: rotate(-11deg);
-  filter: drop-shadow(5px 6px 0 rgba(0,0,0,.2));
-}
-/* =========================================================
-   RANDOM SHIT
-   ========================================================= */
-.im-fine {
-  position: absolute;
-  width: 105px;
-  right: 2%;
-  bottom: 10%;
-  transform: rotate(8deg);
-  filter: drop-shadow(4px 4px 0 rgba(0,0,0,.2));
-}
-.random-fish {
-  position: absolute;
-  width: 30px;
-  opacity: .75;
-  pointer-events: none;
-  animation: tinyDrift 9s ease-in-out infinite;
-}
-.random-fish.one {
-  left: 4%;
-  top: 30%;
-}
-.random-fish.two {
-  right: 12%;
-  bottom: 25%;
-  animation-delay: -4s;
-}
-@keyframes tinyDrift {
-  0%,100% {
-    transform: translate(0,0) rotate(0deg);
-  }
-  50% {
-    transform: translate(18px,-12px) rotate(12deg);
-  }
+/* ugly Tumblr heart stays small */
+.red-heart {
+    position: absolute;
+    width: 76px;
+    right: 5%;
+    top: 31%;
+    z-index: 20;
+    transform: rotate(13deg);
+    filter:
+        drop-shadow(3px 4px 0 rgba(0,0,0,.20));
 }
 /* =========================================================
    FOOTER
+   finally. nobody is allowed to make another section.
    ========================================================= */
 .site-footer {
-  position: relative;
-  padding: 75px 6vw 100px;
-  background: #161616;
-  color: white;
-  border-top: 10px solid var(--yellow2);
+    position: relative;
+    min-height: 440px;
+    padding:
+        100px
+        6vw
+        45px;
+    background: #211d20;
+    color: #ead9b1;
+    border-top:
+        4px
+        solid
+        var(--ink);
+    overflow: hidden;
 }
-.footer-title {
-  font-family: "Archivo Black", Impact, sans-serif;
-  font-size: clamp(40px, 8vw, 100px);
-  line-height: .8;
-  letter-spacing: -4px;
-  color: var(--yellow2);
+.footer-big {
+    position: relative;
+    z-index: 4;
+    max-width: 1000px;
+    font-family: var(--heavy);
+    font-size: clamp(50px, 9vw, 120px);
+    line-height: .72;
+    letter-spacing: -7px;
+    text-transform: uppercase;
+    transform: rotate(-1deg);
 }
-.footer-copy {
-  max-width: 500px;
-  margin-top: 25px;
-  font-size: 14px;
-  font-weight: 700;
+.footer-big span {
+    color: #c4544c;
 }
 .footer-small {
-  margin-top: 45px;
-  color: #8f8f8f;
-  font-family: monospace;
-  font-size: 10px;
+    position: relative;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 85px;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
-.footer-fish {
-  position: absolute;
-  width: 35px;
-  right: 8%;
-  top: 25%;
-  transform: rotate(-18deg);
+.footer-note {
+    max-width: 360px;
+    color: #c5d0c8;
+    line-height: 1.5;
+}
+/* =========================================================
+   ONE. SINGLE. FISHFLY.
+   no swarm.
+   no infestation.
+   just one asshole.
+   ========================================================= */
+.fishfly {
+    position: absolute;
+    width: 30px;
+    z-index: 60;
+    pointer-events: none;
+    opacity: .88;
+    filter:
+        drop-shadow(2px 2px 0 rgba(0,0,0,.20));
+}
+.fishfly-1 {
+    top: 23%;
+    right: 8%;
+    animation:
+        fishflyDrift
+        10s
+        ease-in-out
+        infinite;
+}
+.fishfly-2 {
+    left: 5%;
+    top: 56%;
+    width: 25px;
+    animation:
+        fishflyDrift
+        12s
+        ease-in-out
+        infinite
+        reverse;
+}
+.fishfly-3 {
+    right: 12%;
+    bottom: 20%;
+    width: 28px;
+    animation:
+        fishflyDrift
+        9s
+        ease-in-out
+        infinite;
+}
+/* =========================================================
+   TINY CAR IN HERO
+   cars should interrupt.
+   they should NOT become the website.
+   ========================================================= */
+.car-right {
+    position: absolute;
+    width: 155px;
+    right: -15px;
+    top: 38%;
+    z-index: 18;
+    transform: rotate(6deg);
+    filter:
+        drop-shadow(4px 5px 0 rgba(0,0,0,.25));
+    animation:
+        tinyCarFloat
+        8s
+        ease-in-out
+        infinite;
+}
+.car-sticker {
+    position: absolute;
+    width: 105px;
+    left: -20px;
+    bottom: 18%;
+    z-index: 18;
+    transform: rotate(-8deg);
+    filter:
+        drop-shadow(3px 4px 0 rgba(0,0,0,.22));
+}
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+@keyframes tinyFloat {
+    0%, 100% {
+        transform:
+            translate(0, 0)
+            rotate(8deg);
+    }
+    50% {
+        transform:
+            translate(-6px, -9px)
+            rotate(12deg);
+    }
+}
+@keyframes tinyCarFloat {
+    0%, 100% {
+        transform:
+            translateY(0)
+            rotate(6deg);
+    }
+    50% {
+        transform:
+            translateY(-7px)
+            rotate(3deg);
+    }
+}
+@keyframes cordWiggle {
+    0%, 100% {
+        transform:
+            translate(0, 0)
+            rotate(-10deg);
+    }
+    50% {
+        transform:
+            translate(8px, 7px)
+            rotate(-6deg);
+    }
+}
+@keyframes fishflyDrift {
+    0%, 100% {
+        transform:
+            translate(0, 0)
+            rotate(4deg);
+    }
+    30% {
+        transform:
+            translate(-13px, 9px)
+            rotate(-11deg);
+    }
+    65% {
+        transform:
+            translate(10px, -12px)
+            rotate(13deg);
+    }
 }
 /* =========================================================
    MOBILE
+   phone screen.
+   don't make me cry.
    ========================================================= */
-@media (max-width: 800px) {
-  .site-header {
-    display: block;
-    padding: 17px 5vw;
-  }
-  .site-nav {
-    justify-content: flex-start;
-    margin-top: 16px;
-  }
-  .hero {
-    min-height: 76vh;
-    padding: 70px 6vw 120px;
-  }
-  .hero h1 {
-    font-size: clamp(55px, 17vw, 100px);
-    letter-spacing: -4px;
-  }
-  .hero-car {
-    width: 105px;
-    right: -5px;
-    bottom: 7%;
-  }
-  .hero-fish {
-    width: 27px;
-    right: 7%;
-    top: 12%;
-  }
-  section {
-    padding: 75px 6vw;
-  }
-  .section-title {
-    font-size: clamp(45px, 14vw, 78px);
-  }
-  .people-grid {
-    display: block;
-  }
-  .person:nth-child(2) {
-    margin-top: 85px;
-  }
-  .roman-phone {
-    width: 55px;
-    right: -10px;
-  }
-  .roman-desk {
-    width: 78px;
-    left: -5px;
-    bottom: -35px;
-  }
-  .place-list {
-    display: block;
-  }
-  .place:nth-child(odd) {
-    border-right: 0;
-  }
-  .car-music {
-    width: 90px;
-    right: -5px;
-    top: 10%;
-  }
-  .aux-cord {
-    width: 90px;
-    right: 2%;
-    bottom: 2%;
-  }
-  .music-player {
-    margin-top: 55px;
-    padding: 10px;
-  }
-  .party-fish {
-    width: 30px;
-  }
-  .iphone-sticker {
-    width: 65px;
-    right: 2%;
-    top: 15%;
-  }
-  .relationship-map {
-    min-height: 420px;
-  }
-  .relationship.r1 {
-    left: 0;
-  }
-  .relationship.r2 {
-    right: 0;
-  }
-  .relationship.r3 {
-    left: 12%;
-    top: 57%;
-  }
-  .relationship.r4 {
-    right: 4%;
-    bottom: 8%;
-  }
-  .relationship-heart {
-    width: 70px;
-    left: 42%;
-    top: 30%;
-  }
-  .im-fine {
-    width: 80px;
-    right: 0;
-    bottom: 4%;
-  }
+@media (max-width: 850px) {
+    .site-header {
+        display: block;
+        padding: 15px 5vw;
+    }
+    .site-nav {
+        justify-content: flex-start;
+        margin-top: 15px;
+    }
+    .hero {
+        min-height: 640px;
+        padding:
+            85px
+            6vw
+            125px;
+    }
+    .hero h1 {
+        font-size: clamp(50px, 15vw, 88px);
+        letter-spacing: -5px;
+    }
+    .hero h1 span:nth-child(2) {
+        margin-left: 2vw;
+    }
+    .hero-copy {
+        max-width: 90%;
+        font-size: 14px;
+    }
+    .section {
+        padding:
+            80px
+            5vw;
+    }
+    .section-header {
+        display: block;
+        margin-bottom: 45px;
+    }
+    .section-sub {
+        margin-top: 20px;
+    }
+    .intro {
+        min-height: 500px;
+        padding-top: 90px;
+    }
+    .intro-copy {
+        margin:
+            55px
+            0
+            0
+            8vw;
+    }
+    .people-grid {
+        grid-template-columns: 1fr;
+        gap: 85px;
+    }
+    .person:nth-child(2) {
+        margin-top: 0;
+    }
+    .person-image-wrap {
+        height: 400px;
+    }
+    .person-name {
+        font-size: 49px;
+    }
+    .more-people {
+        margin:
+            85px
+            0
+            0
+            7vw;
+    }
+    .roman-desk {
+        width: 82px;
+        right: -16px;
+        bottom: -27px;
+    }
+    .roman-phone {
+        width: 58px;
+        right: 3%;
+    }
+    .places-list {
+        margin-left: 0;
+    }
+    .place,
+    .place:nth-child(n) {
+        grid-template-columns:
+            35px
+            minmax(0, 1fr);
+        margin-left: 0;
+        gap: 10px;
+        padding: 22px 0;
+    }
+    .place-note {
+        grid-column: 2;
+        max-width: 270px;
+        text-align: left;
+    }
+    .place-name {
+        font-size: 40px;
+    }
+    .night-intro {
+        font-size: 46px;
+    }
+    .night-intro span {
+        margin-left: 4vw;
+    }
+    .night-copy {
+        margin-left: 4vw;
+    }
+    .night-list {
+        margin-left: 4vw;
+    }
+    .night-list li:nth-child(n) {
+        margin-left: 0;
+    }
+    .music-player {
+        width: 100%;
+    }
+    .car-right {
+        width: 105px;
+        right: -25px;
+    }
+    .car-music {
+        width: 90px;
+        right: -15px;
+    }
+    .aux-cord {
+        width: 105px;
+        left: -38px;
+    }
+    .car-sticker {
+        width: 75px;
+        left: -14px;
+    }
+    .summer-list {
+        margin-left: 0;
+    }
+    .summer-item,
+    .summer-item:nth-child(n) {
+        min-width: 0;
+        width: auto;
+        margin:
+            15px
+            5vw
+            15px
+            0;
+    }
+    .summer-item h3 {
+        font-size: 42px;
+    }
+    .party-fish-right {
+        width: 35px;
+    }
+    .party-fish-left {
+        width: 31px;
+    }
+    .school-banner {
+        margin-left: 0;
+        padding: 28px;
+    }
+    .school-banner h3 {
+        font-size: 57px;
+        letter-spacing: -4px;
+    }
+    .im-fine {
+        width: 65px;
+        left: -12px;
+    }
+    .year-grid {
+        grid-template-columns: 1fr 1fr;
+        margin-left: 0;
+    }
+    .year-item {
+        min-height: 145px;
+    }
+    .phone-2015 {
+        width: 48px;
+        right: 3%;
+    }
+    .relationship-map {
+        margin-left: 0;
+    }
+    .relationship-copy {
+        margin-left: 4vw;
+    }
+    .red-heart {
+        width: 58px;
+        right: 3%;
+    }
+    .footer-small {
+        display: block;
+    }
+    .footer-note {
+        margin-top: 25px;
+    }
+    .fishfly-1 {
+        right: 4%;
+    }
+    .fishfly-2 {
+        left: 2%;
+    }
 }
 /* =========================================================
-   SMALLER THAN HELL DEBRIS
+   SMALL PHONE
    ========================================================= */
-img {
-  max-width: 100%;
-}
-img[aria-hidden="true"] {
-  user-select: none;
-  pointer-events: none;
-}
-/* absolutely no fishfly swarm bullshit */
-.swarm-hero,
-.swarm-footer {
-  display: none !important;
+@media (max-width: 500px) {
+    .site-mark {
+        font-size: 20px;
+    }
+    .site-nav a {
+        padding: 5px 6px;
+        font-size: 8px;
+    }
+    .hero {
+        min-height: 610px;
+    }
+    .hero h1 {
+        font-size: 53px;
+        letter-spacing: -4px;
+    }
+    .hero-copy {
+        max-width: 94%;
+        margin-top: 35px;
+    }
+    .hero-meta span {
+        font-size: 8px;
+    }
+    .section h2 {
+        font-size: 48px;
+    }
+    .person-image-wrap {
+        height: 350px;
+    }
+    .person-name {
+        font-size: 43px;
+    }
+    .place-name {
+        font-size: 33px;
+    }
+    .night-intro {
+        font-size: 40px;
+    }
+    .summer-item h3 {
+        font-size: 34px;
+    }
+    .school-banner h3 {
+        font-size: 47px;
+    }
+    .year-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-big {
+        font-size: 62px;
+        letter-spacing: -4px;
+    }
 }
 /* =========================================================
-   OKAY NOW MAKE THE FUCKING PICTURES MOVE
+   REDUCED MOTION
    ========================================================= */
-
-/* Roman — obviously he cannot simply sit there */
-.roman-phone {
-  animation: phoneIdiot 5.5s ease-in-out infinite;
-  transform-origin: center;
-}
-
-@keyframes phoneIdiot {
-  0%, 100% {
-    transform: translate(0, 0) rotate(9deg);
-  }
-  35% {
-    transform: translate(7px, -11px) rotate(14deg);
-  }
-  70% {
-    transform: translate(-5px, 4px) rotate(4deg);
-  }
-}
-
-/* Roman's stupid desk sticker */
-.roman-desk {
-  animation: deskWobble 7s ease-in-out infinite;
-  transform-origin: center;
-}
-
-@keyframes deskWobble {
-  0%, 100% {
-    transform: translate(0, 0) rotate(-7deg);
-  }
-  25% {
-    transform: translate(-8px, -5px) rotate(-10deg);
-  }
-  60% {
-    transform: translate(5px, 7px) rotate(-3deg);
-  }
-}
-
-/* Car in the night section */
-.car-music {
-  animation: carFloat 6s ease-in-out infinite;
-}
-
-@keyframes carFloat {
-  0%, 100% {
-    transform: translate(0, 0) rotate(-7deg);
-  }
-  30% {
-    transform: translate(-13px, 8px) rotate(-3deg);
-  }
-  65% {
-    transform: translate(8px, -7px) rotate(-10deg);
-  }
-}
-
-/* AUX cord has absolutely no business behaving normally */
-.aux-cord {
-  animation: auxDrift 8s ease-in-out infinite;
-  transform-origin: center;
-}
-
-@keyframes auxDrift {
-  0%, 100% {
-    transform: translate(0, 0) rotate(13deg);
-  }
-  25% {
-    transform: translate(-12px, -8px) rotate(20deg);
-  }
-  55% {
-    transform: translate(9px, 5px) rotate(5deg);
-  }
-  80% {
-    transform: translate(-4px, 10px) rotate(16deg);
-  }
-}
-
-/* Party fish. They are fish. They should wander. */
-.party-fish.one {
-  animation: partyFishOne 6s ease-in-out infinite;
-}
-
-.party-fish.two {
-  animation: partyFishTwo 7.5s ease-in-out infinite;
-  animation-delay: -2.5s;
-}
-
-@keyframes partyFishOne {
-  0%, 100% {
-    transform: translate(0, 0) rotate(-15deg);
-  }
-  40% {
-    transform: translate(-15px, 12px) rotate(-5deg);
-  }
-  75% {
-    transform: translate(8px, -8px) rotate(-22deg);
-  }
-}
-
-@keyframes partyFishTwo {
-  0%, 100% {
-    transform: translate(0, 0) rotate(12deg);
-  }
-  35% {
-    transform: translate(12px, -14px) rotate(20deg);
-  }
-  70% {
-    transform: translate(-10px, 7px) rotate(4deg);
-  }
-}
-
-/* The iPhone has been dropped into the website and is now drifting */
-.iphone-sticker {
-  animation: iphoneDrift 6.5s ease-in-out infinite;
-}
-
-@keyframes iphoneDrift {
-  0%, 100% {
-    transform: translate(0, 0) rotate(8deg);
-  }
-  40% {
-    transform: translate(-9px, 12px) rotate(14deg);
-  }
-  75% {
-    transform: translate(7px, -6px) rotate(3deg);
-  }
-}
-
-/* ugly Tumblr heart. obviously */
-.relationship-heart {
-  animation: heartIdiot 5s ease-in-out infinite;
-  transform-origin: center;
-}
-
-@keyframes heartIdiot {
-  0%, 100% {
-    transform: translate(0, 0) rotate(-11deg) scale(1);
-  }
-  30% {
-    transform: translate(8px, -7px) rotate(-5deg) scale(1.04);
-  }
-  65% {
-    transform: translate(-6px, 6px) rotate(-15deg) scale(.96);
-  }
-}
-
-/* I AM FINE. SHE IS NOT FINE. */
-.im-fine {
-  animation: imFine 5.8s ease-in-out infinite;
-  transform-origin: center;
-}
-
-@keyframes imFine {
-  0%, 100% {
-    transform: translate(0, 0) rotate(8deg);
-  }
-  45% {
-    transform: translate(-11px, -9px) rotate(2deg);
-  }
-  75% {
-    transform: translate(6px, 5px) rotate(13deg);
-  }
-}
-
-/* footer fish */
-.footer-fish {
-  animation: footerFish 8s ease-in-out infinite;
-}
-
-@keyframes footerFish {
-  0%, 100% {
-    transform: translate(0, 0) rotate(-18deg);
-  }
-  30% {
-    transform: translate(-18px, 10px) rotate(-8deg);
-  }
-  65% {
-    transform: translate(12px, -12px) rotate(-24deg);
-  }
-}
-
-/* make the hero shit feel less dead */
-.hero-kicker {
-  animation: kickerNudge 4.5s ease-in-out infinite;
-}
-
-@keyframes kickerNudge {
-  0%, 100% {
-    transform: rotate(-2deg) translate(0, 0);
-  }
-  50% {
-    transform: rotate(-1deg) translate(4px, -3px);
-  }
-}
-
-/* tags aren't supposed to be perfectly fucking aligned either */
-.person-tag {
-  animation: tagWiggle 6s ease-in-out infinite;
-}
-
-@keyframes tagWiggle {
-  0%, 100% {
-    margin-top: 0;
-  }
-  50% {
-    margin-top: -4px;
-  }
-}
-
-/* little labels drift independently */
-.hero-meta span:nth-child(1) {
-  animation: label1 5s ease-in-out infinite;
-}
-
-.hero-meta span:nth-child(2) {
-  animation: label2 6s ease-in-out infinite;
-}
-
-.hero-meta span:nth-child(3) {
-  animation: label3 7s ease-in-out infinite;
-}
-
-@keyframes label1 {
-  0%, 100% { transform: rotate(-1deg) translate(0, 0); }
-  50% { transform: rotate(1deg) translate(3px, -3px); }
-}
-
-@keyframes label2 {
-  0%, 100% { transform: rotate(2deg) translate(0, 0); }
-  50% { transform: rotate(4deg) translate(-4px, 3px); }
-}
-
-@keyframes label3 {
-  0%, 100% { transform: rotate(-1deg) translate(0, 0); }
-  50% { transform: rotate(-3deg) translate(5px, -2px); }
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
 }
