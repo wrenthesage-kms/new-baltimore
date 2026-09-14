@@ -3443,3 +3443,1374 @@ body {
   }
 
 }
+/* ============================================================
+   BATCH 3 — BAY-RAMA / FISHFLIES / THE CAR
+   ============================================================ */
+
+
+/* ============================================================
+   BAY-RAMA INTRO
+   ============================================================ */
+
+.bayrama-section {
+  position: relative;
+
+  overflow: visible;
+}
+
+
+.bayrama-heading .section-index {
+  border-color:
+    rgba(248,0,0,.45);
+
+  color: #f80000;
+}
+
+
+.bayrama-intro {
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, .8fr)
+    minmax(0, 1.2fr);
+
+  gap: 60px;
+
+  align-items: center;
+
+  margin-bottom: 90px;
+}
+
+
+/* ============================================================
+   FESTIVAL TITLE CARD
+   ============================================================ */
+
+.bayrama-title-card {
+  position: relative;
+
+  min-height: 430px;
+
+  padding:
+    55px 40px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #171016,
+      #0e0d12
+    );
+
+  border:
+    1px solid
+    rgba(248,0,0,.25);
+
+  box-shadow:
+    14px 15px 0 rgba(248,0,0,.07);
+
+  transform:
+    rotate(-1.2deg);
+}
+
+
+.bayrama-title-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -100px;
+  bottom: -100px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(248,0,0,.25),
+      transparent 65%
+    );
+}
+
+
+.festival-stamp {
+  display: inline-block;
+
+  padding:
+    7px 11px;
+
+  color: #f80000;
+
+  border:
+    1px solid
+    rgba(248,0,0,.5);
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: .15em;
+
+  transform: rotate(-4deg);
+}
+
+
+.bayrama-title-card h3 {
+  position: relative;
+
+  margin:
+    55px 0 25px;
+
+  color: #eeeaf0;
+
+  font-family: "Archivo Black", Impact, sans-serif;
+  font-size: clamp(50px, 7vw, 90px);
+
+  line-height: .78;
+
+  letter-spacing: -.07em;
+}
+
+
+.bayrama-title-card p {
+  position: relative;
+
+  max-width: 350px;
+
+  color: #aaa6ae;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+.festival-route {
+  position: absolute;
+
+  bottom: 25px;
+  left: 40px;
+
+  color: #f2b634;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .06em;
+}
+
+
+/* ============================================================
+   BAY-RAMA COPY
+   ============================================================ */
+
+.bayrama-copy .big-line {
+  max-width: 650px;
+}
+
+
+.bayrama-copy p:not(.big-line) {
+  max-width: 680px;
+
+  color: #aaa6ae;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+
+/* ============================================================
+   FESTIVAL FOOTPRINT
+   ============================================================ */
+
+.festival-footprint {
+  margin:
+    80px 0
+    110px;
+
+  padding:
+    25px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.09);
+
+  background:
+    rgba(255,255,255,.018);
+}
+
+
+.footprint-label {
+  margin-bottom: 25px;
+
+  color: #77737d;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .15em;
+}
+
+
+.footprint-line {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+
+.footprint-line > i {
+  color: #f80000;
+
+  font-family: "DM Mono", monospace;
+  font-size: 16px;
+
+  font-style: normal;
+}
+
+
+.footprint-stop {
+  flex: 1;
+
+  padding:
+    17px;
+
+  border-left:
+    2px solid
+    #f80000;
+}
+
+
+.footprint-stop span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #57535c;
+
+  font-family: "DM Mono", monospace;
+  font-size: 7px;
+}
+
+
+.footprint-stop strong {
+  display: block;
+
+  color: #ddd9df;
+
+  font-size: 10px;
+}
+
+
+.footprint-stop small {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #6e6a73;
+
+  font-family: "DM Mono", monospace;
+  font-size: 7px;
+}
+
+
+/* ============================================================
+   FESTIVAL ELEMENTS
+   ============================================================ */
+
+.festival-elements {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 12px;
+
+  margin-bottom: 120px;
+}
+
+
+.festival-element {
+  min-height: 230px;
+
+  padding:
+    25px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  background:
+    rgba(255,255,255,.015);
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+
+.festival-element:hover {
+  background:
+    rgba(248,0,0,.035);
+
+  transform:
+    translateY(-5px)
+    rotate(-1deg);
+}
+
+
+.element-number {
+  display: block;
+
+  margin-bottom: 40px;
+
+  color: #f80000;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+}
+
+
+.festival-element h3 {
+  margin:
+    0 0
+    13px;
+
+  color: #e5e1e7;
+
+  font-family: "Archivo Black", Impact, sans-serif;
+  font-size: 25px;
+
+  letter-spacing: -.04em;
+}
+
+
+.festival-element p {
+  margin: 0;
+
+  color: #85818a;
+
+  font-size: 11px;
+
+  line-height: 1.75;
+}
+
+
+/* ============================================================
+   FISHFLY WARNING
+   ============================================================ */
+
+.fishfly-warning {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 1fr)
+    minmax(0, 1fr);
+
+  min-height: 520px;
+
+  margin:
+    120px 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(242,182,52,.20);
+
+  background:
+    #11100d;
+}
+
+
+.fishfly-warning-art {
+  position: relative;
+
+  min-height: 520px;
+
+  overflow: hidden;
+
+  background:
+    #15130e;
+}
+
+
+.fishfly-warning-art::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 40%,
+      #11100d 100%
+    );
+}
+
+
+.fishfly-warning-art img {
+  position: absolute;
+
+  width: 85%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: .72;
+
+  transform:
+    scale(1.05)
+    rotate(-2deg);
+}
+
+
+.fishfly-warning-art .fishfly-secondary {
+  width: 55%;
+  height: auto;
+
+  right: -5%;
+  bottom: -5%;
+
+  opacity: .55;
+
+  mix-blend-mode: screen;
+
+  transform:
+    rotate(12deg);
+}
+
+
+.fishfly-warning-copy {
+  position: relative;
+
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    60px 55px;
+}
+
+
+.warning-label {
+  color: #f2b634;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .15em;
+}
+
+
+.fishfly-warning-copy h3 {
+  margin:
+    20px 0 0;
+
+  color: #f2b634;
+
+  font-family: "Archivo Black", Impact, sans-serif;
+  font-size: clamp(65px, 8vw, 120px);
+
+  line-height: .72;
+
+  letter-spacing: -.08em;
+}
+
+
+.warning-big {
+  margin:
+    30px 0;
+
+  color: #eeeaf0;
+
+  font-family: "Permanent Marker", cursive;
+  font-size: 22px;
+
+  transform: rotate(-2deg);
+}
+
+
+.fishfly-warning-copy p:not(.warning-big) {
+  max-width: 480px;
+
+  color: #aaa6ae;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+/* ============================================================
+   POP POP POP
+   ============================================================ */
+
+.fishfly-driving {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, .9fr)
+    minmax(300px, 1.1fr);
+
+  min-height: 620px;
+
+  margin:
+    150px 0;
+
+  border:
+    1px solid
+    rgba(114,169,255,.15);
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(114,169,255,.035),
+      transparent 65%
+    );
+}
+
+
+.driving-copy {
+  padding:
+    60px;
+
+  align-self: center;
+}
+
+
+.driving-copy h3 {
+  margin:
+    25px 0;
+
+  color: #f2b634;
+
+  font-family: "Archivo Black", Impact, sans-serif;
+  font-size: clamp(48px, 7vw, 92px);
+
+  line-height: .75;
+
+  letter-spacing: -.07em;
+
+  transform: rotate(-2deg);
+}
+
+
+.driving-copy p {
+  max-width: 520px;
+
+  color: #aaa6ae;
+
+  font-size: 13px;
+
+  line-height: 1.85;
+}
+
+
+.driving-copy .drive-quote {
+  margin:
+    30px 0;
+
+  color: #f80000;
+
+  font-family: "Permanent Marker", cursive;
+  font-size: 27px;
+
+  line-height: .9;
+
+  transform: rotate(2deg);
+}
+
+
+.car-fishfly-art {
+  position: relative;
+
+  min-height: 620px;
+
+  overflow: hidden;
+}
+
+
+.car-art {
+  position: absolute;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+.car-right {
+  width: 95%;
+
+  right: -15%;
+  top: 7%;
+
+  transform:
+    rotate(4deg);
+}
+
+
+.car-left {
+  width: 88%;
+
+  left: -20%;
+  bottom: -3%;
+
+  opacity: .65;
+
+  transform:
+    rotate(-6deg);
+}
+
+
+.aux-sticker {
+  position: absolute;
+
+  width: 150px;
+
+  right: 13%;
+  top: 15%;
+
+  transform:
+    rotate(18deg);
+
+  filter:
+    drop-shadow(5px 7px 0 rgba(0,0,0,.35));
+}
+
+
+/* ============================================================
+   FISHFLY WALL
+   ============================================================ */
+
+.fishfly-wall {
+  position: relative;
+
+  min-height: 680px;
+
+  margin:
+    140px 0;
+
+  padding:
+    45px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  background:
+    #0d0d11;
+}
+
+
+.wall-header {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: baseline;
+
+  padding-bottom: 25px;
+
+  border-bottom:
+    1px dashed
+    rgba(255,255,255,.12);
+}
+
+
+.wall-header span {
+  color: #b026ff;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .14em;
+}
+
+
+.wall-header strong {
+  color: #77737d;
+
+  font-family: "Permanent Marker", cursive;
+  font-size: 16px;
+  font-weight: 400;
+
+  transform: rotate(-2deg);
+}
+
+
+.fishfly-stickers {
+  position: relative;
+
+  height: 500px;
+}
+
+
+.fishfly-sticker {
+  position: absolute;
+
+  z-index: 2;
+
+  transition:
+    transform .3s ease;
+}
+
+
+.fishfly-sticker:hover {
+  z-index: 10;
+
+  transform:
+    scale(1.12)
+    rotate(0deg) !important;
+}
+
+
+.fishfly-sticker img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+.sticker-fish-1 {
+  width: 220px;
+
+  left: 7%;
+  top: 15%;
+
+  transform:
+    rotate(-12deg);
+}
+
+
+.sticker-fish-2 {
+  width: 190px;
+
+  right: 9%;
+  top: 7%;
+
+  transform:
+    rotate(14deg);
+}
+
+
+.sticker-party-1 {
+  width: 170px;
+
+  left: 35%;
+  top: 24%;
+
+  transform:
+    rotate(8deg);
+}
+
+
+.sticker-party-2 {
+  width: 160px;
+
+  left: 54%;
+  bottom: 4%;
+
+  transform:
+    rotate(-13deg);
+}
+
+
+.sticker-heart {
+  width: 150px;
+
+  left: 13%;
+  bottom: 5%;
+
+  transform:
+    rotate(-8deg);
+}
+
+
+.sticker-fine {
+  width: 180px;
+
+  right: 21%;
+  bottom: 15%;
+
+  transform:
+    rotate(7deg);
+}
+
+
+.wall-caption {
+  position: absolute;
+
+  bottom: 22px;
+  left: 45px;
+
+  color: #65616a;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .08em;
+}
+
+
+.wall-caption span {
+  color: #f2b634;
+
+  margin:
+    0 10px;
+}
+
+
+/* ============================================================
+   THE CAR
+   ============================================================ */
+
+.car-section {
+  position: relative;
+
+  margin:
+    160px 0;
+}
+
+
+.car-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 1.15fr)
+    minmax(0, .85fr);
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+
+.car-main-image {
+  position: relative;
+
+  min-height: 500px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(255,255,255,.09);
+
+  background:
+    #111218;
+}
+
+
+.car-main-image::after {
+  content: "WINDOWS DOWN";
+
+  position: absolute;
+
+  right: 20px;
+  top: 20px;
+
+  padding: 8px;
+
+  color: #08090d;
+
+  background: #f2b634;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  font-weight: 700;
+
+  transform: rotate(4deg);
+}
+
+
+.car-main-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 500px;
+
+  object-fit: cover;
+}
+
+
+.car-copy p:not(.big-line) {
+  color: #aaa6ae;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+
+.car-rule {
+  margin-top: 40px;
+
+  padding:
+    22px;
+
+  border-left:
+    4px solid
+    #f80000;
+
+  background:
+    rgba(248,0,0,.025);
+}
+
+
+.car-rule span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #f80000;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  letter-spacing: .13em;
+}
+
+
+.car-rule strong {
+  color: #ddd9df;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+.car-details {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  margin-top: 35px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.1);
+
+  border-left:
+    1px solid
+    rgba(255,255,255,.1);
+}
+
+
+.car-detail {
+  min-height: 100px;
+
+  padding: 20px;
+
+  border-right:
+    1px solid
+    rgba(255,255,255,.1);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.1);
+}
+
+
+.car-detail span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #66626b;
+
+  font-family: "DM Mono", monospace;
+  font-size: 7px;
+
+  letter-spacing: .12em;
+}
+
+
+.car-detail strong {
+  color: #ddd9df;
+
+  font-size: 11px;
+}
+
+
+/* ============================================================
+   PHONE
+   ============================================================ */
+
+.phone-section {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    260px;
+
+  align-items: center;
+
+  max-width: 800px;
+
+  margin:
+    150px auto;
+
+  padding:
+    50px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(176,38,255,.04),
+      transparent
+    );
+}
+
+
+.phone-copy h3 {
+  margin:
+    15px 0 25px;
+
+  color: #eeeaf0;
+
+  font-family: "Archivo Black", Impact, sans-serif;
+  font-size: 55px;
+
+  line-height: .8;
+
+  letter-spacing: -.07em;
+}
+
+
+.phone-copy p {
+  max-width: 500px;
+
+  color: #aaa6ae;
+
+  font-size: 12px;
+
+  line-height: 1.85;
+}
+
+
+.phone-art {
+  position: relative;
+
+  height: 360px;
+}
+
+
+.phone-art img {
+  position: absolute;
+
+  width: 230px;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  right: -20px;
+
+  transform:
+    rotate(7deg);
+
+  filter:
+    drop-shadow(12px 16px 0 rgba(0,0,0,.35));
+}
+
+
+/* ============================================================
+   BAY-RAMA RANDOM GARBAGE
+   ============================================================ */
+
+.bayrama-garbage {
+  position: absolute;
+
+  z-index: 20;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  font-family: "Permanent Marker", cursive;
+}
+
+
+.garbage-one {
+  top: 7%;
+
+  right: -12px;
+
+  color: #f2b634;
+
+  font-size: 15px;
+
+  transform: rotate(9deg);
+}
+
+
+.garbage-two {
+  top: 30%;
+
+  left: -20px;
+
+  color: #f80000;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  font-weight: 700;
+
+  transform: rotate(-8deg);
+}
+
+
+.garbage-three {
+  top: 52%;
+
+  right: -14px;
+
+  color: #b026ff;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+
+  transform: rotate(7deg);
+}
+
+
+.garbage-four {
+  top: 73%;
+
+  left: 5px;
+
+  color: #f2b634;
+
+  font-size: 17px;
+
+  transform: rotate(-11deg);
+}
+
+
+.garbage-five {
+  bottom: 3%;
+
+  right: 4%;
+
+  color: #66626b;
+
+  font-size: 12px;
+
+  transform: rotate(4deg);
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 850px) {
+
+  .bayrama-intro,
+  .fishfly-warning,
+  .fishfly-driving,
+  .car-layout {
+    grid-template-columns: 1fr;
+  }
+
+
+  .festival-elements {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .fishfly-warning-art {
+    min-height: 350px;
+  }
+
+
+  .fishfly-warning-copy {
+    padding:
+      50px 30px;
+  }
+
+
+  .car-fishfly-art {
+    min-height: 500px;
+  }
+
+
+  .car-layout {
+    gap: 35px;
+  }
+
+
+  .phone-section {
+    grid-template-columns: 1fr;
+
+    max-width: none;
+  }
+
+
+  .phone-art {
+    height: 280px;
+  }
+
+
+  .phone-art img {
+    position: relative;
+
+    display: block;
+
+    margin:
+      20px auto
+      0;
+
+    right: auto;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .bayrama-title-card {
+    min-height: 390px;
+
+    padding:
+      40px 25px;
+  }
+
+
+  .festival-route {
+    left: 25px;
+  }
+
+
+  .footprint-line {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .footprint-line > i {
+    display: none;
+  }
+
+
+  .festival-elements {
+    grid-template-columns: 1fr;
+  }
+
+
+  .fishfly-wall {
+    padding: 25px;
+  }
+
+
+  .wall-header {
+    display: block;
+  }
+
+
+  .wall-header strong {
+    display: block;
+
+    margin-top: 10px;
+  }
+
+
+  .fishfly-stickers {
+    height: 600px;
+  }
+
+
+  .sticker-fish-1 {
+    width: 160px;
+  }
+
+
+  .sticker-fish-2 {
+    width: 140px;
+  }
+
+
+  .sticker-party-1 {
+    width: 125px;
+
+    left: 30%;
+  }
+
+
+  .sticker-party-2 {
+    width: 120px;
+  }
+
+
+  .sticker-heart {
+    width: 110px;
+  }
+
+
+  .sticker-fine {
+    width: 130px;
+
+    right: 5%;
+  }
+
+
+  .car-main-image,
+  .car-main-image img {
+    min-height: 350px;
+  }
+
+
+  .car-details {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .phone-section {
+    padding:
+      35px 25px;
+  }
+
+
+  .bayrama-garbage {
+    display: none;
+  }
+
+}
