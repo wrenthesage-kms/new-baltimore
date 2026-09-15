@@ -130,14 +130,13 @@
         </iframe>
 
     </div>
-
-    <div class="intro-copy">
-        people drive around.<br>
-        people end up at the lake.<br>
-        somebody always knows somebody.<br>
-        somebody's car is always somewhere.<br>
-        nobody really knows what the plan is.
-    </div>
+<div class="intro-copy">
+    roman knows somebody everywhere.<br>
+    tyler has chief keef playing again.<br>
+    somebody's sitting on somebody else's hood.<br>
+    somebody's already asking where we're going.<br>
+    nobody's going home yet.
+</div>
 
 </section>
 
@@ -178,16 +177,16 @@
                     <div class="person-name">
                         roman scholl
                     </div>
-
-                    <div class="person-info">
-                        19 / abcc / freshman / athlete
-                    </div>
-
-                    <div class="person-copy">
-                        short. athletic. tan. brown eyes. brown hair.
-                        popular without acting like he gives a shit.
-                        somehow knows everybody.
-                    </div>
+<div class="person-info">
+    19 / abcc / freshman / athlete / golden boy
+</div>
+<div class="person-copy">
+    shortest guy in the group.
+    crooked smile.
+    golden-boy athlete who somehow gets along with everybody.
+    actually knows how to talk to people.
+    never has to force a conversation.
+</div>
 
                 </article>
 
@@ -216,11 +215,12 @@
                         19 / abcc / track / aux cord
                     </div>
 
-                    <div class="person-copy">
-                        monster in the cupholder.
-                        aux cord in hand.
-                        music loud enough to make the windows vibrate.
-                    </div>
+<div class="person-copy">
+    chief keef on the aux.
+    chief keef in the car.
+    probably talking about chief keef.
+    will defend the song like his life depends on it.
+</div>
 
                 </article>
 
@@ -256,7 +256,7 @@
                     <div class="place-number">01</div>
                     <div class="place-name">m-29</div>
                     <div class="place-note">
-                        lake through the trees. windows down. keep driving.
+                        the road everybody takes when nobody wants to go home yet.
                     </div>
                 </div>
 
@@ -272,7 +272,7 @@
                     <div class="place-number">03</div>
                     <div class="place-name">burke park</div>
                     <div class="place-note">
-                        water tower. beach. dock. benches. somewhere to sit.
+                        water tower. beach. 190 foot dock. get froyo then swim. :-)
                     </div>
                 </div>
 
@@ -280,7 +280,7 @@
                     <div class="place-number">04</div>
                     <div class="place-name">washington street</div>
                     <div class="place-note">
-                        houses. driveways. shortcuts. somebody's probably outside.
+                        houses. driveways. shortcuts. fucking billy lived here.
                     </div>
                 </div>
 
@@ -296,7 +296,7 @@
                     <div class="place-number">06</div>
                     <div class="place-name">festival park</div>
                     <div class="place-note">
-                        still being built. sports fields coming together.
+                        still being built. sports fields coming together. good for being a delinquent. 
                     </div>
                 </div>
 
@@ -304,7 +304,7 @@
                     <div class="place-number">07</div>
                     <div class="place-name">the roads home</div>
                     <div class="place-note">
-                        23 mile. 24 mile. i-94. wherever the car goes next.
+                        23 mile. 24 mile. i-94. so much fucking traffic.
                     </div>
                 </div>
 
@@ -330,18 +330,16 @@
 
 
             <div class="night-intro">
-                where are we going?
-                doesn't matter.
-            </div>
+    somebody said they knew a spot.
+</div>
 
-            <div class="night-copy">
-                the car smells like deodorant, fast food and air freshener.
-                somebody has their feet on the dash.
-                the music is too loud.
-                tyler is talking.
-                roman is laughing.
-                the lake keeps showing up through the trees.
-            </div>
+<div class="night-copy">
+    roman is driving like he knows exactly where he's going.
+    he doesn't.
+    tyler has chief keef turned all the way up.
+    somebody's yelling from the back seat.
+    nobody cares where the road actually ends.
+</div>
 
 
             <div class="night-list">
@@ -694,6 +692,77 @@
         updateclock();
         setInterval(updateclock, 1000);
     </script>
+<!-- =========================================================
+     UNIVERSAL PNG SYSTEM
+     Drop ANY repo PNG anywhere.
+     ========================================================= -->
 
+<div id="png-layer" aria-hidden="true"></div>
+
+<script>
+/* =========================================================
+   UNIVERSAL PNG PLUG-IN
+   ========================================================= */
+
+const PNG_BASE =
+  "https://raw.githubusercontent.com/wrenthesage-kms/new-baltimore/main/";
+
+function addPNG({
+  src,
+  x = 50,
+  y = 50,
+  width = 200,
+  rotate = 0,
+  opacity = 1,
+  z = 100,
+  className = "",
+  id = "",
+  flip = false,
+  fixed = false,
+  pointer = false,
+  animation = "",
+  alt = ""
+}) {
+
+  const img = document.createElement("img");
+
+  img.src = PNG_BASE + src;
+  img.alt = alt;
+
+  if (id) img.id = id;
+
+  img.className = `floating-png ${className}`;
+
+  img.style.left = `${x}%`;
+  img.style.top = `${y}%`;
+  img.style.width = `${width}px`;
+  img.style.opacity = opacity;
+  img.style.zIndex = z;
+
+  img.style.setProperty("--rotate", `${rotate}deg`);
+
+  if (flip) {
+    img.style.setProperty("--flip", "scaleX(-1)");
+  } else {
+    img.style.setProperty("--flip", "scaleX(1)");
+  }
+
+  if (fixed) {
+    img.classList.add("png-fixed");
+  }
+
+  if (pointer) {
+    img.style.pointerEvents = "auto";
+  }
+
+  if (animation) {
+    img.classList.add(animation);
+  }
+
+  document.getElementById("png-layer").appendChild(img);
+
+  return img;
+}
+</script>
 </body>
 </html>
