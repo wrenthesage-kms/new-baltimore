@@ -1,9 +1,8 @@
 /* =========================================================
-   NEW BALTIMORE // 2015
-   tiny bits of bullshit
+   NEW BALTIMORE // interaction
    ========================================================= */
 
-(function () {
+(function(){
 
   /* ---------------------------------------------------------
      LIVE CLOCK
@@ -11,92 +10,81 @@
 
   const clock = document.getElementById("live-clock");
 
-  function updateClock() {
-    if (!clock) return;
+  function updateClock(){
+
+    if(!clock) return;
 
     const now = new Date();
 
     clock.textContent = now.toLocaleTimeString("en-US", {
-      hour: "numeric",
-      minute: "2-digit",
-      second: "2-digit"
+      hour:"numeric",
+      minute:"2-digit",
+      second:"2-digit"
     });
+
   }
 
   updateClock();
+
   setInterval(updateClock, 1000);
 
 
   /* ---------------------------------------------------------
-     RANDOM ROTATION FOR SCRAPBOOK PIECES
+     SCRAPBOOK WIDGETS
      --------------------------------------------------------- */
 
-  const loosePieces = document.querySelectorAll(
-    ".map-list span, .abcc-list b, .roman-stats b, .year-items b"
-  );
+  document.querySelectorAll(".widget-tab").forEach(tab => {
 
-  loosePieces.forEach((piece) => {
-    const rotation = (Math.random() * 10 - 5).toFixed(2);
-    piece.style.setProperty("--r", `${rotation}deg`);
-  });
+    tab.addEventListener("click", () => {
 
+      const widget = tab.closest(".widget");
 
-  /* ---------------------------------------------------------
-     LITTLE SCROLL TITLE
-     --------------------------------------------------------- */
+      if(!widget) return;
 
-  const title = document.querySelector(".address-bar");
+      const open = widget.classList.toggle("is-open");
 
-  window.addEventListener("scroll", () => {
+      tab.setAttribute(
+        "aria-expanded",
+        String(open)
+      );
 
-    if (!title) return;
+      const symbol = tab.querySelector("b");
 
-    const y = window.scrollY;
-
-    if (y > 250) {
-      title.innerHTML =
-        "<span>http://</span> newbaltimore.local / somewhere / 2015";
-    } else {
-      title.innerHTML =
-        "<span>http://</span> newbaltimore.local / 2015 / whatever";
-    }
-
-  }, { passive: true });
-
-
-  /* ---------------------------------------------------------
-     OCCASIONAL FISHFLY MOVEMENT
-     --------------------------------------------------------- */
-
-  document.querySelectorAll(".fly").forEach((fly) => {
-
-    const speed = 9 + Math.random() * 12;
-    const delay = Math.random() * -12;
-
-    fly.style.animationDuration = `${speed}s`;
-    fly.style.animationDelay = `${delay}s`;
-
-  });
-
-
-  /* ---------------------------------------------------------
-     "YOU ARE STILL HERE" FOOTER
-     --------------------------------------------------------- */
-
-  const secret = document.querySelector(".footer-secret");
-
-  if (secret) {
-
-    secret.addEventListener("click", () => {
-
-      secret.textContent =
-        "seriously go talk to roman.";
-
-      secret.style.color = "#f4c928";
-      secret.style.cursor = "default";
+      if(symbol){
+        symbol.textContent = open ? "−" : "+";
+      }
 
     });
 
-  }
+  });
+
+
+  /* ---------------------------------------------------------
+     ROMAN SECRET FLAP
+     --------------------------------------------------------- */
+
+  document.querySelectorAll(".secret").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      const box = button.nextElementSibling;
+
+      if(!box) return;
+
+      const open = box.classList.toggle("is-visible");
+
+      button.setAttribute(
+        "aria-expanded",
+        String(open)
+      );
+
+      button.textContent =
+        open
+          ? "OKAY YOU CLICKED IT"
+          : "DON'T CLICK THIS";
+
+    });
+
+  });
 
 })();
