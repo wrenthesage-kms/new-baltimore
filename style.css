@@ -1331,4 +1331,158 @@ body::after {
     .footer-big {
         letter-spacing: -5px;
     }
+/* =========================================================
+   UNIVERSAL PNG SYSTEM
+   ========================================================= */
+
+#png-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  min-height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 5000;
 }
+
+.floating-png {
+  position: absolute;
+  height: auto;
+  max-width: none;
+
+  transform:
+    translate(-50%, -50%)
+    var(--flip, scaleX(1))
+    rotate(var(--rotate, 0deg));
+
+  user-select: none;
+  -webkit-user-drag: none;
+
+  transition:
+    transform .25s ease,
+    filter .25s ease;
+
+  pointer-events: none;
+}
+
+.floating-png:hover {
+  filter:
+    drop-shadow(0 0 4px rgba(255,255,255,.8))
+    drop-shadow(0 0 12px rgba(255,0,100,.45));
+
+  transform:
+    translate(-50%, -50%)
+    var(--flip, scaleX(1))
+    rotate(var(--rotate, 0deg))
+    scale(1.08);
+}
+
+.png-fixed {
+  position: fixed;
+}
+
+
+/* ---------------------------------------------------------
+   OPTIONAL CHAOS ANIMATIONS
+   --------------------------------------------------------- */
+
+.png-wiggle {
+  animation: pngWiggle 1.8s infinite steps(2);
+}
+
+.png-float {
+  animation: pngFloat 3s ease-in-out infinite;
+}
+
+.png-shake {
+  animation: pngShake .35s infinite;
+}
+
+.png-spin {
+  animation: pngSpin 8s linear infinite;
+}
+
+.png-blink {
+  animation: pngBlink 2s steps(2) infinite;
+}
+
+@keyframes pngWiggle {
+  0%,100% {
+    transform:
+      translate(-50%, -50%)
+      var(--flip, scaleX(1))
+      rotate(calc(var(--rotate, 0deg) - 3deg));
+  }
+
+  50% {
+    transform:
+      translate(-50%, -50%)
+      var(--flip, scaleX(1))
+      rotate(calc(var(--rotate, 0deg) + 4deg));
+  }
+}
+
+@keyframes pngFloat {
+  0%,100% {
+    transform:
+      translate(-50%, -50%)
+      var(--flip, scaleX(1))
+      rotate(var(--rotate, 0deg));
+  }
+
+  50% {
+    transform:
+      translate(-50%, calc(-50% - 12px))
+      var(--flip, scaleX(1))
+      rotate(var(--rotate, 0deg));
+  }
+}
+
+@keyframes pngShake {
+  0%,100% {
+    transform:
+      translate(-50%, -50%)
+      var(--flip, scaleX(1))
+      rotate(var(--rotate, 0deg));
+  }
+
+  25% {
+    transform:
+      translate(calc(-50% - 5px), -50%)
+      var(--flip, scaleX(1))
+      rotate(calc(var(--rotate, 0deg) - 2deg));
+  }
+
+  75% {
+    transform:
+      translate(calc(-50% + 5px), -50%)
+      var(--flip, scaleX(1))
+      rotate(calc(var(--rotate, 0deg) + 2deg));
+  }
+}
+
+@keyframes pngSpin {
+  from {
+    transform:
+      translate(-50%, -50%)
+      var(--flip, scaleX(1))
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      var(--flip, scaleX(1))
+      rotate(360deg);
+  }
+}
+
+@keyframes pngBlink {
+  0%, 45%, 100% {
+    opacity: 1;
+  }
+
+  50%, 55% {
+    opacity: .15;
+  }
+}}
