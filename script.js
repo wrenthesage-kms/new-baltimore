@@ -1,131 +1,182 @@
 /* =========================================================
-   NEW BALTIMORE // interaction
+   NEW BALTIMORE // 2015
+   javascript, unfortunately
    ========================================================= */
 
-(function(){
+(function () {
 
-  /* ---------------------------------------------------------
+  /* =======================================================
      LIVE CLOCK
-     --------------------------------------------------------- */
+     ======================================================= */
 
   const clock = document.getElementById("live-clock");
 
-  function updateClock(){
+  function updateClock() {
 
-    if(!clock) return;
+    if (!clock) return;
 
     const now = new Date();
 
     clock.textContent = now.toLocaleTimeString("en-US", {
-      hour:"numeric",
-      minute:"2-digit",
-      second:"2-digit"
+      hour: "numeric",
+      minute: "2-digit",
+      second: "2-digit"
     });
 
   }
 
   updateClock();
-
   setInterval(updateClock, 1000);
 
 
-  /* ---------------------------------------------------------
+  /* =======================================================
      WIDGET DROPDOWNS
-     
-     IMPORTANT:
-     We use the actual rendered height instead of the
-     0fr/1fr grid trick. This makes the thing physically
-     open downward and prevents the contents from being
-     permanently visible.
-     --------------------------------------------------------- */
+     ======================================================= */
 
-  document.querySelectorAll(".widget-tab").forEach(tab => {
+  const widgets = document.querySelectorAll(".widget");
 
-    tab.addEventListener("click", () => {
+  widgets.forEach(function (widget) {
 
-      const widget = tab.closest(".widget");
+    const button = widget.querySelector(".widget-tab");
+    const body = widget.querySelector(".widget-body");
 
-      if(!widget) return;
+    if (!button || !body) return;
 
-      const body = widget.querySelector(".widget-body");
+    function openWidget() {
 
-      if(!body) return;
+      widget.classList.add("is-open");
 
-      const opening = !widget.classList.contains("is-open");
+      button.setAttribute("aria-expanded", "true");
 
-      if(opening){
+      const icon = button.querySelector("b");
 
-        widget.classList.add("is-open");
-
-        body.style.maxHeight = body.scrollHeight + "px";
-
-      }else{
-
-        body.style.maxHeight = body.scrollHeight + "px";
-
-        requestAnimationFrame(() => {
-          widget.classList.remove("is-open");
-          body.style.maxHeight = "0px";
-        });
-
+      if (icon) {
+        icon.textContent = "−";
       }
 
-      tab.setAttribute(
-        "aria-expanded",
-        String(opening)
-      );
+      body.style.maxHeight = body.scrollHeight + "px";
 
-      const symbol = tab.querySelector("b");
+    }
 
-      if(symbol){
-        symbol.textContent = opening ? "−" : "+";
+
+    function closeWidget() {
+
+      body.style.maxHeight = body.scrollHeight + "px";
+
+      requestAnimationFrame(function () {
+
+        widget.classList.remove("is-open");
+
+        button.setAttribute("aria-expanded", "false");
+
+        const icon = button.querySelector("b");
+
+        if (icon) {
+          icon.textContent = "+";
+        }
+
+        body.style.maxHeight = "0px";
+
+      });
+
+    }
+
+
+    button.addEventListener("click", function () {
+
+      const isOpen =
+        widget.classList.contains("is-open");
+
+      if (isOpen) {
+        closeWidget();
+      } else {
+        openWidget();
       }
 
     });
 
+
+    body.addEventListener("transitionend", function (event) {
+
+      if (event.propertyName !== "max-height") return;
+
+      if (widget.classList.contains("is-open")) {
+
+        body.style.maxHeight = "none";
+
+      }
+
+    });
+
+
+    /*
+      Images can load after the accordion opens.
+      Keep the height correct when that happens.
+    */
+
+    const resizeObserver =
+      new ResizeObserver(function () {
+
+        if (
+          widget.classList.contains("is-open") &&
+          body.style.maxHeight !== "none"
+        ) {
+
+          body.style.maxHeight =
+            body.scrollHeight + "px";
+
+        }
+
+      });
+
+    resizeObserver.observe(body);
+
   });
 
 
-  /* ---------------------------------------------------------
-     SECRET ROMAN FLAP
-     --------------------------------------------------------- */
+  /* =======================================================
+     SECRET ROMAN IMAGE
+     ======================================================= */
 
-  document.querySelectorAll(".secret").forEach(button => {
+  const secretButton =
+    document.querySelector(".secret");
 
-    button.addEventListener("click", () => {
+  const secretContent =
+    document.querySelector(".secret-content");
 
-      const box = button.nextElementSibling;
+  if (secretButton && secretContent) {
 
-      if(!box) return;
+    secretButton.addEventListener("click", function () {
 
-      const open = box.classList.toggle("is-visible");
+      const visible =
+        secretContent.classList.toggle("is-visible");
 
-      button.setAttribute(
+      secretButton.setAttribute(
         "aria-expanded",
-        String(open)
+        String(visible)
       );
 
-      button.textContent =
-        open
+      secretButton.textContent =
+        visible
           ? "OKAY YOU CLICKED IT"
           : "DON'T CLICK THIS";
 
     });
 
-  });
+  }
 
 
-  /* ---------------------------------------------------------
-     KEEP OPEN WIDGETS CORRECT AFTER RESIZE
-     --------------------------------------------------------- */
+  /* =======================================================
+     KEEP OPEN ACCORDIONS CORRECT AFTER RESIZE
+     ======================================================= */
 
-  window.addEventListener("resize", () => {
+  window.addEventListener("resize", function () {
 
     document
       .querySelectorAll(".widget.is-open .widget-body")
-      .forEach(body => {
+      .forEach(function (body) {
 
-        body.style.maxHeight = body.scrollHeight + "px";
+        body.style.maxHeight = "none";
 
       });
 
