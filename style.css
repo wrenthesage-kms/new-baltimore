@@ -1,1604 +1,1622 @@
 /* =========================================================
    NEW BALTIMORE // 2015
-   it is 3:41 AM.
-   i have not slept.
-   i have changed the padding 47 times.
-   this is probably fine.
+   made by somebody who should probably go outside
    ========================================================= */
+
 :root {
-    --sun: #e3b75f;
-    --gold: #c99435;
-    --cream: #ead9b4;
-    --paper: #d7c4a0;
-    --dirty: #bcae91;
-    --ink: #171419;
-    --black: #0c0b0e;
-    --brown: #684b35;
-    --lake: #6d9297;
-    --lake-dark: #365f68;
-    --blue: #294e96;
-    --violet: #7144a8;
-    --electric: #5131b8;
-    --red: #b63132;
-    --red-dark: #762128;
-    --yellow: #e0ad35;
-    --white: #f4e9d1;
+    --sun: #e6b85c;
+    --sun-light: #f1d28b;
+    --cream: #eee1c5;
+    --paper: #d9c8a7;
+    --dirty-white: #f4ead3;
+
+    --ink: #17151a;
+    --black: #0e0d10;
+    --brown: #574335;
+
+    --lake: #638b96;
+    --lake-dark: #315c69;
+    --blue: #2455a4;
+    --electric: #5032c7;
+    --violet: #8d42b9;
+
+    --red: #b93632;
+    --red-dark: #741f25;
+    --acid: #d9a72c;
+
+    --border: 3px solid var(--ink);
+
     --sans: Arial, Helvetica, sans-serif;
     --heavy: "Arial Black", Impact, Arial, Helvetica, sans-serif;
 }
+
+
 /* =========================================================
-   EVERYTHING
+   BASE
    ========================================================= */
+
 * {
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     margin: 0;
     min-height: 100vh;
-    color: var(--ink);
+
     background:
-        radial-gradient(
-            circle at 14% 4%,
-            rgba(255, 218, 135, .82),
-            transparent 27rem
-        ),
-        radial-gradient(
-            circle at 91% 41%,
-            rgba(74, 105, 130, .20),
-            transparent 32rem
-        ),
-        linear-gradient(
-            180deg,
-            #d8bd88 0%,
-            #ead9b5 27%,
-            #d2c7ad 58%,
-            #a9b0ab 100%
-        );
+        radial-gradient(circle at 18% 5%, rgba(244, 210, 135, .85), transparent 25rem),
+        radial-gradient(circle at 88% 28%, rgba(91, 122, 150, .22), transparent 28rem),
+        linear-gradient(180deg, #d8c19b 0%, #e8d7b5 32%, #d5c7aa 70%, #b9b5a1 100%);
+
+    color: var(--ink);
     font-family: var(--sans);
     overflow-x: hidden;
+
     cursor: crosshair;
 }
-/* cheap screen texture */
+
+/* old-web dirt, but NOT fucking X-Files */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     z-index: 9998;
     pointer-events: none;
-    opacity: .10;
-    background:
+
+    opacity: .16;
+
+    background-image:
         repeating-linear-gradient(
             0deg,
-            rgba(0,0,0,.09) 0,
-            rgba(0,0,0,.09) 1px,
+            rgba(0,0,0,.04) 0px,
+            rgba(0,0,0,.04) 1px,
             transparent 1px,
-            transparent 5px
+            transparent 4px
         );
+
     mix-blend-mode: multiply;
 }
+
 body::after {
     content: "";
     position: fixed;
     inset: 0;
     z-index: 9997;
     pointer-events: none;
+
     box-shadow:
-        inset 0 0 100px rgba(50, 33, 25, .16),
-        inset 0 -80px 130px rgba(42, 69, 74, .10);
+        inset 0 0 100px rgba(45, 31, 22, .18),
+        inset 0 -120px 150px rgba(54, 68, 74, .10);
 }
+
+
 /* =========================================================
-   LINKS
+   SELECTION / LINKS
    ========================================================= */
+
 ::selection {
     background: var(--violet);
     color: white;
 }
+
 a {
     color: inherit;
 }
+
+a:hover {
+    color: var(--red);
+}
+
+
 /* =========================================================
    HEADER
-   this is not a navigation bar.
-   it is six links somebody slapped at the top.
    ========================================================= */
+
 .site-header {
     position: relative;
-    z-index: 100;
-    min-height: 74px;
+    z-index: 20;
+
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 30px;
-    padding: 14px 4vw;
-    background: rgba(231, 211, 170, .91);
-    border-bottom: 3px solid var(--ink);
+
+    padding: 20px 5vw;
+
+    background: rgba(239, 220, 178, .88);
+    border-bottom: var(--border);
+
+    box-shadow: 0 8px 0 rgba(24, 20, 18, .08);
 }
+
 .site-mark {
     font-family: var(--heavy);
-    font-size: clamp(18px, 3vw, 29px);
-    line-height: .8;
-    letter-spacing: -1.8px;
+    font-size: clamp(18px, 3vw, 30px);
+    line-height: .9;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
 }
+
 .site-location {
-    margin-top: 7px;
-    font-size: 9px;
-    font-weight: 900;
-    letter-spacing: 1.4px;
-    opacity: .58;
+    margin-top: 5px;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+
+    opacity: .7;
 }
+
 .site-nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
-    transform: rotate(-1deg);
+    justify-content: flex-end;
+    gap: 7px;
 }
+
 .site-nav a {
-    display: block;
-    padding: 6px 8px;
-    background: var(--white);
+    padding: 7px 9px;
+
+    background: var(--dirty-white);
     border: 2px solid var(--ink);
-    font-size: 9px;
+
+    font-size: 10px;
     font-weight: 900;
-    letter-spacing: .7px;
+    letter-spacing: .8px;
     text-decoration: none;
-    box-shadow: 2px 2px 0 var(--ink);
-    transform: rotate(1deg);
-}
-.site-nav a:nth-child(2) {
-    transform: rotate(-2deg);
-}
-.site-nav a:nth-child(3) {
-    transform: rotate(1deg);
-}
-.site-nav a:nth-child(4) {
+
+    box-shadow: 3px 3px 0 var(--ink);
     transform: rotate(-1deg);
 }
-.site-nav a:nth-child(5) {
-    transform: rotate(2deg);
+
+.site-nav a:nth-child(even) {
+    transform: rotate(1.5deg);
 }
-.site-nav a:nth-child(6) {
-    transform: rotate(-2deg);
-}
+
 .site-nav a:hover {
-    background: var(--yellow);
+    background: var(--acid);
     color: var(--ink);
-    transform:
-        translateY(-2px)
-        rotate(-3deg);
+    transform: translate(-1px, -2px) rotate(-2deg);
 }
+
+
 /* =========================================================
    HERO
-   big.
-   warm.
-   slightly stupid.
    ========================================================= */
+
 .hero {
     position: relative;
-    min-height: 680px;
-    padding:
-        110px
-        6vw
-        135px;
+    min-height: 690px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 7vw 110px;
+
     overflow: hidden;
+
     background:
-        radial-gradient(
-            circle at 77% 36%,
-            rgba(255, 225, 153, .94),
-            transparent 19rem
-        ),
+        radial-gradient(circle at 74% 38%, rgba(255, 224, 148, .95), transparent 18rem),
         linear-gradient(
-            160deg,
-            #d9b66d 0%,
-            #e6ce96 45%,
-            #94a9ab 100%
+            165deg,
+            #dfbd78 0%,
+            #e8cf9a 40%,
+            #9aaeb0 100%
         );
-    border-bottom: 3px solid var(--ink);
+
+    border-bottom: var(--border);
 }
+
 .hero::before {
-    content:
-        "LAKE ST. CLAIR // M-29 // WINDOWS DOWN";
+    content: "LAKE ST. CLAIR / 2015";
     position: absolute;
-    top: 43px;
-    right: 4vw;
-    font-size: 9px;
+    right: 5vw;
+    top: 55px;
+
+    font-size: 10px;
     font-weight: 900;
-    letter-spacing: 1.5px;
-    transform: rotate(3deg);
-    opacity: .55;
+    letter-spacing: 2px;
+
+    transform: rotate(4deg);
+    opacity: .6;
 }
+
 .hero::after {
     content: "";
     position: absolute;
-    left: -8%;
-    bottom: -125px;
-    width: 116%;
+    left: -10%;
+    bottom: -100px;
+
+    width: 120%;
     height: 260px;
-    background: rgba(54, 91, 100, .19);
-    border-top: 3px solid rgba(23, 20, 25, .30);
+
+    background: rgba(44, 91, 105, .18);
+
+    border-top: 3px solid rgba(23, 21, 26, .35);
+
     transform: rotate(-2deg);
 }
+
 .hero-inner {
     position: relative;
-    z-index: 5;
-    max-width: 920px;
+    z-index: 4;
+    width: min(850px, 100%);
 }
+
 .kicker {
     display: inline-block;
-    margin-bottom: 25px;
-    padding: 6px 9px;
+
+    padding: 7px 11px;
+    margin-bottom: 22px;
+
     background: var(--red);
     color: white;
+
     border: 2px solid var(--ink);
-    box-shadow: 4px 4px 0 var(--ink);
-    font-size: 10px;
+    box-shadow: 5px 5px 0 var(--ink);
+
+    font-size: 11px;
     font-weight: 900;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.4px;
+
     transform: rotate(-2deg);
 }
+
 .hero h1 {
     margin: 0;
-    max-width: 1000px;
+
     font-family: var(--heavy);
-    font-size: clamp(58px, 11vw, 155px);
-    line-height: .73;
-    letter-spacing: -8px;
+    font-size: clamp(55px, 11vw, 150px);
+    line-height: .77;
+    letter-spacing: -7px;
     text-transform: uppercase;
-    transform: rotate(-.5deg);
+
+    max-width: 900px;
+
+    text-shadow:
+        4px 4px 0 rgba(255, 237, 194, .55);
 }
+
 .hero h1 span {
     display: block;
 }
-.hero h1 span:nth-child(1) {
-    color: var(--ink);
-}
+
 .hero h1 span:nth-child(2) {
-    margin-left: 4vw;
     color: var(--red);
-    transform: rotate(-1deg);
+    transform: translateX(4vw) rotate(-1deg);
 }
+
 .hero h1 span:nth-child(3) {
-    margin-left: 1vw;
     color: var(--lake-dark);
+    transform: translateX(1vw);
 }
+
 .hero-copy {
-    max-width: 625px;
-    margin:
-        42px
-        0
-        22px
-        2px;
-    padding-left: 14px;
+    max-width: 650px;
+
+    margin: 45px 0 25px;
+    padding-left: 17px;
+
     border-left: 6px solid var(--violet);
-    font-size: clamp(15px, 2vw, 19px);
+
+    font-size: clamp(16px, 2vw, 21px);
     font-weight: 700;
-    line-height: 1.42;
+    line-height: 1.35;
 }
+
 .hero-meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
-    transform: rotate(-.5deg);
+    gap: 8px;
 }
+
 .hero-meta span {
-    padding: 5px 7px;
-    background: rgba(248, 238, 215, .84);
+    padding: 6px 9px;
+
+    background: var(--dirty-white);
     border: 2px solid var(--ink);
-    font-size: 9px;
+
+    font-size: 10px;
     font-weight: 900;
-    letter-spacing: .7px;
-    box-shadow: 2px 2px 0 var(--ink);
+    letter-spacing: .8px;
+
+    box-shadow: 3px 3px 0 rgba(23,21,26,.7);
 }
+
 .hero-notes {
     position: absolute;
-    left: 6vw;
-    bottom: 28px;
+    left: 5vw;
+    bottom: 30px;
+
     z-index: 8;
-    font-size: 9px;
+
+    font-size: 11px;
     font-weight: 900;
-    letter-spacing: .5px;
-    line-height: 1.8;
+    line-height: 1.7;
+    letter-spacing: .4px;
+
     transform: rotate(-1deg);
 }
+
 .hero-notes strong {
     color: var(--red-dark);
 }
+
+
 /* =========================================================
    GENERAL SECTIONS
-   notice:
-   there are no goddamn cards here.
    ========================================================= */
+
 .section {
     position: relative;
-    padding:
-        105px
-        6vw;
+    padding: 100px 6vw;
     overflow: hidden;
 }
+
 .section:nth-of-type(odd) {
-    background:
-        rgba(239, 225, 193, .56);
+    background: rgba(245, 232, 201, .52);
 }
+
 .section:nth-of-type(even) {
-    background:
-        rgba(104, 137, 143, .13);
+    background: rgba(101, 137, 145, .16);
 }
+
 .section-header {
     position: relative;
-    z-index: 4;
+    z-index: 3;
+
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
-    gap: 40px;
-    margin-bottom: 60px;
+    justify-content: space-between;
+    gap: 30px;
+
+    margin-bottom: 55px;
 }
+
 .section-number {
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 900;
-    letter-spacing: 1.7px;
-    opacity: .47;
+    letter-spacing: 2px;
+    opacity: .55;
 }
+
 .section h2 {
     margin: 5px 0 0;
+
     font-family: var(--heavy);
-    font-size: clamp(43px, 7vw, 92px);
-    line-height: .76;
-    letter-spacing: -5px;
-    text-transform: uppercase;
-}
-.section-sub {
-    max-width: 300px;
-    font-size: 11px;
-    font-weight: 800;
-    line-height: 1.45;
-}
-/* =========================================================
-   INTRO
-   ========================================================= */
-.intro {
-    min-height: 460px;
-    display: block;
-    padding-top: 130px;
-}
-.intro-big {
-    position: relative;
-    max-width: 850px;
-    font-family: var(--heavy);
-    font-size: clamp(52px, 9vw, 112px);
-    line-height: .73;
-    letter-spacing: -6px;
-    text-transform: uppercase;
-    transform: rotate(-1deg);
-}
-.intro-big span {
-    display: block;
-    margin-left: 8vw;
-    color: var(--electric);
-    transform: rotate(.8deg);
-}
-.intro-copy {
-    max-width: 540px;
-    margin:
-        65px
-        0
-        0
-        38vw;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 1.55;
-}
-.intro-copy strong {
-    display: inline-block;
-    margin-top: 14px;
-    color: var(--red-dark);
-    transform: rotate(-2deg);
-}
-/* =========================================================
-   PEOPLE
-   THIS IS NOT A PROFILE DIRECTORY.
-   ========================================================= */
-.people {
-    padding-bottom: 145px;
-}
-.people-grid {
-    position: relative;
-    z-index: 4;
-    display: grid;
-    grid-template-columns: 1.08fr .92fr;
-    gap: 90px;
-    align-items: start;
-}
-.person {
-    position: relative;
-    min-width: 0;
-}
-.person:nth-child(1) {
-    transform: rotate(-1deg);
-}
-.person:nth-child(2) {
-    margin-top: 75px;
-    transform: rotate(1.3deg);
-}
-.person-image-wrap {
-    position: relative;
-    height: 430px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    overflow: visible;
-    border: 3px solid var(--ink);
-    box-shadow:
-        8px 8px 0 var(--ink);
-    background: #b7a476;
-}
-.person:nth-child(2) .person-image-wrap {
-    background: #708b90;
-    box-shadow:
-        -7px 9px 0 var(--ink);
-}
-.person-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center bottom;
-}
-/* THE TAG IS NO LONGER ON TYLER'S FACE.
-   WE HAVE LEARNED FROM OUR MISTAKES. */
-.person-tag {
-    position: absolute;
-    top: auto;
-    left: auto;
-    right: 14px;
-    bottom: -17px;
-    z-index: 20;
-    padding: 6px 9px;
-    background: var(--yellow);
-    border: 2px solid var(--ink);
-    box-shadow: 4px 4px 0 var(--ink);
-    font-size: 9px;
-    font-weight: 900;
-    letter-spacing: .8px;
-    transform: rotate(2deg);
-}
-.person:nth-child(1) .person-tag {
-    left: 14px;
-    right: auto;
-    bottom: -16px;
-    transform: rotate(-2deg);
-}
-.person:nth-child(2) .person-tag {
-    background: var(--red);
-    color: white;
-    transform: rotate(2deg);
-}
-.person-name {
-    margin:
-        30px
-        0
-        4px;
-    font-family: var(--heavy);
-    font-size: clamp(37px, 5vw, 63px);
-    line-height: .77;
+    font-size: clamp(42px, 7vw, 88px);
+    line-height: .82;
     letter-spacing: -4px;
     text-transform: uppercase;
 }
-.person-info {
-    margin: 0;
-    font-size: 9px;
-    font-weight: 900;
-    letter-spacing: .8px;
-    text-transform: uppercase;
-    opacity: .75;
-}
-.person-copy {
-    max-width: 440px;
-    margin-top: 18px;
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 1.5;
-}
-.more-people {
-    position: relative;
-    z-index: 5;
-    width: fit-content;
-    max-width: 520px;
-    margin:
-        110px
-        0
-        0
-        17vw;
-    padding: 17px 21px;
-    border:
-        3px
-        dashed
-        var(--ink);
-    background: rgba(244, 232, 205, .72);
-    font-family: var(--heavy);
-    font-size: 18px;
-    line-height: 1;
-    text-transform: uppercase;
-    transform: rotate(-1.5deg);
-}
-/* Roman's stupid little desk image */
-.roman-desk {
-    position: absolute;
-    width: 105px;
-    right: -32px;
-    bottom: -35px;
-    z-index: 30;
-    transform: rotate(8deg);
-    filter:
-        drop-shadow(4px 5px 0 rgba(0,0,0,.28));
-}
-/* Roman phone */
-.roman-phone {
-    position: absolute;
-    width: 72px;
-    right: 5%;
-    top: 5%;
-    z-index: 25;
-    transform: rotate(12deg);
-    filter:
-        drop-shadow(3px 4px 0 rgba(0,0,0,.25));
-    animation:
-        tinyFloat
-        8s
-        ease-in-out
-        infinite;
-}
-/* =========================================================
-   PLACES
-   we're going to pretend these are notes somebody kept.
-   ========================================================= */
-.places {
-    padding-bottom: 135px;
-}
-.places-list {
-    position: relative;
-    z-index: 4;
-    max-width: 1050px;
-    margin-left: 5vw;
-}
-.place {
-    position: relative;
-    display: grid;
-    grid-template-columns:
-        60px
-        minmax(0, 1fr)
-        220px;
-    align-items: center;
-    gap: 25px;
-    min-height: 105px;
-    padding:
-        17px
-        0;
-    border-top:
-        2px
-        solid
-        rgba(23,20,25,.62);
-}
-.place:last-child {
-    border-bottom:
-        2px
-        solid
-        rgba(23,20,25,.62);
-}
-.place:nth-child(2) {
-    margin-left: 6vw;
-}
-.place:nth-child(3) {
-    margin-left: 1vw;
-}
-.place:nth-child(4) {
-    margin-left: 9vw;
-}
-.place:nth-child(5) {
-    margin-left: 3vw;
-}
-.place:nth-child(6) {
-    margin-left: 12vw;
-}
-.place:nth-child(7) {
-    margin-left: 5vw;
-}
-.place-number {
-    font-size: 9px;
-    font-weight: 900;
-    opacity: .42;
-}
-.place-name {
-    font-family: var(--heavy);
-    font-size: clamp(28px, 4.8vw, 64px);
-    line-height: .78;
-    letter-spacing: -3px;
-    text-transform: uppercase;
-}
-.place:nth-child(2) .place-name {
-    color: var(--red);
-}
-.place:nth-child(3) .place-name {
-    color: var(--lake-dark);
-}
-.place:nth-child(4) .place-name {
-    color: var(--violet);
-}
-.place:nth-child(5) .place-name {
-    color: var(--blue);
-}
-.place:nth-child(6) .place-name {
-    color: var(--red-dark);
-}
-.place-note {
-    max-width: 220px;
-    font-size: 10px;
+
+.section-sub {
+    max-width: 350px;
+
+    font-size: 12px;
     font-weight: 800;
-    line-height: 1.35;
+    line-height: 1.45;
 }
+
+
 /* =========================================================
-   NIGHTS
-   dark lake.
-   not horror.
+   INTRO
    ========================================================= */
-.nights {
-    background:
-        radial-gradient(
-            circle at 18% 14%,
-            rgba(105, 77, 140, .35),
-            transparent 25rem
-        ),
-        linear-gradient(
-            180deg,
-            #747d81,
-            #525a5e
-        );
-    color: var(--white);
+
+.intro {
+    min-height: 400px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 8vw;
+
+    background: var(--cream);
 }
-.nights h2 {
-    color: #f0d18a;
-}
-.nights .section-number,
-.nights .section-sub {
-    color: var(--white);
-}
-.night-intro {
-    position: relative;
-    z-index: 4;
-    max-width: 1000px;
+
+.intro-big {
     font-family: var(--heavy);
-    font-size: clamp(38px, 7vw, 86px);
-    line-height: .75;
-    letter-spacing: -5px;
+    font-size: clamp(42px, 7vw, 82px);
+    line-height: .82;
+    letter-spacing: -4px;
     text-transform: uppercase;
-    transform: rotate(-1deg);
 }
-.night-intro span {
-    display: block;
-    margin-left: 13vw;
-    color: #e0a742;
-    transform: rotate(1deg);
+
+.intro-big span {
+    color: var(--electric);
 }
-.night-copy {
-    position: relative;
-    z-index: 4;
-    max-width: 620px;
-    margin:
-        50px
-        0
-        42px
-        8vw;
-    font-size: 15px;
+
+.intro-copy {
+    max-width: 500px;
+
+    font-size: 17px;
     font-weight: 700;
     line-height: 1.55;
 }
+
+
+/* =========================================================
+   PEOPLE
+   ========================================================= */
+
+.people-grid {
+    position: relative;
+    z-index: 4;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 70px 40px;
+}
+
+.person {
+    position: relative;
+    min-height: 570px;
+}
+
+.person:nth-child(1) {
+    transform: rotate(-1.2deg);
+}
+
+.person:nth-child(2) {
+    transform: rotate(1deg);
+}
+
+.person-image-wrap {
+    position: relative;
+    height: 390px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(92, 61, 35, .2),
+            rgba(255,255,255,.2)
+        );
+
+    border: var(--border);
+    overflow: hidden;
+
+    box-shadow: 11px 11px 0 rgba(23,21,26,.9);
+}
+
+.person:nth-child(1) .person-image-wrap {
+    background-color: #b8a477;
+}
+
+.person:nth-child(2) .person-image-wrap {
+    background-color: #718b91;
+}
+
+.person-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    display: block;
+}
+
+.person-tag {
+    position: absolute;
+    top: 18px;
+    left: -12px;
+
+    padding: 7px 10px;
+
+    background: var(--acid);
+    border: 2px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    transform: rotate(-4deg);
+}
+
+.person:nth-child(2) .person-tag {
+    background: var(--red);
+    color: white;
+    transform: rotate(3deg);
+}
+
+.person-name {
+    margin: 25px 0 5px;
+
+    font-family: var(--heavy);
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: .85;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+}
+
+.person-info {
+    margin: 0;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.person-copy {
+    max-width: 500px;
+
+    margin-top: 18px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.more-people {
+    position: relative;
+    z-index: 4;
+
+    margin-top: 75px;
+    padding: 30px;
+
+    border: 3px dashed var(--ink);
+    background: rgba(255, 245, 218, .6);
+
+    font-family: var(--heavy);
+    font-size: 24px;
+    text-transform: uppercase;
+
+    transform: rotate(-.8deg);
+}
+
+
+/* =========================================================
+   PLACES
+   ========================================================= */
+
+.places-list {
+    position: relative;
+    z-index: 3;
+}
+
+.place {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    gap: 30px;
+    align-items: center;
+
+    padding: 25px 5px;
+
+    border-top: 3px solid rgba(23,21,26,.55);
+}
+
+.place:last-child {
+    border-bottom: 3px solid rgba(23,21,26,.55);
+}
+
+.place-number {
+    font-size: 11px;
+    font-weight: 900;
+    opacity: .5;
+}
+
+.place-name {
+    font-family: var(--heavy);
+    font-size: clamp(30px, 5vw, 65px);
+    line-height: .85;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+}
+
+.place-note {
+    max-width: 210px;
+
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.4;
+
+    text-align: right;
+}
+
+.place:nth-child(2) .place-name {
+    color: var(--red);
+}
+
+.place:nth-child(3) .place-name {
+    color: var(--lake-dark);
+}
+
+.place:nth-child(4) .place-name {
+    color: var(--violet);
+}
+
+.place:nth-child(5) .place-name {
+    color: var(--blue);
+}
+
+.place:nth-child(6) .place-name {
+    color: var(--red-dark);
+}
+
+
+/* =========================================================
+   NIGHTS
+   ========================================================= */
+
+.nights {
+    background:
+        radial-gradient(circle at 20% 10%, rgba(111, 82, 153, .25), transparent 22rem),
+        linear-gradient(180deg, #727b80, #4d5559);
+    color: var(--dirty-white);
+}
+
+.nights .section-number,
+.nights .section-sub {
+    color: var(--dirty-white);
+}
+
+.nights h2 {
+    color: #f2d69a;
+}
+
+.night-intro {
+    position: relative;
+    z-index: 4;
+
+    max-width: 850px;
+
+    font-family: var(--heavy);
+    font-size: clamp(30px, 5vw, 62px);
+    line-height: .9;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+.night-intro span {
+    color: #e8a73c;
+}
+
+.night-copy {
+    position: relative;
+    z-index: 4;
+
+    max-width: 650px;
+    margin: 35px 0;
+
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
 .night-list {
     position: relative;
     z-index: 4;
-    display: block;
-    max-width: 720px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    max-width: 750px;
+
     padding: 0;
-    margin:
-        0
-        0
-        0
-        16vw;
+    margin: 0;
+
     list-style: none;
 }
+
 .night-list li {
-    display: block;
-    width: fit-content;
-    max-width: 100%;
-    margin: 7px 0;
-    padding: 8px 11px;
-    border:
-        2px
-        solid
-        rgba(244,234,211,.63);
-    background:
-        rgba(255,255,255,.055);
-    font-size: 10px;
+    padding: 13px;
+
+    background: rgba(242, 231, 203, .1);
+    border: 2px solid rgba(244,234,211,.55);
+
+    font-size: 12px;
     font-weight: 900;
     text-transform: uppercase;
 }
-.night-list li:nth-child(2) {
-    margin-left: 35px;
-}
-.night-list li:nth-child(3) {
-    margin-left: 12px;
-}
-.night-list li:nth-child(4) {
-    margin-left: 70px;
-}
-.night-list li:nth-child(5) {
-    margin-left: 25px;
-}
-.night-list li:nth-child(6) {
-    margin-left: 100px;
-}
+
+
 /* =========================================================
-   SOUNDCloud
-   it is an embed.
-   it stays an embed.
+   MUSIC PLAYER
    ========================================================= */
+
 .music-player {
     position: relative;
-    z-index: 8;
-    width: min(720px, 92%);
-    margin:
-        80px
-        auto
-        0;
-    padding: 11px;
-    background: #171419;
-    border:
-        3px
-        solid
-        #d9c59b;
-    box-shadow:
-        7px
-        7px
-        0
-        rgba(0,0,0,.42);
-    transform: rotate(.7deg);
+    z-index: 6;
+
+    max-width: 780px;
+    margin: 70px auto 0;
+
+    padding: 15px;
+
+    background: #17151a;
+    border: 4px solid #e7d2a5;
+
+    box-shadow: 10px 10px 0 rgba(0,0,0,.5);
+
+    transform: rotate(-.8deg);
 }
+
 .music-player-label {
-    color: #e5c26b;
+    color: #e7c66e;
+
     font-family: var(--heavy);
-    font-size: 16px;
-    letter-spacing: -.3px;
+    font-size: 19px;
+    letter-spacing: -.5px;
 }
+
 .music-player-status {
-    margin:
-        4px
-        0
-        9px;
-    color: #b9c9c6;
-    font-size: 8px;
+    margin: 4px 0 12px;
+
+    color: #b8c9c5;
+
+    font-size: 9px;
     font-weight: 900;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
 }
+
 .music-player iframe {
     display: block;
     width: 100%;
     border: 0;
 }
-/* small car interrupting Nights */
-.car-music {
-    position: absolute;
-    width: 125px;
-    right: 2%;
-    top: 36%;
-    z-index: 12;
-    transform: rotate(-7deg);
-    filter:
-        drop-shadow(4px 5px 0 rgba(0,0,0,.30));
-    animation:
-        tinyCarFloat
-        9s
-        ease-in-out
-        infinite;
-}
-/* small aux */
-.aux-cord {
-    position: absolute;
-    width: 145px;
-    left: -28px;
-    top: 8%;
-    z-index: 12;
-    opacity: .85;
-    transform: rotate(-10deg);
-    animation:
-        cordWiggle
-        11s
-        ease-in-out
-        infinite;
-}
+
+
 /* =========================================================
    SUMMER
-   fishflies, but not FISHFLY FUCKING CENTRAL.
    ========================================================= */
+
 .summer {
     background:
-        radial-gradient(
-            circle at 78% 17%,
-            rgba(239, 196, 93, .63),
-            transparent 25rem
-        ),
-        linear-gradient(
-            180deg,
-            #d7c08e,
-            #a9b5ad
-        );
+        radial-gradient(circle at 80% 20%, rgba(236, 192, 86, .7), transparent 25rem),
+        linear-gradient(180deg, #d7c08f, #a8b6af);
 }
+
 .summer-list {
     position: relative;
     z-index: 4;
-    display: block;
-    max-width: 850px;
-    margin-left: 6vw;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
+
 .summer-item {
-    position: relative;
-    display: block;
-    width: fit-content;
-    min-width: 300px;
-    min-height: auto;
-    margin: 20px 0;
-    padding: 17px 22px;
-    background:
-        rgba(245,235,210,.60);
-    border:
-        3px
-        solid
-        var(--ink);
-    box-shadow:
-        6px
-        6px
-        0
-        var(--ink);
-    transform: rotate(-1.2deg);
+    min-height: 190px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 22px;
+
+    border: var(--border);
+    background: rgba(245,235,210,.62);
+
+    box-shadow: 7px 7px 0 var(--ink);
+
+    transform: rotate(-1deg);
 }
-.summer-item:nth-child(2) {
-    margin-left: 17vw;
-    transform: rotate(1.5deg);
-    background:
-        rgba(103, 139, 148, .34);
+
+.summer-item:nth-child(even) {
+    transform: rotate(1.3deg);
+    background: rgba(102, 139, 149, .35);
 }
-.summer-item:nth-child(3) {
-    margin-left: 5vw;
-    transform: rotate(-2deg);
-}
-.summer-item:nth-child(4) {
-    margin-left: 24vw;
-    transform: rotate(1deg);
-    background:
-        rgba(103, 139, 148, .34);
-}
+
 .summer-item h3 {
     margin: 0;
+
     font-family: var(--heavy);
-    font-size: clamp(30px, 5vw, 60px);
-    line-height: .78;
+    font-size: clamp(32px, 5vw, 60px);
+    line-height: .8;
     letter-spacing: -3px;
     text-transform: uppercase;
 }
+
 .summer-item:nth-child(2) h3 {
     color: var(--red);
 }
+
 .summer-item:nth-child(3) h3 {
     color: var(--violet);
 }
+
 .summer-item:nth-child(4) h3 {
     color: var(--lake-dark);
 }
-/* tiny party fishflies */
-.party-fish-right {
-    position: absolute;
-    width: 48px;
-    right: 9%;
-    top: 19%;
-    z-index: 15;
-    transform: rotate(13deg);
-    animation:
-        tinyFloat
-        8s
-        ease-in-out
-        infinite;
-}
-.party-fish-left {
-    position: absolute;
-    width: 42px;
-    left: 4%;
-    bottom: 15%;
-    z-index: 15;
-    transform: rotate(-13deg);
-    animation:
-        tinyFloat
-        10s
-        ease-in-out
-        infinite reverse;
-}
+
+
 /* =========================================================
    SCHOOL
-   yes, the Tars section gets to be obnoxious.
    ========================================================= */
+
 .school {
     background:
         linear-gradient(
             135deg,
-            #eee0bf,
-            #d6c09a 62%,
-            #b2aaa0
+            #eee1c5 0%,
+            #d7c19c 65%,
+            #b1a898 100%
         );
 }
+
 .school-banner {
     position: relative;
-    z-index: 5;
-    max-width: 1050px;
-    margin-left: 3vw;
-    padding: 34px 38px;
-    background: var(--red);
+    z-index: 4;
+
+    padding: 40px;
+
+    background: #b92d32;
     color: white;
-    border:
-        4px
-        solid
-        var(--ink);
-    box-shadow:
-        10px
-        10px
-        0
-        var(--ink);
-    transform: rotate(-1.2deg);
+
+    border: 5px solid var(--ink);
+    box-shadow: 12px 12px 0 var(--ink);
+
+    transform: rotate(-1deg);
 }
-.school-banner h3 {
-    margin: 0;
-    font-family: var(--heavy);
-    font-size: clamp(43px, 8vw, 105px);
-    line-height: .72;
-    letter-spacing: -6px;
-    text-transform: uppercase;
-}
-.school-banner p {
-    max-width: 610px;
-    margin-top: 28px;
-    font-size: 13px;
-    font-weight: 800;
-    line-height: 1.5;
-}
+
 .school-banner::after {
     content: "TARS";
     position: absolute;
-    right: 16px;
-    bottom: -23px;
+    right: 20px;
+    bottom: -28px;
+
     font-family: var(--heavy);
-    font-size: 80px;
+    font-size: 90px;
     line-height: 1;
-    color: rgba(255,255,255,.11);
-    transform: rotate(-6deg);
-    pointer-events: none;
+
+    color: rgba(255,255,255,.13);
+
+    transform: rotate(-5deg);
 }
-/* I'M FINE stays fucking perfect */
-.im-fine {
-    position: absolute;
-    width: 88px;
-    left: 2%;
-    top: 38%;
-    z-index: 25;
-    transform: rotate(-11deg);
-    filter:
-        drop-shadow(4px 4px 0 rgba(0,0,0,.22));
+
+.school-banner h3 {
+    margin: 0;
+
+    font-family: var(--heavy);
+    font-size: clamp(45px, 8vw, 100px);
+    line-height: .78;
+    letter-spacing: -5px;
+    text-transform: uppercase;
 }
+
+.school-banner p {
+    max-width: 600px;
+
+    margin: 25px 0 0;
+
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+
 /* =========================================================
    2015
    ========================================================= */
+
 .year {
     background:
-        radial-gradient(
-            circle at 8% 76%,
-            rgba(81, 49, 184, .17),
-            transparent 23rem
-        ),
-        #d6c5a4;
+        radial-gradient(circle at 10% 80%, rgba(80,50,199,.18), transparent 22rem),
+        #d8c7a7;
 }
+
 .year-grid {
     position: relative;
-    z-index: 4;
+    z-index: 3;
+
     display: grid;
-    grid-template-columns:
-        1.2fr
-        .8fr
-        1fr;
-    gap: 0;
-    max-width: 1050px;
-    margin-left: 4vw;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
+
 .year-item {
-    min-height: 135px;
-    padding: 17px;
-    background: rgba(244,234,211,.65);
-    border:
-        2px
-        solid
-        var(--ink);
+    min-height: 150px;
+
+    padding: 20px;
+
+    background: var(--dirty-white);
+    border: var(--border);
+
+    box-shadow: 5px 5px 0 var(--ink);
+
     transform: rotate(-1deg);
 }
-.year-item:nth-child(2) {
-    background: #c6d0cc;
-    transform: rotate(2deg);
+
+.year-item:nth-child(2n) {
+    transform: rotate(1.4deg);
+    background: #c9d3cb;
 }
-.year-item:nth-child(3) {
-    background: #ded0a9;
+
+.year-item:nth-child(3n) {
     transform: rotate(-2deg);
+    background: #ddd0a9;
 }
-.year-item:nth-child(4) {
-    background: #d5c0a8;
-    transform: rotate(1deg);
-}
-.year-item:nth-child(5) {
-    background: #b7c3bd;
-    transform: rotate(-1deg);
-}
-.year-item:nth-child(6) {
-    background: #d7bd77;
-    transform: rotate(2deg);
-}
+
 .year-item strong {
     display: block;
-    margin-bottom: 9px;
+
+    margin-bottom: 12px;
+
     font-family: var(--heavy);
-    font-size: 22px;
-    line-height: .82;
+    font-size: 25px;
+    line-height: .9;
     text-transform: uppercase;
 }
+
 .year-item span {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 800;
     line-height: 1.4;
 }
-/* little phone, not giant fucking iPhone */
-.phone-2015 {
-    position: absolute;
-    width: 62px;
-    right: 7%;
-    bottom: 13%;
-    z-index: 20;
-    transform: rotate(8deg);
-    filter:
-        drop-shadow(3px 5px 0 rgba(0,0,0,.27));
-    animation:
-        tinyFloat
-        7s
-        ease-in-out
-        infinite;
-}
+
+
 /* =========================================================
    RELATIONSHIPS
    ========================================================= */
+
 .relationships {
     background: #c9bbb0;
 }
+
 .relationship-map {
     position: relative;
-    z-index: 4;
-    max-width: 850px;
-    margin-left: 8vw;
+    z-index: 3;
+
+    max-width: 900px;
+    margin: auto;
 }
+
 .node {
     display: inline-block;
-    margin: 5px 4px;
-    padding: 8px 11px;
-    background: var(--white);
-    border:
-        2px
-        solid
-        var(--ink);
+
+    margin: 6px;
+    padding: 10px 13px;
+
+    background: var(--dirty-white);
+    border: 2px solid var(--ink);
+
     font-family: var(--heavy);
-    font-size: 13px;
+    font-size: 15px;
     text-transform: uppercase;
-    box-shadow:
-        3px
-        3px
-        0
-        var(--ink);
+
+    box-shadow: 4px 4px 0 var(--ink);
+
     transform: rotate(-2deg);
 }
+
 .node:nth-child(2n) {
-    background: #d8b867;
     transform: rotate(2deg);
+    background: #d9b765;
 }
+
 .node:nth-child(3n) {
-    background: #a8c0c2;
-    transform: rotate(-1deg);
+    background: #a7bec0;
 }
-.node:nth-child(5n) {
-    background: #b97971;
-    color: white;
-}
+
 .relationship-copy {
-    position: relative;
-    z-index: 4;
-    max-width: 680px;
-    margin:
-        65px
-        0
-        0
-        17vw;
-    padding: 22px;
-    background: rgba(244,234,211,.70);
-    border:
-        3px
-        solid
-        var(--ink);
-    font-size: 14px;
+    max-width: 700px;
+
+    margin: 55px auto 0;
+    padding: 25px;
+
+    border: 3px solid var(--ink);
+    background: rgba(244,234,211,.7);
+
+    font-size: 16px;
     font-weight: 800;
-    line-height: 1.55;
+    line-height: 1.5;
+
     transform: rotate(.8deg);
 }
-/* ugly Tumblr heart stays small */
-.red-heart {
-    position: absolute;
-    width: 76px;
-    right: 5%;
-    top: 31%;
-    z-index: 20;
-    transform: rotate(13deg);
-    filter:
-        drop-shadow(3px 4px 0 rgba(0,0,0,.20));
-}
+
+
 /* =========================================================
    FOOTER
-   finally. nobody is allowed to make another section.
    ========================================================= */
+
 .site-footer {
     position: relative;
-    min-height: 440px;
-    padding:
-        100px
-        6vw
-        45px;
-    background: #211d20;
-    color: #ead9b1;
-    border-top:
-        4px
-        solid
-        var(--ink);
+
+    padding: 90px 6vw 45px;
+
+    background: #201c20;
+    color: #e9d8b0;
+
+    border-top: 5px solid var(--ink);
     overflow: hidden;
 }
+
 .footer-big {
     position: relative;
-    z-index: 4;
-    max-width: 1000px;
+    z-index: 3;
+
+    max-width: 900px;
+
     font-family: var(--heavy);
-    font-size: clamp(50px, 9vw, 120px);
-    line-height: .72;
-    letter-spacing: -7px;
+    font-size: clamp(45px, 8vw, 105px);
+    line-height: .77;
+    letter-spacing: -5px;
     text-transform: uppercase;
-    transform: rotate(-1deg);
 }
+
 .footer-big span {
-    color: #c4544c;
+    color: #c9554b;
 }
+
 .footer-small {
     position: relative;
-    z-index: 4;
+    z-index: 3;
+
     display: flex;
     justify-content: space-between;
-    gap: 40px;
-    margin-top: 85px;
-    font-size: 9px;
+    gap: 30px;
+
+    margin-top: 80px;
+
+    font-size: 10px;
     font-weight: 900;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+
 .footer-note {
-    max-width: 360px;
-    color: #c5d0c8;
-    line-height: 1.5;
+    max-width: 400px;
+    color: #c2d0ca;
 }
+
+
 /* =========================================================
-   ONE. SINGLE. FISHFLY.
-   no swarm.
-   no infestation.
-   just one asshole.
+   FLOATING / INTERRUPTING ASSETS
    ========================================================= */
-.fishfly {
+
+.floating-asset {
     position: absolute;
-    width: 30px;
-    z-index: 60;
+    z-index: 10;
+
     pointer-events: none;
+    user-select: none;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+.floating-fixed {
+    position: fixed;
+    pointer-events: none;
+    user-select: none;
+    z-index: 50;
+}
+
+
+/* fishflies */
+
+.fishfly {
+    width: 48px;
     opacity: .88;
-    filter:
-        drop-shadow(2px 2px 0 rgba(0,0,0,.20));
+    filter: drop-shadow(2px 3px 0 rgba(0,0,0,.2));
 }
+
 .fishfly-1 {
-    top: 23%;
-    right: 8%;
-    animation:
-        fishflyDrift
-        10s
-        ease-in-out
-        infinite;
+    top: 19%;
+    right: 9%;
+
+    animation: fishflyDrift1 9s ease-in-out infinite;
 }
+
 .fishfly-2 {
-    left: 5%;
-    top: 56%;
-    width: 25px;
-    animation:
-        fishflyDrift
-        12s
-        ease-in-out
-        infinite
-        reverse;
+    top: 46%;
+    left: 4%;
+
+    width: 38px;
+
+    animation: fishflyDrift2 11s ease-in-out infinite;
 }
+
 .fishfly-3 {
-    right: 12%;
-    bottom: 20%;
-    width: 28px;
-    animation:
-        fishflyDrift
-        9s
-        ease-in-out
-        infinite;
+    top: 71%;
+    right: 6%;
+
+    width: 55px;
+
+    animation: fishflyDrift3 13s ease-in-out infinite;
 }
-/* =========================================================
-   TINY CAR IN HERO
-   cars should interrupt.
-   they should NOT become the website.
-   ========================================================= */
-.car-right {
-    position: absolute;
-    width: 155px;
+
+.fishfly-4 {
+    top: 88%;
+    left: 13%;
+
+    width: 42px;
+
+    animation: fishflyDrift1 8s ease-in-out infinite reverse;
+}
+
+
+/* swarms */
+
+.swarm-hero {
+    top: 14%;
     right: -15px;
-    top: 38%;
-    z-index: 18;
+
+    width: 180px;
+
+    transform: rotate(8deg);
+    opacity: .8;
+
+    animation: swarmFloat 12s ease-in-out infinite;
+}
+
+.swarm-footer {
+    right: 4%;
+    bottom: 4%;
+
+    width: 250px;
+
+    opacity: .55;
+
+    animation: swarmFloat 15s ease-in-out infinite reverse;
+}
+
+
+/* cars */
+
+.car-right {
+    top: 28%;
+    right: -20px;
+
+    width: 300px;
+
     transform: rotate(6deg);
-    filter:
-        drop-shadow(4px 5px 0 rgba(0,0,0,.25));
-    animation:
-        tinyCarFloat
-        8s
-        ease-in-out
-        infinite;
+
+    animation: carBob 7s ease-in-out infinite;
 }
+
+.car-music {
+    top: 38%;
+    right: 3%;
+
+    width: 260px;
+
+    transform: rotate(-5deg);
+
+    animation: carBob 9s ease-in-out infinite reverse;
+}
+
 .car-sticker {
-    position: absolute;
-    width: 105px;
-    left: -20px;
+    left: -25px;
     bottom: 18%;
-    z-index: 18;
+
+    width: 210px;
+
     transform: rotate(-8deg);
-    filter:
-        drop-shadow(3px 4px 0 rgba(0,0,0,.22));
 }
+
+
+/* iPhone */
+
+.phone-2015 {
+    right: 5%;
+    bottom: 12%;
+
+    width: 100px;
+
+    transform: rotate(7deg);
+
+    filter: drop-shadow(5px 7px 0 rgba(0,0,0,.3));
+
+    animation: phoneBob 6s ease-in-out infinite;
+}
+
+
+/* Roman debris */
+
+.roman-phone {
+    top: 4%;
+    right: 5%;
+
+    width: 115px;
+
+    transform: rotate(11deg);
+
+    animation: phoneBob 8s ease-in-out infinite reverse;
+}
+
+.roman-desk {
+    position: absolute;
+
+    width: 145px;
+
+    right: -30px;
+    bottom: -30px;
+
+    transform: rotate(7deg);
+
+    z-index: 12;
+
+    filter: drop-shadow(5px 5px 0 rgba(0,0,0,.3));
+}
+
+
+/* Tyler */
+
+.tyler-small {
+    position: absolute;
+
+    width: 160px;
+
+    left: -50px;
+    bottom: 30px;
+
+    z-index: 12;
+
+    transform: rotate(-5deg);
+
+    filter: drop-shadow(6px 6px 0 rgba(0,0,0,.3));
+}
+
+
+/* AUX */
+
+.aux-cord {
+    top: 10%;
+    left: -35px;
+
+    width: 280px;
+
+    transform: rotate(-9deg);
+
+    opacity: .9;
+
+    animation: cordFloat 10s ease-in-out infinite;
+}
+
+
+/* stickers */
+
+.im-fine {
+    width: 120px;
+
+    top: 34%;
+    left: 2%;
+
+    transform: rotate(-11deg);
+
+    z-index: 15;
+}
+
+.red-heart {
+    width: 110px;
+
+    right: 7%;
+    top: 35%;
+
+    transform: rotate(13deg);
+
+    z-index: 15;
+}
+
+.party-fish-right {
+    width: 75px;
+
+    top: 20%;
+    right: 7%;
+
+    transform: rotate(12deg);
+
+    animation: fishflyDrift2 8s ease-in-out infinite;
+}
+
+.party-fish-left {
+    width: 65px;
+
+    left: 5%;
+    bottom: 13%;
+
+    transform: rotate(-14deg);
+
+    animation: fishflyDrift1 10s ease-in-out infinite reverse;
+}
+
+
 /* =========================================================
-   ANIMATION
+   ANIMATIONS
    ========================================================= */
-@keyframes tinyFloat {
+
+@keyframes fishflyDrift1 {
     0%, 100% {
-        transform:
-            translate(0, 0)
-            rotate(8deg);
+        transform: translate(0, 0) rotate(5deg);
     }
+
+    35% {
+        transform: translate(-18px, 12px) rotate(-12deg);
+    }
+
+    70% {
+        transform: translate(11px, -17px) rotate(15deg);
+    }
+}
+
+@keyframes fishflyDrift2 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(-8deg);
+    }
+
+    40% {
+        transform: translate(22px, -9px) rotate(13deg);
+    }
+
+    75% {
+        transform: translate(-8px, 16px) rotate(-18deg);
+    }
+}
+
+@keyframes fishflyDrift3 {
+    0%, 100% {
+        transform: translate(0, 0) rotate(9deg);
+    }
+
     50% {
-        transform:
-            translate(-6px, -9px)
-            rotate(12deg);
+        transform: translate(-25px, -18px) rotate(-14deg);
     }
 }
-@keyframes tinyCarFloat {
+
+@keyframes swarmFloat {
     0%, 100% {
-        transform:
-            translateY(0)
-            rotate(6deg);
+        transform: translate(0, 0) rotate(8deg);
     }
+
     50% {
-        transform:
-            translateY(-7px)
-            rotate(3deg);
+        transform: translate(-15px, 18px) rotate(13deg);
     }
 }
-@keyframes cordWiggle {
+
+@keyframes carBob {
     0%, 100% {
-        transform:
-            translate(0, 0)
-            rotate(-10deg);
+        transform: translateY(0) rotate(6deg);
     }
+
     50% {
-        transform:
-            translate(8px, 7px)
-            rotate(-6deg);
+        transform: translateY(-10px) rotate(3deg);
     }
 }
-@keyframes fishflyDrift {
+
+@keyframes phoneBob {
     0%, 100% {
-        transform:
-            translate(0, 0)
-            rotate(4deg);
+        transform: translateY(0) rotate(7deg);
     }
-    30% {
-        transform:
-            translate(-13px, 9px)
-            rotate(-11deg);
-    }
-    65% {
-        transform:
-            translate(10px, -12px)
-            rotate(13deg);
+
+    50% {
+        transform: translateY(-12px) rotate(10deg);
     }
 }
+
+@keyframes cordFloat {
+    0%, 100% {
+        transform: translate(0, 0) rotate(-9deg);
+    }
+
+    50% {
+        transform: translate(15px, 10px) rotate(-4deg);
+    }
+}
+
+
 /* =========================================================
    MOBILE
-   phone screen.
-   don't make me cry.
    ========================================================= */
+
 @media (max-width: 850px) {
+
     .site-header {
-        display: block;
-        padding: 15px 5vw;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 17px 5vw;
     }
+
     .site-nav {
         justify-content: flex-start;
-        margin-top: 15px;
     }
+
     .hero {
-        min-height: 640px;
-        padding:
-            85px
-            6vw
-            125px;
+        min-height: 650px;
+        padding: 90px 6vw 120px;
     }
+
     .hero h1 {
-        font-size: clamp(50px, 15vw, 88px);
-        letter-spacing: -5px;
+        font-size: clamp(48px, 15vw, 90px);
+        letter-spacing: -4px;
     }
-    .hero h1 span:nth-child(2) {
-        margin-left: 2vw;
-    }
+
     .hero-copy {
-        max-width: 90%;
-        font-size: 14px;
+        font-size: 15px;
     }
-    .section {
-        padding:
-            80px
-            5vw;
+
+    .hero-notes {
+        bottom: 20px;
     }
+
+    .intro {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .people-grid {
+        grid-template-columns: 1fr;
+        gap: 80px;
+    }
+
+    .person-image-wrap {
+        height: 430px;
+    }
+
+    .place {
+        grid-template-columns: 45px 1fr;
+        gap: 12px;
+    }
+
+    .place-note {
+        grid-column: 2;
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .night-list,
+    .summer-list {
+        grid-template-columns: 1fr;
+    }
+
+    .year-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .section-header {
         display: block;
-        margin-bottom: 45px;
     }
+
     .section-sub {
         margin-top: 20px;
     }
-    .intro {
-        min-height: 500px;
-        padding-top: 90px;
-    }
-    .intro-copy {
-        margin:
-            55px
-            0
-            0
-            8vw;
-    }
-    .people-grid {
-        grid-template-columns: 1fr;
-        gap: 85px;
-    }
-    .person:nth-child(2) {
-        margin-top: 0;
-    }
-    .person-image-wrap {
-        height: 400px;
-    }
-    .person-name {
-        font-size: 49px;
-    }
-    .more-people {
-        margin:
-            85px
-            0
-            0
-            7vw;
-    }
-    .roman-desk {
-        width: 82px;
-        right: -16px;
-        bottom: -27px;
-    }
-    .roman-phone {
-        width: 58px;
-        right: 3%;
-    }
-    .places-list {
-        margin-left: 0;
-    }
-    .place,
-    .place:nth-child(n) {
-        grid-template-columns:
-            35px
-            minmax(0, 1fr);
-        margin-left: 0;
-        gap: 10px;
-        padding: 22px 0;
-    }
-    .place-note {
-        grid-column: 2;
-        max-width: 270px;
-        text-align: left;
-    }
-    .place-name {
-        font-size: 40px;
-    }
-    .night-intro {
-        font-size: 46px;
-    }
-    .night-intro span {
-        margin-left: 4vw;
-    }
-    .night-copy {
-        margin-left: 4vw;
-    }
-    .night-list {
-        margin-left: 4vw;
-    }
-    .night-list li:nth-child(n) {
-        margin-left: 0;
-    }
-    .music-player {
-        width: 100%;
-    }
+
     .car-right {
-        width: 105px;
-        right: -25px;
+        width: 190px;
+        right: -45px;
+        top: 30%;
     }
+
     .car-music {
-        width: 90px;
-        right: -15px;
+        width: 180px;
+        right: -35px;
     }
+
+    .swarm-hero {
+        width: 125px;
+    }
+
     .aux-cord {
-        width: 105px;
-        left: -38px;
+        width: 190px;
+        left: -65px;
     }
-    .car-sticker {
-        width: 75px;
-        left: -14px;
-    }
-    .summer-list {
-        margin-left: 0;
-    }
-    .summer-item,
-    .summer-item:nth-child(n) {
-        min-width: 0;
-        width: auto;
-        margin:
-            15px
-            5vw
-            15px
-            0;
-    }
-    .summer-item h3 {
-        font-size: 42px;
-    }
-    .party-fish-right {
-        width: 35px;
-    }
-    .party-fish-left {
-        width: 31px;
-    }
-    .school-banner {
-        margin-left: 0;
-        padding: 28px;
-    }
-    .school-banner h3 {
-        font-size: 57px;
-        letter-spacing: -4px;
-    }
-    .im-fine {
-        width: 65px;
-        left: -12px;
-    }
-    .year-grid {
-        grid-template-columns: 1fr 1fr;
-        margin-left: 0;
-    }
-    .year-item {
-        min-height: 145px;
-    }
+
     .phone-2015 {
-        width: 48px;
+        width: 70px;
         right: 3%;
     }
-    .relationship-map {
-        margin-left: 0;
+
+    .roman-phone {
+        width: 80px;
     }
-    .relationship-copy {
-        margin-left: 4vw;
+
+    .roman-desk {
+        width: 105px;
+        right: -15px;
+        bottom: -15px;
     }
+
+    .tyler-small {
+        width: 115px;
+        left: -20px;
+    }
+
     .red-heart {
-        width: 58px;
+        width: 70px;
         right: 3%;
     }
+
+    .im-fine {
+        width: 85px;
+        left: -15px;
+    }
+
+    .fishfly {
+        width: 32px;
+    }
+
+    .party-fish-right {
+        width: 52px;
+    }
+
+    .party-fish-left {
+        width: 48px;
+    }
+
     .footer-small {
-        display: block;
-    }
-    .footer-note {
-        margin-top: 25px;
-    }
-    .fishfly-1 {
-        right: 4%;
-    }
-    .fishfly-2 {
-        left: 2%;
+        flex-direction: column;
     }
 }
+
+
 /* =========================================================
-   SMALL PHONE
+   VERY SMALL PHONES
    ========================================================= */
+
 @media (max-width: 500px) {
-    .site-mark {
-        font-size: 20px;
-    }
+
     .site-nav a {
-        padding: 5px 6px;
-        font-size: 8px;
+        font-size: 9px;
+        padding: 6px 7px;
     }
+
     .hero {
-        min-height: 610px;
+        min-height: 600px;
     }
+
     .hero h1 {
-        font-size: 53px;
-        letter-spacing: -4px;
+        font-size: 52px;
     }
-    .hero-copy {
-        max-width: 94%;
-        margin-top: 35px;
+
+    .section {
+        padding: 75px 5vw;
     }
-    .hero-meta span {
-        font-size: 8px;
-    }
+
     .section h2 {
         font-size: 48px;
     }
+
     .person-image-wrap {
         height: 350px;
     }
-    .person-name {
-        font-size: 43px;
-    }
-    .place-name {
-        font-size: 33px;
-    }
-    .night-intro {
-        font-size: 40px;
-    }
-    .summer-item h3 {
-        font-size: 34px;
-    }
-    .school-banner h3 {
-        font-size: 47px;
-    }
+
     .year-grid {
         grid-template-columns: 1fr;
     }
-    .footer-big {
-        font-size: 62px;
-        letter-spacing: -4px;
+
+    .school-banner {
+        padding: 28px;
+    }
+
+    .school-banner h3 {
+        font-size: 55px;
+    }
+
+    .music-player {
+        margin-top: 50px;
     }
 }
+
+
 /* =========================================================
-   REDUCED MOTION
+   ACCESSIBILITY
    ========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
     }
+
     *,
     *::before,
     *::after {
-        animation: none !important;
-        transition: none !important;
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
     }
 }
