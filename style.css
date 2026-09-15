@@ -240,23 +240,89 @@ body::after {
     letter-spacing: 1px;
 }
 
-.hero-clock {
-    position: absolute;
-    right: 2vw;
-    top: 0;
-    padding: 12px;
-    background: #b026ff;
-    color: #080308;
-    font-family: "courier new", monospace;
-    font-size: 12px;
-    box-shadow: 7px 7px 0 #f2b634;
-    transform: rotate(4deg);
-}
-
 .hero-notes {
     position: relative;
-    min-height: 550px;
+    min-height: 420px;
+    height: 420px;
 }
+
+.hero-clock {
+    position: absolute;
+    top: 3%;
+    right: 4%;
+    z-index: 20;
+
+    padding: 0;
+    background: transparent;
+    color: #f2b634;
+
+    font-family: "courier new", monospace;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1;
+
+    transform: rotate(2deg);
+}
+
+.hero-clock::before {
+    content: "●";
+    margin-right: 7px;
+    color: #f80000;
+    font-size: 8px;
+    animation: clockblink 1.2s steps(1) infinite;
+}
+
+.hero-clock::after {
+    content: " local";
+    color: #b026ff;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+#local-time {
+    display: inline-block;
+    margin-left: 5px;
+    color: #f4dfc1;
+    font-size: 15px;
+    letter-spacing: -1px;
+}
+
+.roman-phone {
+    position: absolute;
+    width: 92px;
+    left: 2%;
+    top: 14%;
+    z-index: 8;
+    transform: rotate(-12deg);
+    filter: drop-shadow(7px 8px 0 #080308);
+}
+
+.roman-desk {
+    position: absolute;
+    width: 135px;
+    left: 30%;
+    bottom: 5%;
+    z-index: 8;
+    transform: rotate(7deg);
+    filter: drop-shadow(8px 8px 0 #080308);
+}
+
+@keyframes clockblink {
+
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    46%,
+    100% {
+        opacity: .35;
+    }
+
+}
+
+
 
 /* the car is treated like a stupid giant sticker somebody threw onto the page */
 
@@ -265,7 +331,7 @@ body::after {
     right: -10%;
     bottom: 3%;
     z-index: 2;
-    width: min(760px, 75vw);
+    width: min(75px, 75vw);
     filter: drop-shadow(15px 18px 0 #080308);
     animation: carbounce 5s ease-in-out infinite;
 }
@@ -285,25 +351,7 @@ body::after {
     filter: drop-shadow(5px 5px 0 #080308);
 }
 
-.roman-phone {
-    position: absolute;
-    width: 110px;
-    left: 0;
-    top: 18%;
-    z-index: 8;
-    transform: rotate(-12deg);
-    filter: drop-shadow(7px 8px 0 #080308);
-}
 
-.roman-desk {
-    position: absolute;
-    width: 150px;
-    left: 28%;
-    bottom: 4%;
-    z-index: 8;
-    transform: rotate(7deg);
-    filter: drop-shadow(8px 8px 0 #080308);
-}
 
 @keyframes carbounce {
     0%, 100% {
@@ -1040,35 +1088,90 @@ body::after {
     .hero h1 {
         font-size: clamp(65px, 20vw, 120px);
     }
+.hero-notes {
+    min-height: 330px;
+    height: 330px;
+}
 
-    .hero-notes {
-        min-height: 350px;
-    }
+.hero-clock {
+    top: 2%;
+    right: 3%;
+}
 
+.roman-phone {
+    width: 82px;
+    left: 3%;
+    top: 18%;
+}
+
+.roman-desk {
+    width: 120px;
+    left: auto;
+    right: 4%;
+    bottom: 3%;
+}
     .car-right {
         right: -35%;
         width: 120vw;
     }
 
-    .roman-phone {
-        left: 5%;
-        top: 5%;
-    }
+.intro {
+    position: relative;
+    min-height: 430px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(220px, .5fr);
+    align-items: center;
+    gap: 50px;
+    padding: 70px 8vw;
+    background: #f2b634;
+    color: #170611;
+    transform: skewY(-1deg);
+    margin-top: -25px;
+    margin-bottom: -25px;
+}
 
-    .roman-desk {
-        left: auto;
-        right: 5%;
-        bottom: 3%;
-    }
+.intro > * {
+    transform: skewY(1deg);
+}
 
-    .intro {
-        grid-template-columns: 1fr;
-        min-height: 650px;
-    }
+.intro .music-player {
+    width: 100%;
+    max-width: 850px;
+    margin: 0;
+    padding: 20px;
+    background: #080308;
+    color: #f2b634;
+    box-shadow: 14px 14px 0 #b026ff;
+    transform: rotate(-1deg);
+}
 
-    .intro-big {
-        font-size: clamp(55px, 17vw, 100px);
-    }
+.intro .music-player-label {
+    margin-bottom: 10px;
+    color: #f2b634;
+    font-size: 25px;
+    letter-spacing: -1px;
+}
+
+.intro .music-player-status {
+    margin-bottom: 15px;
+    color: #f4dfc1;
+    font-family: "courier new", monospace;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.intro .intro-copy {
+    padding: 22px;
+    background: #f80000;
+    color: #fff0d5;
+    font-family: "courier new", monospace;
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 1.45;
+    transform: rotate(3deg) skewY(1deg);
+    box-shadow: 9px 9px 0 #170611;
+}
+
 
     .people-grid {
         display: block;
@@ -1211,10 +1314,7 @@ body::after {
         margin: 2px;
     }
 
-    .music-player {
-        margin-left: 0;
-        margin-right: 0;
-    }
+
 
     .year-grid {
         grid-template-columns: 1fr;
