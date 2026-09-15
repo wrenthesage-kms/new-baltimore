@@ -13,6 +13,7 @@
   --yellow:#f2c230;
   --white:#f7f4ee;
   --ink:#101015;
+  --green:#9cff5b;
 }
 
 *{
@@ -84,11 +85,25 @@ p{
 .f13{left:26%;top:42%;width:30px;animation-duration:22s;animation-delay:-14s}
 
 @keyframes flyaround{
-  0%{transform:translate(0,0) rotate(-8deg)}
-  25%{transform:translate(90px,-60px) rotate(18deg)}
-  50%{transform:translate(-50px,100px) rotate(-20deg)}
-  75%{transform:translate(120px,50px) rotate(10deg)}
-  100%{transform:translate(0,0) rotate(-8deg)}
+  0%{
+    transform:translate(0,0) rotate(-8deg)
+  }
+
+  25%{
+    transform:translate(90px,-60px) rotate(18deg)
+  }
+
+  50%{
+    transform:translate(-50px,100px) rotate(-20deg)
+  }
+
+  75%{
+    transform:translate(120px,50px) rotate(10deg)
+  }
+
+  100%{
+    transform:translate(0,0) rotate(-8deg)
+  }
 }
 
 
@@ -417,17 +432,13 @@ main{
 
 
 /* =========================================================
-   THE ACTUAL DROPDOWN
-   IMPORTANT:
-   DO NOT USE GRID 0FR HERE.
-   JS controls max-height.
+   DROPDOWN
    ========================================================= */
 
 .widget-body{
   position:relative;
 
   max-height:0;
-
   overflow:hidden;
 
   background:var(--paper);
@@ -445,8 +456,6 @@ main{
 }
 
 .widget.is-open .widget-body{
-  max-height:1400px;
-
   opacity:1;
 
   border-left-width:5px;
@@ -488,6 +497,20 @@ main{
     1.1
     "Comic Sans MS",
     cursive;
+
+  transform:rotate(-2deg);
+}
+
+.mini-note{
+  display:inline-block;
+
+  margin-top:15px;
+  padding:7px 10px;
+
+  background:var(--yellow);
+  border:2px solid #111;
+
+  font:bold 10px monospace;
 
   transform:rotate(-2deg);
 }
@@ -560,10 +583,6 @@ main{
   gap:0;
 }
 
-.road .widget-body>*{
-  padding:0;
-}
-
 .road-sign{
   align-self:center;
   justify-self:center;
@@ -625,8 +644,6 @@ main{
   border-bottom:7px double #111;
 
   font-family:Georgia,serif;
-
-  text-transform:uppercase;
 }
 
 .downtown .widget-body{
@@ -635,10 +652,6 @@ main{
 
   padding:22px;
   gap:22px;
-}
-
-.downtown .widget-body>*{
-  padding:0;
 }
 
 .downtown .widget-body>img{
@@ -695,7 +708,6 @@ main{
   position:relative;
 
   min-width:0;
-
   padding:22px;
 }
 
@@ -713,8 +725,6 @@ main{
 
   right:-3%;
   top:12%;
-
-  padding:0!important;
 
   transform:rotate(8deg);
 }
@@ -741,7 +751,7 @@ main{
 
 
 /* =========================================================
-   BURKE
+   BURKE PARK
    ========================================================= */
 
 .burke{
@@ -766,15 +776,9 @@ main{
   gap:22px;
 }
 
-.burke .widget-body>*{
-  padding:0;
-}
-
 .postcard{
   position:relative;
-
   min-width:0;
-
   transform:rotate(-2deg);
 }
 
@@ -812,7 +816,6 @@ main{
 
 .abcc{
   width:95%;
-
   transform:rotate(-.8deg);
 }
 
@@ -1032,15 +1035,97 @@ main{
 
   color:#aaa;
 
-  border:4px dashed #b026ff;
+  border:4px dashed var(--violet);
 
   font:bold 12px monospace;
 }
 
 .secret-content.is-visible{
   display:flex;
-
   flex-direction:column;
+}
+
+
+/* =========================================================
+   PEOPLE
+   ========================================================= */
+
+.people{
+  width:96%;
+  transform:rotate(-.5deg);
+}
+
+.people .widget-tab{
+  background:#d7d0c5;
+  color:#111;
+}
+
+.people .widget-body{
+  display:grid;
+  grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);
+
+  padding:22px;
+  gap:28px;
+
+  background:#c9bba7;
+}
+
+.people-images{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:20px;
+  align-items:start;
+}
+
+.person-piece{
+  position:relative;
+
+  background:#111;
+  padding:7px;
+
+  box-shadow:7px 8px 0 #111;
+}
+
+.person-piece img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+}
+
+.person-piece span{
+  display:block;
+
+  padding:8px 5px 3px;
+
+  color:#fff;
+
+  font:bold 10px monospace;
+}
+
+.roman-piece{
+  transform:rotate(-2deg);
+}
+
+.tyler-piece{
+  margin-top:45px;
+  transform:rotate(2deg);
+}
+
+.people-copy{
+  align-self:center;
+}
+
+.people-note{
+  display:inline-block;
+
+  padding:7px 10px;
+
+  background:var(--red);
+  color:#fff;
+
+  font:bold 11px monospace;
+
+  transform:rotate(-3deg);
 }
 
 
@@ -1050,16 +1135,12 @@ main{
 
 .fishflies{
   width:98%;
-
   transform:rotate(-1.1deg);
 }
 
 .fishflies .widget-tab{
   background:#303030;
-
   color:#e9e1d2;
-
-  border-color:#111;
 }
 
 .fishflies .widget-body{
@@ -1073,7 +1154,6 @@ main{
   position:relative;
 
   min-height:390px;
-
   padding:22px;
 
   overflow:visible;
@@ -1088,32 +1168,26 @@ main{
 
 .bug-sticker{
   position:absolute!important;
-
   width:100px;
-
   padding:0!important;
 }
 
 .bug-sticker.one{
   left:3%;
   bottom:-20px;
-
   transform:rotate(-15deg);
 }
 
 .bug-sticker.two{
   right:4%;
   top:-30px;
-
   transform:rotate(12deg);
 }
 
 .bug-sticker.three{
   left:43%;
   top:8px;
-
   width:120px;
-
   transform:rotate(9deg);
 }
 
@@ -1125,7 +1199,6 @@ main{
 .bayrama{
   width:89%;
   margin-left:8%;
-
   transform:rotate(1.3deg);
 }
 
@@ -1142,10 +1215,6 @@ main{
   gap:22px;
 
   background:#f4d7e2;
-}
-
-.bayrama .widget-body>*{
-  padding:0;
 }
 
 .bayrama .widget-body>img{
@@ -1177,7 +1246,6 @@ main{
 
 .oldphone{
   width:92%;
-
   transform:rotate(-.7deg);
 }
 
@@ -1191,7 +1259,6 @@ main{
   grid-template-columns:minmax(220px,.75fr) minmax(0,1fr);
 
   background:#17171c;
-
   color:#fff;
 }
 
@@ -1199,8 +1266,8 @@ main{
   position:relative;
 
   min-height:420px;
-
   padding:22px;
+
   text-align:center;
 }
 
@@ -1222,25 +1289,24 @@ main{
   top:45px;
   right:22%;
 
-  color:#9cff5b;
+  color:var(--green);
 
   font:bold 12px monospace;
 }
 
 
 /* =========================================================
-   DRIVING
+   DRIVING / NIGHTS
    ========================================================= */
 
 .driving{
   width:95%;
   margin-left:2%;
-
   transform:rotate(.5deg);
 }
 
 .driving .widget-tab{
-  background:#164dff;
+  background:var(--blue);
   color:#fff;
 }
 
@@ -1249,15 +1315,13 @@ main{
   grid-template-columns:minmax(0,1.35fr) minmax(230px,.8fr);
 
   background:#111;
-
   color:#fff;
 }
 
 .drive-art{
   position:relative;
 
-  min-height:330px;
-
+  min-height:430px;
   padding:22px;
 }
 
@@ -1284,6 +1348,144 @@ main{
   transform:rotate(12deg);
 }
 
+.night-list{
+  margin:25px 0;
+  padding:0;
+
+  list-style:none;
+}
+
+.night-list li{
+  padding:10px 0;
+
+  border-bottom:2px solid rgba(255,255,255,.18);
+
+  font:bold 13px monospace;
+}
+
+.night-list li::before{
+  content:"→ ";
+  color:var(--red);
+}
+
+
+/* =========================================================
+   CONNECTIONS
+   ========================================================= */
+
+.connections{
+  width:94%;
+  margin-left:4%;
+  transform:rotate(-.4deg);
+}
+
+.connections .widget-tab{
+  background:#d8c2bb;
+  color:#111;
+}
+
+.connections .widget-body{
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(240px,.8fr);
+
+  padding:25px;
+
+  background:#d8c2bb;
+}
+
+.connection-map{
+  position:relative;
+
+  min-height:360px;
+
+  border:3px dashed #111;
+
+  background:
+    linear-gradient(28deg,transparent 49%,rgba(0,0,0,.12) 50%,transparent 51%),
+    linear-gradient(-24deg,transparent 49%,rgba(0,0,0,.12) 50%,transparent 51%);
+}
+
+.node{
+  position:absolute;
+
+  padding:10px 13px;
+
+  background:#fff;
+
+  border:3px solid #111;
+
+  color:#111;
+
+  box-shadow:4px 5px 0 #111;
+
+  font:bold 10px monospace;
+}
+
+.n1{
+  left:8%;
+  top:10%;
+  transform:rotate(-4deg);
+}
+
+.n2{
+  right:8%;
+  top:18%;
+  background:var(--yellow);
+  transform:rotate(3deg);
+}
+
+.n3{
+  left:37%;
+  top:25%;
+  background:var(--red);
+  color:#fff;
+  transform:rotate(-2deg);
+}
+
+.n4{
+  left:10%;
+  bottom:20%;
+  background:#a9c5c0;
+  transform:rotate(4deg);
+}
+
+.n5{
+  right:25%;
+  bottom:17%;
+  background:var(--blue);
+  color:#fff;
+  transform:rotate(-5deg);
+}
+
+.n6{
+  left:31%;
+  bottom:7%;
+}
+
+.n7{
+  right:7%;
+  bottom:42%;
+}
+
+.n8{
+  left:48%;
+  top:8%;
+  background:var(--violet);
+  color:#fff;
+}
+
+.n9{
+  right:34%;
+  top:48%;
+  background:#111;
+  color:#fff;
+}
+
+.connection-copy{
+  align-self:center;
+  padding:25px;
+}
+
 
 /* =========================================================
    MAP
@@ -1292,7 +1494,6 @@ main{
 .map-widget{
   width:94%;
   margin-left:4%;
-
   transform:rotate(-.4deg);
 }
 
@@ -1310,9 +1511,7 @@ main{
 
 .map-wrap{
   position:relative;
-
   min-width:0;
-
   padding:22px;
 }
 
@@ -1373,6 +1572,20 @@ main{
   padding:22px;
 }
 
+.map-copy span{
+  display:inline-block;
+
+  margin-top:20px;
+
+  padding:7px 9px;
+
+  background:var(--yellow);
+
+  font:bold 11px monospace;
+
+  transform:rotate(-3deg);
+}
+
 
 /* =========================================================
    RANDOM DEBRIS
@@ -1391,36 +1604,28 @@ main{
 .debris-car{
   right:-85px;
   top:1450px;
-
   width:180px;
-
   transform:rotate(8deg);
 }
 
 .debris-iphone{
   left:-55px;
   top:2550px;
-
   width:115px;
-
   transform:rotate(-12deg);
 }
 
 .debris-receipt{
   right:-35px;
   top:3150px;
-
   width:105px;
-
   transform:rotate(12deg);
 }
 
 .debris-party{
   left:-25px;
   bottom:420px;
-
   width:110px;
-
   transform:rotate(-15deg);
 }
 
@@ -1443,15 +1648,12 @@ main{
 
 .end-chaos{
   position:relative;
-
   min-height:230px;
 }
 
 .end-chaos>img:first-child{
   width:160px;
-
   margin:auto;
-
   transform:rotate(-5deg);
 }
 
@@ -1510,7 +1712,7 @@ footer{
   position:relative;
   z-index:5;
 
-  padding:20px;
+  padding:30px 20px 45px;
 
   border-top:4px solid #fff;
 
@@ -1523,9 +1725,30 @@ footer{
   text-align:center;
 }
 
+footer strong{
+  display:block;
+
+  color:#fff;
+
+  font:bold 12px monospace;
+}
+
 footer span{
-  margin-left:20px;
+  display:block;
+
+  margin-top:10px;
+
   color:#555;
+}
+
+footer small{
+  display:block;
+
+  margin-top:22px;
+
+  color:#3e3e43;
+
+  line-height:1.6;
 }
 
 
@@ -1561,7 +1784,6 @@ footer span{
   .hero-title{
     top:35px;
     left:2%;
-
     width:95%;
   }
 
@@ -1572,7 +1794,6 @@ footer span{
   .music{
     bottom:0;
     left:2%;
-
     width:96%;
   }
 
@@ -1583,25 +1804,28 @@ footer span{
   .bayrama,
   .roman,
   .abcc,
+  .people,
   .oldphone,
   .driving,
+  .connections,
   .map-widget{
     width:100%;
     margin-left:0;
   }
 
 
-  /* one clean column on phones */
   .road .widget-body,
   .downtown .widget-body,
   .lake .widget-body,
   .burke .widget-body,
   .abcc .widget-body,
   .roman .widget-body,
+  .people .widget-body,
   .fishflies .widget-body,
   .bayrama .widget-body,
   .oldphone .widget-body,
   .driving .widget-body,
+  .connections .widget-body,
   .map-widget .widget-body{
     display:block;
   }
@@ -1613,14 +1837,6 @@ footer span{
   .bayrama .widget-body{
     padding:16px;
   }
-
-  .road .widget-body>*,
-  .downtown .widget-body>*,
-  .burke .widget-body>*,
-  .bayrama .widget-body>*{
-    margin-bottom:20px;
-  }
-
 
   .road-sign{
     margin:0 auto 20px;
@@ -1647,6 +1863,7 @@ footer span{
     margin-bottom:25px;
   }
 
+
   .abcc-poster{
     min-height:360px;
 
@@ -1662,6 +1879,19 @@ footer span{
 
   .roman .widget-body>div:last-child{
     padding:16px;
+  }
+
+
+  .people-images{
+    grid-template-columns:1fr;
+  }
+
+  .tyler-piece{
+    margin-top:0;
+  }
+
+  .person-piece img{
+    height:260px;
   }
 
 
@@ -1687,6 +1917,12 @@ footer span{
 
   .drive-art{
     min-height:300px;
+  }
+
+
+  .connection-map{
+    min-height:430px;
+    margin-bottom:20px;
   }
 
 
@@ -1717,6 +1953,22 @@ footer span{
 
   .fly{
     opacity:.4;
+  }
+
+  .widget{
+    margin-bottom:75px;
+  }
+
+  .widget-tab{
+    min-height:68px;
+
+    padding:10px 14px;
+
+    font-size:clamp(27px,8vw,45px);
+  }
+
+  .widget-tab b{
+    font-size:34px;
   }
 
 }
