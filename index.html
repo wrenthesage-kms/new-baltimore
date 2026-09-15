@@ -1,1372 +1,774 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-  <title>NEW BALTIMORE // 2015</title>
+    <meta
+        name="description"
+        content="New Baltimore, Michigan // 2015. People, places, nights, summer, school, and whatever happened after somebody said let's go."
+    >
 
-  <meta
-    name="description"
-    content="New Baltimore, Michigan // 2015. Anchor Bay. Fishflies. Cars. College. Bad decisions."
-  >
+    <title>NEW BALTIMORE // 2015</title>
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- =========================================================
-       GLOBAL CHAOS LAYER
-       ========================================================= -->
-
-  <div id="grain"></div>
-  <div id="cursor-dot"></div>
-
-  <div class="top-warning">
-    <span>⚠ NEW BALTIMORE, MICHIGAN</span>
-    <span>2015</span>
-    <span>POP. NOT SODA.</span>
-    <span>ANCHOR BAY AREA</span>
-    <span>NO ONE KNOWS WHY THEY'RE HERE</span>
-  </div>
-
-  <div class="marquee marquee-top">
-    <div class="marquee-track">
-      ★ WELCOME TO NEW BALTIMORE ★
-      EVERYONE KNOWS EVERYONE ★
-      M-29 FOREVER ★
-      LAKE ST. CLAIR ★
-      BAY-RAMA ★
-      FISHFLIES ★
-      SNAPCHAT ★
-      AUX CORD ★
-      WHY ARE YOU STILL HERE? ★
-      WELCOME TO NEW BALTIMORE ★
-      EVERYONE KNOWS EVERYONE ★
-      M-29 FOREVER ★
-      LAKE ST. CLAIR ★
-      BAY-RAMA ★
-      FISHFLIES ★
-      SNAPCHAT ★
-      AUX CORD ★
-    </div>
-  </div>
+<!-- =====================================================
+     // this is not a tourism website
+     // please stop trying to make it professional
+     ===================================================== -->
 
 
-  <!-- =========================================================
-       HEADER
-       ========================================================= -->
+<header class="site-header">
 
-  <header class="site-header">
+    <div>
+        <div class="site-mark">
+            NEW BALTIMORE / 2015
+        </div>
 
-    <div class="header-left">
-      <div class="fake-browser">
-        <span class="browser-dot red"></span>
-        <span class="browser-dot yellow"></span>
-        <span class="browser-dot green"></span>
-        <span class="browser-address">
-          newbaltimore.local / u / are / here
-        </span>
-      </div>
-
-      <div class="tiny-header-note">
-        INTERNET EXPLORER WOULD PROBABLY HATE THIS
-      </div>
+        <div class="site-location">
+            ANCHOR BAY / MACOMB COUNTY, MI
+        </div>
     </div>
 
-    <div class="header-right">
-      <button class="chaos-button" id="chaosButton">
-        MAKE IT WORSE
-      </button>
+    <nav class="site-nav">
+        <a href="#people">PEOPLE</a>
+        <a href="#places">PLACES</a>
+        <a href="#nights">NIGHTS</a>
+        <a href="#summer">SUMMER</a>
+        <a href="#school">SCHOOL</a>
+        <a href="#year">2015</a>
+    </nav>
 
-      <button class="chaos-button" id="locationButton">
-        WHERE THE FUCK AM I
-      </button>
-    </div>
-
-  </header>
+</header>
 
 
-  <!-- =========================================================
-       HERO
-       ========================================================= -->
+<!-- =====================================================
+     HERO
+     ===================================================== -->
 
-  <main>
+<section class="hero">
 
-    <section class="hero">
+    <div class="hero-inner">
 
-      <div class="hero-scribble scribble-one">
-        MICHIGAN???
-      </div>
-
-      <div class="hero-scribble scribble-two">
-        YES, ACTUALLY.
-      </div>
-
-      <div class="hero-scribble scribble-three">
-        2015.
-      </div>
-
-      <img
-        class="hero-fishfly fishfly-a"
-        src="./flying up fishfly.PNG"
-        alt=""
-      >
-
-      <img
-        class="hero-fishfly fishfly-b"
-        src="./transparent fishfly with a party hat flying to the right .PNG"
-        alt=""
-      >
-
-      <img
-        class="hero-fishfly fishfly-c"
-        src="./side view left fishfly.PNG"
-        alt=""
-      >
-
-      <div class="hero-copy">
-
-        <div class="hero-kicker">
-          <span>MACOMB COUNTY</span>
-          <span>ANCHOR BAY</span>
-          <span>LAKE ST. CLAIR</span>
+        <div class="kicker">
+            ANCHOR BAY / LAKE ST. CLAIR / MACOMB COUNTY
         </div>
 
         <h1>
-          NEW
-          <span>BALTIMORE</span>
+            <span>NEW</span>
+            <span>BALTIMORE,</span>
+            <span>MICHIGAN</span>
         </h1>
 
-        <div class="hero-year">
-          <span>20</span>
-          <strong>15</strong>
-        </div>
-
-        <p class="hero-subtitle">
-          a tiny waterfront city with
-          <b>way too much going on</b>
+        <p class="hero-copy">
+            Everybody ends up here eventually.
+            Washington Street. M-29. The lake.
+            Somebody's car. Somebody's house.
+            You leave for an hour and somehow it's midnight.
         </p>
 
-        <div class="hero-sticker">
-          <img
-            src="./you are here.PNG"
-            alt="you are here"
-          >
+        <div class="hero-meta">
+            <span>2015</span>
+            <span>18–19</span>
+            <span>SUMMER</span>
+            <span>NO DESTINATION</span>
         </div>
 
-      </div>
+    </div>
 
-      <div class="hero-side-note">
-        <b>IF YOU'VE NEVER BEEN HERE:</b>
-        <br>
-        It's not the middle of nowhere.
+    <div class="hero-notes">
+        <div>LOCAL TIME: <strong id="live-time">--:--:--</strong></div>
+        <div>STATUS: <strong>WINDOWS DOWN</strong></div>
+        <div>LOCATION: <strong>M-29</strong></div>
+    </div>
+
+
+    <!-- actual Wave 1 debris -->
+
+    <img
+        class="floating-asset swarm-hero"
+        src="https://ella.janitorai.com/media-approved/-hNPi7ajoZa159HTE5XyO.webp"
+        alt=""
+    >
+
+    <img
+        class="floating-asset fishfly fishfly-1"
+        src="https://ella.janitorai.com/media-approved/P6Wgzk4ismmItUkdKxazk.webp"
+        alt=""
+    >
+
+    <img
+        class="floating-asset car-right"
+        src="https://ella.janitorai.com/media-approved/6fGtSGWHTyoupeqWmdXDC.webp"
+        alt=""
+    >
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+     ===================================================== -->
+
+<section class="section intro">
+
+    <div class="intro-big">
+        THIS IS
+        <span>NEW BALTIMORE.</span>
+    </div>
+
+    <div class="intro-copy">
+        Not a postcard.
+        Not a travel guide.
+        Not some bullshit list of "things to do."
+
         <br><br>
-        It's a little lake town sitting
-        inside the giant Metro Detroit
-        orbit.
+
+        It's the people you know, the people you almost know,
+        the places everybody somehow knows, and the roads you
+        take when nobody actually wants to go home yet.
+
         <br><br>
-        People drive.
-        People know each other.
-        People go to the lake.
-        Someone is always at Burke.
-        <br><br>
-        That's basically it.
-      </div>
 
-      <div class="hero-bottom">
+        <strong>
+            // yes this is basically one enormous inside joke
+        </strong>
+    </div>
 
-        <div class="hero-stat">
-          <small>POPULATION OF YOUR PROBLEM</small>
-          <strong>???</strong>
-        </div>
-
-        <div class="hero-stat">
-          <small>ROAD YOU'LL DRIVE FOR NO REASON</small>
-          <strong>M-29</strong>
-        </div>
-
-        <div class="hero-stat">
-          <small>SEASONAL MENACE</small>
-          <strong>FISHFLIES</strong>
-        </div>
-
-      </div>
-
-    </section>
+</section>
 
 
-    <!-- =======================================================
-         "SO WHAT IS THIS PLACE?"
-         ======================================================= -->
+<!-- =====================================================
+     PEOPLE
+     ===================================================== -->
 
-    <section class="intro-grid">
+<section class="section people" id="people">
 
-      <div class="intro-main">
-
-        <div class="section-label">
-          OKAY. WHAT THE HELL IS NEW BALTIMORE?
-        </div>
-
-        <h2>
-          SMALL TOWN.
-          <br>
-          LAKE TOWN.
-          <br>
-          <span>DETROIT ORBIT.</span>
-        </h2>
-
-        <p class="giant-copy">
-          New Baltimore is the kind of place where you can leave
-          Anchor Bay Community College, get in somebody's car,
-          drive down Washington, end up at Burke Park, see three
-          people you know, buy a pop, and somehow wind up sitting
-          on a dock two hours later.
-        </p>
-
-        <p>
-          It isn't rural. It isn't some isolated little village.
-          It's a residential waterfront community in Macomb County,
-          close enough to the rest of Metro Detroit that you can
-          disappear onto I-94 whenever you want.
-        </p>
-
-        <p>
-          But inside town?
-          Everybody overlaps.
-        </p>
-
-      </div>
-
-
-      <aside class="intro-chaos">
-
-        <div class="paper-note tilt-left">
-          <b>LOCAL RULES</b>
-          <br><br>
-          say POP
-          <br>
-          say PARTY STORE
-          <br>
-          don't ask what a fishfly is
-          <br>
-          just drive
-        </div>
-
-        <div class="paper-note tilt-right">
-          <b>YOU WILL PROBABLY</b>
-          <br><br>
-          know somebody
-          <br>
-          who knows somebody
-          <br>
-          who knows where Roman is
-        </div>
-
-        <img
-          class="intro-fishfly"
-          src="./weird fishfly.PNG"
-          alt=""
-        >
-
-      </aside>
-
-    </section>
-
-
-    <!-- =======================================================
-         CHARACTER AREA
-         ======================================================= -->
-
-    <section class="characters" id="characters">
-
-      <div class="character-heading">
+    <div class="section-header">
 
         <div>
-          <div class="section-label">
-            PEOPLE YOU'RE PROBABLY HERE FOR
-          </div>
-
-          <h2>
-            THE BOYS
-          </h2>
+            <div class="section-number">01 // PEOPLE</div>
+            <h2>WHO'S HERE.</h2>
         </div>
 
-        <div class="heading-aside">
-          19 YEARS OLD.
-          <br>
-          2015.
-          <br>
-          BAD IDEAS.
+        <div class="section-sub">
+            Everybody knows somebody.
+            Everybody knows somebody who knows Roman.
         </div>
 
-      </div>
+    </div>
 
 
-      <!-- ROMAN -->
+    <div class="people-grid">
 
-      <article class="character-card roman-card">
+        <!-- ROMAN -->
 
-        <div class="character-number">
-          01
+        <article class="person">
+
+            <div class="person-image-wrap">
+
+                <img
+                    class="person-image"
+                    src="https://ella.janitorai.com/media-approved/r2Rp8nYy1TOylkJdeUGLG.webp"
+                    alt="Roman Scholl"
+                >
+
+                <div class="person-tag">
+                    THE SOCIAL NEXUS
+                </div>
+
+                <img
+                    class="floating-asset roman-desk"
+                    src="https://ella.janitorai.com/media-approved/bGjzIscxbj0KPOuAFdB6o.webp"
+                    alt=""
+                >
+
+            </div>
+
+            <h3 class="person-name">
+                Roman Scholl
+            </h3>
+
+            <p class="person-info">
+                19 / ABCC / ATHLETE / SNAPCHAT / CAR
+            </p>
+
+            <p class="person-copy">
+                Popular without trying particularly hard.
+                Knows everybody. Talks to everybody.
+                Somehow always ends up sitting somewhere he
+                wasn't originally supposed to be sitting.
+            </p>
+
+        </article>
+
+
+        <!-- TYLER -->
+
+        <article class="person">
+
+            <div class="person-image-wrap">
+
+                <img
+                    class="person-image"
+                    src="https://ella.janitorai.com/media-approved/eg3AxdiHmo2J13eOnrcxK.webp"
+                    alt="Tyler Vance"
+                >
+
+                <div class="person-tag">
+                    SUBURBAN BASS TERRORIST
+                </div>
+
+            </div>
+
+            <h3 class="person-name">
+                Tyler Vance
+            </h3>
+
+            <p class="person-info">
+                19 / ABCC / TRACK / AUX CORD / MONSTER
+            </p>
+
+            <p class="person-copy">
+                Loud. Always has something to say.
+                Treats the aux cord like a constitutional right.
+                If the windows aren't shaking, the music isn't loud enough.
+            </p>
+
+        </article>
+
+    </div>
+
+
+    <div class="more-people">
+        MORE PEOPLE / SOON
+        <br>
+        // because obviously there are more of you
+    </div>
+
+    <img
+        class="floating-asset roman-phone"
+        src="https://ella.janitorai.com/media-approved/LhjiRzmpmlikRHkVtY8fk.webp"
+        alt=""
+    >
+
+    <img
+        class="floating-asset fishfly fishfly-2"
+        src="https://ella.janitorai.com/media-approved/4rDwl1QF8MFeNdzK9bVu6.webp"
+        alt=""
+    >
+
+</section>
+
+
+<!-- =====================================================
+     PLACES
+     ===================================================== -->
+
+<section class="section places" id="places">
+
+    <div class="section-header">
+
+        <div>
+            <div class="section-number">02 // PLACES</div>
+            <h2>GO SOMEWHERE.</h2>
         </div>
 
-        <div class="character-main">
-
-          <div class="character-name">
-            ROMAN
-            <span>SCHOLL</span>
-          </div>
-
-          <div class="character-tagline">
-            THE GUY WHO KNOWS EVERYONE
-          </div>
-
-          <div class="character-details">
-
-            <div>
-              <b>AGE</b>
-              19
-            </div>
-
-            <div>
-              <b>HEIGHT</b>
-              5'6"
-            </div>
-
-            <div>
-              <b>TYPE</b>
-              ATHLETE
-            </div>
-
-            <div>
-              <b>PHONE</b>
-              iPHONE 6
-            </div>
-
-            <div>
-              <b>SMELLS LIKE</b>
-              SANDALWOOD
-            </div>
-
-            <div>
-              <b>KNOWN FOR</b>
-              BEING EVERYWHERE
-            </div>
-
-          </div>
-
-          <p>
-            Roman is not popular because he's desperately trying
-            to be popular.
-          </p>
-
-          <p>
-            He's popular because he keeps walking into rooms and
-            already knows somebody in them.
-          </p>
-
-          <p>
-            He'll abandon his entire friend group because some
-            random person is more interesting.
-          </p>
-
-          <p>
-            He talks. He touches. He steals food.
-            He remembers your name.
-            He acts like you've known each other for years.
-          </p>
-
-          <div class="roman-quote">
-            “What? I'm literally just saying.”
-          </div>
-
+        <div class="section-sub">
+            You don't need a reason.
+            That's sort of the point.
         </div>
 
-        <div class="character-side">
+    </div>
 
-          <div class="fake-profile">
 
-            <div class="profile-top">
-              ABCC
-              <span>ACTIVE NOW</span>
+    <div class="places-list">
+
+        <div class="place">
+            <div class="place-number">01</div>
+            <div class="place-name">M-29</div>
+            <div class="place-note">
+                Windows down. Music up. Lake on one side.
             </div>
-
-            <div class="profile-photo roman-photo">
-              <span>ROMAN</span>
-            </div>
-
-            <div class="profile-info">
-              <b>ROMAN SCHOLL</b>
-              <small>
-                Leo // athlete // New Baltimore
-              </small>
-            </div>
-
-            <div class="profile-buttons">
-              <button>MESSAGE</button>
-              <button>SNAP</button>
-            </div>
-
-          </div>
-
-          <img
-            class="roman-phone"
-            src="./transparent iphone 6 sticker vertical .PNG"
-            alt=""
-          >
-
         </div>
 
-      </article>
-
-
-      <!-- TYLER -->
-
-      <article class="character-card tyler-card">
-
-        <div class="character-number">
-          02
+        <div class="place">
+            <div class="place-number">02</div>
+            <div class="place-name">FRONT STREET</div>
+            <div class="place-note">
+                Walk around. Sit somewhere. Figure it out.
+            </div>
         </div>
 
-        <div class="character-main">
-
-          <div class="character-name">
-            TYLER
-            <span>VANCE</span>
-          </div>
-
-          <div class="character-tagline">
-            THE SUBURBAN BASS TERRORIST
-          </div>
-
-          <div class="character-details">
-
-            <div>
-              <b>AGE</b>
-              19
+        <div class="place">
+            <div class="place-number">03</div>
+            <div class="place-name">BURKE PARK</div>
+            <div class="place-note">
+                Water, dock, benches, beach, red water tower.
             </div>
+        </div>
 
-            <div>
-              <b>UNIFORM</b>
-              COLUMBIA
+        <div class="place">
+            <div class="place-number">04</div>
+            <div class="place-name">WASHINGTON STREET</div>
+            <div class="place-note">
+                Main road energy without pretending to be downtown.
             </div>
+        </div>
 
-            <div>
-              <b>HAT</b>
-              DIAMOND
+        <div class="place">
+            <div class="place-number">05</div>
+            <div class="place-name">ANCHOR BAY</div>
+            <div class="place-note">
+                The lake is basically always there.
             </div>
+        </div>
 
-            <div>
-              <b>SHOES</b>
-              NIKE / JORDAN
+        <div class="place">
+            <div class="place-number">06</div>
+            <div class="place-name">FESTIVAL PARK</div>
+            <div class="place-note">
+                Still becoming a thing. Dirt, fields, sports, construction.
             </div>
+        </div>
 
-            <div>
-              <b>CAR</b>
-              LOUD
+        <div class="place">
+            <div class="place-number">07</div>
+            <div class="place-name">THE ROADS HOME</div>
+            <div class="place-note">
+                I-94. 23 Mile. 24 Mile. Side streets.
+                Wherever the car ends up.
             </div>
+        </div>
 
-            <div>
-              <b>VOLUME</b>
-              ILLEGAL
-            </div>
+    </div>
 
-          </div>
 
-          <p>
-            Tyler does not enter a location.
-          </p>
+    <img
+        class="floating-asset car-sticker"
+        src="https://ella.janitorai.com/media-approved/c1kx3ieLDQRjlS3sLqwPM.webp"
+        alt=""
+    >
 
-          <p>
-            Tyler's car arrives first.
-          </p>
+</section>
 
-          <p>
-            The bass is already shaking the windows.
-            The Monster cans are rolling around the floor.
-            There is a Diamond snapback somewhere in the vehicle.
-          </p>
 
-          <p>
-            Roman says "let's go."
-          </p>
+<!-- =====================================================
+     NIGHTS
+     ===================================================== -->
 
-          <p>
-            Tyler is already starting the car.
-          </p>
+<section class="section nights" id="nights">
 
-          <div class="tyler-quote">
-            LOUD = GOOD
+    <div class="section-header">
+
+        <div>
+            <div class="section-number">03 // NIGHTS</div>
+            <h2>WHERE ARE WE GOING?</h2>
+        </div>
+
+        <div class="section-sub">
+            Nobody knows.
+            Nobody particularly cares.
+        </div>
+
+    </div>
+
+
+    <div class="night-intro">
+        WHERE ARE WE GOING?
+        <span>DOESN'T MATTER.</span>
+    </div>
+
+    <p class="night-copy">
+        The car smells like deodorant, fast food and whatever
+        air freshener somebody bought at the gas station.
+
+        <br><br>
+
+        The music is too loud.
+        Tyler is talking over it anyway.
+        Roman is laughing.
+        The lake keeps appearing through the trees.
+
+        <br><br>
+
+        Somebody says "let's just drive."
+
+        So you do.
+    </p>
+
+
+    <ul class="night-list">
+        <li>Drive until somebody says stop</li>
+        <li>Park for no reason</li>
+        <li>End up at the water</li>
+        <li>Somebody's house</li>
+        <li>Get food</li>
+        <li>Drive again</li>
+    </ul>
+
+
+    <!-- USER-PROVIDED SOUNDCLOUD PLAYER -->
+
+    <div class="music-player">
+
+        <div class="music-player-label">
+            ♫ NEW BALTIMORE // 2015
+        </div>
+
+        <div class="music-player-status">
+            M-29 / WINDOWS DOWN / MUSIC TOO LOUD
+        </div>
+
+        <iframe
+            width="100%"
+            height="166"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay; encrypted-media"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2298746358&color=%23dad0dc&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+        </iframe>
+
+    </div>
+
+
+    <img
+        class="floating-asset aux-cord"
+        src="https://ella.janitorai.com/media-approved/HU3fTC6xC-a1JWcPywgbb.webp"
+        alt=""
+    >
+
+    <img
+        class="floating-asset car-music"
+        src="https://ella.janitorai.com/media-approved/nQsB07aXC0KSF746TF2kP.webp"
+        alt=""
+    >
+
+    <img
+        class="floating-asset fishfly fishfly-3"
+        src="https://ella.janitorai.com/media-approved/4rDwl1QF8MFeNdzK9bVu6.webp"
+        alt=""
+    >
+
+</section>
+
+
+<!-- =====================================================
+     SUMMER
+     ===================================================== -->
+
+<section class="section summer" id="summer">
+
+    <div class="section-header">
+
+        <div>
+            <div class="section-number">04 // SUMMER</div>
+            <h2>SUMMER.</h2>
+        </div>
+
+        <div class="section-sub">
+            Hot pavement. Lake water.
+            Fishflies absolutely fucking everywhere.
+        </div>
+
+    </div>
+
+
+    <div class="summer-list">
+
+        <article class="summer-item">
+            <h3>BAY-RAMA</h3>
+        </article>
+
+        <article class="summer-item">
+            <h3>FISHFLY SEASON</h3>
+        </article>
+
+        <article class="summer-item">
+            <h3>FIREWORKS</h3>
+        </article>
+
+        <article class="summer-item">
+            <h3>THE LAKE</h3>
+        </article>
+
+    </div>
+
+
+    <img
+        class="floating-asset party-fish-right"
+        src="https://ella.janitorai.com/media-approved/XaKLekBFYxKSOItdj-e7M.webp"
+        alt=""
+    >
+
+    <img
+        class="floating-asset party-fish-left"
+        src="https://ella.janitorai.com/media-approved/o09O7wSpXSzPF4d1ZVzvt.webp"
+        alt=""
+    >
+
+    <img
+        class="floating-asset fishfly fishfly-4"
+        src="https://ella.janitorai.com/media-approved/P6Wgzk4ismmItUkdKxazk.webp"
+        alt=""
+    >
+
+</section>
+
+
+<!-- =====================================================
+     SCHOOL
+     ===================================================== -->
+
+<section class="section school" id="school">
+
+    <div class="section-header">
+
+        <div>
+            <div class="section-number">05 // SCHOOL</div>
+            <h2>ABCC / 2015</h2>
+        </div>
+
+        <div class="section-sub">
+            One part of the world.
+            Not the whole damn world.
+        </div>
+
+    </div>
+
+
+    <div class="school-banner">
+
+        <h3>
+            ANCHOR BAY TARS
+        </h3>
+
+        <p>
+            Red. White. Hallways.
+            After class. Lunch.
+            Everybody knowing everybody else's business.
+            School pride that occasionally gets way too loud.
+
+            <br><br>
+
+            // this section is allowed to be school-heavy
             <br>
-            BORED = EMERGENCY
-          </div>
-
-        </div>
-
-        <div class="character-side tyler-side">
-
-          <img
-            class="tyler-car"
-            src="./transparent car facing left windows open music.PNG"
-            alt=""
-          >
-
-          <div class="car-sound">
-            BASS
-            <span>BASS</span>
-            <strong>BASS</strong>
-          </div>
-
-          <img
-            class="aux-cord"
-            src="./transparent aux cord.PNG"
-            alt=""
-          >
-
-        </div>
-
-      </article>
-
-    </section>
-
-
-    <!-- =======================================================
-         THE TOWN
-         ======================================================= -->
-
-    <section class="town" id="town">
-
-      <div class="town-title">
-
-        <div class="section-label">
-          YOUR FIELD GUIDE
-        </div>
-
-        <h2>
-          WHERE THE FUCK
-          <span>ARE WE?</span>
-        </h2>
-
-        <p>
-          Think of New Baltimore as a bunch of small overlapping
-          stages. Nobody stays in one place.
+            // the rest of the website is not
         </p>
-
-      </div>
-
-
-      <div class="location-grid">
-
-        <article class="location-card washington">
-          <div class="location-number">01</div>
-          <h3>WASHINGTON ST.</h3>
-          <div class="location-type">DOWNTOWN / COMMERCIAL</div>
-
-          <p>
-            The everyday spine. Businesses, sidewalks,
-            people running errands, students wandering,
-            somebody recognizing somebody.
-          </p>
-
-          <div class="location-stamp">
-            YOU WILL SEE SOMEONE YOU KNOW
-          </div>
-        </article>
-
-
-        <article class="location-card front">
-          <div class="location-number">02</div>
-          <h3>FRONT ST.</h3>
-          <div class="location-type">WATERFRONT EDGE</div>
-
-          <p>
-            Downtown starts opening up here.
-            The bay gets closer.
-            The buildings give way to water,
-            boats, wind and Burke Park.
-          </p>
-
-          <div class="location-stamp">
-            KEEP WALKING
-          </div>
-        </article>
-
-
-        <article class="location-card burke">
-          <div class="location-number">03</div>
-          <h3>BURKE PARK</h3>
-          <div class="location-type">ANCHOR BAY</div>
-
-          <p>
-            Beach. Boardwalk. Dock. Benches.
-            Playground. Boats. Families.
-            Teenagers doing absolutely nothing.
-          </p>
-
-          <div class="location-stamp">
-            EVERYONE ENDS UP HERE
-          </div>
-        </article>
-
-
-        <article class="location-card m29">
-          <div class="location-number">04</div>
-          <h3>M-29</h3>
-          <div class="location-type">DRIVE UNTIL SOMETHING HAPPENS</div>
-
-          <img
-            src="./m29.PNG"
-            alt="M-29"
-          >
-
-          <p>
-            Two-lane lakeshore road.
-            Windows down.
-            Music on.
-            No destination required.
-          </p>
-
-          <div class="location-stamp">
-            KEEP DRIVING
-          </div>
-        </article>
-
-
-        <article class="location-card festival">
-          <div class="location-number">05</div>
-          <h3>FESTIVAL PARK</h3>
-          <div class="location-type">FIELDS / SPORTS / DUST</div>
-
-          <p>
-            Baseball diamonds, grass, gravel,
-            chain-link fences, bleachers,
-            coaches yelling somewhere in the distance.
-          </p>
-
-          <div class="location-stamp">
-            NORMAL TEENAGER COVER
-          </div>
-        </article>
-
-
-        <article class="location-card interstate">
-          <div class="location-number">06</div>
-          <h3>I-94</h3>
-          <div class="location-type">EXIT / RETURN</div>
-
-          <p>
-            The giant strip of road that lets you
-            leave the immediate universe.
-            Detroit one way.
-            Port Huron another.
-            New Baltimore behind you.
-          </p>
-
-          <div class="location-stamp">
-            OUT / BACK
-          </div>
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================================
-         ANCHOR BAY
-         ======================================================= -->
-
-    <section class="lake-section">
-
-      <img
-        class="lake-car"
-        src="./transparent car no sticker outline facing right.PNG"
-        alt=""
-      >
-
-      <img
-        class="lake-fishfly-left"
-        src="./dancing fishfly right.PNG"
-        alt=""
-      >
-
-      <div class="lake-copy">
-
-        <div class="section-label">
-          THE THING THAT IS ALWAYS THERE
-        </div>
-
-        <h2>
-          ANCHOR
-          <span>BAY</span>
-        </h2>
-
-        <p class="lake-lead">
-          The northern reach of Lake St. Clair.
-        </p>
-
-        <p>
-          You don't have to be doing anything special to notice it.
-          There's water. Boats. Wind. Wet pavement after storms.
-          Grass. Sunscreen. Food cooking somewhere.
-        </p>
-
-        <p>
-          Sometimes the bay is the reason everyone is outside.
-          Sometimes it's just sitting behind the conversation
-          while somebody argues about where to eat.
-        </p>
-
-      </div>
-
-      <div class="lake-note">
-        <span>LAKE WEATHER</span>
-        <b>CHANGES THE WHOLE DAY</b>
-      </div>
-
-    </section>
-
-
-    <!-- =======================================================
-         FISHFLY SECTION
-         ======================================================= -->
-
-    <section class="fishfly-section" id="fishflies">
-
-      <div class="fishfly-chaos">
-
-        <img src="./fishfly carpet 1.PNG" alt="">
-        <img src="./fishfly carpet 2.PNG" alt="">
-        <img src="./transparent swarm of fishflies 1.PNG" alt="">
-        <img src="./transparent swarm of fishflies 2.PNG" alt="">
-        <img src="./baby fishfly.PNG" alt="">
-        <img src="./long leg fishfly.PNG" alt="">
-        <img src="./upside down fishfly.PNG" alt="">
-
-      </div>
-
-      <div class="fishfly-copy">
-
-        <div class="section-label">
-          JUNE PROBLEM
-        </div>
-
-        <h2>
-          FISHFLY
-          <span>SEASON</span>
-        </h2>
-
-        <div class="fishfly-big">
-          POP POP POP POP POP
-        </div>
-
-        <p>
-          Imagine driving down the road and the asphalt is covered
-          in fishflies.
-        </p>
-
-        <p>
-          You don't panic.
-          You don't stop.
-          You lower the windows.
-        </p>
-
-        <p>
-          The tires start making that little
-          <b>pop pop pop pop</b>
-          sound as you drive through them.
-        </p>
-
-        <p>
-          And because everyone in the car is apparently an idiot,
-          it becomes entertaining.
-        </p>
-
-        <div class="fishfly-warning">
-          DO NOT ASK WHY THIS IS FUN.
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================================
-         BAY-RAMA
-         ======================================================= -->
-
-    <section class="bayrama">
-
-      <div class="bayrama-image">
-
-        <img
-          src="./bayrama!!!.PNG"
-          alt="Bay-Rama"
-        >
-
-        <img
-          class="party-fly"
-          src="./transparent fishfly with a party hat flying to the left.PNG"
-          alt=""
-        >
-
-      </div>
-
-      <div class="bayrama-copy">
-
-        <div class="section-label">
-          FIVE DAYS OF LOCAL CHAOS
-        </div>
-
-        <h2>
-          BAY-RAMA
-          <span>FISHFLY FESTIVAL</span>
-        </h2>
-
-        <p class="bayrama-lead">
-          Late June.
-          Five days.
-          Everybody is outside.
-        </p>
-
-        <div class="bayrama-list">
-
-          <div>
-            <strong>01</strong>
-            carnival midway
-          </div>
-
-          <div>
-            <strong>02</strong>
-            food stalls
-          </div>
-
-          <div>
-            <strong>03</strong>
-            live music
-          </div>
-
-          <div>
-            <strong>04</strong>
-            fireworks over the bay
-          </div>
-
-          <div>
-            <strong>05</strong>
-            running into everyone
-          </div>
-
-        </div>
-
-        <p>
-          This is not some giant tourist destination.
-          It is a community takeover.
-        </p>
-
-        <p>
-          Parents.
-          Students.
-          Fishermen.
-          Volunteers.
-          Local businesses.
-          Somebody's little brother.
-          Someone's ex.
-          Somebody who absolutely should not be talking to somebody else.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================================
-         ABCC
-         ======================================================= -->
-
-    <section class="abcc">
-
-      <div class="abcc-header">
-
-        <div class="section-label">
-          ANCHOR BAY COMMUNITY COLLEGE
-        </div>
-
-        <h2>
-          ABCC
-        </h2>
-
-        <p>
-          TWO YEARS.
-          SMALL CLASSES.
-          EVERYBODY KNOWS EVERYBODY.
-        </p>
-
-      </div>
-
-      <div class="classroom">
-
-        <div class="classroom-board">
-          <span>MONDAY</span>
-          <strong>9:00 AM</strong>
-          <em>DO NOT BE LATE</em>
-        </div>
-
-        <div class="bean-table table-a">
-          <span>laptop</span>
-          <span>coffee</span>
-          <span>backpack</span>
-        </div>
-
-        <div class="bean-table table-b">
-          <span>notes</span>
-          <span>phone</span>
-          <span>random charger</span>
-        </div>
-
-        <div class="classroom-note">
-          WHY IS ROMAN OVER HERE?
-        </div>
-
-        <div class="classroom-note note-two">
-          HE'S TALKING TO SOMEONE AGAIN
-        </div>
-
-        <div class="classroom-note note-three">
-          CLASS STARTED 14 MINUTES AGO
-        </div>
-
-      </div>
-
-      <div class="abcc-copy">
-
-        <p>
-          This isn't a sprawling university.
-        </p>
-
-        <p>
-          There aren't massive lecture halls or dorm cities.
-        </p>
-
-        <p>
-          It's a compact commuter college where people sit at
-          weird three-person tables, talk to each other,
-          wander out, come back, flirt, skip things,
-          and eventually run into each other downtown anyway.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================================
-         2015 INTERNET
-         ======================================================= -->
-
-    <section class="internet">
-
-      <div class="internet-title">
-
-        <div class="section-label">
-          THE INTERNET WAS DIFFERENT
-        </div>
-
-        <h2>
-          2015
-          <span>ONLINE</span>
-        </h2>
-
-      </div>
-
-      <div class="internet-grid">
-
-        <div class="web-card snapchat">
-          <span class="web-year">2015</span>
-          <h3>SNAPCHAT</h3>
-          <p>
-            Streaks. Ugly selfies. Filters.
-            "Where are you?"
-          </p>
-        </div>
-
-        <div class="web-card instagram">
-          <span class="web-year">2015</span>
-          <h3>INSTAGRAM</h3>
-          <p>
-            Filtered photos.
-            Mirror selfies.
-            Hashtags everywhere.
-          </p>
-        </div>
-
-        <div class="web-card tumblr">
-          <span class="web-year">2015</span>
-          <h3>TUMBLR</h3>
-          <p>
-            Aesthetic posts.
-            Alternative culture.
-            Endless scrolling.
-          </p>
-        </div>
-
-        <div class="web-card vine">
-          <span class="web-year">2015</span>
-          <h3>VINE</h3>
-          <p>
-            Six seconds.
-            Somehow enough to ruin
-            someone's brain permanently.
-          </p>
-        </div>
-
-        <div class="web-card facebook">
-          <span class="web-year">2015</span>
-          <h3>FACEBOOK</h3>
-          <p>
-            Parents.
-            Events.
-            Terrible statuses.
-          </p>
-        </div>
-
-        <div class="web-card kik">
-          <span class="web-year">2015</span>
-          <h3>KIK / GROUP CHAT</h3>
-          <p>
-            "u up?"
-            "where r u"
-            "come outside"
-          </p>
-        </div>
-
-      </div>
-
-      <img
-        class="tumblr-heart"
-        src="./ugly red tumblr heart.PNG"
-        alt=""
-      >
-
-    </section>
-
-
-    <!-- =======================================================
-         PERSONAL EFFECTS / SCRAPBOOK
-         ======================================================= -->
-
-    <section class="effects">
-
-      <div class="effects-header">
-
-        <div class="section-label">
-          PERSONAL EFFECTS
-        </div>
-
-        <h2>
-          SHIT THAT
-          <span>BELONGS HERE</span>
-        </h2>
-
-        <p>
-          This section is deliberately yours.
-          Add photographs. Screenshots. Receipts.
-          Old messages. Tickets. Maps. Dumb memories.
-          Whatever the hell you want.
-        </p>
-
-      </div>
-
-      <div class="effects-board" id="effectsBoard">
-
-        <div
-          class="effect-card draggable"
-          style="left:5%;top:8%;transform:rotate(-6deg)"
-        >
-          <span class="effect-label">PERSONAL</span>
-          <h3>ADD SOMETHING HERE</h3>
-          <p>
-            A memory, photograph, receipt,
-            screenshot, whatever.
-          </p>
-        </div>
-
-        <div
-          class="effect-card draggable pink"
-          style="left:58%;top:5%;transform:rotate(5deg)"
-        >
-          <span class="effect-label">2015</span>
-          <h3>THIS COULD BE A SCREENSHOT</h3>
-          <p>
-            Tumblr. Snapchat.
-            An old text. Anything.
-          </p>
-        </div>
-
-        <div
-          class="effect-card draggable yellow"
-          style="left:26%;top:48%;transform:rotate(3deg)"
-        >
-          <span class="effect-label">RECEIPT</span>
-          <h3>$8.74</h3>
-          <p>
-            Why did this become emotionally
-            significant?
-          </p>
-        </div>
-
-        <div
-          class="effect-card draggable blue"
-          style="left:72%;top:54%;transform:rotate(-4deg)"
-        >
-          <span class="effect-label">NOTE</span>
-          <h3>REMEMBER THIS</h3>
-          <p>
-            Write your own shit here.
-          </p>
-        </div>
-
-        <img
-          class="effect-iphone draggable"
-          src="./transparent iphone 6 sticker vertical .PNG"
-          alt=""
-          style="left:8%;top:65%"
-        >
-
-        <img
-          class="effect-aux draggable"
-          src="./transparent aux cord.PNG"
-          alt=""
-          style="left:47%;top:73%"
-        >
-
-        <img
-          class="effect-fish draggable"
-          src="./fishfly cigarette.PNG"
-          alt=""
-          style="left:80%;top:18%"
-        >
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================================
-         FINAL CHAOS
-         ======================================================= -->
-
-    <section class="finale">
-
-      <img
-        class="final-fish left"
-        src="./left fishfly.PNG"
-        alt=""
-      >
-
-      <img
-        class="final-fish right"
-        src="./dumb ff right.PNG"
-        alt=""
-      >
-
-      <img
-        class="final-car"
-        src="./transparent car sticker.PNG"
-        alt=""
-      >
-
-      <div class="finale-copy">
-
-        <div class="section-label">
-          YOU MADE IT
-        </div>
-
-        <h2>
-          SO...
-          <span>NOW WHAT?</span>
-        </h2>
-
-        <p>
-          Drive M-29.
-        </p>
-
-        <p>
-          Go to Burke.
-        </p>
-
-        <p>
-          Wander Washington.
-        </p>
-
-        <p>
-          Get food.
-        </p>
-
-        <p>
-          Run into somebody you know.
-        </p>
-
-        <p>
-          Let Roman make the situation worse.
-        </p>
-
-        <p>
-          Let Tyler make it louder.
-        </p>
-
-        <button
-          class="final-button"
-          id="randomButton"
-        >
-          GIVE ME A RANDOM PLACE
-        </button>
-
-        <div
-          class="random-result"
-          id="randomResult"
-        >
-          click it. coward.
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- =========================================================
-       FLOATING PERSONAL EFFECTS
-       ========================================================= -->
-
-  <div class="floating-sticker sticker-a">
-    <img src="./transparent i'm fine on neon pink sticker.PNG" alt="">
-  </div>
-
-  <div class="floating-sticker sticker-b">
-    <img src="./why are you still here.PNG" alt="">
-  </div>
-
-  <div class="floating-sticker sticker-c">
-    <img src="./u up?.PNG" alt="">
-  </div>
-
-  <div class="floating-sticker sticker-d">
-    <img src="./receipt.PNG" alt="">
-  </div>
-
-
-  <!-- =========================================================
-       FAKE SNAPCHAT POPUP
-       ========================================================= -->
-
-  <div
-    class="snap-popup"
-    id="snapPopup"
-  >
-
-    <div class="snap-head">
-      SNAPCHAT
-      <button id="closeSnap">×</button>
-    </div>
-
-    <div class="snap-body">
-
-      <div class="snap-avatar">
-        R
-      </div>
-
-      <div>
-        <b>Roman Scholl</b>
-        <span>sent you a snap</span>
-      </div>
 
     </div>
 
-    <div class="snap-time">
-      just now
+
+    <img
+        class="floating-asset im-fine"
+        src="https://ella.janitorai.com/media-approved/JbXc3DknGlgsxyh9kPwif.webp"
+        alt=""
+    >
+
+</section>
+
+
+<!-- =====================================================
+     2015
+     ===================================================== -->
+
+<section class="section year" id="year">
+
+    <div class="section-header">
+
+        <div>
+            <div class="section-number">06 // 2015</div>
+            <h2>THE YEAR.</h2>
+        </div>
+
+        <div class="section-sub">
+            Before everything got redesigned.
+            When everybody was still posting dumb shit.
+        </div>
+
     </div>
 
-  </div>
+
+    <div class="year-grid">
+
+        <div class="year-item">
+            <strong>iPhone 6</strong>
+            <span>
+                Everybody suddenly had one.
+                Somebody's cracked screen.
+                Somebody else's case.
+            </span>
+        </div>
+
+        <div class="year-item">
+            <strong>Snapchat</strong>
+            <span>
+                Stupid selfies.
+                Screenshots.
+                "why did you save that"
+            </span>
+        </div>
+
+        <div class="year-item">
+            <strong>Vine</strong>
+            <span>
+                Six seconds.
+                Somehow enough.
+            </span>
+        </div>
+
+        <div class="year-item">
+            <strong>Instagram</strong>
+            <span>
+                Filters.
+                Over-edited sunsets.
+                Everybody pretending their life looked cooler.
+            </span>
+        </div>
+
+        <div class="year-item">
+            <strong>Rap On Aux</strong>
+            <span>
+                If you know every word,
+                you better actually know every word.
+            </span>
+        </div>
+
+        <div class="year-item">
+            <strong>Somebody's Car</strong>
+            <span>
+                The unofficial gathering place.
+            </span>
+        </div>
+
+    </div>
 
 
-  <!-- =========================================================
-       LOCATION POPUP
-       ========================================================= -->
+    <img
+        class="floating-fixed phone-2015"
+        src="https://ella.janitorai.com/media-approved/mMDe9WehPIH565pktLHXO.webp"
+        alt=""
+    >
 
-  <div
-    class="location-popup"
-    id="locationPopup"
-  >
+</section>
 
-    <div class="popup-map">
 
-      <span class="map-label label-town">
+<!-- =====================================================
+     RELATIONSHIPS
+     ===================================================== -->
+
+<section class="section relationships">
+
+    <div class="section-header">
+
+        <div>
+            <div class="section-number">07 // CONNECTIONS</div>
+            <h2>WHO KNOWS WHO.</h2>
+        </div>
+
+        <div class="section-sub">
+            The map isn't clean.
+            Neither are the relationships.
+        </div>
+
+    </div>
+
+
+    <div class="relationship-map">
+
+        <span class="node">ROMAN</span>
+        <span class="node">TYLER</span>
+        <span class="node">ABCC</span>
+        <span class="node">THE LAKE</span>
+        <span class="node">M-29</span>
+        <span class="node">WASHINGTON ST.</span>
+        <span class="node">FRONT ST.</span>
+        <span class="node">BAY-RAMA</span>
+        <span class="node">SOMEBODY'S CAR</span>
+
+    </div>
+
+
+    <div class="relationship-copy">
+
+        Roman, Tyler, ABCC, the lake, New Baltimore.
+
+        <br><br>
+
+        People move around the map.
+        They show up somewhere unexpected.
+        Somebody knows somebody.
+        Somebody's friend knows somebody else.
+
+        <br><br>
+
+        <strong>
+            This isn't a fixed storyline.
+            People move around the map.
+            That's the point.
+        </strong>
+
+    </div>
+
+
+    <img
+        class="floating-asset red-heart"
+        src="https://ella.janitorai.com/media-approved/JfxOqc9sDsp4z-Y_PZ4XI.webp"
+        alt=""
+    >
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-big">
         NEW BALTIMORE
-      </span>
+        <span>/ 2015</span>
+    </div>
 
-      <span class="map-label label-lake">
-        ANCHOR BAY
-      </span>
+    <div class="footer-small">
 
-      <span class="map-label label-burke">
-        BURKE PARK
-      </span>
+        <div>
+            ANCHOR BAY / LAKE ST. CLAIR / MACOMB COUNTY
+        </div>
 
-      <span class="map-label label-m29">
-        M-29
-      </span>
-
-      <span class="map-dot"></span>
+        <div class="footer-note">
+            There is no main plot.
+            There is just somewhere to go.
+            <br><br>
+            MADE FOR THE PEOPLE WHO WERE THERE.
+        </div>
 
     </div>
 
-    <div class="popup-location-copy">
 
-      <small>YOU ARE HERE</small>
+    <img
+        class="floating-asset swarm-footer"
+        src="https://ella.janitorai.com/media-approved/BCd2_a38CgImnWXdUuzKi.webp"
+        alt=""
+    >
 
-      <strong>
-        NEW BALTIMORE,
-        MICHIGAN
-      </strong>
-
-      <p>
-        Lake St. Clair is over there.
-      </p>
-
-      <button id="closeLocation">
-        OKAY
-      </button>
-
-    </div>
-
-  </div>
+</footer>
 
 
-  <footer>
+<!-- =====================================================
+     JS
+     ===================================================== -->
 
-    <div>
-      NEW BALTIMORE // 2015
-    </div>
-
-    <div>
-      ANCHOR BAY // MACOMB COUNTY // MICHIGAN
-    </div>
-
-    <div>
-      MADE FOR PEOPLE WHO KEEP DRIVING
-    </div>
-
-  </footer>
-
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
