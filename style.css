@@ -2449,4 +2449,1320 @@ footer {
   .png-hat {
     width: 55px;
   }
+}/* =========================================================
+   ROMAN SCHOLL
+   people / 001
+   ========================================================= */
+
+.roman-page {
+  --roman-red: #e32222;
+  --roman-blue: #1646d8;
+  --roman-yellow: #f2c230;
+  --roman-black: #111216;
+  --roman-paper: #f1eee6;
+  --roman-gray: #d7d3c9;
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0,0,0,.035) 0 1px, transparent 1px),
+    var(--roman-paper);
+
+  background-size: 7px 7px;
+  color: var(--roman-black);
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.roman-page .topbar {
+  position: relative;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 14px 4vw;
+
+  border-bottom: 3px solid var(--roman-black);
+
+  background: var(--roman-paper);
+}
+
+.roman-page .site-mark,
+.roman-page .back-link {
+  color: var(--roman-black);
+  text-decoration: none;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .13em;
+}
+
+.roman-page .site-mark {
+  font-size: 16px;
+}
+
+.roman-page .top-meta {
+  display: flex;
+  gap: 10px;
+
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+
+/* =========================================================
+   TYPE SYSTEM
+   ========================================================= */
+
+.roman-page h1,
+.roman-page h2,
+.roman-page h3 {
+  font-family: Impact, "Arial Black", sans-serif;
+  font-weight: 900;
+  letter-spacing: -.055em;
+  line-height: .86;
+  text-transform: uppercase;
+}
+
+.roman-page p,
+.roman-page li {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.roman-page .eyebrow,
+.roman-page .file-item span,
+.roman-page .card-number,
+.roman-page figcaption,
+.roman-page .photo-label,
+.roman-page .small-note {
+  font-family: "Courier New", Courier, monospace;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.roman-hero {
+  min-height: 720px;
+
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+
+  border-bottom: 4px solid var(--roman-black);
+
+  overflow: hidden;
+}
+
+.roman-hero-copy {
+  position: relative;
+
+  padding: 8vw 5vw 6vw;
+
+  background: var(--roman-yellow);
+}
+
+.roman-hero-copy .eyebrow {
+  margin: 0 0 35px;
+
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+.roman-hero h1 {
+  margin: 0;
+
+  font-size: clamp(100px, 14vw, 220px);
+
+  color: var(--roman-black);
+}
+
+.roman-hero h1 span {
+  color: var(--roman-red);
+}
+
+.roman-stamp {
+  position: absolute;
+  right: 7%;
+  top: 13%;
+
+  width: 105px;
+  height: 105px;
+
+  display: grid;
+  place-items: center;
+
+  border: 4px solid var(--roman-black);
+  border-radius: 50%;
+
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.35;
+  text-align: center;
+
+  transform: rotate(11deg);
+}
+
+.roman-kicker {
+  position: absolute;
+
+  left: 5vw;
+  bottom: 7vw;
+
+  margin: 0;
+
+  font-family: "Courier New", monospace !important;
+  font-size: 14px;
+  font-weight: 900;
+
+  line-height: 1.1;
+
+  color: var(--roman-blue);
+
+  transform: rotate(-3deg);
+}
+
+.roman-hero-photo {
+  position: relative;
+
+  min-height: 720px;
+
+  padding: 6vw;
+
+  background:
+    linear-gradient(135deg, #b8b8b0, #e0ded5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roman-hero-photo::before {
+  content: "";
+
+  position: absolute;
+
+  width: 72%;
+  height: 80%;
+
+  background: white;
+
+  box-shadow: 9px 10px 0 var(--roman-black);
+
+  transform: rotate(3deg);
+}
+
+.roman-hero-photo img {
+  position: relative;
+  z-index: 2;
+
+  width: 72%;
+  height: 80%;
+
+  object-fit: cover;
+
+  filter: saturate(.92) contrast(1.03);
+
+  transform: rotate(-2deg);
+
+  box-shadow: 7px 8px 0 var(--roman-red);
+}
+
+.photo-note {
+  position: absolute;
+  right: 8%;
+  bottom: 11%;
+
+  z-index: 5;
+
+  padding: 8px 12px;
+
+  background: var(--roman-paper);
+
+  border: 2px solid var(--roman-black);
+
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 900;
+
+  transform: rotate(-5deg);
+}
+
+.photo-note span {
+  color: var(--roman-red);
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.roman-intro {
+  display: grid;
+  grid-template-columns: 100px 1fr 300px;
+
+  gap: 4vw;
+
+  padding: 100px 6vw;
+
+  border-bottom: 4px solid var(--roman-black);
+}
+
+.section-number {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-weight: 900;
+
+  color: var(--roman-red);
+}
+
+.roman-intro-main {
+  max-width: 760px;
+}
+
+.roman-intro h2 {
+  margin: 0 0 35px;
+
+  font-size: clamp(65px, 8vw, 125px);
+}
+
+.roman-intro h2 em {
+  color: var(--roman-blue);
+  font-style: normal;
+}
+
+.big-copy {
+  margin-bottom: 28px;
+
+  font-size: clamp(22px, 3vw, 36px);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.roman-intro-main p:not(.big-copy) {
+  max-width: 650px;
+
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.roman-pullquote {
+  align-self: center;
+
+  padding: 28px;
+
+  border: 3px solid var(--roman-black);
+
+  background: white;
+
+  font-family: "Courier New", monospace;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.15;
+
+  transform: rotate(3deg);
+}
+
+.roman-pullquote span {
+  display: block;
+
+  margin-bottom: -15px;
+
+  font-family: Georgia, serif;
+  font-size: 60px;
+
+  color: var(--roman-red);
+}
+
+
+/* =========================================================
+   QUICK FILE
+   ========================================================= */
+
+.roman-file {
+  padding: 90px 6vw;
+
+  background: var(--roman-black);
+  color: var(--roman-paper);
+}
+
+.file-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 55px;
+}
+
+.file-heading .eyebrow {
+  margin: 0;
+
+  color: var(--roman-yellow);
+}
+
+.file-heading h2 {
+  margin: 0;
+
+  font-size: clamp(55px, 7vw, 100px);
+}
+
+.file-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 2px solid #777;
+  border-left: 2px solid #777;
+}
+
+.file-item {
+  min-height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 20px;
+
+  border-right: 2px solid #777;
+  border-bottom: 2px solid #777;
+}
+
+.file-item span {
+  font-size: 10px;
+  letter-spacing: .1em;
+  color: #aaa;
+}
+
+.file-item strong {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 30px;
+}
+
+
+/* =========================================================
+   PHOTO STRIP
+   ========================================================= */
+
+.roman-photo-strip {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 3vw;
+
+  padding: 100px 5vw;
+
+  overflow: hidden;
+
+  background: #c9c7bd;
+}
+
+.roman-photo-strip figure {
+  width: min(30vw, 380px);
+
+  margin: 0;
+  padding: 12px 12px 25px;
+
+  background: white;
+
+  box-shadow: 5px 7px 0 rgba(0,0,0,.75);
+}
+
+.roman-photo-strip figure:nth-child(2) {
+  margin-top: 60px;
+}
+
+.roman-photo-strip figure:nth-child(3) {
+  margin-top: 15px;
+}
+
+.roman-photo-strip img {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+
+  object-fit: cover;
+}
+
+.roman-photo-strip figcaption {
+  padding-top: 13px;
+
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+.tilt-left {
+  transform: rotate(-4deg);
+}
+
+.tilt-right {
+  transform: rotate(5deg);
+}
+
+.tilt-left-small {
+  transform: rotate(-2deg);
+}
+
+
+/* =========================================================
+   BEHAVIOR
+   ========================================================= */
+
+.roman-behavior {
+  display: grid;
+  grid-template-columns: 100px 1fr 360px;
+
+  gap: 4vw;
+
+  padding: 110px 6vw;
+
+  border-bottom: 4px solid var(--roman-black);
+}
+
+.behavior-copy {
+  max-width: 720px;
+}
+
+.behavior-copy h2 {
+  margin: 0 0 40px;
+
+  font-size: clamp(70px, 9vw, 135px);
+}
+
+.behavior-copy h2 span {
+  color: var(--roman-red);
+}
+
+.behavior-copy p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.behavior-copy .underlined {
+  display: inline-block;
+
+  font-weight: 900;
+
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--roman-yellow);
+}
+
+.behavior-list {
+  align-self: center;
+
+  border-top: 3px solid var(--roman-black);
+}
+
+.behavior-list div {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+
+  padding: 18px 0;
+
+  border-bottom: 2px solid var(--roman-black);
+
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.behavior-list span {
+  color: var(--roman-red);
+}
+
+
+/* =========================================================
+   PHYSICALITY
+   ========================================================= */
+
+.roman-physical {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 760px;
+}
+
+.physical-photo {
+  position: relative;
+
+  background: var(--roman-blue);
+
+  padding: 7vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.physical-photo img {
+  width: 80%;
+  height: 80%;
+
+  object-fit: cover;
+
+  border: 12px solid white;
+
+  box-shadow: 12px 12px 0 var(--roman-black);
+
+  transform: rotate(-4deg);
+}
+
+.photo-label {
+  position: absolute;
+
+  bottom: 7%;
+  left: 10%;
+
+  padding: 10px;
+
+  background: var(--roman-yellow);
+
+  border: 2px solid var(--roman-black);
+
+  font-size: 10px;
+  font-weight: 900;
+
+  transform: rotate(2deg);
+}
+
+.physical-copy {
+  padding: 9vw 7vw;
+
+  background: var(--roman-red);
+  color: white;
+}
+
+.physical-copy .eyebrow {
+  color: var(--roman-yellow);
+}
+
+.physical-copy h2 {
+  margin: 25px 0 45px;
+
+  font-size: clamp(65px, 8vw, 120px);
+}
+
+.physical-copy h2 span {
+  color: var(--roman-yellow);
+}
+
+.physical-copy p {
+  max-width: 620px;
+
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.physical-copy ul {
+  margin: 35px 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.physical-copy li {
+  display: inline-block;
+
+  margin: 0 6px 8px 0;
+  padding: 8px 10px;
+
+  border: 2px solid white;
+
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 900;
+
+  transform: rotate(var(--rotation, -1deg));
+}
+
+.physical-copy li:nth-child(even) {
+  --rotation: 2deg;
+}
+
+.physical-copy .small-note {
+  color: var(--roman-yellow);
+}
+
+
+/* =========================================================
+   STYLE
+   ========================================================= */
+
+.roman-style {
+  padding: 110px 6vw;
+
+  border-bottom: 4px solid var(--roman-black);
+}
+
+.style-header {
+  margin-bottom: 60px;
+}
+
+.style-header h2 {
+  margin: 0;
+
+  font-size: clamp(70px, 9vw, 130px);
+}
+
+.style-header h2 span {
+  color: var(--roman-blue);
+}
+
+.style-content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+
+  gap: 7vw;
+
+  align-items: center;
+}
+
+.style-list {
+  border-top: 3px solid var(--roman-black);
+}
+
+.style-list div {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+
+  padding: 20px 0;
+
+  border-bottom: 2px solid var(--roman-black);
+}
+
+.style-list strong {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 17px;
+}
+
+.style-list span {
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+}
+
+.style-photo {
+  position: relative;
+
+  padding: 12px;
+
+  background: white;
+
+  box-shadow: 8px 8px 0 var(--roman-black);
+
+  transform: rotate(4deg);
+}
+
+.style-photo img {
+  display: block;
+
+  width: 100%;
+}
+
+.style-photo span {
+  display: block;
+
+  padding: 12px 4px 3px;
+
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   DIGITAL
+   ========================================================= */
+
+.roman-digital {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+
+  gap: 4vw;
+
+  padding: 100px 6vw;
+
+  background: var(--roman-yellow);
+
+  border-bottom: 4px solid var(--roman-black);
+}
+
+.digital-main h2 {
+  margin: 0 0 65px;
+
+  font-size: clamp(70px, 10vw, 150px);
+}
+
+.digital-main h2 span {
+  color: var(--roman-red);
+}
+
+.digital-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 0;
+
+  max-width: 900px;
+}
+
+.digital-grid article {
+  min-height: 200px;
+
+  padding: 25px;
+
+  border: 2px solid var(--roman-black);
+}
+
+.digital-grid strong {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 18px;
+}
+
+.digital-grid p {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   EVERYDAY
+   ========================================================= */
+
+.roman-everyday {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  min-height: 500px;
+}
+
+.everyday-card {
+  position: relative;
+
+  padding: 70px 45px;
+
+  border-right: 3px solid var(--roman-black);
+}
+
+.everyday-card:last-child {
+  border-right: 0;
+}
+
+.food-card {
+  background: white;
+}
+
+.drink-card {
+  background: var(--roman-blue);
+  color: white;
+}
+
+.car-card {
+  background: var(--roman-black);
+  color: white;
+}
+
+.card-number {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+
+  font-size: 10px;
+}
+
+.everyday-card h3 {
+  margin: 35px 0;
+
+  font-size: 55px;
+}
+
+.everyday-card p {
+  max-width: 300px;
+
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.everyday-card small,
+.everyday-card strong {
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.food-card small {
+  color: var(--roman-red);
+}
+
+.car-card strong {
+  display: block;
+
+  margin-top: 30px;
+
+  color: var(--roman-yellow);
+}
+
+
+/* =========================================================
+   SCHOOL
+   ========================================================= */
+
+.roman-school {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+
+  gap: 6vw;
+
+  padding: 110px 6vw;
+
+  background: #d8d6ce;
+
+  border-bottom: 4px solid var(--roman-black);
+}
+
+.school-photo {
+  position: relative;
+
+  align-self: center;
+
+  padding: 14px;
+
+  background: white;
+
+  box-shadow: 10px 10px 0 var(--roman-black);
+
+  transform: rotate(-3deg);
+}
+
+.school-photo img {
+  display: block;
+
+  width: 100%;
+}
+
+.school-photo span {
+  display: block;
+
+  padding: 12px 3px 2px;
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+}
+
+.school-copy {
+  align-self: center;
+}
+
+.school-copy h2 {
+  margin: 25px 0 40px;
+
+  font-size: clamp(80px, 10vw, 145px);
+}
+
+.school-copy h2 span {
+  color: var(--roman-red);
+}
+
+.school-copy p {
+  max-width: 560px;
+
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   HOME
+   ========================================================= */
+
+.roman-home {
+  padding: 100px 6vw;
+
+  border-bottom: 4px solid var(--roman-black);
+}
+
+.home-heading h2 {
+  margin: 0 0 70px;
+
+  font-size: clamp(90px, 12vw, 175px);
+}
+
+.home-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+
+  gap: 7vw;
+}
+
+.home-copy {
+  max-width: 720px;
+}
+
+.home-copy p {
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.basement-card {
+  padding: 30px;
+
+  background: var(--roman-blue);
+  color: white;
+
+  box-shadow: 8px 8px 0 var(--roman-black);
+
+  transform: rotate(3deg);
+}
+
+.basement-title {
+  margin-bottom: 35px;
+
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 32px;
+}
+
+.basement-card ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.basement-card li {
+  padding: 13px 0;
+
+  border-bottom: 1px solid rgba(255,255,255,.5);
+
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   TOWN
+   ========================================================= */
+
+.roman-town {
+  padding: 110px 6vw;
+
+  background: var(--roman-red);
+  color: white;
+
+  border-bottom: 4px solid var(--roman-black);
+}
+
+.town-heading h2 {
+  margin: 0 0 80px;
+
+  font-size: clamp(75px, 10vw, 150px);
+}
+
+.town-heading h2 span {
+  color: var(--roman-yellow);
+}
+
+.town-map {
+  position: relative;
+
+  min-height: 500px;
+
+  border: 3px solid white;
+
+  background:
+    linear-gradient(90deg, transparent 49.7%, rgba(255,255,255,.25) 50%, transparent 50.3%),
+    linear-gradient(0deg, transparent 49.7%, rgba(255,255,255,.25) 50%, transparent 50.3%);
+}
+
+.town-place {
+  position: absolute;
+
+  max-width: 220px;
+
+  padding: 15px;
+
+  background: var(--roman-yellow);
+  color: var(--roman-black);
+
+  border: 3px solid var(--roman-black);
+
+  box-shadow: 5px 5px 0 var(--roman-black);
+
+  transform: rotate(var(--rotation));
+}
+
+.town-place strong {
+  display: block;
+
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 14px;
+}
+
+.town-place span {
+  display: block;
+
+  margin-top: 7px;
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+}
+
+.place-one {
+  top: 8%;
+  left: 7%;
+  --rotation: -4deg;
+}
+
+.place-two {
+  top: 22%;
+  right: 10%;
+  --rotation: 3deg;
+}
+
+.place-three {
+  bottom: 10%;
+  left: 25%;
+  --rotation: 2deg;
+}
+
+.place-four {
+  bottom: 20%;
+  right: 28%;
+  --rotation: -3deg;
+}
+
+.place-five {
+  top: 55%;
+  left: 6%;
+  --rotation: 4deg;
+}
+
+
+/* =========================================================
+   FINAL
+   ========================================================= */
+
+.roman-final {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 720px;
+}
+
+.final-photo {
+  background: var(--roman-black);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7vw;
+}
+
+.final-photo img {
+  width: 90%;
+  height: 90%;
+
+  object-fit: cover;
+
+  border: 12px solid white;
+
+  transform: rotate(3deg);
+}
+
+.final-copy {
+  padding: 9vw 7vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: var(--roman-yellow);
+}
+
+.final-copy h2 {
+  margin: 25px 0 40px;
+
+  font-size: clamp(65px, 8vw, 120px);
+}
+
+.final-copy h2 span {
+  color: var(--roman-red);
+}
+
+.final-copy p {
+  font-size: 18px;
+}
+
+.return-town {
+  display: inline-block;
+
+  width: fit-content;
+
+  margin-top: 40px;
+  padding: 13px 18px;
+
+  background: var(--roman-black);
+  color: white;
+
+  text-decoration: none;
+
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 900;
+
+  transition: transform .15s ease;
+}
+
+.return-town:hover {
+  transform: translate(-3px, -3px);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.roman-page .site-footer {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 25px 5vw;
+
+  background: var(--roman-black);
+  color: white;
+
+  font-family: "Courier New", monospace;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .roman-page .topbar {
+    flex-wrap: wrap;
+  }
+
+  .roman-page .top-meta {
+    order: 3;
+    width: 100%;
+  }
+
+  .roman-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .roman-hero-copy {
+    min-height: 620px;
+  }
+
+  .roman-hero-photo {
+    min-height: 500px;
+  }
+
+  .roman-hero-photo img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .roman-intro,
+  .roman-behavior,
+  .roman-digital {
+    grid-template-columns: 1fr;
+  }
+
+  .section-number {
+    margin-bottom: -20px;
+  }
+
+  .roman-pullquote {
+    max-width: 300px;
+  }
+
+  .file-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .roman-photo-strip {
+    justify-content: flex-start;
+
+    overflow-x: auto;
+
+    padding: 70px 6vw;
+  }
+
+  .roman-photo-strip figure {
+    flex: 0 0 75vw;
+  }
+
+  .roman-physical,
+  .roman-school,
+  .roman-final {
+    grid-template-columns: 1fr;
+  }
+
+  .physical-photo {
+    min-height: 550px;
+  }
+
+  .style-content,
+  .home-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .style-photo {
+    max-width: 380px;
+  }
+
+  .digital-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roman-everyday {
+    grid-template-columns: 1fr;
+  }
+
+  .everyday-card {
+    min-height: 350px;
+
+    border-right: 0;
+    border-bottom: 3px solid var(--roman-black);
+  }
+
+  .town-map {
+    min-height: 600px;
+  }
+
+  .town-place {
+    max-width: 170px;
+  }
+
+  .final-photo {
+    min-height: 500px;
+  }
+
+  .roman-page .site-footer {
+    flex-direction: column;
+  }
+
 }
